@@ -11,6 +11,7 @@ using Toybox.Application as App;
 var batHist = {};
 var batHistCount = 0;
 var timeInterval = 0;
+var remainingBattery;
 
 //!sunrise/sunset
 //https://github.com/anderssonfilip/SunriseSunset
@@ -123,11 +124,9 @@ class BinarySystemView extends Ui.WatchFace {
     //===============================
     //!battery prediction
     //===============================
-    function batteryPrediction(input, battery) {
+    function batteryPrediction(input, battery, divider) {
         //remember battery percentage and do a prediction how long the battery will last
         var timeDiff = 1;
-        var remainingBattery;
-
         if (timeInterval != input) {
             if (input-timeInterval > 1) {
                 timeDiff = input-timeInterval;
@@ -147,9 +146,7 @@ class BinarySystemView extends Ui.WatchFace {
 
             if (batHist[0] > batHist[1]) {
                 var batLoss = batHist[0]-batHist[1];
-                remainingBattery = battery / batLoss / 24 / timeDiff ; //batRemaining is is a global var
-                //Sys.println(remainingBattery);
-                return remainingBattery;
+                remainingBattery = battery / batLoss / divider / timeDiff ; //batRemaining is is a global var
             }
         }
     }
@@ -255,16 +252,25 @@ class BinarySystemView extends Ui.WatchFace {
         //!battery percentage
         //===============================
         var batteryPercentageStr = battery.format("%d");
-        var remainingBattery = batteryPrediction(seconds, battery);
+        batteryPrediction(hours, battery, 24);
+
         Sys.println("remaining: " + remainingBattery);
 
-        if (batRemaining != 0) {
-            batteryPercentageStr = ("~ " + batRemaining.format("%.2f") + " d");
+        if (remainingBattery) {
+            if (remainingBattery < 1.0) {
+                //convert to hours remaining
+                var remainingBatteryH = remainingBattery * 60;
+                batteryPercentageStr = (batteryPercentageStr + "% (" + remainingBatteryH.format("%.f") + "h)");
+            } else {
+                //show remaining in days
+                batteryPercentageStr = (batteryPercentageStr + "% (" + remainingBattery.format("%.f") + "d)");
+            }
         } else {
-            batteryPercentageStr = (batteryPercentageStr + " %");
+            batteryPercentageStr = (batteryPercentageStr + "%");
         }
         dc.setColor(dot_color, bg_transp);
         dc.drawText(96, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+
 
         //===============================
         //!notifications
