@@ -10,7 +10,6 @@ using Toybox.Application as App;
 
 var batHist = {};
 var batHistCount = 0;
-var batRemaining = 0;
 var timeInterval = 0;
 
 //!sunrise/sunset
@@ -127,6 +126,8 @@ class BinarySystemView extends Ui.WatchFace {
     function batteryPrediction(input, battery) {
         //remember battery percentage and do a prediction how long the battery will last
         var timeDiff = 1;
+        var remainingBattery;
+
         if (timeInterval != input) {
             if (input-timeInterval > 1) {
                 timeDiff = input-timeInterval;
@@ -146,8 +147,9 @@ class BinarySystemView extends Ui.WatchFace {
 
             if (batHist[0] > batHist[1]) {
                 var batLoss = batHist[0]-batHist[1];
-                batRemaining = battery / batLoss / 24 / timeDiff ; //batRemaining is is a global var
-                Sys.println(batRemaining);
+                remainingBattery = battery / batLoss / 24 / timeDiff ; //batRemaining is is a global var
+                //Sys.println(remainingBattery);
+                return remainingBattery;
             }
         }
     }
@@ -253,7 +255,8 @@ class BinarySystemView extends Ui.WatchFace {
         //!battery percentage
         //===============================
         var batteryPercentageStr = battery.format("%d");
-        batteryPrediction(hours, battery);
+        var remainingBattery = batteryPrediction(seconds, battery);
+        Sys.println("remaining: " + remainingBattery);
 
         if (batRemaining != 0) {
             batteryPercentageStr = ("~ " + batRemaining.format("%.2f") + " d");
