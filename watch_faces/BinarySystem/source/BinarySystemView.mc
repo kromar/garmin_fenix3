@@ -249,7 +249,7 @@ class BinarySystemView extends Ui.WatchFace {
         //!battery percentage
         //===============================
         var batteryPercentageStr = battery.format("%d");
-        batteryPrediction(seconds, battery, 24);
+        batteryPrediction(hours, battery, 24);
 
         if (remainingBattery) {
             Sys.println("remaining: " + remainingBattery);
