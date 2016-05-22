@@ -144,9 +144,10 @@ class BinarySystemView extends Ui.WatchFace {
             Sys.println(batHistCount);
             Sys.println(batHist);
 
-            if (batHist[0] > batHist[1]) {
+            if (batHist[0] > batHist[1])  {
                 var batLoss = batHist[0]-batHist[1];
                 remainingBattery = battery / batLoss / divider / timeDiff ; //batRemaining is is a global var
+                Sys.println("rem: " + remainingBattery);
             }
         }
     }
@@ -233,43 +234,46 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         var batteryBarWidth = width/2-fontHeight;
         var batteryBar = batteryBarWidth / 100.0f * battery;
+        var borderOffset_Battery = 6;
 
+        //draw batterybar background
         dc.setColor(fg_color, bg_transp);
-        dc.fillRectangle(0, height/2-20, batteryBarWidth, 2);
+        dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBarWidth-borderOffset_Battery, 2);
+        //draw battery bar vertical lines
         dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-        //dc.drawLine(batteryBarWidth-1, height/2-20, batteryBarWidth-1, height/2-32);
         dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
         dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
         dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-        dc.drawLine(0, height/2-20, 0, height/2-24);
+        dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+        //if battery
+        //draw battery bar
         dc.setColor(dot_color, bg_transp);
-        dc.fillRectangle(0, height/2-20, batteryBar, 2);
+        dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBar-borderOffset_Battery, 2);
         //dc.fillRectangle(batteryBar-1, height/2-30, 2, 8);
-        //System.print(battery.format("%02d"));
+        System.print("battery: ", battery.format("%02d"));
 
 
         //===============================
         //!battery percentage
         //===============================
         var batteryPercentageStr = battery.format("%d");
-        batteryPrediction(hours, battery, 24);
-
-        Sys.println("remaining: " + remainingBattery);
+        batteryPrediction(seconds, battery, 24);
 
         if (remainingBattery) {
+            Sys.println("remaining1: " + remainingBattery);
             if (remainingBattery < 1.0) {
                 //convert to hours remaining
-                var remainingBatteryH = remainingBattery * 60;
-                batteryPercentageStr = (batteryPercentageStr + "% (" + remainingBatteryH.format("%.f") + "h)");
+                remainingBattery = remainingBattery * 60;
+                batteryPercentageStr = ("(" + remainingBattery.format("%.f") + "h) " + batteryPercentageStr + "%");
             } else {
                 //show remaining in days
-                batteryPercentageStr = (batteryPercentageStr + "% (" + remainingBattery.format("%.f") + "d)");
+                batteryPercentageStr = ("(" + remainingBattery.format("%.f") + "d) " +batteryPercentageStr + "%");
             }
         } else {
             batteryPercentageStr = (batteryPercentageStr + "%");
         }
         dc.setColor(dot_color, bg_transp);
-        dc.drawText(96, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(92, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
 
 
         //===============================
@@ -322,18 +326,21 @@ class BinarySystemView extends Ui.WatchFace {
         //draw step goal bar
         var stepBarWidth = width/2-fontHeight;
         var stepGoalPercentage = stepBarWidth.toFloat()/stepGoal*steps;
+        var borderOffset_Goal = 30;
+
         dc.setColor(fg_color, bg_transp);
-        dc.drawLine(0, height-40, stepBarWidth, height-40);
+        dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
 
         dc.setColor(dot_color, bg_transp);
+        dc.fillRectangle(borderOffset_Goal, height-45, 1, 5);
         if (stepGoalPercentage<=stepBarWidth) {
-            dc.drawLine(0, height-40, stepGoalPercentage, height-40);
+            dc.drawLine(borderOffset_Goal, height-40, stepGoalPercentage, height-40);
         } else {
-            dc.drawLine(0, height-40, stepBarWidth, height-40);
+            dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
         }
 
 
-        //Sys.println(stepGoalPercentage);
+        Sys.println("step percentage: ", stepGoalPercentage);
 
         //===============================
         //!calories

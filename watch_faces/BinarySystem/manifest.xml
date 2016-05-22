@@ -6,8 +6,7 @@
             <iq:product id="fenix3"/>
         </iq:products>
 
-        <iq:permissions>
-        </iq:permissions>
+        <iq:permissions/>
 
         <iq:languages/>
 
