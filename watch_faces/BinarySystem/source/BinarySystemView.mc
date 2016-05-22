@@ -48,7 +48,7 @@ class BinarySystemView extends Ui.WatchFace {
         var r2 = 2;
         var lines = 3;
         var rows = 6;
-        var b = 47;
+        var b = 51;
         var x = w/2+r+r2;
         var o = 8;
         var y = (h-2*b)/(rows-1)+1;
@@ -62,6 +62,7 @@ class BinarySystemView extends Ui.WatchFace {
         var activeSeconds = feedingTime(seconds, true);
         var activeMinutes = feedingTime(minutes, true);
         var activeHours = feedingTime(hours, false);
+
 
         for (var iL=0; iL<lines; iL++) {
             for (var iR=0; iR<rows; iR++) {
@@ -91,6 +92,13 @@ class BinarySystemView extends Ui.WatchFace {
                 }
             }
         }
+
+        //===============================
+        //!debug objects
+        //===============================
+        //dc.setColor(Gfx.COLOR_YELLOW, color_a);
+        //dc.drawLine(b, b, w-b, b);
+        //dc.drawLine(b, y+b, w-b, y+b);
     }
 
 
@@ -190,17 +198,6 @@ class BinarySystemView extends Ui.WatchFace {
         View.onUpdate(dc);
         // Include anything that needs to be updated here
 
-
-        //===============================
-        //!debug objects
-        //===============================
-        //background
-        //dc.setColor(Gfx.COLOR_YELLOW, bg_transp);
-        //dc.fillCircle(width/2, 171, 20);
-        //dc.drawLine(border, border, width-border, border);
-        //dc.drawLine(border, dotY+border, width-border, dotY+border);
-
-
         var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
         var clockTime = Sys.getClockTime();
@@ -260,14 +257,14 @@ class BinarySystemView extends Ui.WatchFace {
         batteryPrediction(seconds, battery, 24);
 
         if (remainingBattery) {
-            Sys.println("remaining1: " + remainingBattery);
+            Sys.println("remaining: " + remainingBattery);
             if (remainingBattery < 1.0) {
                 //convert to hours remaining
-                remainingBattery = remainingBattery * 60;
-                batteryPercentageStr = ("(" + remainingBattery.format("%.f") + "h) " + batteryPercentageStr + "%");
+                var remainingBatteryHours = remainingBattery * 60;
+                batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
             } else {
                 //show remaining in days
-                batteryPercentageStr = ("(" + remainingBattery.format("%.f") + "d) " +batteryPercentageStr + "%");
+                batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
             }
         } else {
             batteryPercentageStr = (batteryPercentageStr + "%");

@@ -15,11 +15,15 @@ FEATURES
 - battery percentage
 - binary watch
 - notification count
+- remaining battery time prediction (based on consumption per hour)
 
 
 ******************
 VERSION
 ******************
+v 1.05
+- cleaned up remaining battery display
+
 v 1.04
 - fixed: battery prediction was set to seconds which gave strange results
 

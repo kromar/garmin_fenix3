@@ -1,6 +1,6 @@
 <properties>
 
-    <property id="appVersion" type="string">1.04</property>
+    <property id="appVersion" type="string">1.05</property>
     
     <property id="BackgroundColor" type="number">0x000000</property>
     <property id="ForegroundColor" type="number">0xFF0000</property>
