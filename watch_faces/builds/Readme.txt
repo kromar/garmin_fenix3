@@ -21,6 +21,9 @@ FEATURES
 ******************
 VERSION
 ******************
+v 1.11
+- added radius for binary watch to settings
+
 v 1.10
 - introducing geekMode (new option in watch face settings)
 
