@@ -21,6 +21,9 @@ FEATURES
 ******************
 VERSION
 ******************
+v 1.10
+- introducing geekMode (new option in watch face settings)
+
 v 1.06
 - fix for battery and activity bar outside visible screen range
 - battery bar indicator coloring
