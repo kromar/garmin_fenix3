@@ -21,6 +21,10 @@ FEATURES
 ******************
 VERSION
 ******************
+v 1.06
+- fix for battery and activity bar outside visible screen range
+- battery bar indicator coloring
+
 v 1.05
 - cleaned up remaining battery display
 
