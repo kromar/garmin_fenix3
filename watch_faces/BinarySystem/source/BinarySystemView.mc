@@ -13,6 +13,7 @@ var batHistCount = 0;
 var timeInterval = 0;
 var remainingBattery;
 
+
 //!sunrise/sunset
 //https://github.com/anderssonfilip/SunriseSunset
 
@@ -41,14 +42,16 @@ class BinarySystemView extends Ui.WatchFace {
     //===============================
     //! draw binary layout
     //===============================
-    function drawBinaryLayout(dc,h,w,hours,minutes,seconds) {
+    function drawBinaryLayout(dc,h,w,hours,minutes,seconds, geekMode) {
         //Sys.println("drawing binary");
+
         var r = 9; //keep this a uneven number for better circle
         var r1 = 1;
         var r2 = 2;
         var lines = 3;
         var rows = 6;
         var b = 51;
+
         var x = w/2+r+r2;
         var o = 8;
         var y = (h-2*b)/(rows-1)+1;
@@ -63,8 +66,17 @@ class BinarySystemView extends Ui.WatchFace {
         var activeMinutes = feedingTime(minutes, true);
         var activeHours = feedingTime(hours, false);
 
+        if (geekMode) {
 
-        for (var iL=0; iL<lines; iL++) {
+            x = w/2 - ox;
+        }
+        else {
+
+            x = w/2+r+r2;
+
+
+            }
+         for (var iL=0; iL<lines; iL++) {
             for (var iR=0; iR<rows; iR++) {
                 //draw circles
                 dc.setColor(color_fg, color_bg);
@@ -98,7 +110,9 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //dc.setColor(Gfx.COLOR_YELLOW, color_a);
         //dc.drawLine(b, b, w-b, b);
-        //dc.drawLine(b, y+b, w-b, y+b);
+
+        //dc.drawLine(w/2, 0, w/2, h);
+        //dc.drawLine(0, h/2, w, h/2);
     }
 
 
@@ -166,6 +180,9 @@ class BinarySystemView extends Ui.WatchFace {
     function onUpdate(dc) {
         // Get the current time and format it correctly
 
+        var geekMode = App.getApp().getProperty("GeekMode");
+        Sys.println("geek mode: " + geekMode);
+
         var sysStats = Sys.getSystemStats();
         var battery = sysStats.battery;
         var alarm = Sys.getTimer();
@@ -215,116 +232,154 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!draw time
         //===============================
-        var timeStr = Lang.format("$1$:$2$", [hours, minutes.format("%02d")]);
-        dc.setColor(fg_color, bg_transp);
-        dc.drawText(94, 90, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_RIGHT);
-        //===============================
-        //!draw date
-        //===============================
-        var dateStr = Lang.format("$1$ $2$", [time.day_of_week, time.day]);
-        dc.setColor(dot_color, bg_transp);
-        dc.drawText(94, 120, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_RIGHT);
-
-
-        //===============================
-        //!battery bar
-        //===============================
-        var batteryBarWidth = width/2-fontHeight;
-        var batteryBar = batteryBarWidth / 100.0f * battery;
-        var borderOffset_Battery = 6;
-
-
-        //draw batterybar background
-        dc.setColor(fg_color, bg_transp);
-        dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBarWidth-borderOffset_Battery, 2);
-
-        //color vertical lines depending on percentage
-        if (battery == 100) {
+        if (geekMode) {
+            //===============================
+            //!draw date
+            //===============================
+            var dateStr = Lang.format("$1$ $2$", [time.day_of_week, time.day]);
             dc.setColor(dot_color, bg_transp);
-            //draw battery bar vertical lines
-            dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-            dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-            dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-            dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-            dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            dc.drawText(10, height/2-fontHeight, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_LEFT);
         }
-        else if (battery < 100 and battery >= 75) {
-            //draw battery bar vertical lines
+        else {
+            var timeStr = Lang.format("$1$:$2$", [hours, minutes.format("%02d")]);
             dc.setColor(fg_color, bg_transp);
-            dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+            dc.drawText(94, 90, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            //===============================
+            //!draw date
+            //===============================
+            var dateStr = Lang.format("$1$ $2$", [time.day_of_week, time.day]);
             dc.setColor(dot_color, bg_transp);
-            dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-            dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-            dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-            dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            dc.drawText(94, 120, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_RIGHT);
         }
-        else if (battery < 75 and battery >= 50) {
-            //draw battery bar vertical lines
-            dc.setColor(fg_color, bg_transp);
-            dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-            dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-            dc.setColor(dot_color, bg_transp);
-            dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-            dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-            dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-        }
-        else if (battery < 50 and battery >= 25) {
-            //draw battery bar vertical lines
-            dc.setColor(fg_color, bg_transp);
-            dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-            dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-            dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-            dc.setColor(dot_color, bg_transp);
-            dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-            dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-        }
-        else if (battery < 25 and battery > 0) {
-            //draw battery bar vertical lines
-            dc.setColor(fg_color, bg_transp);
-            dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-            dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-            dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-            dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-            dc.setColor(dot_color, bg_transp);
-            dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-        }
-        else if (battery  == 0) {
-            //draw battery bar vertical lines
-            dc.setColor(fg_color, bg_transp);
-            dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-            dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-            dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-            dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-            dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-        }
-        //draw battery bar
-        dc.setColor(dot_color, bg_transp);
-        dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBar-borderOffset_Battery, 2);
-        //System.print("battery: ", battery.format("%02d"));
 
 
 
-        //===============================
-        //!battery percentage
-        //===============================
-        var batteryPercentageStr = battery.format("%d");
-        batteryPrediction(seconds, battery, 24);
+        if (geekMode) {
 
-        if (remainingBattery) {
-            Sys.println("remaining: " + remainingBattery);
-            if (remainingBattery < 1.0) {
-                //convert to hours remaining
-                var remainingBatteryHours = remainingBattery * 60;
-                batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+            //===============================
+            //!battery percentage
+            //===============================
+            var batteryPercentageStr = battery.format("%d");
+            batteryPrediction(seconds, battery, 24);
+
+            if (remainingBattery) {
+                Sys.println("remaining: " + remainingBattery);
+                if (remainingBattery < 1.0) {
+                    //convert to hours remaining
+                    var remainingBatteryHours = remainingBattery * 60;
+                    batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+                } else {
+                    //show remaining in days
+                    batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                }
             } else {
-                //show remaining in days
-                batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                batteryPercentageStr = (batteryPercentageStr + "%");
             }
-        } else {
-            batteryPercentageStr = (batteryPercentageStr + "%");
+            dc.setColor(dot_color, bg_transp);
+            dc.drawText(width/2, height-20-fontHeight, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_CENTER);
+
         }
-        dc.setColor(dot_color, bg_transp);
-        dc.drawText(92, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+        else {
+            //===============================
+            //!battery bar
+            //===============================
+            var batteryBarWidth = width/2-fontHeight;
+            var batteryBar = batteryBarWidth / 100.0f * battery;
+            var borderOffset_Battery = 6;
+
+
+            //draw batterybar background
+            dc.setColor(fg_color, bg_transp);
+            dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBarWidth-borderOffset_Battery, 2);
+
+            //color vertical lines depending on percentage
+            if (battery == 100) {
+                dc.setColor(dot_color, bg_transp);
+                //draw battery bar vertical lines
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 100 and battery >= 75) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.setColor(dot_color, bg_transp);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 75 and battery >= 50) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.setColor(dot_color, bg_transp);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 50 and battery >= 25) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.setColor(dot_color, bg_transp);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 25 and battery > 0) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.setColor(dot_color, bg_transp);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery  == 0) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            //draw battery bar
+            dc.setColor(dot_color, bg_transp);
+            dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBar-borderOffset_Battery, 2);
+            //System.print("battery: ", battery.format("%02d"));
+
+
+
+            //===============================
+            //!battery percentage
+            //===============================
+            var batteryPercentageStr = battery.format("%d");
+            batteryPrediction(seconds, battery, 24);
+
+            if (remainingBattery) {
+                Sys.println("remaining: " + remainingBattery);
+                if (remainingBattery < 1.0) {
+                    //convert to hours remaining
+                    var remainingBatteryHours = remainingBattery * 60;
+                    batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+                } else {
+                    //show remaining in days
+                    batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                }
+            } else {
+                batteryPercentageStr = (batteryPercentageStr + "%");
+            }
+            dc.setColor(dot_color, bg_transp);
+            dc.drawText(92, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+         }
 
 
         //===============================
@@ -332,20 +387,39 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //Toybox::System::DeviceSettings
         //notificationCount
-        if (notificationCount > 0) {
-            //draw notification box
-            var w = width/2-56;
-            var h = height/2-70;
-            dc.setColor(fg_color, bg_transp);
-            dc.drawRoundedRectangle(w, h, 40, 18, 4);
-            dc.drawRectangle(w+2, h+4, 10, 1, 1);
-            dc.drawRectangle(w+2, h+8, 16, 1, 1);
-            dc.drawRectangle(w+2, h+12, 10, 1, 1);
+        if (geekMode) {
+            if (notificationCount > 0) {
+                //draw notification box
+                var w = width/2-20;
+                var h = 10;
+                dc.setColor(fg_color, bg_transp);
+                dc.drawRoundedRectangle(w, h, 40, 18, 4);
+                dc.drawRectangle(w+2, h+4, 10, 1, 1);
+                dc.drawRectangle(w+2, h+8, 16, 1, 1);
+                dc.drawRectangle(w+2, h+12, 10, 1, 1);
 
-            //draw notification count
-            var notificationCountStr = notificationCount.toString();
-            dc.setColor(dot_color, bg_transp);
-            dc.drawText(w+36, h-3, Gfx.FONT_TINY, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                //draw notification count
+                var notificationCountStr = notificationCount.toString();
+                dc.setColor(dot_color, bg_transp);
+                dc.drawText(w+36, h-3, Gfx.FONT_TINY, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            }
+        }
+        else{
+            if (notificationCount > 0) {
+                //draw notification box
+                var w = width/2-56;
+                var h = height/2-70;
+                dc.setColor(fg_color, bg_transp);
+                dc.drawRoundedRectangle(w, h, 40, 18, 4);
+                dc.drawRectangle(w+2, h+4, 10, 1, 1);
+                dc.drawRectangle(w+2, h+8, 16, 1, 1);
+                dc.drawRectangle(w+2, h+12, 10, 1, 1);
+
+                //draw notification count
+                var notificationCountStr = notificationCount.toString();
+                dc.setColor(dot_color, bg_transp);
+                dc.drawText(w+36, h-3, Gfx.FONT_TINY, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            }
         }
 
 
@@ -354,45 +428,60 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //Toybox::ActivityMonitor::Info
         //distance
-        dc.setColor(dot_color, bg_transp);
-        if (distance < 100000) {
-            var distanceStr = (distance*0.01).toLong() + "m";
-            dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-        } else {
-            var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
-            dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-        }
+        if (geekMode) {
 
 
-        //System.println(distanceKM);
-
-
-        //===============================
-        //!steps
-        //===============================
-        var stepsStr = steps.toString();
-        dc.setColor(dot_color, bg_transp);
-        dc.drawText(96, 178, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
-
-        //draw step goal bar
-        var stepBarWidth = width/2-fontHeight;
-        var stepGoalPercentage = stepBarWidth.toFloat()/stepGoal*steps;
-
-        var borderOffset_Goal = 30;
-
-        dc.setColor(fg_color, bg_transp);
-        dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
-
-        dc.setColor(dot_color, bg_transp);
-        dc.fillRectangle(borderOffset_Goal, height-45, 1, 5);
-
-        if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0) {
-            dc.drawLine(borderOffset_Goal, height-40, borderOffset_Goal + stepGoalPercentage, height-40);
+            dc.setColor(dot_color, bg_transp);
+            if (distance < 100000) {
+                var distanceStr = (distance*0.01).toLong() + "m";
+                dc.drawText(width-10, height/2-fontHeight, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            } else {
+                var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
+                dc.drawText(width-10, height/2-fontHeight, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            }
         }
         else {
+
+            dc.setColor(dot_color, bg_transp);
+            if (distance < 100000) {
+                var distanceStr = (distance*0.01).toLong() + "m";
+                dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            } else {
+                var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
+                dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            }
+
+
+            //System.println(distanceKM);
+
+
+            //===============================
+            //!steps
+            //===============================
+            var stepsStr = steps.toString();
+            dc.setColor(dot_color, bg_transp);
+            dc.drawText(96, 178, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
+
+            //draw step goal bar
+            var stepBarWidth = width/2-fontHeight;
+            var stepGoalPercentage = stepBarWidth.toFloat()/stepGoal*steps;
+
+            var borderOffset_Goal = 30;
+
+            dc.setColor(fg_color, bg_transp);
             dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
+
+            dc.setColor(dot_color, bg_transp);
+            dc.fillRectangle(borderOffset_Goal, height-45, 1, 5);
+
+            if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0) {
+                dc.drawLine(borderOffset_Goal, height-40, borderOffset_Goal + stepGoalPercentage, height-40);
+            }
+            else {
+                dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
+            }
+            System.println("steps percentage: " + stepGoalPercentage.toString());
         }
-        System.println("steps percentage: " + stepGoalPercentage.toString());
 
         //===============================
         //!calories
@@ -441,7 +530,7 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!binary clock hours
         //===============================
-        drawBinaryLayout(dc, height, width, hours, minutes, seconds);
+        drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
 
     }
 
