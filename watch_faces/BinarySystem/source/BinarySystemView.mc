@@ -45,7 +45,7 @@ class BinarySystemView extends Ui.WatchFace {
     function drawBinaryLayout(dc,h,w,hours,minutes,seconds, geekMode) {
         //Sys.println("drawing binary");
 
-        var r = 9; //keep this a uneven number for better circle
+        var r = App.getApp().getProperty("BinaryRadius");
         var r1 = 1;
         var r2 = 2;
         var lines = 3;

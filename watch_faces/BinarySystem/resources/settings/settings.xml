@@ -9,6 +9,17 @@
         <settingConfig type="boolean" />
     </setting>
     
+    <setting propertyKey="@Properties.BinaryRadius" title="@Strings.BinaryRadiusTitle">
+        <settingConfig type="list">
+            <listEntry value="4">@Strings.RADIUS_4</listEntry>
+            <listEntry value="5">@Strings.RADIUS_5</listEntry>
+            <listEntry value="6">@Strings.RADIUS_6</listEntry>
+            <listEntry value="7">@Strings.RADIUS_7</listEntry>
+            <listEntry value="8">@Strings.RADIUS_8</listEntry>
+            <listEntry value="9">@Strings.RADIUS_9</listEntry>  
+        </settingConfig>
+    </setting>
+    
     <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
         <settingConfig type="list">
             <listEntry value="0xFFFFFF">@Strings.COLOR_WHITE</listEntry>

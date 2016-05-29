@@ -1,9 +1,10 @@
 <properties>
 
-    <property id="appVersion" type="string">1.10</property>
+    <property id="appVersion" type="string">1.11</property>
     
     
     <property id="GeekMode" type="boolean">false</property>
+    <property id="BinaryRadius" type="number">8</property>
     
     <property id="BackgroundColor" type="number">0x000000</property>
     <property id="ForegroundColor" type="number">0xFF0000</property>

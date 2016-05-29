@@ -5,6 +5,15 @@
     
     <string id="GeekModeTitle">Geek Mode</string>
     
+    <string id="BinaryRadiusTitle">Binary Radius</string>
+    <string id="RADIUS_4">4</string>
+    <string id="RADIUS_5">5</string>
+    <string id="RADIUS_6">6</string>
+    <string id="RADIUS_7">7</string>
+    <string id="RADIUS_8">8</string>
+    <string id="RADIUS_9">9</string>
+    
+        
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Binary Color</string>
 
