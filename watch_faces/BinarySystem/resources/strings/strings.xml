@@ -4,6 +4,7 @@
     <string id="AppVersionTitle">Version</string>
     
     <string id="GeekModeTitle">Geek Mode</string>
+    <string id="RemainingBatteryEstimateTitle">Remaining Battery Estimate</string>
     
     <string id="BinaryRadiusTitle">Binary Radius</string>
     <string id="RADIUS_4">4</string>
