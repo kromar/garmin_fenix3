@@ -4,6 +4,7 @@
     <string id="AppVersionTitle">Version</string>
     
     <string id="GeekModeTitle">Geek Mode</string>
+    <string id="RemainingBatteryEstimateTitle">Remaining Battery Estimate</string>
     
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Binary Color</string>

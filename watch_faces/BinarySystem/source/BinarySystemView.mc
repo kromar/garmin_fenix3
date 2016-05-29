@@ -181,7 +181,9 @@ class BinarySystemView extends Ui.WatchFace {
         // Get the current time and format it correctly
 
         var geekMode = App.getApp().getProperty("GeekMode");
+        var remainingBatteryEstimateMode = App.getApp().getProperty("RemainingBatteryEstimate");
         Sys.println("geek mode: " + geekMode);
+        Sys.println("remaining mode: " + remainingBatteryEstimateMode);
 
         var sysStats = Sys.getSystemStats();
         var battery = sysStats.battery;
@@ -262,16 +264,21 @@ class BinarySystemView extends Ui.WatchFace {
             var batteryPercentageStr = battery.format("%d");
             batteryPrediction(seconds, battery, 24);
 
-            if (remainingBattery) {
-                Sys.println("remaining: " + remainingBattery);
-                if (remainingBattery < 1.0) {
-                    //convert to hours remaining
-                    var remainingBatteryHours = remainingBattery * 60;
-                    batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+            if (remainingBatteryEstimateMode) {
+                if (remainingBattery) {
+                    Sys.println("remaining: " + remainingBattery);
+                    if (remainingBattery < 1.0) {
+                        //convert to hours remaining
+                        var remainingBatteryHours = remainingBattery * 60;
+                        batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+                    } else {
+                        //show remaining in days
+                        batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                    }
                 } else {
-                    //show remaining in days
-                    batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                    batteryPercentageStr = (batteryPercentageStr + "%");
                 }
+
             } else {
                 batteryPercentageStr = (batteryPercentageStr + "%");
             }
@@ -364,15 +371,19 @@ class BinarySystemView extends Ui.WatchFace {
             var batteryPercentageStr = battery.format("%d");
             batteryPrediction(seconds, battery, 24);
 
-            if (remainingBattery) {
-                Sys.println("remaining: " + remainingBattery);
-                if (remainingBattery < 1.0) {
-                    //convert to hours remaining
-                    var remainingBatteryHours = remainingBattery * 60;
-                    batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+            if (remainingBatteryEstimateMode) {
+                if (remainingBattery) {
+                    Sys.println("remaining: " + remainingBattery);
+                    if (remainingBattery < 1.0) {
+                        //convert to hours remaining
+                        var remainingBatteryHours = remainingBattery * 60;
+                        batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+                    } else {
+                        //show remaining in days
+                        batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                    }
                 } else {
-                    //show remaining in days
-                    batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                    batteryPercentageStr = (batteryPercentageStr + "%");
                 }
             } else {
                 batteryPercentageStr = (batteryPercentageStr + "%");
