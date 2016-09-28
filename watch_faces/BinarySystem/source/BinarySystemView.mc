@@ -173,6 +173,100 @@ class BinarySystemView extends Ui.WatchFace {
             }
         }
     }
+    
+    
+    function drawBatteryBar(dc)
+    {
+            var sysStats = Sys.getSystemStats();
+        	var battery = sysStats.battery;
+    
+            var width = dc.getWidth();
+        	var height = dc.getHeight();
+      
+	        var dot_color = App.getApp().getProperty("ForegroundColor");
+	        var bg_color = Gfx.COLOR_BLACK;
+	        var fg_color = Gfx.COLOR_WHITE;
+	        var bg_transp = Gfx.COLOR_TRANSPARENT;
+	        var fontHeight = 12;
+        	
+            //===============================
+            //!battery bar
+            //===============================
+            var batteryBarWidth = width/2-fontHeight;
+            var batteryBar = batteryBarWidth / 100.0f * battery;
+            var borderOffset_Battery = 6;
+
+
+            //draw batterybar background
+            dc.setColor(fg_color, bg_transp);
+            dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBarWidth-borderOffset_Battery, 2);
+
+            //color vertical lines depending on percentage
+            if (battery == 100) {
+                dc.setColor(dot_color, bg_transp);
+                //draw battery bar vertical lines
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 100 and battery >= 75) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.setColor(dot_color, bg_transp);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 75 and battery >= 50) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.setColor(dot_color, bg_transp);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 50 and battery >= 25) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.setColor(dot_color, bg_transp);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery < 25 and battery > 0) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.setColor(dot_color, bg_transp);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            else if (battery  == 0) {
+                //draw battery bar vertical lines
+                dc.setColor(fg_color, bg_transp);
+                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
+                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
+                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
+                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
+                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
+            }
+            //draw battery bar
+            dc.setColor(dot_color, bg_transp);
+            dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBar-borderOffset_Battery, 2);
+            //System.print("battery: ", battery.format("%02d"));
+
+    
+    }
 
     //===============================
     //! Update the view
@@ -287,83 +381,8 @@ class BinarySystemView extends Ui.WatchFace {
 
         }
         else {
-            //===============================
-            //!battery bar
-            //===============================
-            var batteryBarWidth = width/2-fontHeight;
-            var batteryBar = batteryBarWidth / 100.0f * battery;
-            var borderOffset_Battery = 6;
-
-
-            //draw batterybar background
-            dc.setColor(fg_color, bg_transp);
-            dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBarWidth-borderOffset_Battery, 2);
-
-            //color vertical lines depending on percentage
-            if (battery == 100) {
-                dc.setColor(dot_color, bg_transp);
-                //draw battery bar vertical lines
-                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-            }
-            else if (battery < 100 and battery >= 75) {
-                //draw battery bar vertical lines
-                dc.setColor(fg_color, bg_transp);
-                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-                dc.setColor(dot_color, bg_transp);
-                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-            }
-            else if (battery < 75 and battery >= 50) {
-                //draw battery bar vertical lines
-                dc.setColor(fg_color, bg_transp);
-                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-                dc.setColor(dot_color, bg_transp);
-                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-            }
-            else if (battery < 50 and battery >= 25) {
-                //draw battery bar vertical lines
-                dc.setColor(fg_color, bg_transp);
-                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-                dc.setColor(dot_color, bg_transp);
-                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-            }
-            else if (battery < 25 and battery > 0) {
-                //draw battery bar vertical lines
-                dc.setColor(fg_color, bg_transp);
-                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-                dc.setColor(dot_color, bg_transp);
-                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-            }
-            else if (battery  == 0) {
-                //draw battery bar vertical lines
-                dc.setColor(fg_color, bg_transp);
-                dc.fillRectangle(batteryBarWidth-2, height/2-28, 2, 8);
-                dc.drawLine(batteryBarWidth*0.75, height/2-20, batteryBarWidth*0.75, height/2-25);
-                dc.drawLine(batteryBarWidth*0.5, height/2-20, batteryBarWidth*0.5, height/2-28);
-                dc.drawLine(batteryBarWidth*0.25, height/2-20, batteryBarWidth*0.25, height/2-25);
-                dc.fillRectangle(borderOffset_Battery, height/2-25, 1, 5);
-            }
-            //draw battery bar
-            dc.setColor(dot_color, bg_transp);
-            dc.fillRectangle(borderOffset_Battery, height/2-20, batteryBar-borderOffset_Battery, 2);
-            //System.print("battery: ", battery.format("%02d"));
-
-
+			
+			drawBatteryBar(dc);
 
             //===============================
             //!battery percentage
