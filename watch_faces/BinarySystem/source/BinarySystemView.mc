@@ -21,6 +21,8 @@ var remainingBattery;
 
 class BinarySystemView extends Ui.WatchFace {
 
+	var binaryLocation = new BinaryLocation();
+
     function initialize() {
         WatchFace.initialize();
     }
@@ -35,44 +37,6 @@ class BinarySystemView extends Ui.WatchFace {
     //! loading resources into memory.
     function onShow() {
     }
-
-	function linearLocation(dc, column, item)
-	{
-		var width = dc.getWidth();
-		var height = dc.getHeight();
-		var location = new [2];
-		location[0] = width / 2+ column * 20;
-		location[1] = height / 2 + 15 - item * 20;
-		return location;
-	}
-	
-	function leftBorderLocation(dc, column, item)
-	{
-		var width = dc.getWidth();
-		var height = dc.getHeight();
-		
-		var circleLocation = (item - 3) / 6.0 * Math.PI / 2.0;
-		
-		var location = new [2];
-		location[0] = width / 2.0 - width / 2.0 * Math.cos(circleLocation);
-		location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
-		Sys.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);
-		return location;
-	}
-	
-	function rightBorderLocation(dc, column, item)
-	{
-		var width = dc.getWidth();
-		var height = dc.getHeight();
-		
-		var circleLocation = (item - 3) / 6.0 * Math.PI / 2.0;
-		
-		var location = new [2];
-		location[0] = width / 2.0 + width / 2.0 * Math.cos(circleLocation);
-		location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
-		Sys.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);
-		return location;
-	}
 	
 
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
@@ -495,9 +459,9 @@ class BinarySystemView extends Ui.WatchFace {
         //!binary clock hours
         //===============================
         //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
-		drawBinaryArray(dc, 6, 0, seconds, method(:linearLocation));
-		drawBinaryArray(dc, 6, 1, minutes, method(:leftBorderLocation));
-		drawBinaryArray(dc, 6, 2, hours, method(:rightBorderLocation));
+		drawBinaryArray(dc, 6, 0, seconds, binaryLocation.method(:linearLocation));
+		drawBinaryArray(dc, 6, 1, minutes, binaryLocation.method(:leftBorderLocation));
+		drawBinaryArray(dc, 6, 2, hours, binaryLocation.method(:rightBorderLocation));
     }
 
 
