@@ -3,9 +3,9 @@ using Toybox.System as Sys;
 using Toybox.ActivityMonitor as ActMon;
 using Toybox.Application as App;
 
-class StepsView
+class StepsView extends DataView
 {
-	function drawSteps(dc)
+	function drawItem(dc)
 	{
 	   	var dot_color = App.getApp().getProperty("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;

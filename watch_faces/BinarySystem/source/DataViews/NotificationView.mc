@@ -1,9 +1,9 @@
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 
-class NotificationView
+class NotificationView extends DataView
 {
-	function drawNotifications(dc)
+	function drawItem(dc)
 	{
 	    var deviceSettings = Sys.getDeviceSettings();
         var notificationCount = deviceSettings.notificationCount;

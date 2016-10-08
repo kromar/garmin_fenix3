@@ -21,6 +21,8 @@ class BinarySystemView extends Ui.WatchFace {
 	var notificationView = new NotificationView();
 	var timeView = new TimeView();
 	
+	var dataViews = [binaryView, batteryView, stepsView, notificationView, timeView];
+	
     function initialize() {
         WatchFace.initialize();
     }
@@ -52,68 +54,10 @@ class BinarySystemView extends Ui.WatchFace {
         View.onUpdate(dc);
         // Include anything that needs to be updated here
 
-
-
-        //===============================
-        //!draw time
-        //===============================
-
-        timeView.drawItem(dc);
-
-
-        //===============================
-        //!binary clock hours
-        //===============================
-		binaryView.drawItem(dc);
-
-
-        //===============================
-        //!distance
-        //===============================
-		stepsView.drawSteps(dc);
-
-		//===============================
-		//!Battery
-		//===============================
-		batteryView.drawItem(dc);
-
-        
-        //===============================
-        //!calories
-        //===============================
-
-
-
-        //===============================
-        //!alarm
-        //===============================
-        //var alarm = Sys.getTimer();
-        //var alarmCount = deviceSettings.alarmCount;
-        //Toybox::System::DeviceSettings
-        //alarmCount
-
-
-        //===============================
-        //!timer
-        //===============================
-        //Toybox::System
-        //getTimer
-
-        //===============================
-        //!phone connected
-        //===============================
-        //var phoneConnected = deviceSettings.phoneConnected;
-        //Toybox::System::DeviceSettings
-        //phoneConnected
-
-
-        //===============================
-        //!temperature
-        //===============================
-        //Toybox::System::DeviceSettings
-        //temperatureUnits
-
-
+		for (var i = 0; i < dataViews.size(); i++)
+		{
+			dataViews[i].drawItem(dc);
+		}
     }
 
 
