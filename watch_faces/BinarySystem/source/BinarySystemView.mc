@@ -24,6 +24,7 @@ class BinarySystemView extends Ui.WatchFace {
 	var binaryLocation = new BinaryLocation();
 	var batteryView = new BatteryView();
 	var stepsView = new StepsView();
+	var notificationView = new NotificationView();
 	
     function initialize() {
         WatchFace.initialize();
@@ -96,10 +97,6 @@ class BinarySystemView extends Ui.WatchFace {
         //var altitude = deviceSettings.altitude;
 
         var activityInfo = ActMon.getInfo();
-        var distance = activityInfo.distance;
-        var steps = activityInfo.steps;
-        var stepGoal = activityInfo.stepGoal;
-        var calories = activityInfo.calories;
 
         var width = dc.getWidth();
         var height = dc.getHeight();
@@ -220,6 +217,7 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!notifications
         //===============================
+        notificationView.drawNotifications(dc);
         //Toybox::System::DeviceSettings
         //notificationCount
         if (geekMode) {
@@ -240,21 +238,7 @@ class BinarySystemView extends Ui.WatchFace {
             }
         }
         else{
-            if (notificationCount > 0) {
-                //draw notification box
-                var w = width/2-56;
-                var h = height/2-70;
-                dc.setColor(fg_color, bg_transp);
-                dc.drawRoundedRectangle(w, h, 40, 18, 4);
-                dc.drawRectangle(w+2, h+4, 10, 1, 1);
-                dc.drawRectangle(w+2, h+8, 16, 1, 1);
-                dc.drawRectangle(w+2, h+12, 10, 1, 1);
 
-                //draw notification count
-                var notificationCountStr = notificationCount.toString();
-                dc.setColor(dot_color, bg_transp);
-                dc.drawText(w+36, h-3, Gfx.FONT_TINY, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            }
         }
 
 
@@ -277,14 +261,7 @@ class BinarySystemView extends Ui.WatchFace {
         }
         else {
 
-            dc.setColor(dot_color, bg_transp);
-            if (distance < 100000) {
-                var distanceStr = (distance*0.01).toLong() + "m";
-                dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            } else {
-                var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
-                dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            }
+
 
 
             //System.println(distanceKM);
