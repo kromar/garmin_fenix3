@@ -42,12 +42,8 @@ class BinarySystemView extends Ui.WatchFace {
     function onUpdate(dc) {
         // Get the current time and format it correctly
 
-        var sysStats = Sys.getSystemStats();
-        var alarm = Sys.getTimer();
+        //var deviceSettings = Sys.getDeviceSettings();
 
-        var deviceSettings = Sys.getDeviceSettings();
-        var alarmCount = deviceSettings.alarmCount;
-        var phoneConnected = deviceSettings.phoneConnected;
         //var temperature = deviceSettings.temperature;
         //var altitude = deviceSettings.altitude;
 
@@ -56,16 +52,22 @@ class BinarySystemView extends Ui.WatchFace {
         View.onUpdate(dc);
         // Include anything that needs to be updated here
 
-        var now = Time.now();
-        var time = Gregorian.info(now, Time.FORMAT_LONG);
+
 
         //===============================
         //!draw time
         //===============================
+        var now = Time.now();
+        var time = Gregorian.info(now, Time.FORMAT_LONG);
         timeView.drawTime(dc, time);
 
 		batteryView.drawBatteryBar(dc);
 		batteryView.drawBatteryPercentage(dc);
+        //===============================
+        //!binary clock hours
+        //===============================
+		binaryView.drawBinaryLayout(dc, time);
+
 
         //===============================
         //!distance
@@ -81,6 +83,8 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!alarm
         //===============================
+        //var alarm = Sys.getTimer();
+        //var alarmCount = deviceSettings.alarmCount;
         //Toybox::System::DeviceSettings
         //alarmCount
 
@@ -94,6 +98,7 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!phone connected
         //===============================
+        //var phoneConnected = deviceSettings.phoneConnected;
         //Toybox::System::DeviceSettings
         //phoneConnected
 
@@ -104,10 +109,7 @@ class BinarySystemView extends Ui.WatchFace {
         //Toybox::System::DeviceSettings
         //temperatureUnits
 
-        //===============================
-        //!binary clock hours
-        //===============================
-		binaryView.drawBinaryLayout(dc, time);
+
     }
 
 
