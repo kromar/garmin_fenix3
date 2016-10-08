@@ -92,8 +92,6 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         timeView.drawTime(dc, time);
 
-
-
 		batteryView.drawBatteryBar(dc);
 		batteryView.drawBatteryPercentage(dc);
 
@@ -135,21 +133,8 @@ class BinarySystemView extends Ui.WatchFace {
         //temperatureUnits
 
         //===============================
-        //!binary clock numbers
-        //===============================
-        //dc.setColor(fg_color, bg_transp);
-        //dc.drawText(dotX,height-border-fontHeight, 1, "1", Gfx.TEXT_JUSTIFY_CENTER);
-        //dc.drawText(dotX,height-1*dotY-border-fontHeight, 1, "2", Gfx.TEXT_JUSTIFY_CENTER);
-        //dc.drawText(dotX,height-2*dotY-border-fontHeight, 1, "4", Gfx.TEXT_JUSTIFY_CENTER);
-        //dc.drawText(dotX,height-3*dotY-border-fontHeight, 1, "8", Gfx.TEXT_JUSTIFY_CENTER);
-        //dc.drawText(dotX,height-4*dotY-border-fontHeight, 1, "16", Gfx.TEXT_JUSTIFY_CENTER);
-        //dc.drawText(dotX,height-5*dotY-border-fontHeight, 1, "32", Gfx.TEXT_JUSTIFY_CENTER);
-
-
-        //===============================
         //!binary clock hours
         //===============================
-        //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
 		binaryView.drawBinaryLayout(dc, seconds, minutes, hours);
     }
 
