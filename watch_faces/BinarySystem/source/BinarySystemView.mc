@@ -460,8 +460,8 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
 		drawBinaryArray(dc, 6, 0, seconds, binaryLocation.method(:linearLocation));
-		drawBinaryArray(dc, 6, 1, minutes, binaryLocation.method(:leftBorderLocation));
-		drawBinaryArray(dc, 6, 2, hours, binaryLocation.method(:rightBorderLocation));
+		drawBinaryArray(dc, 6, 0, minutes, binaryLocation.method(:circularLocation));
+		drawBinaryArray(dc, 6, 1, hours, binaryLocation.method(:circularLocation));
     }
 
 
