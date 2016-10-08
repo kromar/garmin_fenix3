@@ -71,37 +71,6 @@ class BinarySystemView extends Ui.WatchFace {
 			}
 		}
 	}
-
-    //===============================
-    //!battery prediction
-    //===============================
-    function batteryPrediction(input, battery, divider) {
-        //remember battery percentage and do a prediction how long the battery will last
-        var timeDiff = 1;
-        if (timeInterval != input) {
-            if (input-timeInterval > 1) {
-                timeDiff = input-timeInterval;
-            }
-            timeInterval = input;
-            if (batHistCount == 0) {
-                batHist[0] = battery;
-                batHist[1] = battery;
-                batHistCount = 1;
-            } else {
-                batHist[0] = batHist[1];
-                batHist[1] = battery;
-            }
-
-            //Sys.println(batHistCount);
-            //Sys.println(batHist);
-
-            if (batHist[0] > batHist[1])  {
-                var batLoss = batHist[0]-batHist[1];
-                remainingBattery = battery / batLoss / divider / timeDiff ; //batRemaining is is a global var
-                Sys.println("rem: " + remainingBattery);
-            }
-        }
-    }
     
     //===============================
     //! Update the view
@@ -223,7 +192,7 @@ class BinarySystemView extends Ui.WatchFace {
             //!battery percentage
             //===============================
             var batteryPercentageStr = battery.format("%d");
-            batteryPrediction(seconds, battery, 24);
+            batteryView.batteryPrediction(seconds, battery, 24);
 
             if (remainingBatteryEstimateMode) {
                 if (remainingBattery) {
