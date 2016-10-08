@@ -37,7 +37,35 @@ class BinarySystemView extends Ui.WatchFace {
     function onShow() {
     }
 
+	function drawBinaryArray(dc, rows, column, count)
+	{
+		var binaryColor = App.getApp().getProperty("BinaryRadius");
+		var color_rgb = App.getApp().getProperty("ForegroundColor");
+        var color_bg = Gfx.COLOR_BLACK;
+	    var color_fg = Gfx.COLOR_WHITE;
+		
+		var width = dc.getWidth();
+        var height = dc.getHeight();
+		
+		for(var iL = 0; iL < rows; iL++)
+		{
+			var value = 1 << iL;
 
+			dc.setColor(color_fg, color_bg);
+            dc.fillCircle(width / 2+ column * 20, height / 2 + 15 - iL * 20, 9);
+			dc.setColor(binaryColor, color_bg);
+            dc.fillCircle(width / 2+ column * 20, height / 2 + 15 - iL * 20, 8);
+			
+			if (count & value == value)
+			{
+				dc.setColor(color_rgb, color_bg);
+    	        dc.fillCircle(width / 2 + column * 20, height / 2 + 15 - iL * 20, 7);
+			
+			}
+		}
+
+
+	}
 
     //===============================
     //! draw binary layout
@@ -530,8 +558,10 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!binary clock hours
         //===============================
-        drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
-
+        //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
+		drawBinaryArray(dc, 6, 0, seconds);
+		drawBinaryArray(dc, 6, 1, minutes);
+		drawBinaryArray(dc, 6, 2, hours);
     }
 
 
