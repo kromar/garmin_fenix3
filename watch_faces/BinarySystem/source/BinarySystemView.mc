@@ -42,31 +42,14 @@ class BinarySystemView extends Ui.WatchFace {
     function onUpdate(dc) {
         // Get the current time and format it correctly
 
-        var geekMode = App.getApp().getProperty("GeekMode");
-        Sys.println("geek mode: " + geekMode);
-
         var sysStats = Sys.getSystemStats();
-        var battery = sysStats.battery;
         var alarm = Sys.getTimer();
 
         var deviceSettings = Sys.getDeviceSettings();
-        var notificationCount = deviceSettings.notificationCount;
         var alarmCount = deviceSettings.alarmCount;
         var phoneConnected = deviceSettings.phoneConnected;
         //var temperature = deviceSettings.temperature;
         //var altitude = deviceSettings.altitude;
-
-        var activityInfo = ActMon.getInfo();
-
-        var width = dc.getWidth();
-        var height = dc.getHeight();
-        //var fontheight = dc.getFontHeight();
-        var dot_color = App.getApp().getProperty("ForegroundColor");
-        var bg_color = Gfx.COLOR_BLACK;
-        var fg_color = Gfx.COLOR_WHITE;
-        var bg_transp = Gfx.COLOR_TRANSPARENT;
-        var fontHeight = 12;
-
 
 
         // Call the parent onUpdate function to redraw the layout
@@ -75,17 +58,6 @@ class BinarySystemView extends Ui.WatchFace {
 
         var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
-        var clockTime = Sys.getClockTime();
-        var hours = time.hour;
-        var minutes = time.min;
-        var seconds = time.sec;
-
-        if (!Sys.getDeviceSettings().is24Hour) {
-            if (hours > 12) {
-                hours = hours - 12;
-            }
-        }
-
 
         //===============================
         //!draw time
@@ -135,7 +107,7 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!binary clock hours
         //===============================
-		binaryView.drawBinaryLayout(dc, seconds, minutes, hours);
+		binaryView.drawBinaryLayout(dc, time);
     }
 
 

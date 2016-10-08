@@ -38,11 +38,11 @@ class BinaryView
 		}
 	}
 	
-	function drawBinaryLayout(dc, seconds, minutes, hours)
+	function drawBinaryLayout(dc, time)
 	{
-		drawBinaryArray(dc, 6, 0, seconds, binaryLocation.method(:circularLocation));
-		drawBinaryArray(dc, 6, 1, minutes, binaryLocation.method(:circularLocation));
-		drawBinaryArray(dc, 6, 2, hours, binaryLocation.method(:circularLocation));
+		drawBinaryArray(dc, 6, 0, time.sec, binaryLocation.method(:circularLocation));
+		drawBinaryArray(dc, 6, 1, time.min, binaryLocation.method(:circularLocation));
+		drawBinaryArray(dc, 6, 2, time.hour, binaryLocation.method(:circularLocation));
 	}
     
  }
