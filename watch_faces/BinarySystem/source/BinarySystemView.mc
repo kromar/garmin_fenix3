@@ -57,15 +57,14 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!draw time
         //===============================
-        var now = Time.now();
-        var time = Gregorian.info(now, Time.FORMAT_LONG);
-        timeView.drawTime(dc, time);
+
+        timeView.drawItem(dc);
 
 
         //===============================
         //!binary clock hours
         //===============================
-		binaryView.drawBinaryLayout(dc, time);
+		binaryView.drawItem(dc);
 
 
         //===============================

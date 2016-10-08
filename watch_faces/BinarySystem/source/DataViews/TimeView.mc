@@ -1,11 +1,16 @@
 using Toybox.Lang as Lang;
 using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
+using Toybox.Time.Gregorian as Gregorian;
+using Toybox.Time as Time;
 
-class TimeView
+class TimeView extends DataView
 {
-	function drawTime(dc, time)
+	function drawItem(dc)
 	{
+		var now = Time.now();
+        var time = Gregorian.info(now, Time.FORMAT_LONG);
+        
 		var bg_color = Gfx.COLOR_BLACK;
         var fg_color = Gfx.COLOR_WHITE;
         var bg_transp = Gfx.COLOR_TRANSPARENT;

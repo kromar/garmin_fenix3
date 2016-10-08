@@ -1,7 +1,9 @@
 using Toybox.Application as App;
 using Toybox.Graphics as Gfx;
+using Toybox.Time.Gregorian as Gregorian;
+using Toybox.Time as Time;
 
-class BinaryView
+class BinaryView extends DataView
 {
 	var binaryLocation = new BinaryLocation();
 
@@ -38,8 +40,11 @@ class BinaryView
 		}
 	}
 	
-	function drawBinaryLayout(dc, time)
+	function drawItem(dc)
 	{
+		var now = Time.now();
+        var time = Gregorian.info(now, Time.FORMAT_LONG);
+		
 		drawBinaryArray(dc, 6, 0, time.sec, binaryLocation.method(:circularLocation));
 		drawBinaryArray(dc, 6, 1, time.min, binaryLocation.method(:circularLocation));
 		drawBinaryArray(dc, 6, 2, time.hour, binaryLocation.method(:circularLocation));
