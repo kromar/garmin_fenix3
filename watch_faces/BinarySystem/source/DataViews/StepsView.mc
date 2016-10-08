@@ -48,7 +48,7 @@ class StepsView extends DataView
         {
         	dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
         }
-        System.println("steps percentage: " + stepGoalPercentage.toString());
+        //System.println("steps percentage: " + stepGoalPercentage.toString());
         
         /////////////
         /// STEPS ///
