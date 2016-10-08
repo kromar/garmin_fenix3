@@ -19,12 +19,12 @@ class TimeView extends DataView
 	    
 		var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
         dc.setColor(fg_color, bg_transp);
-        dc.drawText(94, 90, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(dc.getWidth()/2.0 + 20.0, 20, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_RIGHT);
         //===============================
         //!draw date
         //===============================
         var dateStr = Lang.format("$1$ $2$", [time.day_of_week, time.day]);
         dc.setColor(dot_color, bg_transp);
-        dc.drawText(94, 120, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(dc.getWidth()/2.0 + 20.0, 50, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_RIGHT);
 	}
 }

@@ -57,7 +57,7 @@ class BatteryView extends DataView
         //===============================
         //!battery bar
         //===============================
-        var batteryBarWidth = width/2-fontHeight;
+        var batteryBarWidth = width/2-Gfx.FONT_TINY;
         var batteryBar = batteryBarWidth / 100.0f * battery;
         var borderOffset_Battery = 6;
 
@@ -134,12 +134,12 @@ class BatteryView extends DataView
            	var dot_color = App.getApp().getProperty("ForegroundColor");
         	var bg_transp = Gfx.COLOR_TRANSPARENT;
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(92, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText(dc.getWidth() / 2.0 + 60.0, 27, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
     }
     
     function drawItem(dc)
     {
-    	drawBatteryBar(dc);
+    	//drawBatteryBar(dc);
     	drawBatteryPercentage(dc);
     }
 }
