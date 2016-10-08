@@ -1,0 +1,53 @@
+using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
+using Toybox.ActivityMonitor as ActMon;
+using Toybox.Application as App;
+
+class StepsView
+{
+	function drawSteps(dc)
+	{
+	   	var dot_color = App.getApp().getProperty("ForegroundColor");
+        var bg_transp = Gfx.COLOR_TRANSPARENT;
+        var fg_color = Gfx.COLOR_WHITE;
+        
+	    var fontHeight = 12;
+	    var width = dc.getWidth();
+        var height = dc.getHeight();
+	
+		var activityInfo = ActMon.getInfo();
+		var stepGoal = activityInfo.stepGoal;
+		var steps = activityInfo.steps;
+        var distance = activityInfo.distance;
+        var calories = activityInfo.calories;
+		
+        //===============================
+        //!steps
+        //===============================
+        var stepsStr = steps.toString();
+        dc.setColor(dot_color, bg_transp);
+        dc.drawText(96, 178, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
+		
+		//draw step goal bar
+        var stepBarWidth = dc.getWidth()/2-fontHeight;
+        var stepGoalPercentage = stepBarWidth.toFloat()/stepGoal*steps;
+
+        var borderOffset_Goal = 30;
+
+        dc.setColor(fg_color, bg_transp);
+        dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
+
+        dc.setColor(dot_color, bg_transp);
+        dc.fillRectangle(borderOffset_Goal, height-45, 1, 5);
+
+        if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0) 
+        {
+            dc.drawLine(borderOffset_Goal, height-40, borderOffset_Goal + stepGoalPercentage, height-40);
+        }
+        else 
+        {
+        	dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
+        }
+        System.println("steps percentage: " + stepGoalPercentage.toString());
+	}
+}

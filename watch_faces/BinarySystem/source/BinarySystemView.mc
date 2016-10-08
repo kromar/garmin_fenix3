@@ -23,6 +23,7 @@ class BinarySystemView extends Ui.WatchFace {
 
 	var binaryLocation = new BinaryLocation();
 	var batteryView = new BatteryView();
+	var stepsView = new StepsView();
 	
     function initialize() {
         WatchFace.initialize();
@@ -287,34 +288,8 @@ class BinarySystemView extends Ui.WatchFace {
 
 
             //System.println(distanceKM);
+            stepsView.drawSteps(dc);
 
-
-            //===============================
-            //!steps
-            //===============================
-            var stepsStr = steps.toString();
-            dc.setColor(dot_color, bg_transp);
-            dc.drawText(96, 178, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
-
-            //draw step goal bar
-            var stepBarWidth = width/2-fontHeight;
-            var stepGoalPercentage = stepBarWidth.toFloat()/stepGoal*steps;
-
-            var borderOffset_Goal = 30;
-
-            dc.setColor(fg_color, bg_transp);
-            dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
-
-            dc.setColor(dot_color, bg_transp);
-            dc.fillRectangle(borderOffset_Goal, height-45, 1, 5);
-
-            if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0) {
-                dc.drawLine(borderOffset_Goal, height-40, borderOffset_Goal + stepGoalPercentage, height-40);
-            }
-            else {
-                dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
-            }
-            System.println("steps percentage: " + stepGoalPercentage.toString());
         }
 
         //===============================
