@@ -18,7 +18,7 @@ class BinaryLocation
 		var width = dc.getWidth();
 		var height = dc.getHeight();
 		
-		var circleLocation = (item - 3) / 6.0 * Math.PI / 2.5;
+		var circleLocation = (item - 2.5) / 6.0 * Math.PI / 2.5;
 		
 		var location = new [2];
 
