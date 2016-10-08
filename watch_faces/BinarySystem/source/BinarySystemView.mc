@@ -22,8 +22,6 @@ class BinarySystemView extends Ui.WatchFace {
 
     function initialize() {
         WatchFace.initialize();
-        //BAT_graph = new LineGraph( 20, 1, Gfx.COLOR_RED );
-        //string_BAT = "--%";
     }
 
     //! Load your resources here
@@ -37,7 +35,13 @@ class BinarySystemView extends Ui.WatchFace {
     function onShow() {
     }
 
-	function drawBinaryArray(dc, rows, column, count)
+	function linearLocation(dc, item)
+	{
+		var height = dc.getHeight();
+		return height / 2 + 15 - item * 20;
+	}
+
+	function drawBinaryArray(dc, rows, column, count, locationCallback)
 	{
 		var binaryRadius = App.getApp().getProperty("BinaryRadius");
 		var color_rgb = App.getApp().getProperty("ForegroundColor");
@@ -51,15 +55,17 @@ class BinarySystemView extends Ui.WatchFace {
 		{
 			var value = 1 << iL;
 
+			var yLocation = locationCallback.invoke(dc, iL);
+
 			dc.setColor(color_fg, color_bg);
-            dc.fillCircle(width / 2+ column * 20, height / 2 + 15 - iL * 20, binaryRadius);
+            dc.fillCircle(width / 2+ column * 20, yLocation, binaryRadius);
 			dc.setColor(color_bg, color_bg);
-            dc.fillCircle(width / 2+ column * 20, height / 2 + 15 - iL * 20, binaryRadius - 1);
+            dc.fillCircle(width / 2+ column * 20, yLocation, binaryRadius - 1);
 			
 			if (count & value == value)
 			{
 				dc.setColor(color_rgb, color_bg);
-    	        dc.fillCircle(width / 2 + column * 20, height / 2 + 15 - iL * 20, binaryRadius - 2);
+    	        dc.fillCircle(width / 2 + column * 20, yLocation, binaryRadius - 2);
 			
 			}
 		}
@@ -453,9 +459,9 @@ class BinarySystemView extends Ui.WatchFace {
         //!binary clock hours
         //===============================
         //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
-		drawBinaryArray(dc, 6, 0, seconds);
-		drawBinaryArray(dc, 6, 1, minutes);
-		drawBinaryArray(dc, 6, 2, hours);
+		drawBinaryArray(dc, 6, 0, seconds, method(:linearLocation));
+		drawBinaryArray(dc, 6, 1, minutes, method(:linearLocation));
+		drawBinaryArray(dc, 6, 2, hours, method(:linearLocation));
     }
 
 
