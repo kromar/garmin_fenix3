@@ -18,18 +18,31 @@ class BinaryLocation
 		var width = dc.getWidth();
 		var height = dc.getHeight();
 		
-		var circleLocation = (item - 3) / 6.0 * Math.PI / 2.0;
+		var circleLocation = (item - 3) / 6.0 * Math.PI / 2.5;
 		
 		var location = new [2];
+
 		if (column == 0)
 		{
-			location[0] = width / 2.0 - width / 2.0 * Math.cos(circleLocation);
+			location[0] = width / 2.0 + width / 2.0 * Math.sin(circleLocation);
+			location[1] = height / 2.0 + height / 2.0 * Math.cos(circleLocation);
 		}
-		else
+		if (column == 1)
+		{
+			location[0] = width / 2.0 - width / 2.0 * Math.cos(circleLocation);
+			location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
+		}
+		else if (column == 2)
 		{
 			location[0] = width / 2.0 + width / 2.0 * Math.cos(circleLocation);		
+			location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
 		}
-		location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
+		else if (column == 4)
+		{
+			location[0] = width / 2.0 + width / 2.0 * Math.sin(circleLocation);
+			location[1] = height / 2.0 + height / 2.0 * Math.cos(circleLocation);
+		}
+		
 		//System.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);
 		return location;
 	}

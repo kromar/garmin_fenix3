@@ -3,6 +3,8 @@ using Toybox.Graphics as Gfx;
 
 class BinaryView
 {
+	var binaryLocation = new BinaryLocation();
+
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
 	{
 		var binaryRadius = App.getApp().getProperty("BinaryRadius");
@@ -34,6 +36,13 @@ class BinaryView
 			
 			}
 		}
+	}
+	
+	function drawBinaryLayout(dc, seconds, minutes, hours)
+	{
+		drawBinaryArray(dc, 6, 0, seconds, binaryLocation.method(:circularLocation));
+		drawBinaryArray(dc, 6, 1, minutes, binaryLocation.method(:circularLocation));
+		drawBinaryArray(dc, 6, 2, hours, binaryLocation.method(:circularLocation));
 	}
     
  }

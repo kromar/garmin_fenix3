@@ -15,7 +15,6 @@ using Toybox.Math as Math;
 
 class BinarySystemView extends Ui.WatchFace {
 
-	var binaryLocation = new BinaryLocation();
 	var binaryView = new BinaryView();
 	var batteryView = new BatteryView();
 	var stepsView = new StepsView();
@@ -167,9 +166,7 @@ class BinarySystemView extends Ui.WatchFace {
         //!binary clock hours
         //===============================
         //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
-		binaryView.drawBinaryArray(dc, 6, 0, seconds, binaryLocation.method(:linearLocation));
-		binaryView.drawBinaryArray(dc, 6, 0, minutes, binaryLocation.method(:circularLocation));
-		binaryView.drawBinaryArray(dc, 6, 1, hours, binaryLocation.method(:circularLocation));
+		binaryView.drawBinaryLayout(dc, seconds, minutes, hours);
     }
 
 
