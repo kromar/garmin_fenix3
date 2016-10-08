@@ -2,7 +2,7 @@ using Toybox.System as System;
 using Toybox.Application as App;
 using Toybox.Graphics as Gfx;
 
-class BatteryView 
+class BatteryView extends DataView
 {
 	var batHist = {};
 	var batHistCount = 0;
@@ -103,7 +103,7 @@ class BatteryView
             }
         }
     }
-    function drawBatteryPercentage(dc, battery)
+    function drawBatteryPercentage(dc)
     {
         var remainingBatteryEstimateMode = App.getApp().getProperty("RemainingBatteryEstimate");
         var sysStats = System.getSystemStats();
@@ -135,5 +135,11 @@ class BatteryView
         	var bg_transp = Gfx.COLOR_TRANSPARENT;
             dc.setColor(dot_color, bg_transp);
             dc.drawText(92, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+    }
+    
+    function drawItem(dc)
+    {
+    	drawBatteryBar(dc);
+    	drawBatteryPercentage(dc);
     }
 }

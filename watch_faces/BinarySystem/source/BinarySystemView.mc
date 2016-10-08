@@ -61,8 +61,7 @@ class BinarySystemView extends Ui.WatchFace {
         var time = Gregorian.info(now, Time.FORMAT_LONG);
         timeView.drawTime(dc, time);
 
-		batteryView.drawBatteryBar(dc);
-		batteryView.drawBatteryPercentage(dc);
+
         //===============================
         //!binary clock hours
         //===============================
@@ -73,6 +72,12 @@ class BinarySystemView extends Ui.WatchFace {
         //!distance
         //===============================
 		stepsView.drawSteps(dc);
+
+		//===============================
+		//!Battery
+		//===============================
+		batteryView.drawItem(dc);
+
         
         //===============================
         //!calories
