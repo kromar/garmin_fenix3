@@ -6,6 +6,7 @@ using Toybox.Time as Time;
 using Toybox.Time.Gregorian as Gregorian;
 using Toybox.Lang as Lang;
 using Toybox.Application as App;
+using Toybox.Math as Math;
 
 
 var batHist = {};
@@ -35,10 +36,25 @@ class BinarySystemView extends Ui.WatchFace {
     function onShow() {
     }
 
-	function linearLocation(dc, item)
+	function linearLocation(dc, column, item)
 	{
+		var width = dc.getWidth();
 		var height = dc.getHeight();
-		return height / 2 + 15 - item * 20;
+		var location = new [2];
+		location[0] = width / 2+ column * 20;
+		location[1] = height / 2 + 15 - item * 20;
+		return location;
+	}
+	
+	function leftBorderLocation(dc, column, item)
+	{
+		var width = dc.getWidth();
+		var height = dc.getHeight();
+		//return height / 2 + height / 2 * Math.sin((item - 3) / 6);
+		var location = new [2];
+		location[0] = width / 2+ column * 20;
+		location[1] = height / 2 + 15 - item * 20;
+		return location;
 	}
 
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
@@ -55,12 +71,14 @@ class BinarySystemView extends Ui.WatchFace {
 		{
 			var value = 1 << iL;
 
-			var yLocation = locationCallback.invoke(dc, iL);
+			var location = locationCallback.invoke(dc, column, iL);
+			var xLocation = location[0];
+			var yLocation = location[1];
 
 			dc.setColor(color_fg, color_bg);
-            dc.fillCircle(width / 2+ column * 20, yLocation, binaryRadius);
+            dc.fillCircle(xLocation, yLocation, binaryRadius);
 			dc.setColor(color_bg, color_bg);
-            dc.fillCircle(width / 2+ column * 20, yLocation, binaryRadius - 1);
+            dc.fillCircle(xLocation, yLocation, binaryRadius - 1);
 			
 			if (count & value == value)
 			{
@@ -460,7 +478,7 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
 		drawBinaryArray(dc, 6, 0, seconds, method(:linearLocation));
-		drawBinaryArray(dc, 6, 1, minutes, method(:linearLocation));
+		drawBinaryArray(dc, 6, 1, minutes, method(:leftBorderLocation));
 		drawBinaryArray(dc, 6, 2, hours, method(:linearLocation));
     }
 
