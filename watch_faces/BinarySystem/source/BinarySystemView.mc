@@ -50,12 +50,30 @@ class BinarySystemView extends Ui.WatchFace {
 	{
 		var width = dc.getWidth();
 		var height = dc.getHeight();
-		//return height / 2 + height / 2 * Math.sin((item - 3) / 6);
+		
+		var circleLocation = (item - 3) / 6.0 * Math.PI / 2.0;
+		
 		var location = new [2];
-		location[0] = width / 2+ column * 20;
-		location[1] = height / 2 + 15 - item * 20;
+		location[0] = width / 2.0 - width / 2.0 * Math.cos(circleLocation);
+		location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
+		Sys.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);
 		return location;
 	}
+	
+	function rightBorderLocation(dc, column, item)
+	{
+		var width = dc.getWidth();
+		var height = dc.getHeight();
+		
+		var circleLocation = (item - 3) / 6.0 * Math.PI / 2.0;
+		
+		var location = new [2];
+		location[0] = width / 2.0 + width / 2.0 * Math.cos(circleLocation);
+		location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
+		Sys.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);
+		return location;
+	}
+	
 
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
 	{
@@ -83,7 +101,7 @@ class BinarySystemView extends Ui.WatchFace {
 			if (count & value == value)
 			{
 				dc.setColor(color_rgb, color_bg);
-    	        dc.fillCircle(width / 2 + column * 20, yLocation, binaryRadius - 2);
+    	        dc.fillCircle(xLocation, yLocation, binaryRadius - 2);
 			
 			}
 		}
@@ -479,7 +497,7 @@ class BinarySystemView extends Ui.WatchFace {
         //drawBinaryLayout(dc, height, width, hours, minutes, seconds, geekMode);
 		drawBinaryArray(dc, 6, 0, seconds, method(:linearLocation));
 		drawBinaryArray(dc, 6, 1, minutes, method(:leftBorderLocation));
-		drawBinaryArray(dc, 6, 2, hours, method(:linearLocation));
+		drawBinaryArray(dc, 6, 2, hours, method(:rightBorderLocation));
     }
 
 
