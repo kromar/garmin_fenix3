@@ -49,5 +49,16 @@ class StepsView
         	dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
         }
         System.println("steps percentage: " + stepGoalPercentage.toString());
+        
+        /////////////
+        /// STEPS ///
+            //dc.setColor(dot_color, bg_transp);
+            //if (distance < 100000) {
+            //    var distanceStr = (distance*0.01).toLong() + "m";
+            //    dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            //} else {
+            //    var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
+            //    dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            //}
 	}
 }
