@@ -19,6 +19,7 @@ class BinarySystemView extends Ui.WatchFace {
 	var batteryView = new BatteryView();
 	var stepsView = new StepsView();
 	var notificationView = new NotificationView();
+	var timeView = new TimeView();
 	
     function initialize() {
         WatchFace.initialize();
@@ -89,25 +90,8 @@ class BinarySystemView extends Ui.WatchFace {
         //===============================
         //!draw time
         //===============================
-        if (geekMode) {
-            //===============================
-            //!draw date
-            //===============================
-            var dateStr = Lang.format("$1$ $2$", [time.day_of_week, time.day]);
-            dc.setColor(dot_color, bg_transp);
-            dc.drawText(10, height/2-fontHeight, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_LEFT);
-        }
-        else {
-            var timeStr = Lang.format("$1$:$2$", [hours, minutes.format("%02d")]);
-            dc.setColor(fg_color, bg_transp);
-            dc.drawText(94, 90, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            //===============================
-            //!draw date
-            //===============================
-            var dateStr = Lang.format("$1$ $2$", [time.day_of_week, time.day]);
-            dc.setColor(dot_color, bg_transp);
-            dc.drawText(94, 120, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_RIGHT);
-        }
+        timeView.drawTime(dc, time);
+
 
 
 		batteryView.drawBatteryBar(dc);
