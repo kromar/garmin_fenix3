@@ -9,12 +9,6 @@ using Toybox.Application as App;
 using Toybox.Math as Math;
 
 
-var batHist = {};
-var batHistCount = 0;
-var timeInterval = 0;
-var remainingBattery;
-
-
 //!sunrise/sunset
 //https://github.com/anderssonfilip/SunriseSunset
 
@@ -81,9 +75,7 @@ class BinarySystemView extends Ui.WatchFace {
         // Get the current time and format it correctly
 
         var geekMode = App.getApp().getProperty("GeekMode");
-        var remainingBatteryEstimateMode = App.getApp().getProperty("RemainingBatteryEstimate");
         Sys.println("geek mode: " + geekMode);
-        Sys.println("remaining mode: " + remainingBatteryEstimateMode);
 
         var sysStats = Sys.getSystemStats();
         var battery = sysStats.battery;
@@ -185,90 +177,17 @@ class BinarySystemView extends Ui.WatchFace {
         else {
 			
 			batteryView.drawBatteryBar(dc);
+			batteryView.drawBatteryPercentage(dc);
 
-            //===============================
-            //!battery percentage
-            //===============================
-            var batteryPercentageStr = battery.format("%d");
-            batteryView.batteryPrediction(seconds, battery, 24);
 
-            if (remainingBatteryEstimateMode) {
-                if (remainingBattery) {
-                    Sys.println("remaining: " + remainingBattery);
-                    if (remainingBattery < 1.0) {
-                        //convert to hours remaining
-                        var remainingBatteryHours = remainingBattery * 60;
-                        batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
-                    } else {
-                        //show remaining in days
-                        batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
-                    }
-                } else {
-                    batteryPercentageStr = (batteryPercentageStr + "%");
-                }
-            } else {
-                batteryPercentageStr = (batteryPercentageStr + "%");
-            }
-            dc.setColor(dot_color, bg_transp);
-            dc.drawText(92, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
          }
-
-
-        //===============================
-        //!notifications
-        //===============================
-        notificationView.drawNotifications(dc);
-        //Toybox::System::DeviceSettings
-        //notificationCount
-        if (geekMode) {
-            if (notificationCount > 0) {
-                //draw notification box
-                var w = width/2-20;
-                var h = 10;
-                dc.setColor(fg_color, bg_transp);
-                dc.drawRoundedRectangle(w, h, 40, 18, 4);
-                dc.drawRectangle(w+2, h+4, 10, 1, 1);
-                dc.drawRectangle(w+2, h+8, 16, 1, 1);
-                dc.drawRectangle(w+2, h+12, 10, 1, 1);
-
-                //draw notification count
-                var notificationCountStr = notificationCount.toString();
-                dc.setColor(dot_color, bg_transp);
-                dc.drawText(w+36, h-3, Gfx.FONT_TINY, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            }
-        }
-        else{
-
-        }
 
 
         //===============================
         //!distance
         //===============================
-        //Toybox::ActivityMonitor::Info
-        //distance
-        if (geekMode) {
-
-
-            dc.setColor(dot_color, bg_transp);
-            if (distance < 100000) {
-                var distanceStr = (distance*0.01).toLong() + "m";
-                dc.drawText(width-10, height/2-fontHeight, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            } else {
-                var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
-                dc.drawText(width-10, height/2-fontHeight, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            }
-        }
-        else {
-
-
-
-
-            //System.println(distanceKM);
-            stepsView.drawSteps(dc);
-
-        }
-
+		stepsView.drawSteps(dc);
+        
         //===============================
         //!calories
         //===============================

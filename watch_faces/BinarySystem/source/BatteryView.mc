@@ -4,6 +4,12 @@ using Toybox.Graphics as Gfx;
 
 class BatteryView 
 {
+	var batHist = {};
+	var batHistCount = 0;
+
+	var timeInterval = 0;
+	var remainingBattery;
+	
     function drawBatteryBars(dc, battery) 
 	{
         var width = dc.getWidth();
@@ -97,5 +103,37 @@ class BatteryView
             }
         }
     }
-    
+    function drawBatteryPercentage(dc, battery)
+    {
+        var remainingBatteryEstimateMode = App.getApp().getProperty("RemainingBatteryEstimate");
+        var sysStats = System.getSystemStats();
+        var battery = sysStats.battery;
+            //===============================
+            //!battery percentage
+            //===============================
+            var batteryPercentageStr = battery.format("%d");
+            //batteryPrediction(seconds, battery, 24);
+
+            if (remainingBatteryEstimateMode) {
+                if (remainingBattery) {
+                    Sys.println("remaining: " + remainingBattery);
+                    if (remainingBattery < 1.0) {
+                        //convert to hours remaining
+                        var remainingBatteryHours = remainingBattery * 60;
+                        batteryPercentageStr = (remainingBatteryHours.format("%.f") + "h - " + batteryPercentageStr + "%");
+                    } else {
+                        //show remaining in days
+                        batteryPercentageStr = (remainingBattery.format("%.f") + "d - " + batteryPercentageStr + "%");
+                    }
+                } else {
+                    batteryPercentageStr = (batteryPercentageStr + "%");
+                }
+            } else {
+                batteryPercentageStr = (batteryPercentageStr + "%");
+            }
+           	var dot_color = App.getApp().getProperty("ForegroundColor");
+        	var bg_transp = Gfx.COLOR_TRANSPARENT;
+            dc.setColor(dot_color, bg_transp);
+            dc.drawText(92, 62, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+    }
 }
