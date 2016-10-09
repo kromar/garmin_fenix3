@@ -14,9 +14,9 @@ class BluetoothView extends DataView
 		var devSettings = Sys.getDeviceSettings();
 		var phoneConnected = devSettings.phoneConnected;
 		
-		//if (phoneConnected)
+		if (phoneConnected)
 		{
-			dc.drawBitmap(10, 10, image);
+			dc.drawBitmap(50, 30, image);
 		}
 	
 	}
