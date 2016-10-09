@@ -35,14 +35,14 @@ class StepsView extends DataView
         var borderOffset_Goal = 30;
 
         dc.setColor(fg_color, bg_transp);
-        dc.drawLine(borderOffset_Goal, height-40, stepBarWidth, height-40);
+        dc.drawLine((width - stepBarWidth) / 2, height-40, (width + stepBarWidth) / 2, height-40);
 
         dc.setColor(dot_color, bg_transp);
-        dc.fillRectangle(borderOffset_Goal, height-45, 1, 5);
+        dc.fillRectangle(width / 2, height-45, 1, 5);
 
         if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0) 
         {
-            dc.drawLine(borderOffset_Goal, height-40, borderOffset_Goal + stepGoalPercentage, height-40);
+            dc.drawLine((width - stepBarWidth) / 2, height-40, (width - stepBarWidth + stepGoalPercentage) / 2, height-40);
         }
         else 
         {
