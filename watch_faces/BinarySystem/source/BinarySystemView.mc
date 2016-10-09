@@ -20,8 +20,9 @@ class BinarySystemView extends Ui.WatchFace {
 	var stepsView = new StepsView();
 	var notificationView = new NotificationView();
 	var timeView = new TimeView();
+	var bluetoothView = new BluetoothView();
 	
-	var dataViews = [binaryView, batteryView, stepsView, notificationView, timeView];
+	var dataViews = [binaryView, batteryView, stepsView, notificationView, timeView, bluetoothView];
 	
     function initialize() {
         WatchFace.initialize();
