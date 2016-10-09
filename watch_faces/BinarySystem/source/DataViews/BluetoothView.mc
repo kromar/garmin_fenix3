@@ -1,7 +1,7 @@
 using Toybox.System as Sys;
 using Toybox.WatchUi as Ui;
 
-class BluetoothView extends DataView
+class BluetoothView extends Ui.Drawable
 {
 	var image = null;
 	function initialize()
@@ -9,7 +9,7 @@ class BluetoothView extends DataView
 		image = Ui.loadResource( Rez.Drawables.bluetooth_icon );
 	}
 
-	function drawItem(dc)
+	function draw(dc)
 	{
 		var devSettings = Sys.getDeviceSettings();
 		var phoneConnected = devSettings.phoneConnected;

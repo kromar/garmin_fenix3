@@ -2,8 +2,9 @@ using Toybox.Application as App;
 using Toybox.Graphics as Gfx;
 using Toybox.Time.Gregorian as Gregorian;
 using Toybox.Time as Time;
+using Toybox.WatchUi as Ui;
 
-class BinaryView extends DataView
+class BinaryView extends Ui.Drawable
 {
 	var binaryLocation = new BinaryLocation();
 
@@ -40,7 +41,7 @@ class BinaryView extends DataView
 		}
 	}
 	
-	function drawItem(dc)
+	function draw(dc)
 	{
 		var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);

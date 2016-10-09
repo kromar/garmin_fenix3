@@ -3,10 +3,11 @@ using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
 using Toybox.Time.Gregorian as Gregorian;
 using Toybox.Time as Time;
+using Toybox.WatchUi as Ui;
 
-class TimeView extends DataView
+class TimeView extends Ui.Drawable
 {
-	function drawItem(dc)
+	function draw(dc)
 	{
 		var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);

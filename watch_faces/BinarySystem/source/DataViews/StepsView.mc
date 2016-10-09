@@ -2,10 +2,11 @@ using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.ActivityMonitor as ActMon;
 using Toybox.Application as App;
+using Toybox.WatchUi as Ui;
 
-class StepsView extends DataView
+class StepsView extends Ui.Drawable
 {
-	function drawItem(dc)
+	function draw(dc)
 	{
 	   	var dot_color = App.getApp().getProperty("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;

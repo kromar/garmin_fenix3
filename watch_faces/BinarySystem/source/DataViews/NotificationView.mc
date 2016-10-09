@@ -1,10 +1,11 @@
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.Application as App;
+using Toybox.WatchUi as Ui;
 
-class NotificationView extends DataView
+class NotificationView extends Ui.Drawable
 {
-	function drawItem(dc)
+	function draw(dc)
 	{
 		var dot_color = App.getApp().getProperty("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;

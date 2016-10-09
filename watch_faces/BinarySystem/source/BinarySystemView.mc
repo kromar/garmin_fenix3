@@ -57,7 +57,7 @@ class BinarySystemView extends Ui.WatchFace {
 
 		for (var i = 0; i < dataViews.size(); i++)
 		{
-			dataViews[i].drawItem(dc);
+			dataViews[i].draw(dc);
 		}
     }
 

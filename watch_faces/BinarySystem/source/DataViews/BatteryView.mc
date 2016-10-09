@@ -1,8 +1,9 @@
 using Toybox.System as System;
 using Toybox.Application as App;
 using Toybox.Graphics as Gfx;
+using Toybox.WatchUi as Ui;
 
-class BatteryView extends DataView
+class BatteryView extends Ui.Drawable
 {
 	var batHist = {};
 	var batHistCount = 0;
@@ -137,7 +138,7 @@ class BatteryView extends DataView
             dc.drawText(dc.getWidth() / 2.0 + 60.0, 27, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
     }
     
-    function drawItem(dc)
+    function draw(dc)
     {
     	//drawBatteryBar(dc);
     	drawBatteryPercentage(dc);
