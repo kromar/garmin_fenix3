@@ -26,7 +26,7 @@ class StepsView extends DataView
         //===============================
         var stepsStr = steps.toString();
         dc.setColor(dot_color, bg_transp);
-        dc.drawText(dc.getWidth() / 2.0, 178, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(dc.getWidth() / 2.0, height-35, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_CENTER);
 		
 		//draw step goal bar
         var stepBarWidth = dc.getWidth()/2-fontHeight;
