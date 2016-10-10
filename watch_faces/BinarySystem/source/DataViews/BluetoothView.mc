@@ -4,8 +4,12 @@ using Toybox.WatchUi as Ui;
 class BluetoothView extends Ui.Drawable
 {
 	var image = null;
-	function initialize()
+	function initialize(params)
 	{
+		Drawable.initialize(params);
+		locX = params.get(:x);
+		locY = params.get(:y);
+		
 		image = Ui.loadResource( Rez.Drawables.bluetooth_icon );
 	}
 
@@ -16,7 +20,7 @@ class BluetoothView extends Ui.Drawable
 		
 		if (phoneConnected)
 		{
-			dc.drawBitmap(50, 30, image);
+			dc.drawBitmap(locX, locY, image);
 		}
 	
 	}

@@ -18,6 +18,9 @@
 			<param name="x">109</param>
 			<param name="y">180</param>
 		 </drawable>
-
+		 <drawable id="bluetoothView" class="BluetoothView">
+			<param name="x">40</param>
+			<param name="y">20</param>
+		 </drawable>
 	</layout>
 </resources>
