@@ -15,11 +15,18 @@ class BinaryLocation
 	var borderDistance = 0;
 	
 
-	function linearLocation(dc, column, item)
+	function verticalLocation(dc, column, item)
 	{
 		var location = new [2];
 		location[0] = locX + column * 20;
-		location[1] = locY + item * 20;
+		location[1] = locY + (6 - item) * 20;
+		return location;
+	}
+	function horizontalLocation(dc, column, item)
+	{
+		var location = new [2];
+		location[0] = locX + item * 20;
+		location[1] = locY + column * 20;
 		return location;
 	}
 	

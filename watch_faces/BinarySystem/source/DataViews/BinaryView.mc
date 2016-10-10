@@ -17,7 +17,7 @@ class BinaryView extends Ui.Drawable
 				
 		binaryLocation = new BinaryLocation();
 		binaryLocation.locX = locX;
-		binaryLocation.locX = locY;
+		binaryLocation.locY = locY;
 		binaryLocation.borderDistance = params.get(:borderDistance);
 		
 		var type = params.get(:type);
@@ -30,9 +30,13 @@ class BinaryView extends Ui.Drawable
 		else if (type.equals(Vertical))
 		{
 			Sys.println("Using Vertical locations");
-			typeMethod = binaryLocation.method(:linearLocation);
+			typeMethod = binaryLocation.method(:verticalLocation);
 		}
-			
+			else if (type.equals(Horizontal))
+		{
+			Sys.println("Using Vertical locations");
+			typeMethod = binaryLocation.method(:horizontalLocation);
+		}	
 		
 	}
 	var binaryLocation;

@@ -9,8 +9,8 @@
 			<param name="y">10</param>
 		 </drawable>
 		 <drawable id="binaryView" class="BinaryView">
-			<param name="x">0</param>
-			<param name="y">0</param>
+			<param name="x">60</param>
+			<param name="y">80</param>
 			<param name="borderDistance">15</param>
 			<param name="type">Circular</param>
 		 </drawable>
