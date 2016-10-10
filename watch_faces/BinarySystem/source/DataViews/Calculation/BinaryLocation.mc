@@ -47,16 +47,16 @@ class BinaryLocation
 		if (column == 1)
 		{
 			location[0] = width / 2.0 - (width - borderDistance) / 2.0 * Math.cos(circleLocation);
-			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.sin(circleLocation);
+			location[1] = height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation);
 		}
 		else if (column == 2)
 		{
 			location[0] = width / 2.0 + (width - borderDistance) / 2.0 * Math.cos(circleLocation);		
-			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.sin(circleLocation);
+			location[1] = height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation);
 		}
 		else if (column == 4)
 		{
-			location[0] = width / 2.0 + (width - borderDistance) / 2.0 * Math.sin(circleLocation);
+			location[0] = width / 2.0 - (width - borderDistance) / 2.0 * Math.sin(circleLocation);
 			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation);
 		}
 		
