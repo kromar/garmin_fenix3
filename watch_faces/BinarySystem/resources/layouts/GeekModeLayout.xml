@@ -1,31 +1,31 @@
 <resources>
 	<layout id="GeekModeLayout">
 		<drawable id="batteryView" class="BatteryView">
-			<param name="x">155</param>
-			<param name="y">20</param>
+			<param name="x">30</param>
+			<param name="y">80</param>
 		 </drawable>
 		 <drawable id="timeView" class="TimeView">
+		 	<param name="showTime">false</param>
 			<param name="x">109</param>
-			<param name="y">10</param>
+			<param name="y">20</param>
 		 </drawable>
 		 <drawable id="binaryView" class="BinaryView">
-			<param name="x">60</param>
-			<param name="y">80</param>
+			<param name="x">90</param>
+			<param name="y">40</param>
 			<param name="borderDistance">15</param>
 			<param name="type">Vertical</param>
 		 </drawable>
 		 <drawable id="stepsView" class="StepsView">
 			<param name="x">109</param>
-			<param name="y">180</param>
+			<param name="y">200</param>
 		 </drawable>
 		 <drawable id="bluetoothView" class="BluetoothView">
 			<param name="x">40</param>
 			<param name="y">20</param>
 		 </drawable>
 		 <drawable id="notificationView" class="NotificationView">
-			<param name="x">83</param>
-			<param name="y">70</param>
+			<param name="x">15</param>
+			<param name="y">110</param>
 		 </drawable>
-		 
 	</layout>
 </resources>
