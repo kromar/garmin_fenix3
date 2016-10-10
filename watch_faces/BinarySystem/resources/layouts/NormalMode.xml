@@ -14,7 +14,10 @@
 			<param name="borderDistance">15</param>
 			<param name="type">Circular</param>
 		 </drawable>
-
+		 <drawable id="stepsView" class="StepsView">
+			<param name="x">109</param>
+			<param name="y">180</param>
+		 </drawable>
 
 	</layout>
 </resources>
