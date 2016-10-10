@@ -145,7 +145,7 @@ class BatteryView extends Ui.Drawable
            	var dot_color = App.getApp().getProperty("ForegroundColor");
         	var bg_transp = Gfx.COLOR_TRANSPARENT;
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(locX, locY, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(locX, locY, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
     
     function draw(dc)
