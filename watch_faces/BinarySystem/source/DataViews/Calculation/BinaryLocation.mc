@@ -12,16 +12,14 @@ class BinaryLocation
 {
 	var locX = 0;
 	var locY = 0;
-	var borderLocation = 0;
+	var borderDistance = 0;
 	
 
 	function linearLocation(dc, column, item)
 	{
-		var width = dc.getWidth();
-		var height = dc.getHeight();
 		var location = new [2];
-		location[0] = width / 2+ column * 20;
-		location[1] = height / 2 + 15 - item * 20;
+		location[0] = locX + column * 20;
+		location[1] = locY + item * 20;
 		return location;
 	}
 	
@@ -36,27 +34,26 @@ class BinaryLocation
 
 		if (column == 0)
 		{
-			location[0] = width / 2.0 + width / 2.0 * Math.sin(circleLocation);
-			location[1] = height / 2.0 + height / 2.0 * Math.cos(circleLocation);
+			location[0] = width / 2.0 + (width - borderDistance) / 2.0 * Math.sin(circleLocation);
+			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation);
 		}
 		if (column == 1)
 		{
-			location[0] = width / 2.0 - width / 2.0 * Math.cos(circleLocation);
-			location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
+			location[0] = width / 2.0 - (width - borderDistance) / 2.0 * Math.cos(circleLocation);
+			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.sin(circleLocation);
 		}
 		else if (column == 2)
 		{
-			location[0] = width / 2.0 + width / 2.0 * Math.cos(circleLocation);		
-			location[1] = height / 2.0 + height / 2.0 * Math.sin(circleLocation);
+			location[0] = width / 2.0 + (width - borderDistance) / 2.0 * Math.cos(circleLocation);		
+			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.sin(circleLocation);
 		}
 		else if (column == 4)
 		{
-			location[0] = width / 2.0 + width / 2.0 * Math.sin(circleLocation);
-			location[1] = height / 2.0 + height / 2.0 * Math.cos(circleLocation);
+			location[0] = width / 2.0 + (width - borderDistance) / 2.0 * Math.sin(circleLocation);
+			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation);
 		}
 		
 		//System.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);
 		return location;
 	}
-	
 }

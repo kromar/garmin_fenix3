@@ -18,7 +18,7 @@ class BinaryView extends Ui.Drawable
 		binaryLocation = new BinaryLocation();
 		binaryLocation.locX = locX;
 		binaryLocation.locX = locY;
-		binaryLocation.borderLocation = params.get(:borderLocation);
+		binaryLocation.borderDistance = params.get(:borderDistance);
 		
 		var type = params.get(:type);
 		Sys.println(type);
