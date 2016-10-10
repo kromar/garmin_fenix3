@@ -1,8 +1,20 @@
 using Toybox.Math as Math;
 using Toybox.System as System;
 
+enum
+{
+	Circular,
+	Vertical,
+	Horizontal
+}
+
 class BinaryLocation
 {
+	var locX = 0;
+	var locY = 0;
+	var borderLocation = 0;
+	
+
 	function linearLocation(dc, column, item)
 	{
 		var width = dc.getWidth();

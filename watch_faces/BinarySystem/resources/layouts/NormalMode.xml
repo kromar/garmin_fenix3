@@ -4,9 +4,17 @@
 			<param name="x">155</param>
 			<param name="y">20</param>
 		 </drawable>
-		 	<drawable id="timeView" class="TimeView">
+		 <drawable id="timeView" class="TimeView">
 			<param name="x">109</param>
 			<param name="y">10</param>
 		 </drawable>
+		 <drawable id="binaryView" class="BinaryView">
+			<param name="x">0</param>
+			<param name="y">0</param>
+			<param name="borderDistance">9</param>
+			<param name="type">Circular</param>
+		 </drawable>
+
+
 	</layout>
 </resources>

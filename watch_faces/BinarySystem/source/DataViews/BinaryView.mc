@@ -3,10 +3,39 @@ using Toybox.Graphics as Gfx;
 using Toybox.Time.Gregorian as Gregorian;
 using Toybox.Time as Time;
 using Toybox.WatchUi as Ui;
+using Toybox.System as Sys;
 
 class BinaryView extends Ui.Drawable
 {
-	var binaryLocation = new BinaryLocation();
+	var typeMethod = null;
+	function initialize(params)
+	{
+		Drawable.initialize(params);
+		
+		locX = params.get(:x);
+		locY = params.get(:y);
+				
+		binaryLocation = new BinaryLocation();
+		binaryLocation.locX = locX;
+		binaryLocation.locX = locY;
+		binaryLocation.borderLocation = params.get(:borderLocation);
+		
+		var type = params.get(:type);
+		Sys.println(type);
+		if (type.equals(Circular))
+		{
+			Sys.println("Using Circular location");
+			typeMethod = binaryLocation.method(:circularLocation);
+		}
+		else if (type.equals(Vertical))
+		{
+			Sys.println("Using Vertical locations");
+			typeMethod = binaryLocation.method(:linearLocation);
+		}
+			
+		
+	}
+	var binaryLocation;
 
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
 	{
@@ -46,9 +75,9 @@ class BinaryView extends Ui.Drawable
 		var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 		
-		drawBinaryArray(dc, 6, 0, time.sec, binaryLocation.method(:circularLocation));
-		drawBinaryArray(dc, 6, 1, time.min, binaryLocation.method(:circularLocation));
-		drawBinaryArray(dc, 6, 2, time.hour, binaryLocation.method(:circularLocation));
+		drawBinaryArray(dc, 6, 0, time.sec, typeMethod);
+		drawBinaryArray(dc, 6, 1, time.min, typeMethod);
+		drawBinaryArray(dc, 6, 2, time.hour, typeMethod);
 	}
     
  }
