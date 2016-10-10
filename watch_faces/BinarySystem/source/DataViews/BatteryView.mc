@@ -5,6 +5,16 @@ using Toybox.WatchUi as Ui;
 
 class BatteryView extends Ui.Drawable
 {
+	function initialize(params)
+	{
+		Drawable.initialize(params);
+		
+		var x = params.get(:x);
+        var y = params.get(:y);
+		Ui.Drawable.setLocation(x, y);
+	} 
+
+
 	var batHist = {};
 	var batHistCount = 0;
 
@@ -135,7 +145,7 @@ class BatteryView extends Ui.Drawable
            	var dot_color = App.getApp().getProperty("ForegroundColor");
         	var bg_transp = Gfx.COLOR_TRANSPARENT;
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(dc.getWidth() / 2.0 + 60.0, 27, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText(locX, locY, Gfx.FONT_TINY, batteryPercentageStr, Gfx.TEXT_JUSTIFY_LEFT);
     }
     
     function draw(dc)

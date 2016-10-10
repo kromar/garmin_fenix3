@@ -7,6 +7,15 @@ using Toybox.WatchUi as Ui;
 
 class TimeView extends Ui.Drawable
 {
+	function initialize(params)
+	{
+		Ui.Drawable.initialize(params);
+		
+		var x = params.get(:x);
+        var y = params.get(:y);
+		Ui.Drawable.setLocation(x, y);
+	}
+
 	function draw(dc)
 	{
 		var now = Time.now();
@@ -20,12 +29,12 @@ class TimeView extends Ui.Drawable
 	    
 		var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
         dc.setColor(fg_color, bg_transp);
-        dc.drawText(dc.getWidth()/2.0 + 20.0, 20, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(locX, locY, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
         //===============================
         //!draw date
         //===============================
-        var dateStr = Lang.format("$1$ $2$", [time.day_of_week, time.day]);
+        var dateStr = Lang.format("$1$ $2$ $3$", [time.day_of_week, time.month, time.day]);
         dc.setColor(dot_color, bg_transp);
-        dc.drawText(dc.getWidth()/2.0 + 20.0, 50, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(locX, locY+30, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
 	}
 }
