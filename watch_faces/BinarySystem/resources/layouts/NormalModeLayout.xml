@@ -5,6 +5,7 @@
 			<param name="y">20</param>
 		 </drawable>
 		 <drawable id="timeView" class="TimeView">
+		 	<param name="showTime">true</param>
 			<param name="x">109</param>
 			<param name="y">10</param>
 		 </drawable>
@@ -25,6 +26,10 @@
 		 <drawable id="notificationView" class="NotificationView">
 			<param name="x">83</param>
 			<param name="y">70</param>
+		 </drawable>
+		 <drawable id="elevationView" class="ElevationView">
+		 	<param name="x">109</param>
+		 	<param name="y">90</param>
 		 </drawable>
 		 
 	</layout>
