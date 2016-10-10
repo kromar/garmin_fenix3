@@ -7,12 +7,14 @@ using Toybox.WatchUi as Ui;
 
 class TimeView extends Ui.Drawable
 {
+	var showTime = true;
 	function initialize(params)
 	{
 		Ui.Drawable.initialize(params);
 		
 		var x = params.get(:x);
         var y = params.get(:y);
+        showTime = params.get(:showTime);
 		Ui.Drawable.setLocation(x, y);
 	}
 
@@ -27,14 +29,17 @@ class TimeView extends Ui.Drawable
 	    var dot_color = App.getApp().getProperty("ForegroundColor");
 	    
 	    
-		var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
-        dc.setColor(fg_color, bg_transp);
-        dc.drawText(locX, locY, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+	    if (showTime)
+	    {
+			var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
+        	dc.setColor(fg_color, bg_transp);
+        	dc.drawText(locX, locY, Gfx.FONT_LARGE, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+        }
         //===============================
         //!draw date
         //===============================
         var dateStr = Lang.format("$1$ $2$ $3$", [time.day_of_week, time.month, time.day]);
         dc.setColor(dot_color, bg_transp);
-        dc.drawText(locX, locY+30, Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(locX, locY+ (showTime ? 30 : 0), Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
 	}
 }
