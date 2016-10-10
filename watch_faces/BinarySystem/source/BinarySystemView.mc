@@ -15,13 +15,23 @@ using Toybox.Math as Math;
 
 class BinarySystemView extends Ui.WatchFace {
 
+	var isDirty = false;
+	
     function initialize() {
         WatchFace.initialize();
     }
 
     //! Load your resources here
     function onLayout(dc) {
-        setLayout(Rez.Layouts.NormalModeLayout(dc));
+        var geekMode = App.getApp().getProperty("GeekMode");
+        if (!geekMode)
+        {
+        	setLayout(Rez.Layouts.NormalModeLayout(dc));
+        }
+        else
+        {
+        	setLayout(Rez.Layouts.GeekModeLayout(dc));
+        }
     }
 
     //! Called when this View is brought to the foreground. Restore
@@ -34,22 +44,13 @@ class BinarySystemView extends Ui.WatchFace {
     //! Update the view
     //===============================
     function onUpdate(dc) {
-        // Get the current time and format it correctly
-
-        //var deviceSettings = Sys.getDeviceSettings();
-
-        //var temperature = deviceSettings.temperature;
-        //var altitude = deviceSettings.altitude;
-
-
-        // Call the parent onUpdate function to redraw the layout
+        if (isDirty)
+        {
+        	onLayout(dc);
+        	isDirty = false;
+        }
         View.onUpdate(dc);
-        // Include anything that needs to be updated here
-
-		//for (var i = 0; i < dataViews.size(); i++)
-		//{
-		//	dataViews[i].draw(dc);
-		//}
+        
     }
 
 
@@ -66,6 +67,10 @@ class BinarySystemView extends Ui.WatchFace {
 
     //! Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+    }
+    
+    function onSettingsChanged() {
+    	isDirty = true;
     }
 
 }
