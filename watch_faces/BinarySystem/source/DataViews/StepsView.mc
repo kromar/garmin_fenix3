@@ -60,8 +60,8 @@ class StepsView extends Ui.Drawable
         }
         
         // meters climbed
-        dc.drawText(locX + stepBarWidth / 2.0+1, locY-5, Gfx.FONT_XTINY, activityInfo.metersClimbed.format("%d") + "m", Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER );
-        dc.drawText(locX - stepBarWidth / 2.0-1, locY-5, Gfx.FONT_XTINY, activityInfo.metersDescended.format("%d") + "m", Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER );
+        //dc.drawText(locX + stepBarWidth / 2.0+1, locY-5, Gfx.FONT_XTINY, activityInfo.metersClimbed.format("%d") + "m", Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER );
+        //dc.drawText(locX - stepBarWidth / 2.0-1, locY-5, Gfx.FONT_XTINY, activityInfo.metersDescended.format("%d") + "m", Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER );
         
         
         // Activity History
