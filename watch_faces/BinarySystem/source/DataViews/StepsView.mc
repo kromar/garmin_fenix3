@@ -64,7 +64,7 @@ class StepsView extends Ui.Drawable
         dc.drawText(locX - stepBarWidth / 2.0-1, locY-5, Gfx.FONT_XTINY, activityInfo.metersDescended.format("%d") + "m", Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER );
         
         
-        
+        // Activity History
         var heartRateHistory = ActMon.getHeartRateHistory(1, true);
 		var heartRate = heartRateHistory.next().heartRate;
         dc.drawText(locX, locY - 40, Gfx.FONT_TINY, heartRate + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
