@@ -36,9 +36,12 @@ class StepsView extends Ui.Drawable
         dc.drawText(locX, locY, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_CENTER);
 		
 		//draw step goal bar
-        var stepBarWidth = dc.getWidth()/2-fontHeight;
-        var stepGoalPercentage = stepBarWidth.toFloat()/stepGoal*steps;
-
+        var stepBarWidth = dc.getWidth()/2;
+        var stepGoalPercentage = steps.toFloat() / stepGoal.toFloat();
+        if (steps > stepGoal) 
+        {
+        	stepGoalPercentage = 1.0;
+		}
         var borderOffset_Goal = 30;
 
         dc.setColor(fg_color, bg_transp);
@@ -49,7 +52,7 @@ class StepsView extends Ui.Drawable
 
         if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0) 
         {
-            dc.drawLine((locX - stepBarWidth / 2), locY-5, locX - (stepBarWidth ) / 2 + stepGoalPercentage , locY-5);
+            dc.drawLine((locX - stepBarWidth / 2), locY-5, locX - (stepBarWidth ) / 2 + stepBarWidth * stepGoalPercentage , locY-5);
         }
         else 
         {
