@@ -17,10 +17,10 @@ class ElevationView extends Ui.Drawable
 
 	function draw(dc)
 	{
-		var elevIt = SensorHistory.getElevationHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST });
-		var hrIt = SensorHistory.getHeartRateHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST });
-		var pressureIt = SensorHistory.getPressureHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST });
-		var tempIt = SensorHistory.getTemperatureHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST });
+		var elevIt = SensorHistory.getElevationHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST, :period=>1 });
+		var hrIt = SensorHistory.getHeartRateHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST, :period=>1 });
+		var pressureIt = SensorHistory.getPressureHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST, :period=>1});
+		var tempIt = SensorHistory.getTemperatureHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST, :period=>1 });
 
 
 		//var dot_color = App.getApp().getProperty("ForegroundColor");

@@ -49,7 +49,7 @@ class StepsView extends Ui.Drawable
 
         if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0) 
         {
-            dc.drawLine((locX - stepBarWidth / 2), locY-5, locX - (stepBarWidth + stepGoalPercentage) / 2 , locY-5);
+            dc.drawLine((locX - stepBarWidth / 2), locY-5, locX - (stepBarWidth ) / 2 + stepGoalPercentage , locY-5);
         }
         else 
         {
