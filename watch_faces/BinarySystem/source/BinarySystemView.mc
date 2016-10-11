@@ -19,6 +19,7 @@ class BinarySystemView extends Ui.WatchFace {
 	
     function initialize() {
         WatchFace.initialize();
+    	//App.getApp().setProperty("IsLowPowerMode", false);
     }
 
     //! Load your resources here
@@ -63,10 +64,13 @@ class BinarySystemView extends Ui.WatchFace {
 
     //! The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
+    	App.getApp().setProperty("IsLowPowerMode", false);
     }
 
     //! Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+    	App.getApp().setProperty("IsLowPowerMode", true);
+    	Ui.requestUpdate();
     }
     
     function onSettingsChanged() {

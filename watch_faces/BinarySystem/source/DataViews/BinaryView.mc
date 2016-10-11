@@ -79,7 +79,11 @@ class BinaryView extends Ui.Drawable
 		var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 		
-		drawBinaryArray(dc, 6, 0, time.sec, typeMethod);
+		var isLowPower = App.getApp().getProperty("IsLowPowerMode");
+		if (isLowPower == null || isLowPower == false)
+		{
+			drawBinaryArray(dc, 6, 0, time.sec, typeMethod);
+		}
 		drawBinaryArray(dc, 6, 1, time.min, typeMethod);
 		drawBinaryArray(dc, 6, 2, time.hour, typeMethod);
 	}
