@@ -14,6 +14,7 @@
 			<param name="y">40</param>
 			<param name="borderDistance">15</param>
 			<param name="type">Vertical</param>
+			<param name="showSeconds">true</param>
 		 </drawable>
 		 <drawable id="stepsView" class="StepsView">
 			<param name="x">109</param>
