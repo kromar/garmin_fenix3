@@ -3,10 +3,11 @@
     <string id="AppName">BinarySystem</string>    
     <string id="AppVersionTitle">Version</string>
     
-    <string id="GeekModeTitle">Geek Mode</string>
-    <string id="RemainingBatteryEstimateTitle">Remaining Battery Estimate</string>
+    <string id="GeekModeTitle">Geek mode</string>
+    <string id="ShowSecondsTitle">Show seconds</string>
+    <string id="RemainingBatteryEstimateTitle">Remaining battery estimate</string>
     
-    <string id="BinaryRadiusTitle">Binary Radius</string>
+    <string id="BinaryRadiusTitle">Binary radius</string>
     <string id="RADIUS_4">4</string>
     <string id="RADIUS_5">5</string>
     <string id="RADIUS_6">6</string>
@@ -15,8 +16,8 @@
     <string id="RADIUS_9">9</string>
     
         
-    <string id="BackgroundColorTitle">Background Color</string>
-    <string id="ForegroundColorTitle">Binary Color</string>
+    <string id="BackgroundColorTitle">Background color</string>
+    <string id="ForegroundColorTitle">Binary color</string>
 
     <string id="COLOR_WHITE">White</string>
     <string id="COLOR_LT_GRAY">Light Gray</string>

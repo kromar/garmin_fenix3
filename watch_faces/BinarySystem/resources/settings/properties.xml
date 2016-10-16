@@ -1,8 +1,9 @@
 <properties>
 
-    <property id="appVersion" type="string">1.5</property>   
+    <property id="appVersion" type="string">2.0</property>   
     
     <property id="GeekMode" type="boolean">false</property>
+    <property id="ShowSeconds" type="boolean">true</property>
     <property id="BinaryRadius" type="number">8</property>
     <property id="RemainingBatteryEstimate" type="boolean">false</property>
     

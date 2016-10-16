@@ -24,10 +24,19 @@ class BinarySystemView extends Ui.WatchFace {
 
     //! Load your resources here
     function onLayout(dc) {
+    
         var geekMode = App.getApp().getProperty("GeekMode");
         if (!geekMode)
         {
-        	setLayout(Rez.Layouts.NormalModeLayout(dc));
+        	if (dc.getHeight() >200)
+        	{
+        		setLayout(Rez.Layouts.NormalModeLayout(dc));
+        	}
+        	else
+        	{
+        		// ForeRunner 735XT
+        		setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
+        	}
         }
         else
         {

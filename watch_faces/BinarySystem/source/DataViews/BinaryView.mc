@@ -8,13 +8,14 @@ using Toybox.System as Sys;
 class BinaryView extends Ui.Drawable
 {
 	var typeMethod = null;
+	var m_showSeconds = true;
 	function initialize(params)
 	{
 		Drawable.initialize(params);
 		
 		locX = params.get(:x);
 		locY = params.get(:y);
-				
+		m_showSeconds = params.get(:ShowSeconds);		
 		binaryLocation = new BinaryLocation();
 		binaryLocation.locX = locX;
 		binaryLocation.locY = locY;
@@ -78,7 +79,10 @@ class BinaryView extends Ui.Drawable
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 		
 		var isLowPower = App.getApp().getProperty("IsLowPowerMode");
-		if (isLowPower == null || isLowPower == false)
+		var showSeconds = App.getApp().getProperty("ShowSeconds");
+		if ((isLowPower == null || isLowPower == false)
+			&& showSeconds == true
+			&& m_ShowSeconds == true)
 		{
 			drawBinaryArray(dc, 6, 0, time.sec, typeMethod);
 		}
