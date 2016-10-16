@@ -65,9 +65,9 @@ class StepsView extends Ui.Drawable
         
         
         // Activity History
-        var heartRateHistory = ActMon.getHeartRateHistory(1, true);
-		var heartRate = heartRateHistory.next().heartRate;
-        dc.drawText(locX, locY - 40, Gfx.FONT_TINY, heartRate + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
+        //var heartRateHistory = ActMon.getHeartRateHistory(1, true);
+		//var heartRate = heartRateHistory.next().heartRate;
+        //dc.drawText(locX, locY - 40, Gfx.FONT_TINY, heartRate + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
         
         
         //System.println("steps percentage: " + stepGoalPercentage.toString());
