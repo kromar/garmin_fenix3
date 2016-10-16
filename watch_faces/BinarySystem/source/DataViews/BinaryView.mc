@@ -61,14 +61,12 @@ class BinaryView extends Ui.Drawable
 			var yLocation = location[1];
 
 			dc.setColor(color_fg, color_bg);
-            dc.fillCircle(xLocation, yLocation, binaryRadius);
-			dc.setColor(color_bg, color_bg);
-            dc.fillCircle(xLocation, yLocation, binaryRadius - 1);
+            dc.drawCircle(xLocation, yLocation, binaryRadius);
 			
 			if (count & value == value)
 			{
 				dc.setColor(color_rgb, color_bg);
-    	        dc.fillCircle(xLocation, yLocation, binaryRadius - 2);
+    	        dc.fillCircle(xLocation, yLocation, binaryRadius - 1);
 			
 			}
 		}
