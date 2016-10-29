@@ -4,4 +4,10 @@
             <color>FF0000</color>
         </palette>
 	</bitmap>
+	
+	<bitmap id="alarm_icon" filename="icons/alarm.png">
+		<palette disableTransparency="false">
+            <color>FF0000</color>
+        </palette>
+	</bitmap>
 </resources>
