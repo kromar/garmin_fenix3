@@ -59,15 +59,16 @@ class StepsView extends Ui.Drawable
         	dc.drawLine(borderOffset_Goal, locY-5, stepBarWidth, locY-5);
         }
         
+        // var floorsClimbed = activityInfo.floorsClimbed;
         // meters climbed
-        //dc.drawText(locX + stepBarWidth / 2.0+1, locY-5, Gfx.FONT_XTINY, activityInfo.metersClimbed.format("%d") + "m", Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER );
-        //dc.drawText(locX - stepBarWidth / 2.0-1, locY-5, Gfx.FONT_XTINY, activityInfo.metersDescended.format("%d") + "m", Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER );
+        //dc.drawText(locX + stepBarWidth / 2.0+1, locY-5, Gfx.FONT_TINY , floorsClimbed, Gfx.TEXT_JUSTIFY_LEFT);
+        //dc.drawText(locX - stepBarWidth / 2.0-1, locY-5, Gfx.FONT_SYSTEM_TINY , activityInfo.floorsDescended.format("%d"), Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER );
         
         
         // Activity History
-        var heartRateHistory = ActMon.getHeartRateHistory(1, true);
-		var heartRate = heartRateHistory.next().heartRate;
-        dc.drawText(locX, locY - 40, Gfx.FONT_TINY, heartRate + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
+        //var heartRateHistory = ActMon.getHeartRateHistory(1, true);
+		//var heartRate = heartRateHistory.next().heartRate;
+        //dc.drawText(locX, locY - 40, Gfx.FONT_TINY, heartRate + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
         
         
         //System.println("steps percentage: " + stepGoalPercentage.toString());
