@@ -6,6 +6,9 @@
     <setting propertyKey="@Properties.GeekMode" title="@Strings.GeekModeTitle">
         <settingConfig type="boolean" />
     </setting>
+        <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSecondsTitle">
+        <settingConfig type="boolean" />
+    </setting>
     <setting propertyKey="@Properties.RemainingBatteryEstimate" title="@Strings.RemainingBatteryEstimateTitle">
         <settingConfig type="boolean" />
     </setting>

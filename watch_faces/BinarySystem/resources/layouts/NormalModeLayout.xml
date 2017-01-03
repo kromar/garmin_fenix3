@@ -1,0 +1,44 @@
+<resources>
+	<layout id="NormalModeLayout">
+		<drawable id="batteryView" class="BatteryView">
+			<param name="x">109</param>
+			<param name="y">0</param>
+		 </drawable>
+		 <drawable id="timeView" class="TimeView">
+		 	<param name="showTime">true</param>
+			<param name="x">109</param>
+			<param name="y">12</param>
+		 </drawable>
+		 <drawable id="binaryView" class="BinaryView">
+			<param name="x">60</param>
+			<param name="y">80</param>
+			<param name="borderDistance">18</param>
+			<param name="type">Circular</param>
+			<param name="showSeconds">true</param>
+		 </drawable>
+		 <drawable id="stepsView" class="StepsView">
+			<param name="x">109</param>
+			<param name="y">180</param>
+		 </drawable>
+		 <drawable id="bluetoothView" class="BluetoothView">
+			<param name="x">40</param>
+			<param name="y">20</param>
+		 </drawable>
+		 <drawable id="alarmView" class="AlarmView">
+			<param name="x">157</param>
+			<param name="y">20</param>
+		 </drawable>
+		 
+		 
+		 <drawable id="notificationView" class="NotificationView">
+			<param name="x">83</param>
+			<param name="y">70</param>
+		 </drawable>
+		 <!-- 
+		 <drawable id="elevationView" class="ElevationView">
+		 	<param name="x">109</param>
+		 	<param name="y">90</param>
+		 </drawable>
+		  -->
+	</layout>
+</resources>
