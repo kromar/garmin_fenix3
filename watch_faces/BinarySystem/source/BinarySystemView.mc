@@ -15,32 +15,32 @@ using Toybox.Math as Math;
 
 class BinarySystemView extends Ui.WatchFace {
 
-	var isDirty = false;
-	
+    var isDirty = false;
+
     function initialize() {
         WatchFace.initialize();
-    	//App.getApp().setProperty("IsLowPowerMode", false);
+        //App.getApp().setProperty("IsLowPowerMode", false);
     }
 
     //! Load your resources here
     function onLayout(dc) {
-    
+
         var geekMode = App.getApp().getProperty("GeekMode");
         if (!geekMode)
         {
-        	if (dc.getHeight() >200)
-        	{
-        		setLayout(Rez.Layouts.NormalModeLayout(dc));
-        	}
-        	else
-        	{
-        		// ForeRunner 735XT
-        		setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
-        	}
+            if (dc.getHeight() >200)
+            {
+                setLayout(Rez.Layouts.NormalModeLayout2(dc));
+            }
+            else
+            {
+                // ForeRunner 735XT
+                setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
+            }
         }
         else
         {
-        	setLayout(Rez.Layouts.GeekModeLayout(dc));
+            setLayout(Rez.Layouts.GeekModeLayout(dc));
         }
     }
 
@@ -49,18 +49,18 @@ class BinarySystemView extends Ui.WatchFace {
     //! loading resources into memory.
     function onShow() {
     }
-	
+
     //===============================
     //! Update the view
     //===============================
     function onUpdate(dc) {
         if (isDirty)
         {
-        	onLayout(dc);
-        	isDirty = false;
+            onLayout(dc);
+            isDirty = false;
         }
         View.onUpdate(dc);
-        
+
     }
 
 
@@ -73,17 +73,17 @@ class BinarySystemView extends Ui.WatchFace {
 
     //! The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
-    	App.getApp().setProperty("IsLowPowerMode", false);
+        App.getApp().setProperty("IsLowPowerMode", false);
     }
 
     //! Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
-    	App.getApp().setProperty("IsLowPowerMode", true);
-    	Ui.requestUpdate();
+        App.getApp().setProperty("IsLowPowerMode", true);
+        Ui.requestUpdate();
     }
-    
+
     function onSettingsChanged() {
-    	isDirty = true;
+        isDirty = true;
     }
 
 }
