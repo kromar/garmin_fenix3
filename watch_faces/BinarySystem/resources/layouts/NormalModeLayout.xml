@@ -16,10 +16,20 @@
 			<param name="type">Circular</param>
 			<param name="showSeconds">true</param>
 		 </drawable>
+		 
 		 <drawable id="stepsView" class="StepsView">
 			<param name="x">109</param>
 			<param name="y">180</param>
+            <param name="stepsX">0</param>
+            <param name="stepsY">-6</param>
 		 </drawable>
+         <drawable id="distanceView" class="DistanceView">
+            <param name="showDistance">true</param>
+            <param name="metricUnits">true</param>   
+            <param name="x">109+56</param>
+            <param name="y">154</param>       
+         </drawable>
+         
 		 <drawable id="bluetoothView" class="BluetoothView">
 			<param name="x">40</param>
 			<param name="y">20</param>

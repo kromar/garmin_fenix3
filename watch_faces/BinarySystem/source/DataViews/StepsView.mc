@@ -6,11 +6,15 @@ using Toybox.WatchUi as Ui;
 
 class StepsView extends Ui.Drawable
 {
+    var stepsX = 0;
+    var stepsY = 0;
     function initialize(params)
     {
         Drawable.initialize(params);
         locX = params.get(:x);
         locY = params.get(:y);
+        stepsX = params.get(:stepsX);
+        stepsY = params.get(:stepsY);
 
 
     }
@@ -33,7 +37,7 @@ class StepsView extends Ui.Drawable
         //===============================
         var stepsStr = steps.toString();
         dc.setColor(dot_color, bg_transp);
-        dc.drawText(locX, locY, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText((locX + stepsX), (locY + stepsY), Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
 
         //draw step goal bar
         var stepBarWidth = dc.getWidth()/2;
