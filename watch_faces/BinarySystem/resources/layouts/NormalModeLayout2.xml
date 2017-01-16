@@ -7,8 +7,8 @@
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
 			<param name="x">109</param>
-			<param name="y">104</param>
-		 </drawable>		 		 >   
+			<param name="y">66</param>
+		 </drawable> 
 		 <drawable id="binaryView" class="BinaryView">
 			<param name="x">60</param>
 			<param name="y">80</param>
@@ -19,13 +19,13 @@
 		  
 		 <drawable id="activityView" class="ActivityView">
 			<param name="x">109</param>
-			<param name="y">60</param>
+			<param name="y">160</param>
             <param name="stepsXOffset">56</param>
             <param name="stepsYOffset">-30</param>
             <param name="showDistance">true</param>
             <param name="metricUnits">true</param>   
             <param name="distanceXOffset">56</param>
-            <param name="distanceYOffset">0</param>       
+            <param name="distanceYOffset">-5</param>      
          </drawable>
 		  
 		 <drawable id="bluetoothView" class="BluetoothView">
