@@ -26,19 +26,29 @@ class DistanceView extends Ui.Drawable
             var dot_color = App.getApp().getProperty("ForegroundColor");
             var bg_transp = Gfx.COLOR_TRANSPARENT;
             var fg_color = Gfx.COLOR_WHITE;
-
             var fontHeight = 12;
+            var activityInfo = ActMon.getInfo();
+            var distance = activityInfo.distance;
 
-             var activityInfo = ActMon.getInfo();
-             var distance = activityInfo.distance;
-
-             dc.setColor(dot_color, bg_transp);
+            dc.setColor(dot_color, bg_transp);
             if (distance < 100000) {
-                var distanceStr = (distance*0.01).toLong() + "m";
-                dc.drawText(locX, locY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                if (metricUnits == true)
+                {
+                     var distanceStr = (distance*0.01).toLong() + "m";
+                    dc.drawText(locX, locY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                } else {
+                     var distanceStr = (distance*0.0328).toLong() + "ft";
+                    dc.drawText(locX, locY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                }
             } else {
-                var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
-                dc.drawText(locX, locY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                if (metricUnits == true)
+                {
+                    var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
+                    dc.drawText(locX, locY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                } else {
+                    var distanceStr = (distance*0.01*0.001*0.621).format("%.2f") + "mi";
+                    dc.drawText(locX, locY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                }
             }
 
                 //System.println(distanceKM);
