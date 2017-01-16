@@ -4,10 +4,17 @@ using Toybox.ActivityMonitor as ActMon;
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 
-class StepsView extends Ui.Drawable
+class ActivityView extends Ui.Drawable
 {
     var stepsXOffset = 0;
     var stepsYOffset = 0;
+
+    var showDistance = true;
+    var metricUnits = true;   //switch between metric and imperial true=metric / false=imperial
+    var distanceStr = 0;
+    var distanceXOffset = 0;
+    var distanceYOffset = 0;
+
     function initialize(params)
     {
         Drawable.initialize(params);
@@ -16,6 +23,11 @@ class StepsView extends Ui.Drawable
         stepsXOffset = params.get(:stepsXOffset);
         stepsYOffset = params.get(:stepsYOffset);
 
+        distanceXOffset = params.get(:distanceXOffset);
+        distanceYOffset = params.get(:distanceYOffset);
+        showDistance = params.get(:showDistance);
+        metricUnits =  params.get(:metricUnits);
+
 
     }
     function draw(dc)
@@ -23,14 +35,12 @@ class StepsView extends Ui.Drawable
         var dot_color = App.getApp().getProperty("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var fg_color = Gfx.COLOR_WHITE;
-
         var fontHeight = 12;
-
         var activityInfo = ActMon.getInfo();
         var stepGoal = activityInfo.stepGoal;
         var steps = activityInfo.steps;
-        var distance = activityInfo.distance;
         var calories = activityInfo.calories;
+        var distance = activityInfo.distance;
 
         //===============================
         //!steps
@@ -77,15 +87,36 @@ class StepsView extends Ui.Drawable
 
         //System.println("steps percentage: " + stepGoalPercentage.toString());
 
-        /////////////
-        /// STEPS ///
-            //dc.setColor(dot_color, bg_transp);
-            //if (distance < 100000) {
-            //    var distanceStr = (distance*0.01).toLong() + "m";
-            //    dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            //} else {
-            //    var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
-            //    dc.drawText(96, 156, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-            //}
+
+
+        //===============================
+        //!distance
+        //===============================
+
+        if (showDistance)
+        {
+            dc.setColor(dot_color, bg_transp);
+            if (distance < 100000) {        //TODO: here we switch between meters and kilometers so we need the same for feet and miles
+                if (metricUnits == true)
+                {
+                     var distanceStr = (distance*0.01).toLong() + "m";
+                    dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                } else {
+                     var distanceStr = (distance*0.0328).toLong() + "ft";
+                    dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                }
+            } else {
+                if (metricUnits == true)
+                {
+                    var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
+                    dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                } else {
+                    var distanceStr = (distance*0.01*0.001*0.621).format("%.2f") + "mi";
+                    dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                }
+            }
+            //System.println(distanceKM);
+        }
     }
 }
+
