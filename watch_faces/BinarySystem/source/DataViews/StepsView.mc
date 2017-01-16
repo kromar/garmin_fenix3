@@ -13,8 +13,8 @@ class StepsView extends Ui.Drawable
         Drawable.initialize(params);
         locX = params.get(:x);
         locY = params.get(:y);
-        stepsX = params.get(:stepsX);
-        stepsY = params.get(:stepsY);
+        stepsXOffset = params.get(:stepsX);
+        stepsYOffset = params.get(:stepsY);
 
 
     }
