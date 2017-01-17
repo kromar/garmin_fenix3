@@ -3,12 +3,15 @@
 		<drawable id="batteryView" class="BatteryView">
 			<param name="x">109</param>
 			<param name="y">10</param>
-		 </drawable>		 
+		 </drawable>		
+		 
+		  
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
 			<param name="x">109</param>
-			<param name="y">66</param>
+			<param name="y">84</param>
 		 </drawable> 
+		 
 		 <drawable id="binaryView" class="BinaryView">
 			<param name="x">60</param>
 			<param name="y">80</param>
@@ -29,16 +32,16 @@
          </drawable>
 		  
 		 <drawable id="bluetoothView" class="BluetoothView">
-			<param name="x">40</param>
-			<param name="y">20</param>
+			<param name="x">36</param>
+			<param name="y">60</param>
 		 </drawable>		 
 		 <drawable id="alarmView" class="AlarmView">
-			<param name="x">157</param>
-			<param name="y">20</param>
+			<param name="x">32</param>
+			<param name="y">90</param>
 		 </drawable>		
 		 <drawable id="notificationView" class="NotificationView">
-			<param name="x">90</param>
-			<param name="y">166</param>
+			<param name="x">88</param>
+			<param name="y">66</param>
 		 </drawable>
 		 <!-- 
 		 <drawable id="elevationView" class="ElevationView">
