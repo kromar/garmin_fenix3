@@ -21,6 +21,9 @@ FEATURES
 ******************
 VERSION
 ******************
+v 1.12
+- properties to remaining battery estimate
+
 v 1.11
 - added radius for binary watch to settings
 
