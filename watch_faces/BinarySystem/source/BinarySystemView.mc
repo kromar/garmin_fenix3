@@ -30,7 +30,7 @@ class BinarySystemView extends Ui.WatchFace {
         {
             if (dc.getHeight() > 200)
             {
-                setLayout(Rez.Layouts.NormalModeLayout2(dc));
+                setLayout(Rez.Layouts.NormalModeLayout(dc));
             }
             else
             {
