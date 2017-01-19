@@ -1,38 +1,43 @@
+
+    <!--         <listEntry value="FFFFFF">COLOR_WHITE</listEntry>
+            <listEntry value="AAAAAA">COLOR_LT_GRAY</listEntry>
+            <listEntry value="555555">COLOR_DK_GRAY</listEntry>
+            <listEntry value="000000">COLOR_BLACK</listEntry>
+            <listEntry value="FF0000">COLOR_RED</listEntry>
+            <listEntry value="AA0000">COLOR_DK_RED</listEntry>
+            <listEntry value="FF5500">COLOR_ORANGE</listEntry>
+            <listEntry value="FFAA00">COLOR_YELLOW</listEntry>
+            <listEntry value="00FF00">COLOR_GREEN</listEntry>
+            <listEntry value="00AA00">COLOR_DK_GREEN</listEntry>
+            <listEntry value="00AAFF">COLOR_BLUE</listEntry>
+            <listEntry value="0000FF">COLOR_DK_BLUE</listEntry>
+            <listEntry value="AA00FF">COLOR_PURPLE</listEntry>
+            <listEntry value="FF00FF">COLOR_PINK</listEntry>    -->
+
 <resources>
-	<bitmap id="bluetooth_icon" filename="icons/bluetooth.png" dithering="none">	
-    <palette disableTransparency="false">
-      <color>555555</color>
-      <color>AAAAAA</color>
-      <color>000000</color>
-      <color>FF0000</color>
-      <color>AA0000</color>
-      <color>FF5500</color>
-      <color>FFAA00</color>
-      <color>00FF00</color>
-      <color>00AA00</color>
-      <color>00AAFF</color>
-      <color>0000FF</color>
-      <color>AA00FF</color>
-      <color>FF00FF</color>
-    </palette>
+
+    <bitmap id="bluetooth_icon" filename="icons/bluetooth.png" dithering="none">  
+        <palette disableTransparency="false">
+           <color>FF0000</color>
+        </palette>
     </bitmap>
+    
+	<bitmap id="bluetooth_icon_white" filename="icons/bluetooth.png" dithering="none">	
+	    <palette disableTransparency="false">
+	       <color>FFFFFF</color>
+	    </palette>
+    </bitmap>
+    <bitmap id="bluetooth_icon_green" filename="icons/bluetooth.png" dithering="none">    
+        <palette disableTransparency="false">
+           <color>00FF00</color>
+        </palette>
+    </bitmap>	
+	
 	
 	<bitmap id="alarm_icon" filename="icons/alarm.png" dithering="none">
-    <palette disableTransparency="false">
-      <color>AAAAAA</color>
-      <color>555555</color>
-      <color>000000</color>
-      <color>FF0000</color>
-      <color>AA0000</color>
-      <color>FF5500</color>
-      <color>FFAA00</color>
-      <color>00FF00</color>
-      <color>00AA00</color>
-      <color>00AAFF</color>
-      <color>0000FF</color>
-      <color>AA00FF</color>
-      <color>FF00FF</color>
-    </palette>
-  </bitmap>
+	    <palette disableTransparency="false">
+	       <color>FFFFFF</color>
+	    </palette>
+	  </bitmap>
 </resources>
 
