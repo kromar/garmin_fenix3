@@ -3,6 +3,7 @@
 		<drawable id="batteryView" class="BatteryView">
 			<param name="x">109</param>
 			<param name="y">10</param>
+			<param name="showBatteryBar">true</param>
 		 </drawable>		
 		 
 		  

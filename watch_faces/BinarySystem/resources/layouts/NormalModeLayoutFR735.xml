@@ -3,7 +3,8 @@
 		<drawable id="batteryView" class="BatteryView">
 			<param name="x">109</param>
 			<param name="y">0</param>
-		 </drawable>
+			<param name="showBatteryBar">true</param>
+		</drawable>
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
 			<param name="x">109</param>
