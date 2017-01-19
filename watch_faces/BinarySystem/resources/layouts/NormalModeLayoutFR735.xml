@@ -23,7 +23,6 @@
             <param name="stepsXOffset">0</param>
             <param name="stepsYOffset">-6</param>
             <param name="showDistance">true</param>
-            <param name="metricUnits">true</param>   
             <param name="distanceXOffset">56</param>
             <param name="distanceYOffset">136</param>       
          </drawable>
