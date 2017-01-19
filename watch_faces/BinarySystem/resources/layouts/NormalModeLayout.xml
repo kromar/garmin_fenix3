@@ -20,11 +20,11 @@
 		 <drawable id="activityView" class="ActivityView">
 			<param name="x">109</param>
 			<param name="y">180</param>
-            <param name="stepsXOffset">0</param>
-            <param name="stepsYOffset">-6</param>
+            <param name="stepsXOffset">56</param>
+            <param name="stepsYOffset">-30</param>
             <param name="showDistance">true</param>
             <param name="distanceXOffset">56</param>
-            <param name="distanceYOffset">154</param>       
+            <param name="distanceYOffset">-5</param>      
          </drawable>
          
 		 <drawable id="bluetoothView" class="BluetoothView">
