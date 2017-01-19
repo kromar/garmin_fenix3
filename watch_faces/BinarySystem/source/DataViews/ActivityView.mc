@@ -46,7 +46,6 @@ class ActivityView extends Ui.Drawable
             var distance = activityInfo.distance;
             // the units are either UNIT_METRIC or UNIT_STATUTE
             var distUnits = Sys.getDeviceSettings().distanceUnits;
-            Sys.println("Units: " + distUnits);
 
             //===============================
             //!steps
