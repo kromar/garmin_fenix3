@@ -48,8 +48,8 @@ class BatteryView extends Ui.Drawable
             dc.fillRectangle(locX - barLength/2, locY - 8,  barThickness, 8);
             dc.fillRectangle(locX - barLength/2, locY, barLength / 100.0f * battery, barThickness);
 
-
-        } else {
+        // TODO  vertical battery bar needs to be implemented
+        } else {  
             dc.fillRectangle(locX - 5, locY + barLength/2, 5, 1);
             dc.fillRectangle(locX, locY + barLength/2, barThickness, barLength / 100.0f * battery);
         }
