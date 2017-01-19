@@ -32,6 +32,7 @@ class ActivityView extends Ui.Drawable
     function draw(dc)
     {
         var deviceSettings = Sys.getDeviceSettings();
+        // check Activity Tracking active
         var activity = deviceSettings.activityTrackingOn;
         if (activity == true)
         {
