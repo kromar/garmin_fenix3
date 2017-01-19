@@ -28,7 +28,7 @@ class BinarySystemView extends Ui.WatchFace {
         var geekMode = App.getApp().getProperty("GeekMode");
         if (!geekMode)
         {
-            if (dc.getHeight() >200)
+            if (dc.getHeight() > 200)
             {
                 setLayout(Rez.Layouts.NormalModeLayout2(dc));
             }
