@@ -1,42 +1,15 @@
-
-    <!--         <listEntry value="FFFFFF">COLOR_WHITE</listEntry>
-            <listEntry value="AAAAAA">COLOR_LT_GRAY</listEntry>
-            <listEntry value="555555">COLOR_DK_GRAY</listEntry>
-            <listEntry value="000000">COLOR_BLACK</listEntry>
-            <listEntry value="FF0000">COLOR_RED</listEntry>
-            <listEntry value="AA0000">COLOR_DK_RED</listEntry>
-            <listEntry value="FF5500">COLOR_ORANGE</listEntry>
-            <listEntry value="FFAA00">COLOR_YELLOW</listEntry>
-            <listEntry value="00FF00">COLOR_GREEN</listEntry>
-            <listEntry value="00AA00">COLOR_DK_GREEN</listEntry>
-            <listEntry value="00AAFF">COLOR_BLUE</listEntry>
-            <listEntry value="0000FF">COLOR_DK_BLUE</listEntry>
-            <listEntry value="AA00FF">COLOR_PURPLE</listEntry>
-            <listEntry value="FF00FF">COLOR_PINK</listEntry>    -->
-
 <resources>
 
     <bitmap id="bluetooth_icon" filename="icons/bluetooth.png" dithering="none">  
         <palette disableTransparency="false">
-           <color>FF0000</color>
+           <color>AAAAAA</color>
         </palette>
     </bitmap>
-    
-	<bitmap id="bluetooth_icon_white" filename="icons/bluetooth.png" dithering="none">	
-	    <palette disableTransparency="false">
-	       <color>FFFFFF</color>
-	    </palette>
-    </bitmap>
-    <bitmap id="bluetooth_icon_green" filename="icons/bluetooth.png" dithering="none">    
-        <palette disableTransparency="false">
-           <color>00FF00</color>
-        </palette>
-    </bitmap>	
-	
+
 	
 	<bitmap id="alarm_icon" filename="icons/alarm.png" dithering="none">
 	    <palette disableTransparency="false">
-	       <color>FFFFFF</color>
+	       <color>AAAAAA</color>
 	    </palette>
 	  </bitmap>
 </resources>
