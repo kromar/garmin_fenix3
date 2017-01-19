@@ -9,7 +9,6 @@ class ActivityView extends Ui.Drawable
     var stepsXOffset = 0;
     var stepsYOffset = 0;
     var showDistance = true;
-    var metricUnits = true;   //switch between metric and imperial true=metric / false=imperial
     var distanceStr = 0;
     var distanceXOffset = 0;
     var distanceYOffset = 0;
@@ -25,7 +24,6 @@ class ActivityView extends Ui.Drawable
         distanceXOffset = params.get(:distanceXOffset);
         distanceYOffset = params.get(:distanceYOffset);
         showDistance = params.get(:showDistance);
-        metricUnits =  params.get(:metricUnits);
     }
 
 
@@ -47,7 +45,8 @@ class ActivityView extends Ui.Drawable
             var calories = activityInfo.calories;
             var distance = activityInfo.distance;
             // the units are either UNIT_METRIC or UNIT_STATUTE
-            var distUnits = Sys.DeviceSettings.distanceUnits;
+            var distUnits = Sys.getDeviceSettings().distanceUnits;
+            Sys.println("Units: " + distUnits);
 
             //===============================
             //!steps
@@ -104,7 +103,7 @@ class ActivityView extends Ui.Drawable
             {
                 dc.setColor(dot_color, bg_transp);
                 if (distance < 100000) {        //TODO: here we switch between meters and kilometers so we need the same for feet and miles
-                    if (metricUnits == true)
+                    if (distUnits == Sys.UNIT_METRIC)
                     {
                          var distanceStr = (distance*0.01).toLong() + "m";
                         dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
@@ -113,7 +112,7 @@ class ActivityView extends Ui.Drawable
                         dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
                     }
                 } else {
-                    if (metricUnits == true)
+                    if (distUnits == Sys.UNIT_METRIC)
                     {
                         var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
                         dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
