@@ -11,6 +11,7 @@ class BatteryView extends Ui.Drawable
 
         var x = params.get(:x);
         var y = params.get(:y);
+        showBatteryBar = params.get(:showBatteryBar);
 
         Ui.Drawable.setLocation(x, y);
     }
@@ -21,6 +22,7 @@ class BatteryView extends Ui.Drawable
 
     var timeInterval = 0;
     var remainingBattery;
+    var showBatteryBar = false;
 
     function drawBatteryBars(dc, battery)
     {
@@ -28,6 +30,9 @@ class BatteryView extends Ui.Drawable
         var barThickness = 2;
         var locX= 109;
         var locY = 40;
+        
+        if (showBatteryBar)
+        {
         var barHorizontal = true;
 
          //draw battery bar vertical lines
@@ -52,6 +57,7 @@ class BatteryView extends Ui.Drawable
         } else {
             dc.fillRectangle(locX - 5, locY + barLength/2, 5, 1);
             dc.fillRectangle(locX, locY + barLength/2, barThickness, barLength / 100.0f * battery);
+        }
         }
     }
 
