@@ -46,6 +46,8 @@ class ActivityView extends Ui.Drawable
             var steps = activityInfo.steps;
             var calories = activityInfo.calories;
             var distance = activityInfo.distance;
+            // the units are either UNIT_METRIC or UNIT_STATUTE
+            var distUnits = Sys.DeviceSettings.distanceUnits;
 
             //===============================
             //!steps
