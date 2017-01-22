@@ -1,23 +1,30 @@
 <resources>
 	<layout id="VerticalLayout">
 		<drawable id="batteryView" class="BatteryView">
-			<param name="x">30</param>
-			<param name="y">80</param>
+			<param name="x">109</param>
+			<param name="y">0</param>
 			<param name="showBatteryBar">false</param>			
 		 </drawable>
-		 <drawable id="timeView" class="TimeView">
-		 	<param name="showTime">true</param>
+		 <drawable id="dateView" class="TimeView">
+		 	<param name="showTime">false</param>
 		 	<param name="showDate">true</param>
 			<param name="x">109</param>
 			<param name="y">20</param>
 		 </drawable>
+		 <drawable id="timeView" class="TimeView">
+		 	<param name="showTime">true</param>
+		 	<param name="showDate">false</param>
+			<param name="x">40</param>
+			<param name="y">85</param>
+		 </drawable>
 		 <drawable id="binaryView" class="BinaryView">
-			<param name="x">90</param>
+			<param name="x">110</param>
 			<param name="y">40</param>
 			<param name="borderDistance">15</param>
 			<param name="type">Vertical</param>
 			<param name="showSeconds">true</param>
 		 </drawable>
+		 <!-- 
 		 <drawable id="activityView" class="ActivityView">
 			<param name="x">109</param>
 			<param name="y">180</param>
@@ -27,6 +34,7 @@
             <param name="distanceXOffset">56</param>
             <param name="distanceYOffset">-5</param>      
          </drawable>
+          -->
 		 <drawable id="bluetoothView" class="BluetoothView">
 			<param name="x">40</param>
 			<param name="y">20</param>
