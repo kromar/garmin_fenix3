@@ -3,14 +3,22 @@
   	 <setting propertyKey="@Properties.appVersion" title="@Strings.AppVersionTitle">
         <settingConfig type="alphaNumeric" readonly="true" />
     </setting>
-    <setting propertyKey="@Properties.GeekMode" title="@Strings.GeekModeTitle">
-        <settingConfig type="boolean" />
-    </setting>
+
         <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSecondsTitle">
         <settingConfig type="boolean" />
     </setting>
     <setting propertyKey="@Properties.RemainingBatteryEstimate" title="@Strings.RemainingBatteryEstimateTitle">
         <settingConfig type="boolean" />
+    </setting>
+    
+    <setting propertyKey="LayoutType" title="@Strings.LayoutTypeTitle">
+        <settingConfig type="list">
+        	<listEntry value="GeekMode">@String.LAYOUTMODE_GEEK</listEntry>
+        	<listEntry value="VerticalMode">@String.LAYOUTMODE_VERTICAL</listEntry>
+        	<listEntry value="HorizontalMode">@String.LAYOUTMODE_HORIZONTAL</listEntry>
+        	<listEntry value="CircularMode1">@String.LAYOUTMODE_CIRCULAR1</listEntry>
+        	<listEntry value="CircularMode2">@String.LAYOUTMODE_CIRCULAR2</listEntry>
+        </settingConfig>
     </setting>
     
     <setting propertyKey="@Properties.BinaryRadius" title="@Strings.BinaryRadiusTitle">
