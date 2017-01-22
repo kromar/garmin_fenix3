@@ -3,9 +3,11 @@
 		<drawable id="batteryView" class="BatteryView">
 			<param name="x">30</param>
 			<param name="y">80</param>
+			<param name="showBatteryBar">false</param>			
 		 </drawable>
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">false</param>
+		 	<param name="showDate">true</param>
 			<param name="x">109</param>
 			<param name="y">20</param>
 		 </drawable>
@@ -16,10 +18,15 @@
 			<param name="type">Vertical</param>
 			<param name="showSeconds">true</param>
 		 </drawable>
-		 <drawable id="stepsView" class="StepsView">
+		 <drawable id="activityView" class="ActivityView">
 			<param name="x">109</param>
-			<param name="y">200</param>
-		 </drawable>
+			<param name="y">180</param>
+            <param name="stepsXOffset">56</param>
+            <param name="stepsYOffset">-30</param>
+            <param name="showDistance">true</param>
+            <param name="distanceXOffset">56</param>
+            <param name="distanceYOffset">-5</param>      
+         </drawable>
 		 <drawable id="bluetoothView" class="BluetoothView">
 			<param name="x">40</param>
 			<param name="y">20</param>
