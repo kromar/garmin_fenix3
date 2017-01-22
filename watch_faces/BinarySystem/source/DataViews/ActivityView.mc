@@ -9,7 +9,6 @@ class ActivityView extends Ui.Drawable
     var stepsXOffset = 0;
     var stepsYOffset = 0;
     var showDistance = true;
-    var metricUnits = true;   //switch between metric and imperial true=metric / false=imperial
     var distanceStr = 0;
     var distanceXOffset = 0;
     var distanceYOffset = 0;
@@ -25,13 +24,13 @@ class ActivityView extends Ui.Drawable
         distanceXOffset = params.get(:distanceXOffset);
         distanceYOffset = params.get(:distanceYOffset);
         showDistance = params.get(:showDistance);
-        metricUnits =  params.get(:metricUnits);
     }
 
 
     function draw(dc)
     {
         var deviceSettings = Sys.getDeviceSettings();
+        // check Activity Tracking active
         var activity = deviceSettings.activityTrackingOn;
         if (activity == true)
         {
@@ -45,6 +44,8 @@ class ActivityView extends Ui.Drawable
             var steps = activityInfo.steps;
             var calories = activityInfo.calories;
             var distance = activityInfo.distance;
+            // the units are either UNIT_METRIC or UNIT_STATUTE
+            var distUnits = Sys.getDeviceSettings().distanceUnits;
 
             //===============================
             //!steps
@@ -100,25 +101,30 @@ class ActivityView extends Ui.Drawable
             if (showDistance)
             {
                 dc.setColor(dot_color, bg_transp);
-                if (distance < 100000) {        //TODO: here we switch between meters and kilometers so we need the same for feet and miles
-                    if (metricUnits == true)
-                    {
-                         var distanceStr = (distance*0.01).toLong() + "m";
-                        dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-                    } else {
-                         var distanceStr = (distance*0.0328).toLong() + "ft";
-                        dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+               	var distanceStr = ""; 
+                if (distUnits == Sys.UNIT_METRIC)
+                {
+                	if (distance >= 100000) {
+                       distanceStr = (distance * 0.01 * 0.001).format("%.2f") + "km";
                     }
-                } else {
-                    if (metricUnits == true)
+                    else
                     {
-                        var distanceStr = (distance*0.01*0.001).format("%.2f") + "km";
-                        dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-                    } else {
-                        var distanceStr = (distance*0.01*0.001*0.621).format("%.2f") + "mi";
-                        dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                    	distanceStr = (distance * 0.01).toLong() + "m";
                     }
+                } 
+                else 
+                {
+                	var feetDistance = distance * 0.0328084;
+                	if (feetDistance >= 5280)
+                	{
+                		distanceStr = (feetDistance / 5280.0).format("%.2f") + "mi";
+                	}
+                	else 
+                	{
+                 		distanceStr = (feetDistance).toLong() + "ft";
+                 	}
                 }
+                dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
                 //System.println(distanceKM);
             }
         }
