@@ -8,6 +8,7 @@ using Toybox.WatchUi as Ui;
 class TimeView extends Ui.Drawable
 {
 	var showTime = true;
+	var showDate = true;
 	function initialize(params)
 	{
 		Ui.Drawable.initialize(params);
@@ -15,6 +16,7 @@ class TimeView extends Ui.Drawable
 		var x = params.get(:x);
         var y = params.get(:y);
         showTime = params.get(:showTime);
+        showDate = params.get(:showDate);
 		Ui.Drawable.setLocation(x, y);
 	}
 
@@ -38,8 +40,11 @@ class TimeView extends Ui.Drawable
         //===============================
         //!draw date
         //===============================
-        var dateStr = Lang.format("$1$ $2$ $3$", [time.day_of_week, time.month, time.day]);
-        dc.setColor(dot_color, bg_transp);
-        dc.drawText(locX, locY+ (showTime ? 30 : 0), Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+        if (showDate)
+        {
+	        var dateStr = Lang.format("$1$ $2$ $3$", [time.day_of_week, time.month, time.day]);
+	        dc.setColor(dot_color, bg_transp);
+	        dc.drawText(locX, locY+ (showTime ? 30 : 0), Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+	    }
 	}
 }

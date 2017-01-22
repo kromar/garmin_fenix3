@@ -7,6 +7,7 @@
 		 </drawable>
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">false</param>
+		 	<param name="showDate">true</param>
 			<param name="x">109</param>
 			<param name="y">20</param>
 		 </drawable>

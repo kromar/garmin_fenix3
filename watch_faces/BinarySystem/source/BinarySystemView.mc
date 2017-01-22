@@ -36,11 +36,11 @@ class BinarySystemView extends Ui.WatchFace {
                 }
                 else if (layoutMode == 1)
                 {
-		            setLayout(Rez.Layouts.GeekModeLayout(dc));
+		            setLayout(Rez.Layouts.VerticalLayout(dc));
                 }
                 else if (layoutMode == 2)
                 {
-		            setLayout(Rez.Layouts.GeekModeLayout(dc));                
+		            setLayout(Rez.Layouts.HorizontalLayout(dc));                
                 }
                 else if (layoutMode == 3)
                 {
