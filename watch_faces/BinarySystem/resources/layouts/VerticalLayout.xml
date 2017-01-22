@@ -1,9 +1,15 @@
 <resources>
 	<layout id="VerticalLayout">
 		<drawable id="batteryView" class="BatteryView">
-			<param name="x">109</param>
-			<param name="y">0</param>
-			<param name="showBatteryBar">false</param>			
+            <param name="showBatteryPercentage">true</param>
+            <param name="showBatteryBar">true</param>
+            <param name="batteryBarHorizontal">true</param>
+            <param name="batteryBarSize">70</param>
+            <param name="batteryBarThickness">2</param>
+            <param name="batteryBarLocX">40</param>
+            <param name="batteryBarLocY">80</param>
+            <param name="batteryPercentageLocX">35</param>
+            <param name="batteryPercentageLocY">-30</param>		
 		 </drawable>
 		 <drawable id="dateView" class="TimeView">
 		 	<param name="showTime">false</param>
