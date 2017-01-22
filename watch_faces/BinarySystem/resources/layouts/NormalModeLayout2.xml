@@ -1,9 +1,15 @@
 <resources>
 	<layout id="NormalModeLayout2">
 		<drawable id="batteryView" class="BatteryView">
-			<param name="x">109</param>
-			<param name="y">10</param>
+            <param name="showBatteryPercentage">true</param>
 			<param name="showBatteryBar">true</param>
+            <param name="batteryBarHorizontal">true</param>
+            <param name="batteryBarSize">100</param>
+            <param name="batteryBarThickness">2</param>
+            <param name="batteryBarLocX">109</param>
+            <param name="batteryBarLocY">16</param>
+            <param name="batteryPercentageLocX">50</param>
+            <param name="batteryPercentageLocY">0</param>
 		 </drawable>		
 		 
 		 
@@ -30,26 +36,26 @@
 		 </drawable>		
 		  
 		 <drawable id="activityView" class="ActivityView">
-			<param name="x">109</param>
-			<param name="y">160</param>
-            <param name="stepsXOffset">56</param>
-            <param name="stepsYOffset">-30</param>
+			<param name="x">108</param>
+			<param name="y">180</param>
+            <param name="stepsXOffset">-20</param>
+            <param name="stepsYOffset">-26</param>
             <param name="showDistance">true</param>
             <param name="distanceXOffset">56</param>
-            <param name="distanceYOffset">-5</param>      
+            <param name="distanceYOffset">-26</param>      
          </drawable>
 		  
 		 <drawable id="bluetoothView" class="BluetoothView">
-			<param name="x">36</param>
-			<param name="y">60</param>
+			<param name="x">70</param>
+			<param name="y">20</param>
 		 </drawable>		 
 		 <drawable id="alarmView" class="AlarmView">
-			<param name="x">32</param>
-			<param name="y">90</param>
+			<param name="x">40</param>
+			<param name="y">20</param>
 		 </drawable>		
 		 <drawable id="notificationView" class="NotificationView">
-			<param name="x">88</param>
-			<param name="y">66</param>
+			<param name="x">42</param>
+			<param name="y">50</param>
 		 </drawable>
 		 <!-- 
 		 <drawable id="elevationView" class="ElevationView">

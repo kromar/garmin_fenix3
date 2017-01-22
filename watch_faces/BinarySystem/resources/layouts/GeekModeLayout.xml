@@ -1,9 +1,15 @@
 <resources>
 	<layout id="GeekModeLayout">
 		<drawable id="batteryView" class="BatteryView">
-			<param name="x">30</param>
-			<param name="y">80</param>
-			<param name="showBatteryBar">false</param>			
+            <param name="showBatteryPercentage">true</param>
+            <param name="showBatteryBar">false</param>
+            <param name="batteryBarHorizontal">true</param>
+            <param name="batteryBarSize">100</param>
+            <param name="batteryBarThickness">2</param>
+            <param name="batteryBarLocX">0</param>
+            <param name="batteryBarLocY">0</param>
+            <param name="batteryPercentageLocX">30</param>
+            <param name="batteryPercentageLocY">80</param>	
 		 </drawable>
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">false</param>

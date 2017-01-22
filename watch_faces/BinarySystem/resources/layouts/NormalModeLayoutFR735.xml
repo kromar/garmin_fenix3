@@ -1,9 +1,15 @@
 <resources>
 	<layout id="NormalModeLayoutFR735">
 		<drawable id="batteryView" class="BatteryView">
-			<param name="x">109</param>
-			<param name="y">0</param>
-			<param name="showBatteryBar">true</param>
+            <param name="showBatteryPercentage">true</param>
+            <param name="showBatteryBar">true</param>
+            <param name="batteryBarHorizontal">true</param>
+            <param name="batteryBarSize">100</param>
+            <param name="batteryBarThickness">2</param>
+            <param name="batteryBarLocX">109</param>
+            <param name="batteryBarLocY">10</param>
+            <param name="batteryPercentageLocX">12</param>
+            <param name="batteryPercentageLocY">0</param>
 		</drawable>
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
@@ -14,32 +20,32 @@
 		 <drawable id="binaryView" class="BinaryView">
 			<param name="x">60</param>
 			<param name="y">80</param>
-			<param name="borderDistance">15</param>
+			<param name="borderDistance">20</param>
 			<param name="type">Circular</param>
-			<param name="showSeconds">false</param>
+			<param name="showSeconds">true</param>
 		 </drawable>
 		 
          <drawable id="activityView" class="ActivityView">
-			<param name="x">109</param>
-			<param name="y">160</param>
-            <param name="stepsXOffset">0</param>
-            <param name="stepsYOffset">-6</param>
+			<param name="x">106</param>
+			<param name="y">150</param>
+            <param name="stepsXOffset">-23</param>
+            <param name="stepsYOffset">-24</param>
             <param name="showDistance">true</param>
-            <param name="distanceXOffset">56</param>
-            <param name="distanceYOffset">136</param>       
+            <param name="distanceXOffset">53</param>
+            <param name="distanceYOffset">-24</param>       
          </drawable>
          
 		 <drawable id="bluetoothView" class="BluetoothView">
-			<param name="x">40</param>
-			<param name="y">20</param>
+			<param name="x">35</param>
+			<param name="y">10</param>
 		 </drawable>
 		 <drawable id="alarmView" class="AlarmView">
-			<param name="x">157</param>
-			<param name="y">20</param>
+			<param name="x">160</param>
+			<param name="y">10</param>
 		 </drawable>
 		 <drawable id="notificationView" class="NotificationView">
-			<param name="x">83</param>
-			<param name="y">70</param>
+			<param name="x">90</param>
+			<param name="y">40</param>
 		 </drawable>
 	</layout>
 </resources>
