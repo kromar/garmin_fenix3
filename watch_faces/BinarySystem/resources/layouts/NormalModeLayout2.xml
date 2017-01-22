@@ -1,9 +1,14 @@
 <resources>
 	<layout id="NormalModeLayout2">
 		<drawable id="batteryView" class="BatteryView">
-			<param name="x">109</param>
-			<param name="y">10</param>
 			<param name="showBatteryBar">true</param>
+            <param name="batteryBarHorizontal">true</param>
+            <param name="batteryBarSize">100</param>
+            <param name="batteryBarThickness">2</param>
+            <param name="batteryBarLocX">109</param>
+            <param name="batteryBarLocY">50</param>
+            <param name="batteryPercentageLocX">50</param>
+            <param name="batteryPercentageLocY">0</param>
 		 </drawable>		
 		 
 		  
