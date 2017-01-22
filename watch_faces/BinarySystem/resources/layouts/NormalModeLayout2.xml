@@ -9,7 +9,7 @@
 		 
         <drawable id="sunView" class="SunView">
             <param name="x">109</param>
-            <param name="y">30</param>
+            <param name="y">50</param>
          </drawable>        
 		 
 		 
