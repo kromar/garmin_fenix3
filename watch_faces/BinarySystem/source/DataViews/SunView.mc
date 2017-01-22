@@ -16,6 +16,7 @@ class SunView extends Ui.Drawable
             Ui.Drawable.setLocation(x, y);
 
             // https://github.com/haraldh/SunCalc
+            //http://lexikon.astronomie.info/zeitgleichung/
             var sc = new SunCalc();
         }
 
