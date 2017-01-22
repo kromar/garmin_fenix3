@@ -25,22 +25,43 @@ class BinarySystemView extends Ui.WatchFace {
     //! Load your resources here
     function onLayout(dc) {
 
-        var geekMode = App.getApp().getProperty("GeekMode");
-        if (!geekMode)
+        var layoutMode = App.getApp().getProperty("LayoutType");
         {
+            // this is a round watchface... HACK
             if (dc.getHeight() > 200)
             {
-                setLayout(Rez.Layouts.NormalModeLayout(dc));
+            	if (layoutMode == 0)
+            	{
+		            setLayout(Rez.Layouts.GeekModeLayout(dc));
+                }
+                else if (layoutMode == 1)
+                {
+		            setLayout(Rez.Layouts.GeekModeLayout(dc));
+                }
+                else if (layoutMode == 2)
+                {
+		            setLayout(Rez.Layouts.GeekModeLayout(dc));                
+                }
+                else if (layoutMode == 3)
+                {
+		            setLayout(Rez.Layouts.NormalModeLayout(dc));     
+                }
+                else if (layoutMode == 4)
+                {
+		            setLayout(Rez.Layouts.NormalModeLayout2(dc));     
+                }
+                else
+                {
+                	Sys.println("!!Could not find correct value for LayoutType, fallback to default!!");
+		            setLayout(Rez.Layouts.NormalModeLayout2(dc));                     
+                }
             }
+            
             else
             {
                 // ForeRunner 735XT
                 setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
             }
-        }
-        else
-        {
-            setLayout(Rez.Layouts.GeekModeLayout(dc));
         }
     }
 
