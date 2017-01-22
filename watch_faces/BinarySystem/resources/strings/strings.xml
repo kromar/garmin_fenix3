@@ -8,8 +8,8 @@
     <string id="LAYOUTMODE_GEEK">Geek mode</string>
     <string id="LAYOUTMODE_VERTICAL">Vertical mode</string>
     <string id="LAYOUTMODE_HORIZONTAL">Horizontal mode</string>
-    <string id="LAYOUTMODE_">Circular mode 1</string>
-    <string id="LAYOUTMODE_">Circular mode 2</string>
+    <string id="LAYOUTMODE_CIRCULAR1">Circular mode 1</string>
+    <string id="LAYOUTMODE_CIRCULAR2">Circular mode 2</string>
     
     <string id="ShowSecondsTitle">Show seconds</string>
     <string id="RemainingBatteryEstimateTitle">Remaining battery estimate</string>
