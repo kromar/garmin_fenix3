@@ -1,7 +1,9 @@
-using Toybox.System as System;
+using Toybox.System as Sys;
 using Toybox.Application as App;
 using Toybox.Graphics as Gfx;
 using Toybox.WatchUi as Ui;
+using Toybox.Math as Math;
+
 
 class BatteryView extends Ui.Drawable
 {
@@ -26,45 +28,62 @@ class BatteryView extends Ui.Drawable
 
     function drawBatteryBars(dc, battery)
     {
+        // API draw references
+            // fillRectangle(x, y, width, height) ⇒ Object
+            // drawLine(x1, y1, x2, y2) ⇒ Object
+            //  drawArc(x, y, r, attr, degreeStart, degreeEnd) ⇒ Object
+
+        var barHorizontal = true;
         var barLength = 100;
         var barThickness = 2;
         var locX= 109;
-        var locY = 40;
-        
+        var locY = 50;
+        var batteryPercentageBar = Math.round(barLength / 100.0f * battery).toLong();
+        var batteryPercentageOffset =(barLength -  batteryPercentageBar);   // this is needed to shift the percentage bar to its correct coordinate
+
+
         if (showBatteryBar)
         {
-        var barHorizontal = true;
+            if (barHorizontal == true) //draw horizontal battery bar
+            {
+                if (battery > 99){
+                    dc.fillRectangle(locX + barLength / 2 - barThickness,  locY - 8, barThickness, 8);
+                }
+                if (battery >= 75) {
+                    dc.drawLine(locX + barLength * 0.25 , locY, locX + barLength * 0.25, locY - 5);
+                }
+                if (battery >= 50) {
+                    dc.drawLine(locX , locY, locX, locY - 8);
+                }
+                if (battery >= 25) {
+                    dc.drawLine(locX - barLength * 0.25 , locY, locX - barLength * 0.25, locY - 5);
+                }
+                dc.fillRectangle(locX - barLength / 2, locY - 8,  barThickness, 8);   //0% mark
+                dc.fillRectangle(locX - barLength / 2, locY, batteryPercentageBar, barThickness);
 
-         //draw battery bar vertical lines
-        if (barHorizontal == true)
-        {
-            if (battery > 99){
-                dc.fillRectangle(locX + barLength/2 - barThickness,  locY-8, barThickness, 8);
+            } else {     // draw vertical battery bar
+                if (battery > 99){
+                    dc.fillRectangle(locX - 8,  locY , 8, barThickness);
+                }
+                if (battery >= 75) {
+                    dc.drawLine(locX - 5, locY  + barLength * 0.25, locX,  locY+ barLength * 0.25);
+                }
+                if (battery >= 50) {
+                    dc.drawLine(locX - 8, locY  + barLength * 0.5, locX,  locY+ barLength * 0.5);
+                }
+                if (battery >= 25) {
+                    dc.drawLine(locX - 5, locY  + barLength * 0.75, locX,  locY+ barLength * 0.75);
+                }
+                dc.fillRectangle(locX - 8, locY + barLength - barThickness, 8, barThickness);     //0% mark
+                dc.fillRectangle(locX,  locY + batteryPercentageOffset , barThickness, batteryPercentageBar);
             }
-            if (battery >= 75) {
-                dc.drawLine(locX*0.75 + barLength/2, locY, locX*0.75 + barLength/2, locY-5);
-            }
-            if (battery >= 50) {
-                dc.drawLine(locX*0.5 + barLength/2, locY, locX*0.5 + barLength/2, locY-8);
-            }
-            if (battery >= 25) {
-                dc.drawLine(locX * 0.25 + barLength/2, locY, locX * 0.25 + barLength/2, locY-5);
-            }
-            dc.fillRectangle(locX - barLength/2, locY - 8,  barThickness, 8);
-            dc.fillRectangle(locX - barLength/2, locY, barLength / 100.0f * battery, barThickness);
-
-        // TODO  vertical battery bar needs to be implemented
-        } else {  
-            dc.fillRectangle(locX - 5, locY + barLength/2, 5, 1);
-            dc.fillRectangle(locX, locY + barLength/2, barThickness, barLength / 100.0f * battery);
-        }
         }
     }
 
 
     function drawBatteryBar(dc)
     {
-        var sysStats = System.getSystemStats();
+        var sysStats = Sys.getSystemStats();
         var battery = sysStats.battery;
 
         var width = dc.getWidth();
@@ -128,7 +147,7 @@ class BatteryView extends Ui.Drawable
     function drawBatteryPercentage(dc)
     {
         var remainingBatteryEstimateMode = App.getApp().getProperty("RemainingBatteryEstimate");
-        var sysStats = System.getSystemStats();
+        var sysStats = Sys.getSystemStats();
         var battery = sysStats.battery;
             //===============================
             //!battery percentage
