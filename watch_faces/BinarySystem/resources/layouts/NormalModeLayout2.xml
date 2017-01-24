@@ -10,15 +10,13 @@
             <param name="batteryBarLocY">16</param>
             <param name="batteryPercentageLocX">50</param>
             <param name="batteryPercentageLocY">0</param>
-		 </drawable>		
-		 
+		 </drawable>				 
 		 
         <drawable id="sunView" class="SunView">
+            <param name="showSun">true</param>
             <param name="x">109</param>
-            <param name="y">50</param>
-         </drawable>        
-		 
-		 
+            <param name="y">68</param>            
+         </drawable>        		 
 		  
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
