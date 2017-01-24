@@ -15,8 +15,8 @@
     <string id="showBatteryBarTitle">Battery Bar</string>
     <string id="RemainingBatteryEstimateTitle">Remaining Battery Estimate</string>   
     
-    <string id="showTimeTitle">Show Time</string>
-    <string id="showDateTitle">Show Date</string>
+    <!-- <string id="showTimeTitle">Show Time</string>
+    <string id="showDateTitle">Show Date</string> -->
     <string id="ShowSecondsTitle">Show Binary Seconds</string>
     
     <string id="showDistanceTitle">Show Activity Distance</string>

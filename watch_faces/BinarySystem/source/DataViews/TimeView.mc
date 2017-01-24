@@ -23,8 +23,8 @@ class TimeView extends Ui.Drawable
 
     function draw(dc)
     {
-       var showTime= App.getApp().getProperty("showTime");
-       var showDate= App.getApp().getProperty("showDate");
+        //var showTime= App.getApp().getProperty("showTime");
+        //var showDate= App.getApp().getProperty("showDate");
         var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 

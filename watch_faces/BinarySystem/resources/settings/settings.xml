@@ -31,14 +31,14 @@
     </setting>
     
     
-    <setting propertyKey="@Properties.showTime" 
+    <!-- <setting propertyKey="@Properties.showTime" 
                     title="@Strings.showTimeTitle">
         <settingConfig type="boolean" />
     </setting>    
     <setting propertyKey="@Properties.showDate" 
                     title="@Strings.showDateTitle">
         <settingConfig type="boolean" />
-    </setting>
+    </setting> -->
 	<setting propertyKey="@Properties.ShowSeconds" 
 	                title="@Strings.ShowSecondsTitle">
 		<settingConfig type="boolean" />
