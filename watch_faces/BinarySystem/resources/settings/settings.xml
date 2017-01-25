@@ -1,18 +1,10 @@
 <settings>
-
 	<setting propertyKey="@Properties.appVersion" 
 	               title="@Strings.AppVersionTitle">
 		<settingConfig type="alphaNumeric" readonly="true" />
-	</setting>
+	</setting>	
 	
-    <setting propertyKey="@Properties.ShowSun"
-        title="@Strings.ShowSunTitle">
-        <settingConfig type="boolean" />
-    </setting>
-    
-	<setting propertyKey="@Properties.RemainingBatteryEstimate"
-		title="@Strings.RemainingBatteryEstimateTitle">
-
+	<!-- LAYOUT -->
     <setting propertyKey="@Properties.LayoutType" 
                     title="@Strings.LayoutTypeTitle">
         <settingConfig type="list">
@@ -22,23 +14,24 @@
             <listEntry value="3">@Strings.LAYOUTMODE_CIRCULAR1</listEntry>
             <listEntry value="4">@Strings.LAYOUTMODE_CIRCULAR2</listEntry>
         </settingConfig>
-    </setting>
+    </setting>        
     
     
+    <!-- BATTERY -->
         <setting propertyKey="@Properties.showBatteryPercentage" 
                         title="@Strings.showBatteryPercentageTitle">
         <settingConfig type="boolean" />
-    </setting>
+    </setting>    
     <setting propertyKey="@Properties.showBatteryBar" 
                     title="@Strings.showBatteryBarTitle">
         <settingConfig type="boolean" />
     </setting>
     <setting propertyKey="@Properties.RemainingBatteryEstimate"
-                    title="@Strings.RemainingBatteryEstimateTitle">
+        title="@Strings.RemainingBatteryEstimateTitle">
         <settingConfig type="boolean" />
-    </setting>
+    </setting>      
     
-    
+    <!-- TIME -->   
     <!-- <setting propertyKey="@Properties.showTime" 
                     title="@Strings.showTimeTitle">
         <settingConfig type="boolean" />
@@ -46,20 +39,19 @@
     <setting propertyKey="@Properties.showDate" 
                     title="@Strings.showDateTitle">
         <settingConfig type="boolean" />
-    </setting> -->
-	<setting propertyKey="@Properties.ShowSeconds" 
-	                title="@Strings.ShowSecondsTitle">
-		<settingConfig type="boolean" />
-	</setting>
-	
-	
+    </setting> -->    
+    <setting propertyKey="@Properties.ShowSun"
+        title="@Strings.ShowSunTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    
+	<!-- ACTIVITY -->
     <setting propertyKey="@Properties.showDistance" 
                     title="@Strings.showDistanceTitle">
         <settingConfig type="boolean" />
     </setting>
-	
 
-
+    <!-- BINARY -->
 	<setting propertyKey="@Properties.BinaryRadius" 
 	                title="@Strings.BinaryRadiusTitle">
 		<settingConfig type="list">
@@ -70,9 +62,14 @@
 			<listEntry value="8">@Strings.RADIUS_8</listEntry>
 			<listEntry value="9">@Strings.RADIUS_9</listEntry>
 		</settingConfig>
-	</setting>
-
-
+	</setting>	
+    <setting propertyKey="@Properties.ShowSeconds" 
+                    title="@Strings.ShowSecondsTitle">
+        <settingConfig type="boolean" />
+    </setting>  
+    
+	
+	<!-- COLORS -->
 	<setting propertyKey="@Properties.ForegroundColor" 
                    title="@Strings.ForegroundColorTitle">
 		<settingConfig type="list">
@@ -90,11 +87,9 @@
 			<listEntry value="0x0000FF">@Strings.COLOR_DK_BLUE</listEntry>
 			<listEntry value="0xAA00FF">@Strings.COLOR_PURPLE</listEntry>
 			<listEntry value="0xFF00FF">@Strings.COLOR_PINK</listEntry>
-
 		</settingConfig>
 	</setting>
-	
-	
+		
     <setting propertyKey="@Properties.BackgroundColor" 
                     title="@Strings.BackgroundColorTitle">
         <settingConfig type="list">
@@ -114,7 +109,4 @@
             <listEntry value="0xFF00FF">@Strings.COLOR_PINK</listEntry>
         </settingConfig>
     </setting>
-
-
-
 </settings>

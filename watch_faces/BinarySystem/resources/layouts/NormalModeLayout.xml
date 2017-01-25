@@ -5,11 +5,11 @@
             <param name="showBatteryBar">false</param>
             <param name="batteryBarHorizontal">true</param>
             <param name="batteryBarSize">100</param>
-            <param name="batteryBarThickness">2</param>
+            <param name="batteryBarThickness">1</param>
             <param name="batteryBarLocX">109</param>
-            <param name="batteryBarLocY">50</param>
+            <param name="batteryBarLocY">70</param>
             <param name="batteryPercentageLocX">12</param>
-            <param name="batteryPercentageLocY">-50</param>
+            <param name="batteryPercentageLocY">-70</param>
 		 </drawable>
 		 
 		 <drawable id="timeView" class="TimeView">
@@ -18,6 +18,13 @@
 			<param name="x">109</param>
 			<param name="y">12</param>
 		 </drawable>
+		 
+        <drawable id="sunView" class="SunView">
+            <param name="showSun">true</param>
+            <param name="x">109</param>
+            <param name="y">109</param>            
+         </drawable> 
+         
 		 <drawable id="binaryView" class="BinaryView">
 			<param name="x">60</param>
 			<param name="y">80</param>
@@ -29,10 +36,10 @@
 		 <drawable id="activityView" class="ActivityView">
 			<param name="x">109</param>
 			<param name="y">180</param>
-            <param name="stepsXOffset">56</param>
+            <param name="stepsXOffset">18</param>
             <param name="stepsYOffset">-30</param>
             <param name="showDistance">true</param>
-            <param name="distanceXOffset">56</param>
+            <param name="distanceXOffset">28</param>
             <param name="distanceYOffset">-5</param>      
          </drawable>
          
@@ -45,10 +52,9 @@
 			<param name="y">20</param>
 		 </drawable>
 		 
-		 
 		 <drawable id="notificationView" class="NotificationView">
-			<param name="x">83</param>
-			<param name="y">70</param>
+			<param name="x">88</param>
+			<param name="y">80</param>
 		 </drawable>
 		 <!-- 
 		 <drawable id="elevationView" class="ElevationView">

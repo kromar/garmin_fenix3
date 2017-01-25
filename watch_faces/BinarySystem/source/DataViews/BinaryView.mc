@@ -37,8 +37,7 @@ class BinaryView extends Ui.Drawable
 		{
 			Sys.println("Using Vertical locations");
 			typeMethod = binaryLocation.method(:horizontalLocation);
-		}	
-		
+		}			
 	}
 	var binaryLocation;
 

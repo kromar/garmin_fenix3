@@ -1,10 +1,9 @@
 <strings>
-
     <string id="AppName">BinarySystem</string>    
     <string id="AppVersionTitle">Version</string>
     
-    <string id="LayoutTypeTitle">Layout mode</string>
-    <string id="ShowSunTitle">Show Sunrise and Sunset</string>
+    <string id="LayoutTypeTitle">Layout</string>
+    <string id="ShowSunTitle">Sunrise Sunset</string>
     
     <string id="LAYOUTMODE_GEEK">Geek Mode</string>
     <string id="LAYOUTMODE_VERTICAL">Vertical Mode</string>
@@ -14,14 +13,13 @@
     
     <string id="showBatteryPercentageTitle">Battery Percentage</string> 
     <string id="showBatteryBarTitle">Battery Bar</string>
-    <string id="RemainingBatteryEstimateTitle">Remaining Battery Estimate</string>   
+    <string id="RemainingBatteryEstimateTitle">Remaining Battery (Experimental)</string>   
     
     <!-- <string id="showTimeTitle">Show Time</string>
     <string id="showDateTitle">Show Date</string> -->
-    <string id="ShowSecondsTitle">Show Binary Seconds</string>
+    <string id="ShowSecondsTitle">Binary Seconds</string>
     
-    <string id="showDistanceTitle">Show Activity Distance</string>
-    
+    <string id="showDistanceTitle">Activity Distance</string>    
     
     <string id="BinaryRadiusTitle">Binary radius</string>
     <string id="RADIUS_4">4</string>
@@ -29,11 +27,10 @@
     <string id="RADIUS_6">6</string>
     <string id="RADIUS_7">7</string>
     <string id="RADIUS_8">8</string>
-    <string id="RADIUS_9">9</string>
-    
+    <string id="RADIUS_9">9</string>    
         
-    <string id="BackgroundColorTitle">Background color</string>
-    <string id="ForegroundColorTitle">Binary color</string>
+    <string id="BackgroundColorTitle">Background Color</string>
+    <string id="ForegroundColorTitle">Binary Color</string>
 
     <string id="COLOR_WHITE">White</string>
     <string id="COLOR_LT_GRAY">Light Gray</string>

@@ -2,44 +2,61 @@
 	<layout id="GeekModeLayout">
 		<drawable id="batteryView" class="BatteryView">
             <param name="showBatteryPercentage">true</param>
-            <param name="showBatteryBar">false</param>
-            <param name="batteryBarHorizontal">true</param>
-            <param name="batteryBarSize">100</param>
+            <param name="showBatteryBar">true</param>
+            <param name="batteryBarHorizontal">false</param>
+            <param name="batteryBarSize">110</param>
             <param name="batteryBarThickness">2</param>
-            <param name="batteryBarLocX">0</param>
-            <param name="batteryBarLocY">0</param>
-            <param name="batteryPercentageLocX">30</param>
-            <param name="batteryPercentageLocY">80</param>	
+            <param name="batteryBarLocX">20</param>
+            <param name="batteryBarLocY">55</param>
+            <param name="batteryPercentageLocX">40</param>
+            <param name="batteryPercentageLocY">-6</param>	
 		 </drawable>
+		 
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">false</param>
 		 	<param name="showDate">true</param>
 			<param name="x">109</param>
-			<param name="y">20</param>
+			<param name="y">10</param>
 		 </drawable>
+		 
+        <drawable id="sunView" class="SunView">
+            <param name="showSun">true</param>
+            <param name="x">109</param>
+            <param name="y">30</param>            
+         </drawable> 
+		 
 		 <drawable id="binaryView" class="BinaryView">
-			<param name="x">90</param>
+			<param name="x">88</param>
 			<param name="y">40</param>
 			<param name="borderDistance">15</param>
 			<param name="type">Vertical</param>
 			<param name="showSeconds">true</param>
 		 </drawable>
+		 
 		 <drawable id="activityView" class="ActivityView">
 			<param name="x">109</param>
-			<param name="y">180</param>
-            <param name="stepsXOffset">56</param>
-            <param name="stepsYOffset">-30</param>
+			<param name="y">190</param>
+            <param name="stepsXOffset">0</param>
+            <param name="stepsYOffset">-5</param>
             <param name="showDistance">true</param>
             <param name="distanceXOffset">56</param>
             <param name="distanceYOffset">-5</param>      
          </drawable>
+         
+         
 		 <drawable id="bluetoothView" class="BluetoothView">
-			<param name="x">40</param>
-			<param name="y">20</param>
+			<param name="x">30</param>
+			<param name="y">94</param>
 		 </drawable>
+		 
+         <drawable id="alarmView" class="AlarmView">
+            <param name="x">30</param>
+            <param name="y">120</param>
+         </drawable>        
+		 
 		 <drawable id="notificationView" class="NotificationView">
-			<param name="x">15</param>
-			<param name="y">110</param>
+			<param name="x">30</param>
+			<param name="y">148</param>
 		 </drawable>
 	</layout>
 </resources>
