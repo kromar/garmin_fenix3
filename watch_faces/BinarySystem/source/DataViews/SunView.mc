@@ -8,6 +8,7 @@ using Toybox.Activity as Activity;
 class SunView extends Ui.Drawable
 {
     var showSun = false;
+    var image = null;
     function initialize(params)
         {
             Drawable.initialize(params);
@@ -15,6 +16,7 @@ class SunView extends Ui.Drawable
             var y = params.get(:y);
             showSun = params.get(:showSun);
             Ui.Drawable.setLocation(x, y);
+            image = Ui.loadResource( Rez.Drawables.nogps_icon );
             
             // references
                 //https://forums.garmin.com/showthread.php?351367-Sun-rise-sunset/page2
@@ -53,9 +55,7 @@ class SunView extends Ui.Drawable
 	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 	
 	        } else {
-	            var sunInfoString = "no gps fix!";
-	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
-	            //Sys.println("sunInfoString: " + sunInfoString);
+                dc.drawBitmap(locX-9, locY, image);
 	        }
         }
     }
