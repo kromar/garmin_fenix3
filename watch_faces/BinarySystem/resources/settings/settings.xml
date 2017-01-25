@@ -4,6 +4,14 @@
 	               title="@Strings.AppVersionTitle">
 		<settingConfig type="alphaNumeric" readonly="true" />
 	</setting>
+	
+    <setting propertyKey="@Properties.ShowSun"
+        title="@Strings.ShowSunTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    
+	<setting propertyKey="@Properties.RemainingBatteryEstimate"
+		title="@Strings.RemainingBatteryEstimateTitle">
 
     <setting propertyKey="@Properties.LayoutType" 
                     title="@Strings.LayoutTypeTitle">
