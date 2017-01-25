@@ -11,12 +11,7 @@
             <param name="batteryPercentageLocX">35</param>
             <param name="batteryPercentageLocY">-30</param>		
 		 </drawable>
-		 <drawable id="dateView" class="TimeView">
-		 	<param name="showTime">false</param>
-		 	<param name="showDate">true</param>
-			<param name="x">109</param>
-			<param name="y">20</param>
-		 </drawable>
+		 
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
 		 	<param name="showDate">false</param>

@@ -7,12 +7,33 @@ using Toybox.Math as Math;
 
 class BatteryView extends Ui.Drawable
 {
+
+    var showBatteryBar = true;
+    var showBatteryPercentage = true;
+    var batteryBarHorizontal = true;
+
+    var batHist = {};
+    var batHistCount = 0;
+    var timeInterval = 0;
+    var remainingBattery;
+
+    var batteryBarSize = 50;
+    var batteryBarThickness = 2;
+    var batteryBarLocX= 109;
+    var batteryBarLocY = 50;
+
+    var batteryPercentageLocX = 109;
+    var batteryPercentageLocY =10;
+
+    var fg_color = Gfx.COLOR_WHITE;
+    var bg_transp = Gfx.COLOR_TRANSPARENT;
+    var dot_color = App.getApp().getProperty("ForegroundColor");
+
+
     function initialize(params)
     {
         Drawable.initialize(params);
 
-        showBatteryBar = params.get(:showBatteryBar);
-        showBatteryPercentage = params.get(:showBatteryPercentage);
         batteryBarHorizontal = params.get(:batteryBarHorizontal);
         batteryBarSize = params.get(:batteryBarSize);
         batteryBarThickness = params.get(:batteryBarThickness);
@@ -22,25 +43,25 @@ class BatteryView extends Ui.Drawable
         batteryPercentageLocY = params.get(:batteryPercentageLocY);
     }
 
-    var dot_color = App.getApp().getProperty("ForegroundColor");
-    var fg_color = Gfx.COLOR_WHITE;
-    var bg_transp = Gfx.COLOR_TRANSPARENT;
 
-    var batHist = {};
-    var batHistCount = 0;
-    var timeInterval = 0;
-    var remainingBattery;
 
-    var showBatteryBar = false;
-    var showBatteryPercentage = true;
-    var batteryBarHorizontal = true;
-    var batteryBarSize = 50;
-    var batteryBarThickness = 2;
-    var batteryBarLocX= 109;
-    var batteryBarLocY = 50;
+function draw(dc)
+    {
 
-    var batteryPercentageLocX = 109;
-    var batteryPercentageLocY =10;
+
+        var showBatteryBar = App.getApp().getProperty("showBatteryBar");
+        var showBatteryPercentage = App.getApp().getProperty("showBatteryPercentage");
+
+        if (showBatteryBar)
+        {
+            drawBatteryBar(dc);
+        }
+        if (showBatteryPercentage)
+        {
+            drawBatteryPercentage(dc);
+        }
+    }
+
 
     function drawBatteryBars(dc, battery)
     {
@@ -167,15 +188,5 @@ class BatteryView extends Ui.Drawable
             dc.drawText(batteryBarLocX + batteryPercentageLocX , batteryBarLocY +batteryPercentageLocY, font, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
     }
 
-    function draw(dc)
-    {
-        if (showBatteryBar == true)
-        {
-            drawBatteryBar(dc);
-        }
-        if (showBatteryPercentage == true)
-        {
-         drawBatteryPercentage(dc);
-        }
-    }
+
 }

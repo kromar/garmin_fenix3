@@ -5,14 +5,22 @@
     
     <string id="LayoutTypeTitle">Layout mode</string>
     
-    <string id="LAYOUTMODE_GEEK">Geek mode</string>
-    <string id="LAYOUTMODE_VERTICAL">Vertical mode</string>
-    <string id="LAYOUTMODE_HORIZONTAL">Horizontal mode</string>
-    <string id="LAYOUTMODE_CIRCULAR1">Circular mode 1</string>
-    <string id="LAYOUTMODE_CIRCULAR2">Circular mode 2</string>
+    <string id="LAYOUTMODE_GEEK">Geek Mode</string>
+    <string id="LAYOUTMODE_VERTICAL">Vertical Mode</string>
+    <string id="LAYOUTMODE_HORIZONTAL">Horizontal Mode</string>
+    <string id="LAYOUTMODE_CIRCULAR1">Circular Mode 1</string>
+    <string id="LAYOUTMODE_CIRCULAR2">Circular Mode 2</string>
     
-    <string id="ShowSecondsTitle">Show seconds</string>
-    <string id="RemainingBatteryEstimateTitle">Remaining battery estimate</string>
+    <string id="showBatteryPercentageTitle">Battery Percentage</string> 
+    <string id="showBatteryBarTitle">Battery Bar</string>
+    <string id="RemainingBatteryEstimateTitle">Remaining Battery Estimate</string>   
+    
+    <!-- <string id="showTimeTitle">Show Time</string>
+    <string id="showDateTitle">Show Date</string> -->
+    <string id="ShowSecondsTitle">Show Binary Seconds</string>
+    
+    <string id="showDistanceTitle">Show Activity Distance</string>
+    
     
     <string id="BinaryRadiusTitle">Binary radius</string>
     <string id="RADIUS_4">4</string>
