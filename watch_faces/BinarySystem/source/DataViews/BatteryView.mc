@@ -27,7 +27,7 @@ class BatteryView extends Ui.Drawable
 
     var fg_color = Gfx.COLOR_WHITE;
     var bg_transp = Gfx.COLOR_TRANSPARENT;
-        var dot_color = App.getApp().getProperty("ForegroundColor");
+    var dot_color = App.getApp().getProperty("ForegroundColor");
 
 
     function initialize(params)
@@ -58,7 +58,7 @@ function draw(dc)
         }
         if (showBatteryPercentage)
         {
-         drawBatteryPercentage(dc);
+            drawBatteryPercentage(dc);
         }
     }
 
