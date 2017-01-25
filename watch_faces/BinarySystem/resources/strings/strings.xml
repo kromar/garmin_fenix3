@@ -4,6 +4,7 @@
     <string id="AppVersionTitle">Version</string>
     
     <string id="LayoutTypeTitle">Layout mode</string>
+    <string id="ShowSunTitle">Show Sunrise and Sunset</string>
     
     <string id="LAYOUTMODE_GEEK">Geek mode</string>
     <string id="LAYOUTMODE_VERTICAL">Vertical mode</string>

@@ -5,7 +5,6 @@ using Toybox.WatchUi as Ui;
 using Toybox.System as Sys;
 using Toybox.Activity as Activity;
 
-
 class SunView extends Ui.Drawable
 {
     var showSun = false;
@@ -25,6 +24,7 @@ class SunView extends Ui.Drawable
 
     function draw(dc)
     {
+        var showSun = App.getApp().getProperty("ShowSun");
         if (showSun)
         {
 	        var curLoc = Activity.getActivityInfo().currentLocation;
