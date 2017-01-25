@@ -6,9 +6,20 @@
     <property id="ShowSun" type="boolean">true</property>
     <property id="ShowSeconds" type="boolean">true</property>
     <property id="BinaryRadius" type="number">8</property>
+    
+    <property id="showBatteryPercentage" type="boolean">true</property>
+    <property id="showBatteryBar" type="boolean">true</property>
     <property id="RemainingBatteryEstimate" type="boolean">false</property>
     
-    <property id="BackgroundColor" type="number">0x000000</property>
+  <!--   <property id="showTime" type="boolean">true</property>
+    <property id="showDate" type="boolean">true</property> -->
+    <property id="ShowSeconds" type="boolean">true</property>
+    
+    <property id="showDistance" type="boolean">true</property>
+    
+    <property id="BinaryRadius" type="number">8</property>
     <property id="ForegroundColor" type="number">0xFF0000</property>
+    <property id="BackgroundColor" type="number">0x000000</property>
 
 </properties>
+

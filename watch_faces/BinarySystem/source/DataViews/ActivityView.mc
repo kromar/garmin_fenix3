@@ -23,12 +23,12 @@ class ActivityView extends Ui.Drawable
 
         distanceXOffset = params.get(:distanceXOffset);
         distanceYOffset = params.get(:distanceYOffset);
-        showDistance = params.get(:showDistance);
     }
 
 
     function draw(dc)
     {
+        var showDistance = App.getApp().getProperty("showDistance");
         var deviceSettings = Sys.getDeviceSettings();
         // check Activity Tracking active
         var activity = deviceSettings.activityTrackingOn;
@@ -101,28 +101,28 @@ class ActivityView extends Ui.Drawable
             if (showDistance)
             {
                 dc.setColor(dot_color, bg_transp);
-               	var distanceStr = ""; 
+                var distanceStr = "";
                 if (distUnits == Sys.UNIT_METRIC)
                 {
-                	if (distance >= 100000) {
+                    if (distance >= 100000) {
                        distanceStr = (distance * 0.01 * 0.001).format("%.2f") + "km";
                     }
                     else
                     {
-                    	distanceStr = (distance * 0.01).toLong() + "m";
+                        distanceStr = (distance * 0.01).toLong() + "m";
                     }
-                } 
-                else 
+                }
+                else
                 {
-                	var feetDistance = distance * 0.0328084;
-                	if (feetDistance >= 5280)
-                	{
-                		distanceStr = (feetDistance / 5280.0).format("%.2f") + "mi";
-                	}
-                	else 
-                	{
-                 		distanceStr = (feetDistance).toLong() + "ft";
-                 	}
+                    var feetDistance = distance * 0.0328084;
+                    if (feetDistance >= 5280)
+                    {
+                        distanceStr = (feetDistance / 5280.0).format("%.2f") + "mi";
+                    }
+                    else
+                    {
+                        distanceStr = (feetDistance).toLong() + "ft";
+                    }
                 }
                 dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
                 //System.println(distanceKM);
