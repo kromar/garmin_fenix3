@@ -8,6 +8,7 @@ using Toybox.Activity as Activity;
 class SunView extends Ui.Drawable
 {
     var showSun = false;
+    var storedGpsLocation = null;
     function initialize(params)
         {
             Drawable.initialize(params);
@@ -15,6 +16,17 @@ class SunView extends Ui.Drawable
             var y = params.get(:y);
             showSun = params.get(:showSun);
             Ui.Drawable.setLocation(x, y);
+            var curLoc = Activity.getActivityInfo().currentLocation;
+	        if (curLoc != null)
+	        {
+	        	Application.getApp().setProperty("lastStoredLocation", curLoc);
+	        	storedGpsLocation = curLoc;
+	        }
+	        else
+	        {
+	        	storedGpsLocation = Application.getApp().getProperty("lastStoredLocation");
+	        	
+	        }
             
             // references
                 //https://forums.garmin.com/showthread.php?351367-Sun-rise-sunset/page2
@@ -27,16 +39,16 @@ class SunView extends Ui.Drawable
         var showSun = App.getApp().getProperty("ShowSun");
         if (showSun)
         {
-	        var curLoc = Activity.getActivityInfo().currentLocation;
+	        	        
 	        var dot_color = App.getApp().getProperty("ForegroundColor");
 	        var bg_transp = Gfx.COLOR_TRANSPARENT;
 	        dc.setColor(dot_color, bg_transp);
 	        var sc = new SunCalc();
 	
-	        if (curLoc != null) {
-	            //Sys.println("curLoc" + curLoc);
+	        if (storedGpsLocation != null) {
+	            //Sys.println("storedGpsLocation" + storedGpsLocation);
 	            
-	            var latlon = curLoc.toRadians();
+	            var latlon = storedGpsLocation.toRadians();
 	            //Sys.println("latlon" + latlon);
 	            
 	            var now = new Time.Moment(Time.now().value());
