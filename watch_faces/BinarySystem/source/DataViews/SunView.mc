@@ -8,7 +8,8 @@ using Toybox.Activity as Activity;
 class SunView extends Ui.Drawable
 {
     var showSun = false;
-    var storedGpsLocation = null;
+    var latitude = null;
+    var longitude = null;
     function initialize(params)
         {
             Drawable.initialize(params);
@@ -19,13 +20,16 @@ class SunView extends Ui.Drawable
             var curLoc = Activity.getActivityInfo().currentLocation;
 	        if (curLoc != null)
 	        {
-	        	Application.getApp().setProperty("lastStoredLocation", curLoc);
-	        	storedGpsLocation = curLoc;
+	            var latlon = curLoc.toRadians();
+	            latitude = latlon[0];
+	            longitude = latlon[1];
+	        	Application.getApp().setProperty("lastStoredLatitude", latitude);
+	        	Application.getApp().setProperty("lastStoredLongitude", longitude);
 	        }
 	        else
 	        {
-	        	storedGpsLocation = Application.getApp().getProperty("lastStoredLocation");
-	        	
+	        	latitude = Application.getApp().getProperty("lastStoredLatitude");
+	        	longitude = Application.getApp().getProperty("lastStoredLatitude");	
 	        }
             
             // references
@@ -45,17 +49,13 @@ class SunView extends Ui.Drawable
 	        dc.setColor(dot_color, bg_transp);
 	        var sc = new SunCalc();
 	
-	        if (storedGpsLocation != null) {
-	            //Sys.println("storedGpsLocation" + storedGpsLocation);
-	            
-	            var latlon = storedGpsLocation.toRadians();
-	            //Sys.println("latlon" + latlon);
-	            
+	        if (latitude != null) {
+          
 	            var now = new Time.Moment(Time.now().value());
 	            //Sys.println("now: " + now);
 	            
-	            var sunrise_moment = sc.calculate(now, latlon[0], latlon[1], SUNRISE);
-	            var sunset_moment = sc.calculate(now, latlon[0], latlon[1], SUNSET);
+	            var sunrise_moment = sc.calculate(now, latitude, longitude, SUNRISE);
+	            var sunset_moment = sc.calculate(now, latitude, longitude, SUNSET);
 	
 	            var timeInfoSunrise = Time.Gregorian.info(sunrise_moment, Time.FORMAT_SHORT);
 	            var timeInfoSunset = Time.Gregorian.info(sunset_moment, Time.FORMAT_SHORT);
