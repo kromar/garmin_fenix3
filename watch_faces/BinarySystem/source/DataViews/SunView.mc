@@ -53,7 +53,7 @@ class SunView extends Ui.Drawable
 	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 	
 	        } else {
-	            var sunInfoString = "no gps fix!";
+	            var sunInfoString = Ui.loadResource(Rez.Strings.NO_GPS_FIX);
 	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 	            //Sys.println("sunInfoString: " + sunInfoString);
 	        }
