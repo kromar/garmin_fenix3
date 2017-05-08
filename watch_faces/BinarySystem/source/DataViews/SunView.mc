@@ -10,6 +10,7 @@ class SunView extends Ui.Drawable
     var showSun = false;
     var latitude = null;
     var longitude = null;
+    var hasStoredLocationData = false;
     function initialize(params)
         {
             Drawable.initialize(params);
@@ -25,11 +26,16 @@ class SunView extends Ui.Drawable
 	            longitude = latlon[1];
 	        	Application.getApp().setProperty("lastStoredLatitude", latitude);
 	        	Application.getApp().setProperty("lastStoredLongitude", longitude);
+	        	Application.getApp().setProperty("hasStoredLocationData", hasStoredLocationData);
 	        }
 	        else
 	        {
-	        	latitude = Application.getApp().getProperty("lastStoredLatitude");
-	        	longitude = Application.getApp().getProperty("lastStoredLatitude");	
+	        	hasStoredLocationData = Application.getApp().getProperty("hasStoredLocationData");
+	        	if (hasStoredLocationData)
+	        	{
+	        		latitude = Application.getApp().getProperty("lastStoredLatitude");
+	        		longitude = Application.getApp().getProperty("lastStoredLatitude");
+	        	}	
 	        }
             
             // references
@@ -49,7 +55,7 @@ class SunView extends Ui.Drawable
 	        dc.setColor(dot_color, bg_transp);
 	        var sc = new SunCalc();
 	
-	        if (latitude != null) {
+	        if (hasStoredLocationData == true) {
           
 	            var now = new Time.Moment(Time.now().value());
 	            //Sys.println("now: " + now);
