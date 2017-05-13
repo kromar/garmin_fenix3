@@ -8,6 +8,7 @@ using Toybox.Activity as Activity;
 class SunView extends Ui.Drawable
 {
     var showSun = false;
+    var gpsImage = null;
     var latitude = null;
     var longitude = null;
     var hasStoredLocationData = false;
@@ -18,6 +19,7 @@ class SunView extends Ui.Drawable
             var y = params.get(:y);
             showSun = params.get(:showSun);
             Ui.Drawable.setLocation(x, y);
+            gpsImage = Ui.loadResource(Rez.Drawables.nogps_icon);
             var curLoc = Activity.getActivityInfo().currentLocation;
 	        if (curLoc != null)
 	        {
@@ -71,8 +73,9 @@ class SunView extends Ui.Drawable
 	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 	
 	        } else {
-	            var sunInfoString = Ui.loadResource(Rez.Strings.NO_GPS_FIX);
-	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+                //var sunInfoString = Ui.loadResource(Rez.Strings.NO_GPS_FIX);
+	            //dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+	            dc.drawBitmap(locX, locY, gpsImage);
 	            //Sys.println("sunInfoString: " + sunInfoString);
 	        }
         }

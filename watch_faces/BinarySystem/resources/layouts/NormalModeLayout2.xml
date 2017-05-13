@@ -14,8 +14,8 @@
 		 
         <drawable id="sunView" class="SunView">
             <param name="showSun">true</param>
-            <param name="x">109</param>
-            <param name="y">68</param>            
+            <param name="x">100</param>
+            <param name="y">20</param>            
          </drawable>        		 
 		  
 		 <drawable id="timeView" class="TimeView">
