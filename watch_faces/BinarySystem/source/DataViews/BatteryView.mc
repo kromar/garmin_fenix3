@@ -162,8 +162,10 @@ function draw(dc)
         var battery = sysStats.battery;
             //===============================
             //!battery percentage
-            //===============================
-            var batteryPercentageStr = Math.ceil(battery).format("%d");
+            //===============================           
+            var batteryPercentageStr = Math.round(battery).format("%d");
+            //Sys.println("string: "+  batteryPercentageString);
+            
             //batteryPrediction(seconds, battery, 24);
 
             if (remainingBatteryEstimateMode) {
