@@ -47,6 +47,6 @@
     <string id="COLOR_PURPLE">Purple</string>    
     <string id="COLOR_PINK">Pink</string>  
     
-    <string id="NO_GPS_FIX">No previous gps fix!</string>
+    <string id="NO_GPS_FIX">No GPS fix!</string>
 
 </strings>
