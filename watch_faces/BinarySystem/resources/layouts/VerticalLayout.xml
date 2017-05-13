@@ -37,12 +37,22 @@
          </drawable>
           -->
 		 <drawable id="bluetoothView" class="BluetoothView">
-			<param name="x">40</param>
-			<param name="y">20</param>
-		 </drawable>
-		 <drawable id="notificationView" class="NotificationView">
-			<param name="x">15</param>
-			<param name="y">110</param>
-		 </drawable>
+			<param name="x">80</param>
+			<param name="y">10</param>
+		 </drawable>             
+         <drawable id="alarmView" class="AlarmView">
+            <param name="x">120</param>
+            <param name="y">12</param>
+         </drawable>    
+        <drawable id="sunView" class="SunView">
+            <param name="showSun">true</param>
+            <param name="x">100</param>
+            <param name="y">10</param>            
+         </drawable> 
+         <drawable id="notificationView" class="NotificationView">
+            <param name="x">34</param>
+            <param name="y">130</param>              
+         </drawable>    
+         
 	</layout>
 </resources>

@@ -11,12 +11,6 @@
             <param name="batteryPercentageLocX">50</param>
             <param name="batteryPercentageLocY">0</param>
 		 </drawable>				 
-		 
-        <drawable id="sunView" class="SunView">
-            <param name="showSun">true</param>
-            <param name="x">100</param>
-            <param name="y">20</param>            
-         </drawable>        		 
 		  
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
@@ -43,18 +37,25 @@
             <param name="distanceYOffset">-26</param>      
          </drawable>
 		  
+         <drawable id="alarmView" class="AlarmView">
+            <param name="x">40</param>
+            <param name="y">20</param>
+         </drawable>    
 		 <drawable id="bluetoothView" class="BluetoothView">
-			<param name="x">70</param>
+			<param name="x">60</param>
 			<param name="y">20</param>
-		 </drawable>		 
-		 <drawable id="alarmView" class="AlarmView">
-			<param name="x">40</param>
-			<param name="y">20</param>
-		 </drawable>		
+		 </drawable>		 	
+        <drawable id="sunView" class="SunView">
+            <param name="showSun">true</param>
+            <param name="x">80</param>
+            <param name="y">20</param>            
+         </drawable>  
+         
 		 <drawable id="notificationView" class="NotificationView">
 			<param name="x">42</param>
-			<param name="y">50</param>
+			<param name="y">42</param>
 		 </drawable>
+         
 		 <!-- 
 		 <drawable id="elevationView" class="ElevationView">
 		 	<param name="x">109</param>

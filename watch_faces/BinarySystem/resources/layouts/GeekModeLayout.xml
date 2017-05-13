@@ -21,8 +21,8 @@
 		 
         <drawable id="sunView" class="SunView">
             <param name="showSun">true</param>
-            <param name="x">109</param>
-            <param name="y">30</param>            
+            <param name="x">30</param>
+            <param name="y">70</param>            
          </drawable> 
 		 
 		 <drawable id="binaryView" class="BinaryView">
