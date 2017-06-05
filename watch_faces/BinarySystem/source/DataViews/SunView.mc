@@ -8,6 +8,10 @@ using Toybox.Activity as Activity;
 class SunView extends Ui.Drawable
 {
     var showSun = false;
+    var gpsImage = null;
+    var latitude = null;
+    var longitude = null;
+    var hasStoredLocationData = false;
     function initialize(params)
         {
             Drawable.initialize(params);
@@ -15,6 +19,26 @@ class SunView extends Ui.Drawable
             var y = params.get(:y);
             showSun = params.get(:showSun);
             Ui.Drawable.setLocation(x, y);
+            gpsImage = Ui.loadResource(Rez.Drawables.nogps_icon);
+            var curLoc = Activity.getActivityInfo().currentLocation;
+	        if (curLoc != null)
+	        {
+	            var latlon = curLoc.toRadians();
+	            latitude = latlon[0];
+	            longitude = latlon[1];
+	        	Application.getApp().setProperty("lastStoredLatitude", latitude);
+	        	Application.getApp().setProperty("lastStoredLongitude", longitude);
+	        	Application.getApp().setProperty("hasStoredLocationData", hasStoredLocationData);
+	        }
+	        else
+	        {
+	        	hasStoredLocationData = Application.getApp().getProperty("hasStoredLocationData");
+	        	if (hasStoredLocationData)
+	        	{
+	        		latitude = Application.getApp().getProperty("lastStoredLatitude");
+	        		longitude = Application.getApp().getProperty("lastStoredLatitude");
+	        	}	
+	        }
             
             // references
                 //https://forums.garmin.com/showthread.php?351367-Sun-rise-sunset/page2
@@ -27,23 +51,19 @@ class SunView extends Ui.Drawable
         var showSun = App.getApp().getProperty("ShowSun");
         if (showSun)
         {
-	        var curLoc = Activity.getActivityInfo().currentLocation;
+	        	        
 	        var dot_color = App.getApp().getProperty("ForegroundColor");
 	        var bg_transp = Gfx.COLOR_TRANSPARENT;
 	        dc.setColor(dot_color, bg_transp);
 	        var sc = new SunCalc();
 	
-	        if (curLoc != null) {
-	            //Sys.println("curLoc" + curLoc);
-	            
-	            var latlon = curLoc.toRadians();
-	            //Sys.println("latlon" + latlon);
-	            
+	        if (hasStoredLocationData == true) {
+          
 	            var now = new Time.Moment(Time.now().value());
 	            //Sys.println("now: " + now);
 	            
-	            var sunrise_moment = sc.calculate(now, latlon[0], latlon[1], SUNRISE);
-	            var sunset_moment = sc.calculate(now, latlon[0], latlon[1], SUNSET);
+	            var sunrise_moment = sc.calculate(now, latitude, longitude, SUNRISE);
+	            var sunset_moment = sc.calculate(now, latitude, longitude, SUNSET);
 	
 	            var timeInfoSunrise = Time.Gregorian.info(sunrise_moment, Time.FORMAT_SHORT);
 	            var timeInfoSunset = Time.Gregorian.info(sunset_moment, Time.FORMAT_SHORT);
@@ -53,8 +73,9 @@ class SunView extends Ui.Drawable
 	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 	
 	        } else {
-	            var sunInfoString = "no gps fix!";
-	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+                //var sunInfoString = Ui.loadResource(Rez.Strings.NO_GPS_FIX);
+	            //dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+	            dc.drawBitmap(locX, locY, gpsImage);
 	            //Sys.println("sunInfoString: " + sunInfoString);
 	        }
         }

@@ -17,19 +17,14 @@
 			<param name="x">109</param>
 			<param name="y">70</param>
 		 </drawable>
-		 
-        <drawable id="sunView" class="SunView">
-            <param name="showSun">true</param>
-            <param name="x">109</param>
-            <param name="y">54</param>            
-         </drawable> 
-         
+		          
 		 <drawable id="binaryView" class="BinaryView">
 			<param name="x">60</param>
 			<param name="y">80</param>
 			<param name="borderDistance">20</param>
 			<param name="type">Circular</param>
 			<param name="showSeconds">true</param>
+			
 		 </drawable>
 		 
          <drawable id="activityView" class="ActivityView">
@@ -43,13 +38,20 @@
          </drawable>
          
 		 <drawable id="bluetoothView" class="BluetoothView">
-			<param name="x">35</param>
+			<param name="x">40</param>
 			<param name="y">10</param>
 		 </drawable>
 		 <drawable id="alarmView" class="AlarmView">
 			<param name="x">160</param>
 			<param name="y">10</param>
 		 </drawable>
+		 
+        <drawable id="sunView" class="SunView">
+            <param name="showSun">true</param>
+            <param name="x">100</param>
+            <param name="y">54</param>            
+         </drawable> 
+         
 		 <drawable id="notificationView" class="NotificationView">
 			<param name="x">90</param>
 			<param name="y">26</param>

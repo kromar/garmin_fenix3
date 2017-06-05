@@ -46,5 +46,7 @@
     <string id="COLOR_DK_BLUE">Dark Blue</string>
     <string id="COLOR_PURPLE">Purple</string>    
     <string id="COLOR_PINK">Pink</string>  
+    
+    <string id="NO_GPS_FIX">No GPS fix!</string>
 
 </strings>
