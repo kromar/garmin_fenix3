@@ -11,8 +11,10 @@ class SunView extends Ui.Drawable
     var gpsImage = null;
     var latitude = null;
     var longitude = null;
+    //var latitude = 50.283333;
+    //var longitude = 2.783333; 
     var curLoc = null;
-    var hasStoredLocationData = false;
+    var hasStoredLocationData = null;
     
     function initialize(params)
         {
@@ -35,9 +37,9 @@ class SunView extends Ui.Drawable
 
     function draw(dc)
     {
-
-      if (curLoc != null) //when loc is defined
-            {
+        Sys.println("check location: " + Activity.getActivityInfo().currentLocation);
+      if (curLoc) //when loc is defined we can write the location to the app properties
+            {               
                 Sys.println("curloc: " + curLoc);
                 var latlon = curLoc.toRadians();
                 latitude = latlon[0];
@@ -46,19 +48,26 @@ class SunView extends Ui.Drawable
                 Application.getApp().setProperty("lastStoredLongitude", longitude);
                 Application.getApp().setProperty("hasStoredLocationData", hasStoredLocationData);
             }
-            else //whne no location saved
+            else //when no location is present
             {
+                //check if there is stored location data and load it if available
                 hasStoredLocationData = Application.getApp().getProperty("hasStoredLocationData");
-                Sys.println("no curloc: " + curLoc);
-                Sys.println("stored data 1: " + hasStoredLocationData);
+                Sys.println("check for stored location data");
                 
                 if (hasStoredLocationData)
                 {
                     Sys.println("stored location date exists");
                     latitude = Application.getApp().getProperty("lastStoredLatitude");
                     longitude = Application.getApp().getProperty("lastStoredLatitude");
+                    Sys.println("stored location date exists: " + latitude + longitude);
                 }   
+                else
+                {
+                 Sys.println("no stored data and no location");
+                 }
             }
+            
+            
             //================
             
         var showSun = App.getApp().getProperty("ShowSun");
@@ -88,10 +97,11 @@ class SunView extends Ui.Drawable
 	            var sunInfoString = timeInfoSunrise.hour.format("%01d") + ":" + timeInfoSunrise.min.format("%02d") + " - " + timeInfoSunset.hour.format("%01d") + ":" + timeInfoSunset.min.format("%02d");
 	            Sys.println("sunInfoString: " + sunInfoString);
 	            dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+                dc.drawText(109, 50, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 	            	
 	        } else {
 	        
-                Sys.println("no stored data");
+                Sys.println("no stored data for drawing");
                 //var sunInfoString = Ui.loadResource(Rez.Strings.NO_GPS_FIX);
 	            //dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 	            dc.drawBitmap(locX, locY, gpsImage);
