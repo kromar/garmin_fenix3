@@ -43,9 +43,11 @@
             <param name="y">80</param>
          </drawable>    
         <drawable id="sunView" class="SunView">
-            <param name="showSun">true</param>
-            <param name="x">30</param>
-            <param name="y">60</param>            
+            <param name="showSun">true</param>    
+            <param name="iconX">30</param>
+            <param name="iconY">60</param>  
+            <param name="textX">109</param>
+            <param name="textY">6</param>             
          </drawable> 
 		 
 		 

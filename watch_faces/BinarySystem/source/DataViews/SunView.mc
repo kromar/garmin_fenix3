@@ -5,92 +5,78 @@ using Toybox.WatchUi as Ui;
 using Toybox.System as Sys;
 using Toybox.Activity as Activity;
 
+// references
+//https://forums.garmin.com/showthread.php?351367-Sun-rise-sunset/page2
+// https://github.com/haraldh/SunCalc
+//http://lexikon.astronomie.info/zeitgleichung/
+
 class SunView extends Ui.Drawable
 {
     var showSun = false;
     var gpsImage = null;
     var latitude = null;
     var longitude = null;
-    //var latitude = 50.283333;
-    //var longitude = 2.783333;
     var curLoc = null;
-    var hasStoredLocationData = null;
+    var hasStoredLocationData = false;
+    var iconX = 0;
+    var iconY = 0;
+    var textX = 0;
+    var textY = 0;
 
     function initialize(params)
         {
             Ui.Drawable.initialize(params);
-            var x = params.get(:x);
-            var y = params.get(:y);
+            iconX = params.get(:iconX);
+            iconY = params.get(:iconY);
+            textX = params.get(:textX);
+            textY = params.get(:textY);
+            //Drawable.setLocation(iconX, iconY);
+
             showSun = params.get(:showSun);
-            Ui.Drawable.setLocation(x, y);
-
-                // references
-                //https://forums.garmin.com/showthread.php?351367-Sun-rise-sunset/page2
-                // https://github.com/haraldh/SunCalc
-                //http://lexikon.astronomie.info/zeitgleichung/
-     }
-
-
-    function draw(dc)
-    {
-
             gpsImage = Ui.loadResource(Rez.Drawables.nogps_icon);
             var curLoc = Activity.getActivityInfo().currentLocation;
-            Sys.println("curLoc init: " + curLoc);
+            var hasStoredLocationData = false;
 
-             Sys.println("check location: " + curLoc);  // we get a location here
              //when the location  is defined we can write the location to the app properties
               if (curLoc)
-                {
-                    Sys.println("curloc: " + curLoc);
-                    var latlon = curLoc.toRadians();
-                    latitude = latlon[0];
-                    longitude = latlon[1];
-                    var hasStoredLocationData = true;
-                    Sys.println("location: " + latitude + longitude);
-                    Application.getApp().setProperty("lastStoredLatitude", latitude);
-                    Application.getApp().setProperty("lastStoredLongitude", longitude);
-                    Application.getApp().setProperty("hasStoredLocationData", hasStoredLocationData);
+				{
+				    var latlon = curLoc.toRadians();
+				    hasStoredLocationData = true;
+				    latitude = latlon[0];
+				    longitude = latlon[1];
+				    Application.getApp().setProperty("lastStoredLatitude", latitude);
+				    Application.getApp().setProperty("lastStoredLongitude", longitude);
+				    Application.getApp().setProperty("hasStoredLocationData", hasStoredLocationData);
 
-                }
-                else //when no location is present
-                {
-                    Sys.println("curloc2: " + curLoc);
-                    //check if there is stored location data and load it if available
-                    var hasStoredLocationData = Application.getApp().getProperty("hasStoredLocationData");
-                    Sys.println("check for stored location data " + hasStoredLocationData);
+				}
+				else //when no location is present
+				{
+				    //check if there is stored location data and load it if available
+				    var hasStoredLocationData = Application.getApp().getProperty("hasStoredLocationData");
+				    if (hasStoredLocationData==true)
+				    {   // then get the stored location
+				        latitude = Application.getApp().getProperty("lastStoredLatitude");
+				        longitude = Application.getApp().getProperty("lastStoredLatitude");
+				    }
+				}
+            }
 
-                    if (hasStoredLocationData)
-                    {
-                        Sys.println("stored location date exists");
-                        latitude = Application.getApp().getProperty("lastStoredLatitude");
-                        longitude = Application.getApp().getProperty("lastStoredLatitude");
-                        Sys.println("stored location date exists: " + latitude + longitude);
-                    }
-                    else
-                    {
-                     Sys.println("no stored data and no location");
-                     }
-                }
-
-               //========================
+    //TODO: i think we miss the case where the user gets a location for the first time and the init is not triggered (when is init triggered?)
+    function draw(dc)
+    {
         var showSun = App.getApp().getProperty("ShowSun");
-        if (showSun)
-        {
 
+        if (showSun==true)
+        {
             var dot_color = App.getApp().getProperty("ForegroundColor");
             var bg_transp = Gfx.COLOR_TRANSPARENT;
             dc.setColor(dot_color, bg_transp);
             var sc = new SunCalc();
 
-            dc.drawText(109, 60,  Gfx.FONT_TINY, "test", Gfx.TEXT_JUSTIFY_CENTER);
-            Sys.println("stored data 2: " + hasStoredLocationData);
-
-            if (hasStoredLocationData) {
-
-                Sys.println("stored data found");
+            // get stored data
+            var hasStoredLocationData = Application.getApp().getProperty("hasStoredLocationData");
+            if (hasStoredLocationData==true) {
                 var now = new Time.Moment(Time.now().value());
-                //Sys.println("now: " + now);
 
                 var sunrise_moment = sc.calculate(now, latitude, longitude, SUNRISE);
                 var sunset_moment = sc.calculate(now, latitude, longitude, SUNSET);
@@ -99,16 +85,11 @@ class SunView extends Ui.Drawable
                 var timeInfoSunset = Time.Gregorian.info(sunset_moment, Time.FORMAT_SHORT);
 
                 var sunInfoString = timeInfoSunrise.hour.format("%01d") + ":" + timeInfoSunrise.min.format("%02d") + " - " + timeInfoSunset.hour.format("%01d") + ":" + timeInfoSunset.min.format("%02d");
-                Sys.println("sunInfoString: " + sunInfoString);
-                dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
-                dc.drawText(109, 50, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+                dc.drawText(textX, textY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 
             } else {
-
-                Sys.println("no stored data for drawing");
-                //var sunInfoString = Ui.loadResource(Rez.Strings.NO_GPS_FIX);
-                //dc.drawText(locX, locY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
-                dc.drawBitmap(locX, locY, gpsImage);
+                // if no location found or stored draw icon
+                dc.drawBitmap(iconX, iconY, gpsImage);
             }
 
         }

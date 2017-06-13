@@ -42,12 +42,14 @@
 		 </drawable>             
          <drawable id="alarmView" class="AlarmView">
             <param name="x">120</param>
-            <param name="y">12</param>
+            <param name="y">10</param>
          </drawable>    
         <drawable id="sunView" class="SunView">
-            <param name="showSun">true</param>
-            <param name="x">100</param>
-            <param name="y">10</param>            
+            <param name="showSun">true</param> 
+            <param name="iconX">100</param>
+            <param name="iconY">10</param>  
+            <param name="textX">109</param>
+            <param name="textY">180</param>                
          </drawable> 
          <drawable id="notificationView" class="NotificationView">
             <param name="x">34</param>
