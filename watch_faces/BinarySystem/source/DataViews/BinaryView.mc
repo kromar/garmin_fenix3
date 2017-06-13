@@ -12,17 +12,17 @@ class BinaryView extends Ui.Drawable
 	function initialize(params)
 	{
 		Drawable.initialize(params);
-		
+
 		locX = params.get(:x);
 		locY = params.get(:y);
-		showSeconds = params.get(:showSeconds);		
+		showSeconds = params.get(:showSeconds);
 		binaryLocation = new BinaryLocation();
 		binaryLocation.locX = locX;
 		binaryLocation.locY = locY;
 		binaryLocation.borderDistance = params.get(:borderDistance);
-		
+
 		var type = params.get(:type);
-		Sys.println(type);
+		Sys.println("binary type: " + type);
 		if (type.equals(Circular))
 		{
 			Sys.println("Using Circular location");
@@ -37,7 +37,7 @@ class BinaryView extends Ui.Drawable
 		{
 			Sys.println("Using Vertical locations");
 			typeMethod = binaryLocation.method(:horizontalLocation);
-		}			
+		}
 	}
 	var binaryLocation;
 
@@ -47,10 +47,10 @@ class BinaryView extends Ui.Drawable
 		var color_rgb = App.getApp().getProperty("ForegroundColor");
         var color_bg = Gfx.COLOR_BLACK;
 	    var color_fg = Gfx.COLOR_WHITE;
-		
+
 		var width = dc.getWidth();
         var height = dc.getHeight();
-		
+
 		for(var iL = 0; iL < rows; iL++)
 		{
 			var value = 1 << iL;
@@ -62,21 +62,21 @@ class BinaryView extends Ui.Drawable
 
 			dc.setColor(color_fg, color_bg);
             dc.drawCircle(xLocation, yLocation, binaryRadius);
-			
+
 			if (count & value == value)
 			{
 				dc.setColor(color_rgb, color_bg);
     	        dc.fillCircle(xLocation, yLocation, binaryRadius - 1);
-			
+
 			}
 		}
 	}
-	
+
 	function draw(dc)
 	{
 		var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
-		
+
 		var isLowPower = App.getApp().getProperty("IsLowPowerMode");
 		var appShowSeconds = App.getApp().getProperty("ShowSeconds");
 		if ((isLowPower == null || isLowPower == false)
@@ -88,5 +88,5 @@ class BinaryView extends Ui.Drawable
 		drawBinaryArray(dc, 6, 1, time.min, typeMethod);
 		drawBinaryArray(dc, 6, 2, time.hour, typeMethod);
 	}
-    
+
  }

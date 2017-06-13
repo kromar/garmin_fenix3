@@ -2,8 +2,6 @@
     <iq:application entry="BinarySystemApp" id="E9673B6B3B2E4D96A5752A239E4F6169" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="1.2.1" name="@Strings.AppName" type="watchface">
 
         <iq:products>
-            <iq:product id="round_watch"/>
-            <iq:product id="semi_round_watch"/>
             <iq:product id="fr735xt"/>
             <iq:product id="fenix3"/>
             <iq:product id="fenix3_hr"/>

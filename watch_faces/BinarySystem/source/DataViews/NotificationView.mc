@@ -10,7 +10,7 @@ class NotificationView extends Ui.Drawable
 		Drawable.initialize(params);
 		locX = params.get(:x);
 		locY = params.get(:y);
-		
+
 	}
 
 	function draw(dc)
@@ -19,18 +19,18 @@ class NotificationView extends Ui.Drawable
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var color_bg = Gfx.COLOR_BLACK;
 	    var fg_color = Gfx.COLOR_WHITE;
-        
-	
+
+
 	    var deviceSettings = Sys.getDeviceSettings();
         var notificationCount = deviceSettings.notificationCount;
-        
-		if (notificationCount > 0) 
+
+		if (notificationCount > 0)
 		{
             dc.setColor(fg_color, bg_transp);
             dc.drawRoundedRectangle(locX, locY, 40, 18, 4);
-            dc.drawRectangle(locX+2, locY+4, 10, 1, 1);
-            dc.drawRectangle(locX+2, locY+8, 16, 1, 1);
-            dc.drawRectangle(locX+2, locY+12, 10, 1, 1);
+            dc.drawRectangle(locX+2, locY+4, 10, 1);
+            dc.drawRectangle(locX+2, locY+8, 16, 1);
+            dc.drawRectangle(locX+2, locY+12, 10, 1);
 
             //draw notification count
             var notificationCountStr = notificationCount.toString();
