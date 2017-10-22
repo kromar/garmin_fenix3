@@ -61,6 +61,20 @@ class SunView extends Ui.Drawable
 				}
             }
 
+    function drawArc(dc)
+     {
+            //      dc.drawArc(x, y, r, attr, degreeStart, degreeEnd)
+            //x (Toybox::Lang::Number) — The x location of the arc center
+            //y (Toybox::Lang::Number) — The y location of the arc center
+            //r (Toybox::Lang::Number) — The radius of the arc
+            //attr (Toybox::Lang::Number) — Arc drawing attributes. (ARC_COUNTER_CLOCKWISE or ARC_CLOCKWISE)
+            //degreeStart (Toybox::Lang::Number) — The start angle of the arc by degrees.
+            //degreeEnd (Toybox::Lang::Number) — The end angle of the arc by degrees.
+
+            //dc.drawArc(109, 109, 50, Gfx.ARC_CLOCKWISE, 0, 180);
+        }
+
+
     //TODO: i think we miss the case where the user gets a location for the first time and the init is not triggered (when is init triggered?)
     function draw(dc)
     {
