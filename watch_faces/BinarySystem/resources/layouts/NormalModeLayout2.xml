@@ -16,7 +16,9 @@
 		 	<param name="showTime">true</param>
 		 	<param name="showDate">true</param>
 			<param name="x">109</param>
-			<param name="y">84</param>
+			<param name="y">109</param>
+			<param name="timeFontSize">6</param>
+			<param name="dateFontSize">1</param>
 		 </drawable> 
 		 
 		 <drawable id="binaryView" class="BinaryView">

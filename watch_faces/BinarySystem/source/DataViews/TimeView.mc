@@ -10,6 +10,8 @@ class TimeView extends Ui.Drawable
 {
     var showTime = true;
     var showDate = true;
+    var timeFontSize = 4;
+    var dateFontSize = 1;
 
     function initialize(params)
     {
@@ -17,9 +19,15 @@ class TimeView extends Ui.Drawable
 
         var x = params.get(:x);
         var y = params.get(:y);
+
         showTime = params.get(:showTime);
         showDate = params.get(:showDate);
+
+        timeFontSize = params.get(:timeFontSize);
+        dateFontSize = params.get(:dateFontSize);
+
         Ui.Drawable.setLocation(x, y);
+
     }
 
     function draw(dc)
@@ -34,35 +42,15 @@ class TimeView extends Ui.Drawable
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var dot_color = App.getApp().getProperty("ForegroundColor");
 
-        // font heights
-        //0 (18); 1 (22) ; 2 (26); 3 (29); 4 (38); 5 (32);  6 (60); 7 (83); 8 (116);
-        var fontSize =4;
-         System.println("ascent: " + Gfx.getFontAscent(fontSize));
-         System.println("descent: " + Gfx.getFontDescent(fontSize));
-         System.println("fontheight: " +Gfx.getFontHeight(fontSize));
-
-         //correct position based on font size
-          System.println("locY: " + locY);
-          System.println("screen w/h " + dc.getWidth() + " / " + dc.getHeight());
-
-           //calculate offset
-           var font_offset =  Gfx.getFontDescent(fontSize);
-           System.println("font_offset: " + font_offset);
+		//calculate offset
+		var timeFontOffset =  (Gfx.getFontDescent(timeFontSize) + Gfx.getFontAscent(timeFontSize)/2);
+        //System.println("timeFontOffset" + timeFontOffset);
 
         if (showTime)
         {
             var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
             dc.setColor(fg_color, bg_transp);
-
-            dc.drawText(locX, locY, fontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
-            //dc.drawText(locX, locY-font_offset, fontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
-
-            //debug grid
-            dc.setColor(fg_color, bg_transp);
-            //horizontal
-            dc.drawLine(0, dc.getHeight()/2, dc.getWidth() , dc.getHeight()/2);
-            //vertical
-            dc.drawLine(dc.getWidth()/2, 0, dc.getWidth()/2 , dc.getHeight() );
+            dc.drawText(locX, locY-timeFontOffset, timeFontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
 
         }
 
@@ -75,6 +63,7 @@ class TimeView extends Ui.Drawable
             var dateStr = Lang.format("$1$ $2$ $3$", [time.day_of_week, time.month, time.day]);
             dc.setColor(dot_color, bg_transp);
             dc.drawText(locX, locY + (showTime ? 30 : 0), Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(locX, locY + timeFontOffset/2, dateFontSize, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
         }
     }
 }
