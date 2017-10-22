@@ -24,6 +24,7 @@ class SunView extends BinaryWatchDrawable
     var iconY = 0;
     var textX = 0;
     var textY = 0;
+    var sunFontSize = 1;
 
     function initialize(params)
         {
@@ -32,6 +33,8 @@ class SunView extends BinaryWatchDrawable
             iconY = params.get(:iconY) * scaleFactorY;
             textX = params.get(:textX) * scaleFactorX;
             textY = params.get(:textY) * scaleFactorY;
+            
+            sunFontSize = params.get(:sunFontSize);
             //Drawable.setLocation(iconX, iconY);
 
             showSun = params.get(:showSun);
@@ -91,8 +94,9 @@ class SunView extends BinaryWatchDrawable
 
                     var sunInfoString = timeInfoSunrise.hour.format("%01d") + ":" + timeInfoSunrise.min.format("%02d") + " - " + timeInfoSunset.hour.format("%01d") + ":" + timeInfoSunset.min.format("%02d");
                     // var sunInfoString = sunrise_moment.hour.format("%01d") + ":" + sunrise_moment.min.format("%02d") + " - " + sunset_moment.hour.format("%01d") + ":" + sunset_moment.min.format("%02d");
-                    dc.drawText(textX, textY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+                    dc.drawText(textX, textY, sunFontSize, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
             }   
+               
 
             } else {
                 // if no location found or stored draw icon
