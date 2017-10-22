@@ -22,6 +22,7 @@ class SunView extends Ui.Drawable
     var iconY = 0;
     var textX = 0;
     var textY = 0;
+    var sunFontSize = 1;
 
     function initialize(params)
         {
@@ -30,6 +31,7 @@ class SunView extends Ui.Drawable
             iconY = params.get(:iconY);
             textX = params.get(:textX);
             textY = params.get(:textY);
+            sunFontSize = params.get(:sunFontSize);
             //Drawable.setLocation(iconX, iconY);
 
             showSun = params.get(:showSun);
@@ -85,7 +87,7 @@ class SunView extends Ui.Drawable
                 var timeInfoSunset = Time.Gregorian.info(sunset_moment, Time.FORMAT_SHORT);
 
                 var sunInfoString = timeInfoSunrise.hour.format("%01d") + ":" + timeInfoSunrise.min.format("%02d") + " - " + timeInfoSunset.hour.format("%01d") + ":" + timeInfoSunset.min.format("%02d");
-                dc.drawText(textX, textY, Gfx.FONT_TINY, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+                dc.drawText(textX, textY, sunFontSize, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 
             } else {
                 // if no location found or stored draw icon
