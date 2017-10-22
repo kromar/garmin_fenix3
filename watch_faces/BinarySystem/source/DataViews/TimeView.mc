@@ -34,8 +34,9 @@ class TimeView extends Ui.Drawable
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var dot_color = App.getApp().getProperty("ForegroundColor");
 
-        var fontSize =6;
-
+        // font heights
+        //0 (18); 1 (22) ; 2 (26); 3 (29); 4 (38); 5 (32);  6 (60); 7 (83); 8 (116);
+        var fontSize =4;
          System.println("ascent: " + Gfx.getFontAscent(fontSize));
          System.println("descent: " + Gfx.getFontDescent(fontSize));
          System.println("fontheight: " +Gfx.getFontHeight(fontSize));
@@ -44,25 +45,25 @@ class TimeView extends Ui.Drawable
           System.println("locY: " + locY);
           System.println("screen w/h " + dc.getWidth() + " / " + dc.getHeight());
 
-
-
-
+           //calculate offset
+           var font_offset =  Gfx.getFontDescent(fontSize);
+           System.println("font_offset: " + font_offset);
 
         if (showTime)
         {
             var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
             dc.setColor(fg_color, bg_transp);
+
             dc.drawText(locX, locY, fontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+            //dc.drawText(locX, locY-font_offset, fontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
 
-            //      dc.drawArc(x, y, r, attr, degreeStart, degreeEnd)
-            //x (Toybox::Lang::Number) — The x location of the arc center
-			//y (Toybox::Lang::Number) — The y location of the arc center
-			//r (Toybox::Lang::Number) — The radius of the arc
-			//attr (Toybox::Lang::Number) — Arc drawing attributes. (ARC_COUNTER_CLOCKWISE or ARC_CLOCKWISE)
-			//degreeStart (Toybox::Lang::Number) — The start angle of the arc by degrees.
-			//degreeEnd (Toybox::Lang::Number) — The end angle of the arc by degrees.
+            //debug grid
+            dc.setColor(fg_color, bg_transp);
+            //horizontal
+            dc.drawLine(0, dc.getHeight()/2, dc.getWidth() , dc.getHeight()/2);
+            //vertical
+            dc.drawLine(dc.getWidth()/2, 0, dc.getWidth()/2 , dc.getHeight() );
 
-			//dc.drawArc(109, 109, 50, Gfx.ARC_CLOCKWISE, 0, 180);
         }
 
 
