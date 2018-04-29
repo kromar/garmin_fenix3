@@ -22,61 +22,15 @@ class BinarySystemView extends Ui.WatchFace {
         //App.getApp().setProperty("IsLowPowerMode", false);
     }
 
-    //get screen type so we can scale thee ui depending on screen type, and proportions
-	    // we want to d here is work with one layout type andd convert it to different screen proportions,
-	    // so if our screen is not square circle we reduce the height values for a target display by the calculated percentage
-	    // to fit the screen height of the new device
-	    // we do the same for screen formats, we switch from circular to linear layout for the binary draw
-
-    function layoutScaling(dc) {
-        // var deviceID = Ant.deviceType;     //requires additional permissions! so lets go with screen size
-        var screenShape = Sys.getDeviceSettings().screenShape;
-        var width = dc.getWidth();
-        var height = dc.getHeight();
-        var screenType = null;
-
-       //shapes: https://developer.garmin.com/connect-iq/user-experience-guide/appendices/
-       //   1 = circle           //   2 = semi circle           //   3= rect / tall / square
-
-       // identify screen type and proportions
-       if (screenShape == 1) //circle screen
-       {
-            screenType = "circle";
-       }
-       else if (screenShape == 2) // semi circle screen
-       {
-            screenType = "semicircle";
-       }
-       else if (screenShape == 3) // rectangular screens
-       {
-	       if (height > width) // tall rectangular
-	        {
-	           screenType = "tall";
-	        }
-	        else if (height < width) // wide rectangular
-	        {
-	           screenType = "rect";
-           }
-            else if (height == width)   //  square
-            {
-                screenType = "square";
-            }
-	    }
-
-       Sys.println("screenShape: " + screenShape + " width: " +  width + " height: " + height);
-       Sys.println("screenType: " + screenType);
-    }
-
-
 
     //! Load your resources here
     function onLayout(dc) {
-        layoutScaling(dc);
+        //layoutScaling(dc);
         var layoutMode = App.getApp().getProperty("LayoutType");
         {
             //this is a round watchface... HACK
-            if (dc.getHeight() > 200)
-            {
+//            if (dc.getHeight() > 200)
+//            {
             	if (layoutMode == 0)
             	{
 		            setLayout(Rez.Layouts.GeekModeLayout(dc));
@@ -104,12 +58,12 @@ class BinarySystemView extends Ui.WatchFace {
                 }
             }
 
-            else
-            {
-                // ForeRunner 735XT
-                setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
-            }
-        }
+//            else
+//            {
+//                // ForeRunner 735XT
+//                setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
+//            }
+//        }
     }
 
     //! Called when this View is brought to the foreground. Restore
