@@ -9,50 +9,54 @@ using Toybox.System as Sys;
 
 class LayoutCorrection
 {
-        var width = width;
-        var height = height;
-        var correctionFactor = 1;
-
- function getCorrection(width, height) {
-
-       //shapes: https://developer.garmin.com/connect-iq/user-experience-guide/appendices/
-       //   1 = circle           //   2 = semi circle           //   3= rect / tall / square
-        var screenShape = Sys.getDeviceSettings().screenShape;
+	var deviceSettings = Sys.getDeviceSettings();
+	var screenShape = deviceSettings.screenShape;
+	var width = deviceSettings.screenWidth;
+	var height = deviceSettings.screenHeight;
+	var correctionFactor = 1;
+	var value = null;
 
 
-       // identify screen type and proportions
-       if (screenShape == 1) //circle screen
-       {
-            correctionFactor = (1 / width * height);    //size correction if proportions are not square
+ function getCorrection(value) {
+
+   //shapes: https://developer.garmin.com/connect-iq/user-experience-guide/appendices/
+   //   1 = circle           //   2 = semi circle           //   3= rect / tall / square
+
+    //TODO: specify scaling factors for each screenShape
+    if (screenShape == 1) //circle screen
+	   {
+	        correctionFactor = (1.0 / width * height);
             Sys.println("screen correction1:" + correctionFactor);
-       }
-       else if (screenShape == 2) // semi circle screen
-       {
-            correctionFactor = (1 / width * height);    //size correction if proportions are not square
-            Sys.println("screen correction2:" + correctionFactor);
-       }
-       else if (screenShape == 3) // rectangular screens
-       {
-           if (height > width) // tall rectangular
-            {
-                correctionFactor = (1 / width * height);    //size correction if proportions are not square
-                Sys.println("screen correction3:" + correctionFactor);
-            }
-            else if (height < width) // wide rectangular
-            {
-                correctionFactor = (1 / width * height);    //size correction if proportions are not square
-                Sys.println("screen correction4:" + correctionFactor);
-            }
-            else if (height == width)   //  square
-            {
-                correctionFactor = (1 / width * height);    //size correction if proportions are not square
-                Sys.println("screen correction5:" + correctionFactor);
-            }
-       }
+	   }
+	   else if (screenShape == 2) // semi circle screen
+	   {
+            correctionFactor = (1.0 / width * height);
+	        Sys.println("screen correction2:" + correctionFactor);
+	   }
+	   else if (screenShape == 3) // rectangular screens
+	   {
+	       if (height > width) // tall rectangular
+	   {
+            correctionFactor = (1.0 / width * height);
+	        Sys.println("screen correction3:" + correctionFactor);
+	    }
+	    else if (height < width) // wide rectangular
+	    {
+            correctionFactor = (1.0 / width * height);
+	        Sys.println("screen correction4:" + correctionFactor);
+	    }
+	    else if (height == width)   //  square
+	    {
+            correctionFactor = (1.0 / width * height);
+	        Sys.println("screen correction5:" + correctionFactor);
+	     }
+     }
 
-        Sys.println("screenShape: " + screenShape + " width: " +  width + " height: " + height);
-        //Sys.println("screenType: " + screenType);
-        Sys.println("screen correction: " + correctionFactor);
-        return correctionFactor;
-    }
+     Sys.println("Layout Correction: " + correctionFactor + " " + value +
+                        "->> " + Math.round(value * correctionFactor).format("%d"));
+
+	value = (Math.round(value * correctionFactor).format("%d")).toNumber();
+	Sys.println("screenShape: " + screenShape + " width: " +  width + " height: " + height);
+	return value ;
+	}
 }

@@ -10,6 +10,7 @@ class TimeView extends Ui.Drawable
 {
     var showTime = true;
     var showDate = true;
+    var value = null;
     var layoutCorrection;
 
     function initialize(params)
@@ -21,16 +22,10 @@ class TimeView extends Ui.Drawable
         showTime = params.get(:showTime);
         showDate = params.get(:showDate);
 
+
         layoutCorrection = new LayoutCorrection();
-        var deviceSettings = Sys.getDeviceSettings();
-        var width = deviceSettings.screenWidth;
-        var height = deviceSettings.screenHeight;
-        //correctionFactor = layoutCorrection.getCorrection(width, height);
-        var correctionFactor = (1.0 / width * height); //.format("%.2f");
-        Sys.println("correction: " + width + " " + height + " " + correctionFactor + " " +  y + " " + Math.round(y * correctionFactor).format("%d"));
-
-          y = (Math.round(y * correctionFactor).format("%d")).toNumber();
-
+        value = layoutCorrection.getCorrection(y);
+        Sys.println("i: " + value);
 
         Ui.Drawable.setLocation(x, y);
     }

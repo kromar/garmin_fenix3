@@ -9,9 +9,10 @@ class BinaryView extends Ui.Drawable
 {
 	var typeMethod = null;
 	var showSeconds = true;
+    var binaryLocation;
 	function initialize(params)
 	{
-		Drawable.initialize(params);
+		Drawable.initialize(params); //TODO: does this need to bu Ui.Drawable?
 
 		locX = params.get(:x);
 		locY = params.get(:y);
@@ -39,7 +40,6 @@ class BinaryView extends Ui.Drawable
 			typeMethod = binaryLocation.method(:horizontalLocation);
 		}
 	}
-	var binaryLocation;
 
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
 	{
