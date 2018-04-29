@@ -22,12 +22,54 @@ class BinarySystemView extends Ui.WatchFace {
         //App.getApp().setProperty("IsLowPowerMode", false);
     }
 
+    //get screen type so we can scale thee ui depending on screen type, and proportions
+    function layoutScaling(dc) {
+        // var deviceID = Ant.deviceType;     //requires additional permissions! so lets go with screen size
+        var screenShape = Sys.getDeviceSettings().screenShape;
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var screenType = null;
+
+       //shapes: https://developer.garmin.com/connect-iq/user-experience-guide/appendices/
+       //   1 = circle           //   2 = semi circle           //   3= rect / tall / square
+
+       // identify screen type and proportions
+       if (screenShape == 1)
+       {
+            screenType = "circle";
+       }
+       else if (screenShape == 2)
+       {
+            screenType = "semicircle";
+       }
+       else if (screenShape == 3)
+       {
+	       if (height > width)
+	        {
+	           screenType = "tall";
+	        }
+	        else if (height < width)
+	        {
+	           screenType = "rect";
+           }
+            else
+            {
+                screenType = "square";
+            }
+	    }
+
+       Sys.println("screenShape: " + screenShape + " width: " +  width + " height: " + height);
+       Sys.println("screenType: " + screenType);
+    }
+
+
+
     //! Load your resources here
     function onLayout(dc) {
-
+        layoutScaling(dc);
         var layoutMode = App.getApp().getProperty("LayoutType");
         {
-            // this is a round watchface... HACK
+            //this is a round watchface... HACK
             if (dc.getHeight() > 200)
             {
             	if (layoutMode == 0)
@@ -40,23 +82,23 @@ class BinarySystemView extends Ui.WatchFace {
                 }
                 else if (layoutMode == 2)
                 {
-		            setLayout(Rez.Layouts.HorizontalLayout(dc));                
+		            setLayout(Rez.Layouts.HorizontalLayout(dc));
                 }
                 else if (layoutMode == 3)
                 {
-		            setLayout(Rez.Layouts.NormalModeLayout(dc));     
+		            setLayout(Rez.Layouts.NormalModeLayout(dc));
                 }
                 else if (layoutMode == 4)
                 {
-		            setLayout(Rez.Layouts.NormalModeLayout2(dc));     
+		            setLayout(Rez.Layouts.NormalModeLayout2(dc));
                 }
                 else
                 {
                 	Sys.println("!!Could not find correct value for LayoutType, fallback to default!!");
-		            setLayout(Rez.Layouts.NormalModeLayout2(dc));                     
+		            setLayout(Rez.Layouts.NormalModeLayout2(dc));
                 }
             }
-            
+
             else
             {
                 // ForeRunner 735XT
