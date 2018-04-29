@@ -11,11 +11,14 @@
             <param name="batteryPercentageLocX">16</param>
             <param name="batteryPercentageLocY">0</param>
 		</drawable>
+		
 		 <drawable id="timeView" class="TimeView">
 		 	<param name="showTime">true</param>
 		 	<param name="showDate">true</param>
 			<param name="x">109</param>
 			<param name="y">70</param>
+            <param name="timeFontSize">7</param>
+            <param name="dateFontSize">2</param>
 		 </drawable>
 		          
 		 <drawable id="binaryView" class="BinaryView">
@@ -52,6 +55,7 @@
             <param name="iconY">54</param>  
             <param name="textX">109</param>
             <param name="textY">54</param>               
+            <param name="sunFontSize">2</param>   
          </drawable> 
          
 		 <drawable id="notificationView" class="NotificationView">
