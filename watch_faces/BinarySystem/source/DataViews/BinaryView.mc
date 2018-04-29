@@ -12,7 +12,7 @@ class BinaryView extends Ui.Drawable
     var binaryLocation;
 	function initialize(params)
 	{
-		Drawable.initialize(params); //TODO: does this need to bu Ui.Drawable?
+		Drawable.initialize(params);
 
 		locX = params.get(:x);
 		locY = params.get(:y);
