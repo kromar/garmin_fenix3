@@ -46,7 +46,8 @@
 		 <drawable id="bluetoothView" class="BluetoothView">
 			<param name="x">60</param>
 			<param name="y">20</param>
-		 </drawable>		 	
+		 </drawable>		 
+		 	
         <drawable id="sunView" class="SunView">
             <param name="showSun">true</param>
             <param name="iconX">80</param>
