@@ -23,6 +23,11 @@ class BinarySystemView extends Ui.WatchFace {
     }
 
     //get screen type so we can scale thee ui depending on screen type, and proportions
+	    // we want to d here is work with one layout type andd convert it to different screen proportions,
+	    // so if our screen is not square circle we reduce the height values for a target display by the calculated percentage
+	    // to fit the screen height of the new device
+	    // we do the same for screen formats, we switch from circular to linear layout for the binary draw
+
     function layoutScaling(dc) {
         // var deviceID = Ant.deviceType;     //requires additional permissions! so lets go with screen size
         var screenShape = Sys.getDeviceSettings().screenShape;
@@ -34,25 +39,25 @@ class BinarySystemView extends Ui.WatchFace {
        //   1 = circle           //   2 = semi circle           //   3= rect / tall / square
 
        // identify screen type and proportions
-       if (screenShape == 1)
+       if (screenShape == 1) //circle screen
        {
             screenType = "circle";
        }
-       else if (screenShape == 2)
+       else if (screenShape == 2) // semi circle screen
        {
             screenType = "semicircle";
        }
-       else if (screenShape == 3)
+       else if (screenShape == 3) // rectangular screens
        {
-	       if (height > width)
+	       if (height > width) // tall rectangular
 	        {
 	           screenType = "tall";
 	        }
-	        else if (height < width)
+	        else if (height < width) // wide rectangular
 	        {
 	           screenType = "rect";
            }
-            else
+            else if (height == width)   //  square
             {
                 screenType = "square";
             }
