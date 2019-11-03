@@ -187,7 +187,7 @@ function draw(dc)
             }
             var font = Gfx.FONT_TINY;
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(batteryBarLocX + batteryPercentageLocX , batteryBarLocY +batteryPercentageLocY, font, batteryPercentageStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText(batteryBarLocX + batteryPercentageLocX , batteryBarLocY +batteryPercentageLocY, font, batteryPercentageStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
 
 
