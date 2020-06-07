@@ -5,11 +5,13 @@ using Toybox.WatchUi as Ui;
 
 class NotificationView extends Ui.Drawable
 {
+	var fontSize = Gfx.FONT_TINY;
 	function initialize(params)
 	{
 		Drawable.initialize(params);
 		locX = params.get(:x);
 		locY = params.get(:y);
+		fontSize = params.get(:fontSize);
 
 	}
 
@@ -35,7 +37,7 @@ class NotificationView extends Ui.Drawable
             //draw notification count
             var notificationCountStr = notificationCount.toString();
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(locX+36, locY-3, Gfx.FONT_TINY, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText(locX+36, locY-1, fontSize, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
 		}
 	}
 }

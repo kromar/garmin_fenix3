@@ -27,9 +27,15 @@ class BinarySystemView extends Ui.WatchFace {
 
         var layoutMode = App.getApp().getProperty("LayoutType");
         {
+        	if (dc.getHeight() >= 260)
+        	{
+        		Sys.println("Fenix 6 detected");
+        		setLayout(Rez.Layouts.Fenix6Layout(dc));
+        	}
             // this is a round watchface... HACK
-            if (dc.getHeight() > 200)
+            else if (dc.getHeight() > 200)
             {
+            	Sys.println("Fenix 3 detected");
             	if (layoutMode == 0)
             	{
 		            setLayout(Rez.Layouts.GeekModeLayout(dc));

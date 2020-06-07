@@ -1,0 +1,69 @@
+<resources>
+	<layout id="Fenix6Layout">
+		<drawable id="batteryView" class="BatteryView">
+            <param name="showBatteryPercentage">true</param>
+            <param name="showBatteryBar">false</param>
+            <param name="batteryBarHorizontal">true</param>
+            <param name="batteryBarSize">100</param>
+            <param name="batteryBarThickness">1</param>
+            <param name="batteryBarLocX">130</param>
+            <param name="batteryBarLocY">40</param>
+            <param name="batteryPercentageLocX">0</param>
+            <param name="batteryPercentageLocY">-40</param>
+		 </drawable>
+		 
+		 <drawable id="timeView" class="TimeView">
+		 	<param name="showTime">true</param>
+		 	<param name="showDate">true</param>
+			<param name="x">130</param>
+			<param name="y">90</param>
+		 </drawable>
+		 
+        <drawable id="sunView" class="SunView">
+            <param name="showSun">true</param>  
+            <param name="iconX">80</param>
+            <param name="iconY">160</param>  
+            <param name="textX">80</param>
+            <param name="textY">160</param>      
+         </drawable> 
+         
+		 <drawable id="binaryView" class="BinaryView">
+			<param name="x">60</param>
+			<param name="y">80</param>
+			<param name="borderDistance">18</param>
+			<param name="type">Circular</param>
+			<param name="showSeconds">true</param>
+		 </drawable>
+		 
+		 <drawable id="activityView" class="ActivityView">
+			<param name="x">130</param>
+			<param name="y">210</param>
+            <param name="stepsXOffset">18</param>
+            <param name="stepsYOffset">-30</param>
+            <param name="showDistance">true</param>
+            <param name="distanceXOffset">28</param>
+            <param name="distanceYOffset">-5</param>      
+         </drawable>
+         
+		 <drawable id="bluetoothView" class="BluetoothView">
+			<param name="x">60</param>
+			<param name="y">60</param>
+		 </drawable>
+		 <drawable id="alarmView" class="AlarmView">
+			<param name="x">80</param>
+			<param name="y">60</param>
+		 </drawable>
+		 
+		 <drawable id="notificationView" class="NotificationView">
+			<param name="x">100</param>
+			<param name="y">60</param>
+			<param name="fontSize">Gfx.FONT_XTINY</param>
+		 </drawable>
+		 <!-- 
+		 <drawable id="elevationView" class="ElevationView">
+		 	<param name="x">109</param>
+		 	<param name="y">90</param>
+		 </drawable>
+		  -->
+	</layout>
+</resources>
