@@ -56,7 +56,7 @@ class SunView extends Ui.Drawable
 				    if (hasStoredLocationData==true)
 				    {   // then get the stored location
 				        latitude = Application.getApp().getProperty("lastStoredLatitude");
-				        longitude = Application.getApp().getProperty("lastStoredLatitude");
+				        longitude = Application.getApp().getProperty("lastStoredLongitude");
 				    }
 				}
             }
