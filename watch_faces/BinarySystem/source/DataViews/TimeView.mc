@@ -4,11 +4,14 @@ using Toybox.Application as App;
 using Toybox.Time.Gregorian as Gregorian;
 using Toybox.Time as Time;
 using Toybox.WatchUi as Ui;
+using Toybox.System as Sys;
 
 class TimeView extends Ui.Drawable
 {
     var showTime = true;
     var showDate = true;
+    var value = null;
+    var layoutCorrection;
 
     function initialize(params)
     {
@@ -18,6 +21,12 @@ class TimeView extends Ui.Drawable
         var y = params.get(:y);
         showTime = params.get(:showTime);
         showDate = params.get(:showDate);
+
+
+        layoutCorrection = new LayoutCorrection();
+        value = layoutCorrection.getCorrection(y);
+        Sys.println("i: " + value);
+
         Ui.Drawable.setLocation(x, y);
     }
 
@@ -32,6 +41,7 @@ class TimeView extends Ui.Drawable
         var fg_color = Gfx.COLOR_WHITE;
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var dot_color = App.getApp().getProperty("ForegroundColor");
+
 
 
         if (showTime)

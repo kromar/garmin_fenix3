@@ -22,9 +22,10 @@ class BinarySystemView extends Ui.WatchFace {
         //App.getApp().setProperty("IsLowPowerMode", false);
     }
 
+
     //! Load your resources here
     function onLayout(dc) {
-
+        //layoutScaling(dc);
         var layoutMode = App.getApp().getProperty("LayoutType");
         {
         	if (dc.getHeight() >= 260)
@@ -46,29 +47,29 @@ class BinarySystemView extends Ui.WatchFace {
                 }
                 else if (layoutMode == 2)
                 {
-		            setLayout(Rez.Layouts.HorizontalLayout(dc));                
+		            setLayout(Rez.Layouts.HorizontalLayout(dc));
                 }
                 else if (layoutMode == 3)
                 {
-		            setLayout(Rez.Layouts.NormalModeLayout(dc));     
+		            setLayout(Rez.Layouts.NormalModeLayout(dc));
                 }
                 else if (layoutMode == 4)
                 {
-		            setLayout(Rez.Layouts.NormalModeLayout2(dc));     
+		            setLayout(Rez.Layouts.NormalModeLayout2(dc));
                 }
                 else
                 {
                 	Sys.println("!!Could not find correct value for LayoutType, fallback to default!!");
-		            setLayout(Rez.Layouts.NormalModeLayout2(dc));                     
+		            setLayout(Rez.Layouts.NormalModeLayout2(dc));
                 }
             }
-            
-            else
-            {
-                // ForeRunner 735XT
-                setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
-            }
-        }
+
+//            else
+//            {
+//                // ForeRunner 735XT
+//                setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
+//            }
+//        }
     }
 
     //! Called when this View is brought to the foreground. Restore
