@@ -28,14 +28,14 @@ class ActivityView extends Ui.Drawable
 
     function draw(dc)
     {
-        var showDistance = App.getApp().getProperty("showDistance");
+        var showDistance = Application.Properties.getValue("showDistance");
         var deviceSettings = Sys.getDeviceSettings();
         // check Activity Tracking active
         var activity = deviceSettings.activityTrackingOn;
         if (activity == true)
         {
             //System.println("activityTrackingOn: " + activity);
-            var dot_color = App.getApp().getProperty("ForegroundColor");
+            var dot_color = Application.Properties.getValue("ForegroundColor");
             var bg_transp = Gfx.COLOR_TRANSPARENT;
             var fg_color = Gfx.COLOR_WHITE;
             var fontHeight = 12;

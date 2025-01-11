@@ -23,15 +23,14 @@ class TimeView extends Ui.Drawable
 
     function draw(dc)
     {
-        //var showTime= App.getApp().getProperty("showTime");
-        //var showDate= App.getApp().getProperty("showDate");
+        //var showTime= Application.Properties.getValue("showTime");
+        //var showDate= Application.Properties.getValue("showDate");
         var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 
-        var bg_color = Gfx.COLOR_BLACK;
         var fg_color = Gfx.COLOR_WHITE;
         var bg_transp = Gfx.COLOR_TRANSPARENT;
-        var dot_color = App.getApp().getProperty("ForegroundColor");
+        var dot_color = Application.Properties.getValue("ForegroundColor");
 
 
         if (showTime)
