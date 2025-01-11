@@ -17,7 +17,7 @@ class NotificationView extends Ui.Drawable
 
 	function draw(dc)
 	{
-		var dot_color = App.getApp().getProperty("ForegroundColor");
+		var dot_color = Application.Properties.getValue("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var color_bg = Gfx.COLOR_BLACK;
 	    var fg_color = Gfx.COLOR_WHITE;

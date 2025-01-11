@@ -25,7 +25,7 @@ class BinarySystemView extends Ui.WatchFace {
     //! Load your resources here
     function onLayout(dc) {
 
-        var layoutMode = App.getApp().getProperty("LayoutType");
+        var layoutMode = Application.Properties.getValue("LayoutType");
         {
         	if (dc.getHeight() >= 260)
         	{
@@ -100,12 +100,12 @@ class BinarySystemView extends Ui.WatchFace {
 
     //! The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
-        App.getApp().setProperty("IsLowPowerMode", false);
+        Application.Properties.setValue("IsLowPowerMode", false);
     }
 
     //! Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
-        App.getApp().setProperty("IsLowPowerMode", true);
+        Application.Properties.setValue("IsLowPowerMode", true);
         Ui.requestUpdate();
     }
 

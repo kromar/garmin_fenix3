@@ -23,7 +23,7 @@ class ElevationView extends Ui.Drawable
 		var tempIt = SensorHistory.getTemperatureHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST, :period=>1 });
 
 
-		//var dot_color = App.getApp().getProperty("ForegroundColor");
+		//var dot_color = Application.Properties.getValue("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var color_bg = Gfx.COLOR_BLACK;
 	    var fg_color = Gfx.COLOR_WHITE;
