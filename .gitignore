@@ -3,3 +3,5 @@
 watch_faces/BinarySystem/.settings/org.eclipse.ltk.core.refactoring.prefs
 watch_faces/builds/gen
 watch_faces/builds/mir
+*.prg
+watch_faces/builds/internal-mir
