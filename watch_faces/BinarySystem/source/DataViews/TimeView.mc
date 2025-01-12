@@ -4,18 +4,20 @@ using Toybox.Application as App;
 using Toybox.Time.Gregorian as Gregorian;
 using Toybox.Time as Time;
 using Toybox.WatchUi as Ui;
+using Toybox.System as Sys;
 
-class TimeView extends Ui.Drawable
+
+class TimeView extends BinaryWatchDrawable
 {
     var showTime = true;
     var showDate = true;
 
     function initialize(params)
     {
-        Ui.Drawable.initialize(params);
+        BinaryWatchDrawable.initialize(params);
 
-        var x = params.get(:x);
-        var y = params.get(:y);
+        var x = params.get(:x) * scaleFactorX;
+        var y = params.get(:y) * scaleFactorY;
         showTime = params.get(:showTime);
         showDate = params.get(:showDate);
         Ui.Drawable.setLocation(x, y);
@@ -46,7 +48,7 @@ class TimeView extends Ui.Drawable
         {
             var dateStr = Lang.format("$1$ $2$ $3$", [time.day_of_week, time.month, time.day]);
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(locX, locY + (showTime ? 30 : 0), Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(locX, locY + (showTime ? 30 * scaleFactorY : 0), Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
         }
     }
 }

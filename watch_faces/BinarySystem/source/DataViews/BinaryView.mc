@@ -12,10 +12,15 @@ class BinaryView extends Ui.Drawable
 	var isLowPowerMode = false;
 	function initialize(params)
 	{
+        var screenHeight = Sys.getDeviceSettings().screenHeight;
+        var screenWidth = Sys.getDeviceSettings().screenWidth;
+		var scaleFactorX = screenHeight / 260.0;
+		var scaleFactorY = screenWidth / 260.0;
+
 		Drawable.initialize(params);
 
-		locX = params.get(:x);
-		locY = params.get(:y);
+		locX = params.get(:x) * scaleFactorX;
+		locY = params.get(:y) * scaleFactorY;
 		showSeconds = params.get(:showSeconds);
 		binaryLocation = new BinaryLocation();
 		binaryLocation.locX = locX;

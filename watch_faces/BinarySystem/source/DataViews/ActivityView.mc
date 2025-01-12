@@ -2,9 +2,8 @@ using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.ActivityMonitor as ActMon;
 using Toybox.Application as App;
-using Toybox.WatchUi as Ui;
 
-class ActivityView extends Ui.Drawable
+class ActivityView extends BinaryWatchDrawable
 {
     var stepsXOffset = 0;
     var stepsYOffset = 0;
@@ -15,7 +14,7 @@ class ActivityView extends Ui.Drawable
 
     function initialize(params)
     {
-        Drawable.initialize(params);
+        BinaryWatchDrawable.initialize(params);
         locX = params.get(:x);
         locY = params.get(:y);
         stepsXOffset = params.get(:stepsXOffset);
@@ -50,10 +49,10 @@ class ActivityView extends Ui.Drawable
             //===============================
             var stepsStr = steps.toString();
             dc.setColor(dot_color, bg_transp);
-            dc.drawText((locX + stepsXOffset), (locY + stepsYOffset), Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText((locX + stepsXOffset) * scaleFactorX, (locY + stepsYOffset) * scaleFactorY, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
 
             //draw step goal bar
-            var stepBarWidth = dc.getWidth()/2;
+            var stepBarWidth = self.screenWidth / 2;
             var stepGoalPercentage = steps.toFloat() / stepGoal.toFloat();
             if (steps > stepGoal)
             {
@@ -62,35 +61,19 @@ class ActivityView extends Ui.Drawable
             var borderOffset_Goal = 30;
 
             dc.setColor(fg_color, bg_transp);
-            dc.drawLine(locX - stepBarWidth / 2, locY-5, locX + stepBarWidth / 2, locY -5);
+            dc.drawLine((locX - stepBarWidth / 2)* scaleFactorX, (locY-5) * scaleFactorY, (locX + stepBarWidth / 2) * scaleFactorX, (locY -5) * scaleFactorY);
 
             dc.setColor(dot_color, bg_transp);
             dc.fillRectangle(locX , locY - 10, 2, 5);
 
             if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0)
             {
-                dc.drawLine((locX - stepBarWidth / 2), locY-5, locX - (stepBarWidth ) / 2 + stepBarWidth * stepGoalPercentage , locY-5);
+                dc.drawLine((locX - stepBarWidth / 2) * scaleFactorX, (locY-5) * scaleFactorY, (locX - (stepBarWidth ) / 2 + stepBarWidth * stepGoalPercentage) * scaleFactorX , (locY-5) * scaleFactorY);
             }
             else
             {
-                dc.drawLine(borderOffset_Goal, locY-5, stepBarWidth, locY-5);
+                dc.drawLine(borderOffset_Goal * scaleFactorX, (locY-5) * scaleFactorX, (stepBarWidth) * scaleFactorX, (locY-5) * scaleFactorY);
             }
-
-            // var floorsClimbed = activityInfo.floorsClimbed;
-            // meters climbed
-            //dc.drawText(locX + stepBarWidth / 2.0+1, locY-5, Gfx.FONT_TINY , floorsClimbed, Gfx.TEXT_JUSTIFY_LEFT);
-            //dc.drawText(locX - stepBarWidth / 2.0-1, locY-5, Gfx.FONT_SYSTEM_TINY , activityInfo.floorsDescended.format("%d"), Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER );
-
-
-            // Activity History
-            //var heartRateHistory = ActMon.getHeartRateHistory(1, true);
-            //var heartRate = heartRateHistory.next().heartRate;
-            //dc.drawText(locX, locY - 40, Gfx.FONT_TINY, heartRate + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
-
-
-            //System.println("steps percentage: " + stepGoalPercentage.toString());
-
-
 
             //===============================
             //!distance
@@ -107,7 +90,7 @@ class ActivityView extends Ui.Drawable
                     }
                     else
                     {
-                        distanceStr = (distance * 0.01).toLong() + "m";
+                        distanceStr = (distance * 0.01).toLong() + "m" ;
                     }
                 }
                 else
@@ -122,8 +105,7 @@ class ActivityView extends Ui.Drawable
                         distanceStr = (feetDistance).toLong() + "ft";
                     }
                 }
-                dc.drawText(locX+distanceXOffset, locY+distanceYOffset, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
-                //System.println(distanceKM);
+                dc.drawText((locX+distanceXOffset) * scaleFactorX, (locY+distanceYOffset) * scaleFactorY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
             }
         }
     }
