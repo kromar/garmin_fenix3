@@ -1,11 +1,22 @@
 using Toybox.Math as Math;
 using Toybox.System as System;
+using Toybox.Graphics as Graphics;
 
 enum
 {
 	Circular,
 	Vertical,
 	Horizontal
+}
+
+class Point {
+    var x;
+    var y;
+
+    function initialize(x, y) {
+        self.x = x;
+        self.y = y;
+    }
 }
 
 class BinaryLocation
@@ -17,16 +28,14 @@ class BinaryLocation
 
 	function verticalLocation(dc, column, item)
 	{
-		var location = new [2];
-		location[0] = locX + column * 20;
-		location[1] = locY + (6 - item) * 20;
+		var location = new Point(
+		locX + column * 20,
+		locY + (6 - item) * 20);
 		return location;
 	}
 	function horizontalLocation(dc, column, item)
 	{
-		var location = new [2];
-		location[0] = locX + item * 20;
-		location[1] = locY + column * 20;
+		var location = new Point(locX + item * 20,  locY + column * 20);
 		return location;
 	}
 	
@@ -41,23 +50,26 @@ class BinaryLocation
 
 		if (column == 0)
 		{
-			location[0] = width / 2.0 + (width - borderDistance) / 2.0 * Math.sin(circleLocation);
-			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation);
+			location = new Point( width / 2.0 + (width - borderDistance) / 2.0 * Math.sin(circleLocation),
+			 height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation));
 		}
 		if (column == 1)
 		{
-			location[0] = width / 2.0 + (width - borderDistance) / 2.0 * Math.cos(circleLocation);
-			location[1] = height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation);
+			location = new Point (
+			width / 2.0 + (width - borderDistance) / 2.0 * Math.cos(circleLocation),
+			height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation));
 		}
 		else if (column == 2)
 		{
-			location[0] = width / 2.0 - (width - borderDistance) / 2.0 * Math.cos(circleLocation);		
-			location[1] = height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation);
+			location = new Point (
+			width / 2.0 - (width - borderDistance) / 2.0 * Math.cos(circleLocation),		
+			height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation));
 		}
 		else if (column == 3)
 		{
-			location[0] = width / 2.0 - (width - borderDistance) / 2.0 * Math.sin(circleLocation);
-			location[1] = height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation);
+			location = new Point (
+			width / 2.0 - (width - borderDistance) / 2.0 * Math.sin(circleLocation),
+			height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation));
 		}
 		
 		//System.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);

@@ -3,6 +3,7 @@ using Toybox.Application as App;
 using Toybox.Graphics as Gfx;
 using Toybox.WatchUi as Ui;
 using Toybox.Math as Math;
+using Toybox.Lang as Lang;
 
 
 class BatteryView extends Ui.Drawable
@@ -12,7 +13,7 @@ class BatteryView extends Ui.Drawable
     var showBatteryPercentage = true;
     var batteryBarHorizontal = true;
 
-    var batHist = {};
+    var batHist as Lang.Array;
     var batHistCount = 0;
     var timeInterval = 0;
     var remainingBattery;
@@ -33,7 +34,7 @@ class BatteryView extends Ui.Drawable
     function initialize(params)
     {
         Drawable.initialize(params);
-
+        batHist = [];
         batteryBarHorizontal = params.get(:batteryBarHorizontal);
         batteryBarSize = params.get(:batteryBarSize);
         batteryBarThickness = params.get(:batteryBarThickness);

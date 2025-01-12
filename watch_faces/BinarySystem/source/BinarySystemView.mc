@@ -16,10 +16,10 @@ using Toybox.Math as Math;
 class BinarySystemView extends Ui.WatchFace {
 
     var isDirty = false;
+    var isLowPowerMode = false;
 
     function initialize() {
         WatchFace.initialize();
-        //App.getApp().setProperty("IsLowPowerMode", false);
     }
 
     //! Load your resources here
@@ -100,12 +100,12 @@ class BinarySystemView extends Ui.WatchFace {
 
     //! The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
-        Application.Properties.setValue("IsLowPowerMode", false);
+        isLowPowerMode = false;
     }
 
     //! Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
-        Application.Properties.setValue("IsLowPowerMode", true);
+        isLowPowerMode = true;
         Ui.requestUpdate();
     }
 

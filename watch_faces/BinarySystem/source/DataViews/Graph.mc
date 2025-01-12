@@ -12,9 +12,10 @@ using Toybox.Lang as Lang;
 //! A simple line graph drawing class
 class LineGraph
 {
-    hidden var graphArray;
+    hidden var graphArray as Lang.Array;
     hidden var graphIndex;
-    hidden var graphRange;
+    hidden var graphRangeStart;
+    hidden var graphRangeEnd;
     hidden var graphMinRange;
     hidden var graphColor;
 
@@ -22,7 +23,8 @@ class LineGraph
     function initialize( size, minRange, color )
     {
         graphIndex = 0;
-        graphRange = [null,null];
+        graphRangeStart = null;
+        graphRangeEnd = null; 
 
         if( size < 2 )
         {
@@ -52,28 +54,28 @@ class LineGraph
 
         if( value instanceof Number || value instanceof Float )
         {
-            if( graphRange[0] == null )
+            if(graphRangeStart  == null )
             {
                 // This is our first value, save as min and max
-                graphRange[0] = value;
-                graphRange[1] = value;
+                graphRangeStart = value;
+                graphRangeEnd = value;
             }
 
             // Save value if it is a new minimum
-            if( value < graphRange[0] )
+            if( value < graphRangeStart )
             {
-                graphRange[0] = value;
+                graphRangeStart = value;
             }
-            else if( graphArray[graphIndex] == graphRange[0] )
+            else if( graphArray[graphIndex] == graphRangeStart )
             {
                 updateMin = true;
             }
             // Save value if it is a new maximum
-            if( value > graphRange[1] )
+            if( value > graphRangeEnd )
             {
-                graphRange[1] = value;
+                graphRangeEnd = value;
             }
-            else if( graphArray[graphIndex] == graphRange[1] )
+            else if( graphArray[graphIndex] == graphRangeEnd )
             {
                 updateMax = true;
             }
@@ -98,7 +100,7 @@ class LineGraph
                         min = graphArray[i];
                     }
                 }
-               graphRange[0] = min;
+               graphRangeStart = min;
            }
 
             if( updateMax )
@@ -112,7 +114,7 @@ class LineGraph
                         max = graphArray[i];
                     }
                 }
-                graphRange[1] = max;
+                graphRangeEnd = max;
             }
         }
         else
@@ -131,30 +133,20 @@ class LineGraph
         var x;
         var prev_y;
         var prev_x;
-        var drawExtentsX = bottomRight[0] - topLeft[0] + 1;
-        var drawExtentsY = bottomRight[1] - topLeft[1] + 1;
+        var drawExtentsX = bottomRight.x - topLeft.x + 1;
+        var drawExtentsY = bottomRight.y - topLeft.y + 1;
         var i;
         var draw_idx = 1;
 
-        var string = "[";
-        string +=  topLeft[0].toString();
-        string += ",";
-        string += topLeft[1].toString();
-        string += "] [";
-        string += bottomRight[0].toString();
-        string += ",";
-        string += bottomRight[1].toString();
-        string += "]\n";
-
         // If the graph range is null, no values have been added yet
-        if( graphRange[0] != null )
+        if( graphRangeStart != null )
         {
             //Set Graph color       !!!no way to preserve color setting right now?
             dc.setColor(graphColor, graphColor);
 
             //Determine Graph minimum and range
-            min = graphRange[0];
-            range = graphRange[1] - graphRange[0];
+            min = graphRangeStart;
+            range = graphRangeEnd - graphRangeStart;
             range = range.toFloat();
 
             if( range < graphMinRange )
@@ -163,15 +155,15 @@ class LineGraph
                 range = graphMinRange;
             }
 
-            prev_x = topLeft[0];
-            x = topLeft[0] + drawExtentsX * draw_idx / (graphArray.size() -  1);
+            prev_x = topLeft.x;
+            x = topLeft.x + drawExtentsX * draw_idx / (graphArray.size() -  1);
             y = null;
             for( i = graphIndex ; i < graphArray.size() ; i += 1 )
             {
                 if( graphArray[i] != null )
                 {
                     prev_y = y;
-                    y = bottomRight[1] - ((graphArray[i] - min) * drawExtentsY / range);
+                    y = bottomRight.y - ((graphArray[i] - min) * drawExtentsY / range);
                     y = y.toNumber();
 
                     if( prev_y != null )
@@ -179,7 +171,7 @@ class LineGraph
                         dc.drawLine(prev_x, prev_y, x, y);
                         prev_x = x;
                         draw_idx += 1;
-                        x = topLeft[0] + drawExtentsX * draw_idx / (graphArray.size() - 1);
+                        x = topLeft.x + drawExtentsX * draw_idx / (graphArray.size() - 1);
                     }
                 }
             }
@@ -188,7 +180,7 @@ class LineGraph
                 if( graphArray[i] != null )
                 {
                     prev_y = y;
-                    y = bottomRight[1] - ((graphArray[i] - min) * drawExtentsY / range);
+                    y = bottomRight.y - ((graphArray[i] - min) * drawExtentsY / range);
                     y = y.toNumber();
 
                     if( prev_y != null )
@@ -196,7 +188,7 @@ class LineGraph
                         dc.drawLine(prev_x, prev_y, x, y);
                         prev_x = x;
                         draw_idx += 1;
-                        x = topLeft[0] + drawExtentsX * draw_idx / (graphArray.size() - 1);
+                        x = topLeft.x + drawExtentsX * draw_idx / (graphArray.size() - 1);
                     }
                 }
             }

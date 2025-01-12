@@ -38,11 +38,9 @@ class ActivityView extends Ui.Drawable
             var dot_color = Application.Properties.getValue("ForegroundColor");
             var bg_transp = Gfx.COLOR_TRANSPARENT;
             var fg_color = Gfx.COLOR_WHITE;
-            var fontHeight = 12;
             var activityInfo = ActMon.getInfo();
             var stepGoal = activityInfo.stepGoal;
             var steps = activityInfo.steps;
-            var calories = activityInfo.calories;
             var distance = activityInfo.distance;
             // the units are either UNIT_METRIC or UNIT_STATUTE
             var distUnits = Sys.getDeviceSettings().distanceUnits;
