@@ -53,11 +53,11 @@ class SunView extends BinaryWatchDrawable
 				else //when no location is present
 				{
 				    //check if there is stored location data and load it if available
-				    hasStoredLocationData = Application.Properties.getValue("hasStoredLocationData");
+				    hasStoredLocationData = AppStorage.getProperty("hasStoredLocationData");
 				    if (hasStoredLocationData==true)
 				    {   // then get the stored location
-				        latitude = Application.Properties.getValue("lastStoredLatitude");
-				        longitude = Application.Properties.getValue("lastStoredLongitude");
+				        latitude = AppStorage.getProperty("lastStoredLatitude");
+				        longitude = AppStorage.getProperty("lastStoredLongitude");
 				    }
 				}
             }
@@ -65,17 +65,17 @@ class SunView extends BinaryWatchDrawable
     //TODO: i think we miss the case where the user gets a location for the first time and the init is not triggered (when is init triggered?)
     function draw(dc)
     {
-        var showSun = Application.Properties.getValue("ShowSun");
+        var showSun = AppStorage.getProperty("ShowSun");
 
         if (showSun==true)
         {
-            var dot_color = Application.Properties.getValue("ForegroundColor");
+            var dot_color = AppStorage.getProperty("ForegroundColor");
             var bg_transp = Gfx.COLOR_TRANSPARENT;
             dc.setColor(dot_color, bg_transp);
             var sc = new SunCalc();
 
             // get stored data
-            var hasStoredLocationData = Application.Properties.getValue("hasStoredLocationData");
+            var hasStoredLocationData = AppStorage.getProperty("hasStoredLocationData");
             if (hasStoredLocationData==true) {
 
                 var now = new Time.Moment(Time.now().value());

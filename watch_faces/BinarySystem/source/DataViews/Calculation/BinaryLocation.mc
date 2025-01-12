@@ -35,7 +35,7 @@ class BinaryLocation
 	{
 		var height = dc.getHeight();
 		var width = dc.getWidth();
-		var binaryRadius = App.Properties.getValue("BinaryRadius") * width / 260.0 *2;
+		var binaryRadius = AppStorage.getProperty("BinaryRadius") * width / 260.0 *2;
 
 		
 		var circleLocation = (item - 2.5) / 6.0 * Math.PI / 2.5;

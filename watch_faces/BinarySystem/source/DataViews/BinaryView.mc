@@ -44,8 +44,8 @@ class BinaryView extends BinaryWatchDrawable
 
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
 	{
-		var binaryRadius = Application.Properties.getValue("BinaryRadius") * scaleFactorX;
-		var color_rgb = Application.Properties.getValue("ForegroundColor");
+		var binaryRadius = AppStorage.getProperty("BinaryRadius") * scaleFactorX;
+		var color_rgb = AppStorage.getProperty("ForegroundColor");
         var color_bg = Gfx.COLOR_BLACK;
 	    var color_fg = Gfx.COLOR_WHITE;
 
@@ -86,7 +86,7 @@ class BinaryView extends BinaryWatchDrawable
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 
 
-		var appShowSeconds = Application.Properties.getValue("ShowSeconds");
+		var appShowSeconds = AppStorage.getProperty("ShowSeconds");
 		if (isLowPowerMode == false
 			&& appShowSeconds == true
 			&& showSeconds == true)

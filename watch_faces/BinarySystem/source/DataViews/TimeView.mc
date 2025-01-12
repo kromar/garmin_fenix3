@@ -25,14 +25,14 @@ class TimeView extends BinaryWatchDrawable
 
     function draw(dc)
     {
-        //var showTime= Application.Properties.getValue("showTime");
-        //var showDate= Application.Properties.getValue("showDate");
+        //var showTime= AppStorage.getProperty("showTime");
+        //var showDate= AppStorage.getProperty("showDate");
         var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 
         var fg_color = Gfx.COLOR_WHITE;
         var bg_transp = Gfx.COLOR_TRANSPARENT;
-        var dot_color = Application.Properties.getValue("ForegroundColor");
+        var dot_color = AppStorage.getProperty("ForegroundColor");
 
 
         if (showTime)

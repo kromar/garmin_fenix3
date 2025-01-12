@@ -14,7 +14,7 @@ class Background extends Ui.Drawable {
 
     function draw(dc) {
         // Set the background color then call to clear the screen
-        dc.setColor(Gfx.COLOR_TRANSPARENT, Application.Properties.getValue("BackgroundColor"));
+        dc.setColor(Gfx.COLOR_TRANSPARENT, AppStorage.getProperty("BackgroundColor"));
         dc.clear();
     }
 

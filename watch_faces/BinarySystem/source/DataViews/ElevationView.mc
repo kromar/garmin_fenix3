@@ -23,7 +23,7 @@ class ElevationView extends BinaryWatchDrawable
 		var tempIt = SensorHistory.getTemperatureHistory({ :order=>SensorHistory.ORDER_NEWEST_FIRST, :period=>1 });
 
 
-		//var dot_color = Application.Properties.getValue("ForegroundColor");
+		//var dot_color = AppStorage.getProperty("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;
 	    var fg_color = Gfx.COLOR_WHITE;
 	

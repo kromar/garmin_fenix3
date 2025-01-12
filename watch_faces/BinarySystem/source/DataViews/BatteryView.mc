@@ -28,7 +28,7 @@ class BatteryView extends BinaryWatchDrawable
 
     var fg_color = Gfx.COLOR_WHITE;
     var bg_transp = Gfx.COLOR_TRANSPARENT;
-    var dot_color = Application.Properties.getValue("ForegroundColor");
+    var dot_color = AppStorage.getProperty("ForegroundColor");
 
 
     function initialize(params)
@@ -51,8 +51,8 @@ function draw(dc)
     {
 
 
-        var showBatteryBar = Application.Properties.getValue("showBatteryBar");
-        var showBatteryPercentage = Application.Properties.getValue("showBatteryPercentage");
+        var showBatteryBar = AppStorage.getProperty("showBatteryBar");
+        var showBatteryPercentage = AppStorage.getProperty("showBatteryPercentage");
 
         if (showBatteryBar)
         {
@@ -159,7 +159,7 @@ function draw(dc)
 
     function drawBatteryPercentage(dc)
     {
-        var remainingBatteryEstimateMode = Application.Properties.getValue("RemainingBatteryEstimate");
+        var remainingBatteryEstimateMode = AppStorage.getProperty("RemainingBatteryEstimate");
         var sysStats = Sys.getSystemStats();
         var battery = sysStats.battery;
             //===============================

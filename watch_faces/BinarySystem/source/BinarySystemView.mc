@@ -13,6 +13,8 @@ using Toybox.Math as Math;
 //https://github.com/anderssonfilip/SunriseSunset
 
 
+
+
 class BinarySystemView extends Ui.WatchFace {
 
     var isDirty = false;
@@ -20,12 +22,13 @@ class BinarySystemView extends Ui.WatchFace {
 
     function initialize() {
         WatchFace.initialize();
+        AppStorage.setApp(Application.getApp());
     }
 
     //! Load your resources here
     function onLayout(dc) {
-
-        var layoutMode = Application.Properties.getValue("LayoutType");
+        
+        var layoutMode = AppStorage.getProperty("LayoutType");
         {
         	if (dc.getHeight() >= 0)
         	{

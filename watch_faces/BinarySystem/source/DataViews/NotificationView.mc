@@ -17,7 +17,7 @@ class NotificationView extends BinaryWatchDrawable
 
 	function draw(dc)
 	{
-		var dot_color = Application.Properties.getValue("ForegroundColor");
+		var dot_color = AppStorage.getProperty("ForegroundColor");
         var bg_transp = Gfx.COLOR_TRANSPARENT;
 	    var fg_color = Gfx.COLOR_WHITE;
 
