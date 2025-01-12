@@ -1,14 +1,14 @@
 using Toybox.System as Sys;
 using Toybox.WatchUi as Ui;
 
-class BluetoothView extends Ui.Drawable
+class BluetoothView extends BinaryWatchDrawable
 {
 	var image = null;
 	function initialize(params)
 	{
-		Drawable.initialize(params);
-		locX = params.get(:x);
-		locY = params.get(:y);
+		BinaryWatchDrawable.initialize(params);
+		locX = params.get(:x) * scaleFactorX;
+		locY = params.get(:y) * scaleFactorY;
 		
 		image = Ui.loadResource( Rez.Drawables.bluetooth_icon );
 	}

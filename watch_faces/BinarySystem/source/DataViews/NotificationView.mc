@@ -3,14 +3,14 @@ using Toybox.System as Sys;
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 
-class NotificationView extends Ui.Drawable
+class NotificationView extends BinaryWatchDrawable
 {
 	var fontSize = Gfx.FONT_TINY;
 	function initialize(params)
 	{
-		Drawable.initialize(params);
-		locX = params.get(:x);
-		locY = params.get(:y);
+		BinaryWatchDrawable.initialize(params);
+		locX = params.get(:x) * scaleFactorX;
+		locY = params.get(:y) * scaleFactorY;
 		fontSize = params.get(:fontSize);
 
 	}
@@ -28,7 +28,7 @@ class NotificationView extends Ui.Drawable
 		if (notificationCount > 0)
 		{
             dc.setColor(fg_color, bg_transp);
-            dc.drawRoundedRectangle(locX, locY, 40, 18, 4);
+            dc.drawRoundedRectangle(locX, locY, 40 * scaleFactorX, 18 * scaleFactorY, 4);
             dc.drawRectangle(locX+2, locY+4, 10, 1);
             dc.drawRectangle(locX+2, locY+8, 16, 1);
             dc.drawRectangle(locX+2, locY+12, 10, 1);
@@ -36,7 +36,7 @@ class NotificationView extends Ui.Drawable
             //draw notification count
             var notificationCountStr = notificationCount.toString();
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(locX+36, locY-1, fontSize, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText(locX+36 * scaleFactorX, locY-1, fontSize, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
 		}
 	}
 }

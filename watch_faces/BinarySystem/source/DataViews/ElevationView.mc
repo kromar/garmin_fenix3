@@ -4,14 +4,14 @@ using Toybox.SensorHistory as SensorHistory;
 using Toybox.Sensor as Sensor;
 using Toybox.Graphics as Gfx;
 
-class ElevationView extends Ui.Drawable
+class ElevationView extends BinaryWatchDrawable
 {
 	
 	function initialize(params)
 	{
-		Drawable.initialize(params);
-		locX = params.get(:x);
-		locY = params.get(:y);
+		BinaryWatchDrawable.initialize(params);
+		locX = params.get(:x) * scaleFactorX;
+		locY = params.get(:y) * scaleFactorY;
 		
 	}
 
@@ -29,9 +29,9 @@ class ElevationView extends Ui.Drawable
 	
 		dc.setColor(fg_color, bg_transp);
 		dc.drawText(locX, locY, Gfx.FONT_TINY, elevIt.next().data.format("%d") + "m", Gfx.TEXT_JUSTIFY_CENTER);
-		dc.drawText(locX, locY+18, Gfx.FONT_TINY, hrIt.next().data.format("%d") + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
-		dc.drawText(locX, locY+36, Gfx.FONT_TINY, pressureIt.next().data.format("%d") + "mmHg", Gfx.TEXT_JUSTIFY_CENTER);
-		dc.drawText(locX, locY+54, Gfx.FONT_TINY, tempIt.next().data.format("%d") + "C", Gfx.TEXT_JUSTIFY_CENTER);
+		dc.drawText(locX, locY+18 * scaleFactorY, Gfx.FONT_TINY, hrIt.next().data.format("%d") + "bpm", Gfx.TEXT_JUSTIFY_CENTER);
+		dc.drawText(locX, locY+36 * scaleFactorY, Gfx.FONT_TINY, pressureIt.next().data.format("%d") + "mmHg", Gfx.TEXT_JUSTIFY_CENTER);
+		dc.drawText(locX, locY+54 * scaleFactorY, Gfx.FONT_TINY, tempIt.next().data.format("%d") + "C", Gfx.TEXT_JUSTIFY_CENTER);
 	
 	}
 }

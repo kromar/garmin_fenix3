@@ -11,7 +11,7 @@ using Toybox.Position;
 // https://github.com/haraldh/SunCalc
 //http://lexikon.astronomie.info/zeitgleichung/
 
-class SunView extends Ui.Drawable
+class SunView extends BinaryWatchDrawable
 {
     var showSun = false;
     var gpsImage = null;
@@ -26,11 +26,11 @@ class SunView extends Ui.Drawable
 
     function initialize(params)
         {
-            Ui.Drawable.initialize(params);
-            iconX = params.get(:iconX);
-            iconY = params.get(:iconY);
-            textX = params.get(:textX);
-            textY = params.get(:textY);
+            BinaryWatchDrawable.initialize(params);
+            iconX = params.get(:iconX) * scaleFactorX;
+            iconY = params.get(:iconY) * scaleFactorY;
+            textX = params.get(:textX) * scaleFactorX;
+            textY = params.get(:textY) * scaleFactorY;
             //Drawable.setLocation(iconX, iconY);
 
             showSun = params.get(:showSun);
