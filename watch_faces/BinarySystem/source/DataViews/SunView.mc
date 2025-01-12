@@ -38,7 +38,7 @@ class SunView extends Ui.Drawable
             var hasStoredLocationData = false;
 
              //when the location  is defined we can write the location to the app properties
-              if (curLoc)
+              if (curLoc != null)
 				{
 				    var latlon = curLoc.toRadians();
 				    hasStoredLocationData = true;

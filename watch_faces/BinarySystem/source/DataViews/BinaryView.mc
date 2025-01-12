@@ -9,6 +9,7 @@ class BinaryView extends Ui.Drawable
 {
 	var typeMethod = null;
 	var showSeconds = true;
+	var isLowPowerMode = false;
 	function initialize(params)
 	{
 		Drawable.initialize(params);
@@ -72,14 +73,24 @@ class BinaryView extends Ui.Drawable
 		}
 	}
 
+	function onExitSleep() {
+        isLowPowerMode = false;
+    }
+
+    //! Terminate any active timers and prepare for slow updates.
+    function onEnterSleep() {
+        isLowPowerMode = true;
+        Ui.requestUpdate();
+    }
+
 	function draw(dc)
 	{
 		var now = Time.now();
         var time = Gregorian.info(now, Time.FORMAT_LONG);
 
-		var isLowPower = Application.Properties.getValue("IsLowPowerMode");
+
 		var appShowSeconds = Application.Properties.getValue("ShowSeconds");
-		if ((isLowPower == null || isLowPower == false)
+		if (isLowPowerMode == false
 			&& appShowSeconds == true
 			&& showSeconds == true)
 		{
@@ -88,5 +99,4 @@ class BinaryView extends Ui.Drawable
 		drawBinaryArray(dc, 6, 1, time.min, typeMethod);
 		drawBinaryArray(dc, 6, 2, time.hour, typeMethod);
 	}
-
  }
