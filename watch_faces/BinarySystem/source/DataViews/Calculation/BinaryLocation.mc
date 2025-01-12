@@ -1,6 +1,7 @@
 using Toybox.Math as Math;
 using Toybox.System as System;
 using Toybox.Graphics as Graphics;
+using Toybox.Application as App;
 
 enum
 {
@@ -32,8 +33,10 @@ class BinaryLocation
 	
 	function circularLocation(dc, column, item)
 	{
-		var width = dc.getWidth();
 		var height = dc.getHeight();
+		var width = dc.getWidth();
+		var binaryRadius = App.Properties.getValue("BinaryRadius") * width / 260.0 *2;
+
 		
 		var circleLocation = (item - 2.5) / 6.0 * Math.PI / 2.5;
 		
@@ -41,26 +44,26 @@ class BinaryLocation
 
 		if (column == 0)
 		{
-			location = new Point( width / 2.0 + (width - borderDistance) / 2.0 * Math.sin(circleLocation),
-			 height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation));
+			location = new Point( width / 2.0 + (width - binaryRadius) / 2.0 * Math.sin(circleLocation),
+			 height / 2.0 + (height - binaryRadius) / 2.0 * Math.cos(circleLocation));
 		}
 		if (column == 1)
 		{
 			location = new Point (
-			width / 2.0 + (width - borderDistance) / 2.0 * Math.cos(circleLocation),
-			height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation));
+			width / 2.0 + (width - binaryRadius) / 2.0 * Math.cos(circleLocation),
+			height / 2.0 - (height - binaryRadius) / 2.0 * Math.sin(circleLocation));
 		}
 		else if (column == 2)
 		{
 			location = new Point (
-			width / 2.0 - (width - borderDistance) / 2.0 * Math.cos(circleLocation),		
-			height / 2.0 - (height - borderDistance) / 2.0 * Math.sin(circleLocation));
+			width / 2.0 - (width - binaryRadius) / 2.0 * Math.cos(circleLocation),		
+			height / 2.0 - (height - binaryRadius) / 2.0 * Math.sin(circleLocation));
 		}
 		else if (column == 3)
 		{
 			location = new Point (
-			width / 2.0 - (width - borderDistance) / 2.0 * Math.sin(circleLocation),
-			height / 2.0 + (height - borderDistance) / 2.0 * Math.cos(circleLocation));
+			width / 2.0 - (width - binaryRadius) / 2.0 * Math.sin(circleLocation),
+			height / 2.0 + (height - binaryRadius) / 2.0 * Math.cos(circleLocation));
 		}
 		
 		//System.println(location[0] + " " + location[1] + " " + circleLocation + " " + item);

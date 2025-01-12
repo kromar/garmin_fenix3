@@ -5,19 +5,14 @@ using Toybox.Time as Time;
 using Toybox.WatchUi as Ui;
 using Toybox.System as Sys;
 
-class BinaryView extends Ui.Drawable
+class BinaryView extends BinaryWatchDrawable
 {
 	var typeMethod = null;
 	var showSeconds = true;
 	var isLowPowerMode = false;
 	function initialize(params)
 	{
-        var screenHeight = Sys.getDeviceSettings().screenHeight;
-        var screenWidth = Sys.getDeviceSettings().screenWidth;
-		var scaleFactorX = screenHeight / 260.0;
-		var scaleFactorY = screenWidth / 260.0;
-
-		Drawable.initialize(params);
+		BinaryWatchDrawable.initialize(params);
 
 		locX = params.get(:x) * scaleFactorX;
 		locY = params.get(:y) * scaleFactorY;
@@ -49,7 +44,7 @@ class BinaryView extends Ui.Drawable
 
 	function drawBinaryArray(dc, rows, column, count, locationCallback)
 	{
-		var binaryRadius = Application.Properties.getValue("BinaryRadius");
+		var binaryRadius = Application.Properties.getValue("BinaryRadius") * scaleFactorX;
 		var color_rgb = Application.Properties.getValue("ForegroundColor");
         var color_bg = Gfx.COLOR_BLACK;
 	    var color_fg = Gfx.COLOR_WHITE;
