@@ -53,7 +53,8 @@
          </drawable> 
          <drawable id="notificationView" class="NotificationView">
             <param name="x">34</param>
-            <param name="y">130</param>              
+            <param name="y">130</param>     
+			   <param name="fontSize">Gfx.FONT_XTINY</param>         
          </drawable>    
          
 	</layout>
