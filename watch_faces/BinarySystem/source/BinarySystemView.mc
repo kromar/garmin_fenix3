@@ -30,7 +30,7 @@ class BinarySystemView extends Ui.WatchFace {
         
         var layoutMode = AppStorage.getProperty("LayoutType");
         {
-        	if (dc.getHeight() >= 0)
+        	if (dc.getHeight() >= 260)
         	{
         		Sys.println("Fenix 6 detected");
         		setLayout(Rez.Layouts.Fenix6Layout(dc));
