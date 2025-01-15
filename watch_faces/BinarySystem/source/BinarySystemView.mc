@@ -32,13 +32,13 @@ class BinarySystemView extends Ui.WatchFace {
         {
         	if (dc.getHeight() >= 260)
         	{
-        		Sys.println("Fenix 6 detected");
+        		Sys.println("Screen width over 260 detected");
         		setLayout(Rez.Layouts.Fenix6Layout(dc));
         	}
             // this is a round watchface... HACK
             else if (dc.getHeight() > 200)
             {
-            	Sys.println("Fenix 3 detected");
+            	Sys.println("Screen width below detected");
             	if (layoutMode == 0)
             	{
 		            setLayout(Rez.Layouts.GeekModeLayout(dc));
