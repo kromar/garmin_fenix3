@@ -10,6 +10,8 @@
     <string id="LAYOUTMODE_HORIZONTAL">Horizontal Mode</string>
     <string id="LAYOUTMODE_CIRCULAR1">Circular Mode 1</string>
     <string id="LAYOUTMODE_CIRCULAR2">Circular Mode 2</string>
+    <string id="FENIX6LAYOUT">Fenix 6</string>
+    <string id="LAYOUTMODE_FR735">Forerunner 735</string>
     
     <string id="showBatteryPercentageTitle">Battery Percentage</string> 
     <string id="showBatteryBarTitle">Battery Bar</string>

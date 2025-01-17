@@ -9,12 +9,6 @@ using Toybox.Application as App;
 using Toybox.Math as Math;
 
 
-//!sunrise/sunset
-//https://github.com/anderssonfilip/SunriseSunset
-
-
-
-
 class BinarySystemView extends Ui.WatchFace {
 
     var isDirty = false;
@@ -30,47 +24,48 @@ class BinarySystemView extends Ui.WatchFace {
         
         var layoutMode = AppStorage.getProperty("LayoutType");
         {
-        	if (dc.getHeight() >= 260)
-        	{
-        		Sys.println("Screen width over 260 detected");
-        		setLayout(Rez.Layouts.Fenix6Layout(dc));
-        	}
-            // this is a round watchface... HACK
-            else if (dc.getHeight() > 200)
+            if (layoutMode == 0)
             {
-            	Sys.println("Screen width below detected");
-            	if (layoutMode == 0)
-            	{
-		            setLayout(Rez.Layouts.GeekModeLayout(dc));
-                }
-                else if (layoutMode == 1)
-                {
-		            setLayout(Rez.Layouts.VerticalLayout(dc));
-                }
-                else if (layoutMode == 2)
-                {
-		            setLayout(Rez.Layouts.HorizontalLayout(dc));                
-                }
-                else if (layoutMode == 3)
-                {
-		            setLayout(Rez.Layouts.NormalModeLayout(dc));     
-                }
-                else if (layoutMode == 4)
-                {
-		            setLayout(Rez.Layouts.NormalModeLayout2(dc));     
-                }
-                else
-                {
-                	Sys.println("!!Could not find correct value for LayoutType, fallback to default!!");
-		            setLayout(Rez.Layouts.NormalModeLayout2(dc));                     
-                }
+                Sys.println("Loading Layout: GeekModeLayout");
+                setLayout(Rez.Layouts.GeekModeLayout(dc));
             }
-            
-            else
+            else if (layoutMode == 1)
+            {
+                Sys.println("Loading Layout: VerticalLayout");
+                setLayout(Rez.Layouts.VerticalLayout(dc));
+            }
+            else if (layoutMode == 2)
+            {
+                Sys.println("Loading Layout: HorizontalLayout");
+                setLayout(Rez.Layouts.HorizontalLayout(dc));                
+            }
+            else if (layoutMode == 3)
+            {
+                Sys.println("Loading Layout: NormalModeLayout");
+                setLayout(Rez.Layouts.NormalModeLayout(dc));     
+            }
+            else if (layoutMode == 4)
+            {
+                Sys.println("Loading Layout: NormalModeLayout2");
+                setLayout(Rez.Layouts.NormalModeLayout2(dc));     
+            }
+            else if (layoutMode == 5)
+            {
+                Sys.println("Loading Layout: Fenix6Layout");
+                setLayout(Rez.Layouts.Fenix6Layout(dc));   
+            }      
+            else if (layoutMode == 6)
             {
                 // ForeRunner 735XT
+                Sys.println("Loading Layout: NormalModeLayoutFR735");
                 setLayout(Rez.Layouts.NormalModeLayoutFR735(dc));
+            }             
+            else
+            {
+                Sys.println("!!Could not find correct value for LayoutType, fallback to NormalModeLayout2!!");
+                setLayout(Rez.Layouts.NormalModeLayout2(dc));                     
             }
+            
         }
     }
 

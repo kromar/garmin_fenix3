@@ -6,7 +6,8 @@ using Toybox.System as Sys;
 using Toybox.Activity as Activity;
 using Toybox.Position;
 
-// references
+// references !sunrise/sunset
+//https://github.com/anderssonfilip/SunriseSunset
 //https://forums.garmin.com/showthread.php?351367-Sun-rise-sunset/page2
 // https://github.com/haraldh/SunCalc
 //http://lexikon.astronomie.info/zeitgleichung/

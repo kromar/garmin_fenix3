@@ -13,6 +13,8 @@
             <listEntry value="2">@Strings.LAYOUTMODE_HORIZONTAL</listEntry>
             <listEntry value="3">@Strings.LAYOUTMODE_CIRCULAR1</listEntry>
             <listEntry value="4">@Strings.LAYOUTMODE_CIRCULAR2</listEntry>
+            <listEntry value="5">@Strings.FENIX6LAYOUT</listEntry>
+            <listEntry value="6">@Strings.LAYOUTMODE_FR735</listEntry>
         </settingConfig>
     </setting>        
     

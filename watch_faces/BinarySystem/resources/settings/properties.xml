@@ -20,7 +20,7 @@
     <property id="ForegroundColor" type="number">0xFF0000</property>
     <property id="BackgroundColor" type="number">0x000000</property>
 
-    <!-- storaga for location data-->
+    <!-- storage for location data-->
     <property id="lastStoredLatitude" type="double">51.477928</property>
     <property id="lastStoredLongitude" type="double">0.001545</property>
     <property id="hasStoredLocationData" type="boolean">false</property>
