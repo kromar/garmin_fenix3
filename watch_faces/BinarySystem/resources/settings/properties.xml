@@ -4,6 +4,8 @@
     
     <property id="LayoutType" type="number">4</property>
     
+    <property id="FontSize" type="number">4</property>
+    
     <property id="ShowSun" type="boolean">true</property>
     <property id="ShowSeconds" type="boolean">true</property>
     <property id="BinaryRadius" type="number">8</property>

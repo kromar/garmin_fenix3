@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="C:\Repo\fenix3\watch_faces\BinarySystem\manifest.xml"/>
+<pcToLineNum>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="1" lineNum="6" parent="globals/NotificationView" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435472" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="3" lineNum="12" parent="globals/BinarySystemView" pc="268435492" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="4" lineNum="6" parent="globals/ActivityView" pc="268435504" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="5" lineNum="4" parent="globals/BluetoothView" pc="268435516" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="6" lineNum="33" parent="globals/SunCalc" pc="268435528" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="7" lineNum="7" parent="globals/ElevationView" pc="268435541" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="8" lineNum="4" parent="globals/BinarySystemApp" pc="268435553" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="8" lineNum="6" parent="globals/BinarySystemApp" pc="268435564" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemBackground.mc" id="9" lineNum="5" parent="globals/Background" pc="268435590" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="10" lineNum="15" parent="globals/SunView" pc="268435602" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="11" lineNum="9" parent="globals/BatteryView" pc="268435614" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="11" lineNum="31" parent="globals/BatteryView" pc="268435625" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="12" lineNum="4" parent="globals/AlarmView" pc="268435651" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="13" lineNum="10" parent="globals/TimeView" pc="268435663" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinaryWatchDrawable.mc" id="14" lineNum="5" parent="globals/BinaryWatchDrawable" pc="268435675" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="15" lineNum="8" parent="globals/BinaryView" pc="268435687" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="16" lineNum="9" parent="globals/NotificationView" pc="268435699" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="16" lineNum="11" parent="globals/NotificationView" pc="268435701" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="16" lineNum="12" parent="globals/NotificationView" pc="268435717" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="16" lineNum="13" parent="globals/NotificationView" pc="268435744" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="16" lineNum="14" parent="globals/NotificationView" pc="268435771" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="18" parent="globals/NotificationView" pc="268435793" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="20" parent="globals/NotificationView" pc="268435796" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="21" parent="globals/NotificationView" pc="268435816" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="22" parent="globals/NotificationView" pc="268435820" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="25" parent="globals/NotificationView" pc="268435827" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="26" parent="globals/NotificationView" pc="268435839" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="28" parent="globals/NotificationView" pc="268435847" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="30" parent="globals/NotificationView" pc="268435854" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="31" parent="globals/NotificationView" pc="268435868" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="32" parent="globals/NotificationView" pc="268435906" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="33" parent="globals/NotificationView" pc="268435936" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="34" parent="globals/NotificationView" pc="268435966" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="37" parent="globals/NotificationView" pc="268435996" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="38" parent="globals/NotificationView" pc="268436005" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\NotificationView.mc" id="17" lineNum="39" parent="globals/NotificationView" pc="268436019" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="50" parent="globals/LineGraph" pc="268436063" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="52" parent="globals/LineGraph" pc="268436066" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="53" parent="globals/LineGraph" pc="268436069" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="55" parent="globals/LineGraph" pc="268436072" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="57" parent="globals/LineGraph" pc="268436094" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="60" parent="globals/LineGraph" pc="268436103" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="61" parent="globals/LineGraph" pc="268436112" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="65" parent="globals/LineGraph" pc="268436124" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="67" parent="globals/LineGraph" pc="268436135" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="69" parent="globals/LineGraph" pc="268436147" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="71" parent="globals/LineGraph" pc="268436167" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="74" parent="globals/LineGraph" pc="268436173" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="76" parent="globals/LineGraph" pc="268436184" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="78" parent="globals/LineGraph" pc="268436196" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="80" parent="globals/LineGraph" pc="268436216" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="84" parent="globals/LineGraph" pc="268436222" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="86" parent="globals/LineGraph" pc="268436235" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="87" parent="globals/LineGraph" pc="268436250" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="89" parent="globals/LineGraph" pc="268436270" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="92" parent="globals/LineGraph" pc="268436281" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="95" parent="globals/LineGraph" pc="268436286" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="96" parent="globals/LineGraph" pc="268436295" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="98" parent="globals/LineGraph" pc="268436316" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="100" parent="globals/LineGraph" pc="268436330" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="103" parent="globals/LineGraph" pc="268436353" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="106" parent="globals/LineGraph" pc="268436365" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="109" parent="globals/LineGraph" pc="268436370" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="110" parent="globals/LineGraph" pc="268436379" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="112" parent="globals/LineGraph" pc="268436400" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="114" parent="globals/LineGraph" pc="268436414" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="18" lineNum="117" parent="globals/LineGraph" pc="268436437" symbol="addItem"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="19" lineNum="39" parent="globals/LineGraph" pc="268436453" symbol="setColor"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="19" lineNum="41" parent="globals/LineGraph" pc="268436455" symbol="setColor"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="20" lineNum="45" parent="globals/LineGraph" pc="268436465" symbol="setMinRange"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="20" lineNum="47" parent="globals/LineGraph" pc="268436467" symbol="setMinRange"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="23" parent="globals/LineGraph" pc="268436477" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="25" parent="globals/LineGraph" pc="268436479" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="26" parent="globals/LineGraph" pc="268436487" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="27" parent="globals/LineGraph" pc="268436495" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="29" parent="globals/LineGraph" pc="268436503" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="31" parent="globals/LineGraph" pc="268436511" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="33" parent="globals/LineGraph" pc="268436532" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="34" parent="globals/LineGraph" pc="268436542" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="21" lineNum="35" parent="globals/LineGraph" pc="268436551" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="128" parent="globals/LineGraph" pc="268436561" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="136" parent="globals/LineGraph" pc="268436564" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="137" parent="globals/LineGraph" pc="268436582" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="139" parent="globals/LineGraph" pc="268436600" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="142" parent="globals/LineGraph" pc="268436604" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="145" parent="globals/LineGraph" pc="268436613" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="148" parent="globals/LineGraph" pc="268436633" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="149" parent="globals/LineGraph" pc="268436640" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="150" parent="globals/LineGraph" pc="268436653" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="152" parent="globals/LineGraph" pc="268436662" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="154" parent="globals/LineGraph" pc="268436673" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="155" parent="globals/LineGraph" pc="268436689" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="158" parent="globals/LineGraph" pc="268436699" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="159" parent="globals/LineGraph" pc="268436707" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="160" parent="globals/LineGraph" pc="268436736" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="161" parent="globals/LineGraph" pc="268436739" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="163" parent="globals/LineGraph" pc="268436763" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="165" parent="globals/LineGraph" pc="268436775" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="166" parent="globals/LineGraph" pc="268436779" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="167" parent="globals/LineGraph" pc="268436805" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="169" parent="globals/LineGraph" pc="268436814" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="171" parent="globals/LineGraph" pc="268436820" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="172" parent="globals/LineGraph" pc="268436838" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="173" parent="globals/LineGraph" pc="268436842" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="174" parent="globals/LineGraph" pc="268436849" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="178" parent="globals/LineGraph" pc="268436894" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="180" parent="globals/LineGraph" pc="268436908" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="182" parent="globals/LineGraph" pc="268436920" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="183" parent="globals/LineGraph" pc="268436924" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="184" parent="globals/LineGraph" pc="268436950" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="186" parent="globals/LineGraph" pc="268436959" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="188" parent="globals/LineGraph" pc="268436965" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="189" parent="globals/LineGraph" pc="268436983" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="190" parent="globals/LineGraph" pc="268436987" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Graph.mc" id="22" lineNum="191" parent="globals/LineGraph" pc="268436994" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="23" lineNum="100" parent="globals/BinarySystemView" pc="268437043" symbol="onExitSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="23" lineNum="101" parent="globals/BinarySystemView" pc="268437045" symbol="onExitSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="25" lineNum="110" parent="globals/BinarySystemView" pc="268437054" symbol="onSettingsChanged"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="25" lineNum="111" parent="globals/BinarySystemView" pc="268437056" symbol="onSettingsChanged"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="23" parent="globals/BinarySystemView" pc="268437065" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="25" parent="globals/BinarySystemView" pc="268437068" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="27" parent="globals/BinarySystemView" pc="268437088" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="29" parent="globals/BinarySystemView" pc="268437095" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="30" parent="globals/BinarySystemView" pc="268437113" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="32" parent="globals/BinarySystemView" pc="268437149" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="34" parent="globals/BinarySystemView" pc="268437157" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="35" parent="globals/BinarySystemView" pc="268437175" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="37" parent="globals/BinarySystemView" pc="268437211" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="39" parent="globals/BinarySystemView" pc="268437219" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="40" parent="globals/BinarySystemView" pc="268437237" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="42" parent="globals/BinarySystemView" pc="268437273" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="44" parent="globals/BinarySystemView" pc="268437281" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="45" parent="globals/BinarySystemView" pc="268437299" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="47" parent="globals/BinarySystemView" pc="268437335" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="49" parent="globals/BinarySystemView" pc="268437343" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="50" parent="globals/BinarySystemView" pc="268437361" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="52" parent="globals/BinarySystemView" pc="268437397" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="54" parent="globals/BinarySystemView" pc="268437405" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="55" parent="globals/BinarySystemView" pc="268437423" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="57" parent="globals/BinarySystemView" pc="268437459" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="60" parent="globals/BinarySystemView" pc="268437467" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="61" parent="globals/BinarySystemView" pc="268437485" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="65" parent="globals/BinarySystemView" pc="268437521" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="26" lineNum="66" parent="globals/BinarySystemView" pc="268437539" symbol="onLayout"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="27" lineNum="105" parent="globals/BinarySystemView" pc="268437573" symbol="onEnterSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="27" lineNum="106" parent="globals/BinarySystemView" pc="268437575" symbol="onEnterSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="27" lineNum="107" parent="globals/BinarySystemView" pc="268437583" symbol="onEnterSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="28" lineNum="17" parent="globals/BinarySystemView" pc="268437595" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="28" lineNum="18" parent="globals/BinarySystemView" pc="268437597" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="28" lineNum="19" parent="globals/BinarySystemView" pc="268437609" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="30" lineNum="81" parent="globals/BinarySystemView" pc="268437634" symbol="onUpdate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="30" lineNum="82" parent="globals/BinarySystemView" pc="268437636" symbol="onUpdate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="30" lineNum="84" parent="globals/BinarySystemView" pc="268437644" symbol="onUpdate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="30" lineNum="85" parent="globals/BinarySystemView" pc="268437655" symbol="onUpdate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemView.mc" id="30" lineNum="87" parent="globals/BinarySystemView" pc="268437666" symbol="onUpdate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="15" parent="globals/ActivityView" pc="268437683" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="17" parent="globals/ActivityView" pc="268437685" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="18" parent="globals/ActivityView" pc="268437701" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="19" parent="globals/ActivityView" pc="268437722" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="20" parent="globals/ActivityView" pc="268437743" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="21" parent="globals/ActivityView" pc="268437764" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="23" parent="globals/ActivityView" pc="268437785" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="31" lineNum="24" parent="globals/ActivityView" pc="268437806" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="28" parent="globals/ActivityView" pc="268437828" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="30" parent="globals/ActivityView" pc="268437831" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="31" parent="globals/ActivityView" pc="268437851" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="33" parent="globals/ActivityView" pc="268437863" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="34" parent="globals/ActivityView" pc="268437871" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="37" parent="globals/ActivityView" pc="268437878" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="38" parent="globals/ActivityView" pc="268437898" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="39" parent="globals/ActivityView" pc="268437902" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="40" parent="globals/ActivityView" pc="268437909" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="41" parent="globals/ActivityView" pc="268437921" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="42" parent="globals/ActivityView" pc="268437929" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="43" parent="globals/ActivityView" pc="268437937" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="45" parent="globals/ActivityView" pc="268437945" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="50" parent="globals/ActivityView" pc="268437962" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="51" parent="globals/ActivityView" pc="268437971" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="52" parent="globals/ActivityView" pc="268437985" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="55" parent="globals/ActivityView" pc="268438034" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="56" parent="globals/ActivityView" pc="268438044" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="57" parent="globals/ActivityView" pc="268438061" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="59" parent="globals/ActivityView" pc="268438069" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="61" parent="globals/ActivityView" pc="268438079" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="63" parent="globals/ActivityView" pc="268438083" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="64" parent="globals/ActivityView" pc="268438097" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="66" parent="globals/ActivityView" pc="268438169" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="67" parent="globals/ActivityView" pc="268438183" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="69" parent="globals/ActivityView" pc="268438210" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="71" parent="globals/ActivityView" pc="268438225" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="75" parent="globals/ActivityView" pc="268438306" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="82" parent="globals/ActivityView" pc="268438360" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="84" parent="globals/ActivityView" pc="268438365" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="85" parent="globals/ActivityView" pc="268438379" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="86" parent="globals/ActivityView" pc="268438386" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="88" parent="globals/ActivityView" pc="268438393" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="89" parent="globals/ActivityView" pc="268438403" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="93" parent="globals/ActivityView" pc="268438441" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="98" parent="globals/ActivityView" pc="268438466" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="99" parent="globals/ActivityView" pc="268438476" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="101" parent="globals/ActivityView" pc="268438485" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="105" parent="globals/ActivityView" pc="268438517" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ActivityView.mc" id="32" lineNum="108" parent="globals/ActivityView" pc="268438532" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="33" lineNum="7" parent="globals/BluetoothView" pc="268438588" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="33" lineNum="9" parent="globals/BluetoothView" pc="268438590" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="33" lineNum="10" parent="globals/BluetoothView" pc="268438606" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="33" lineNum="11" parent="globals/BluetoothView" pc="268438633" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="33" lineNum="13" parent="globals/BluetoothView" pc="268438660" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="34" lineNum="16" parent="globals/BluetoothView" pc="268438699" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="34" lineNum="18" parent="globals/BluetoothView" pc="268438702" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="34" lineNum="19" parent="globals/BluetoothView" pc="268438714" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="34" lineNum="21" parent="globals/BluetoothView" pc="268438722" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BluetoothView.mc" id="34" lineNum="23" parent="globals/BluetoothView" pc="268438727" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="35" lineNum="59" parent="globals/SunCalc" pc="268438756" symbol="fromJulian"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="35" lineNum="60" parent="globals/SunCalc" pc="268438758" symbol="fromJulian"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="36" lineNum="63" parent="globals/SunCalc" pc="268438799" symbol="round"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="36" lineNum="64" parent="globals/SunCalc" pc="268438801" symbol="round"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="36" lineNum="65" parent="globals/SunCalc" pc="268438808" symbol="round"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="36" lineNum="67" parent="globals/SunCalc" pc="268438832" symbol="round"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="37" lineNum="54" parent="globals/SunCalc" pc="268438854" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="37" lineNum="55" parent="globals/SunCalc" pc="268438856" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="37" lineNum="56" parent="globals/SunCalc" pc="268438864" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="72" parent="globals/SunCalc" pc="268438873" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="73" parent="globals/SunCalc" pc="268438876" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="74" parent="globals/SunCalc" pc="268438912" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="75" parent="globals/SunCalc" pc="268438934" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="77" parent="globals/SunCalc" pc="268438966" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="78" parent="globals/SunCalc" pc="268438999" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="79" parent="globals/SunCalc" pc="268439023" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="80" parent="globals/SunCalc" pc="268439047" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="81" parent="globals/SunCalc" pc="268439125" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="82" parent="globals/SunCalc" pc="268439155" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="83" parent="globals/SunCalc" pc="268439182" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="84" parent="globals/SunCalc" pc="268439224" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="85" parent="globals/SunCalc" pc="268439265" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="86" parent="globals/SunCalc" pc="268439274" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="89" parent="globals/SunCalc" pc="268439286" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="90" parent="globals/SunCalc" pc="268439294" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="93" parent="globals/SunCalc" pc="268439311" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="95" parent="globals/SunCalc" pc="268439399" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="96" parent="globals/SunCalc" pc="268439421" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="99" parent="globals/SunCalc" pc="268439426" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="101" parent="globals/SunCalc" pc="268439469" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="102" parent="globals/SunCalc" pc="268439502" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="103" parent="globals/SunCalc" pc="268439510" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="106" parent="globals/SunCalc" pc="268439524" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\SunCalc.mc" id="38" lineNum="108" parent="globals/SunCalc" pc="268439540" symbol="calculate"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="39" lineNum="10" parent="globals/ElevationView" pc="268439551" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="39" lineNum="12" parent="globals/ElevationView" pc="268439553" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="39" lineNum="13" parent="globals/ElevationView" pc="268439569" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="39" lineNum="14" parent="globals/ElevationView" pc="268439596" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="18" parent="globals/ElevationView" pc="268439624" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="20" parent="globals/ElevationView" pc="268439627" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="21" parent="globals/ElevationView" pc="268439661" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="22" parent="globals/ElevationView" pc="268439695" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="23" parent="globals/ElevationView" pc="268439729" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="27" parent="globals/ElevationView" pc="268439763" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="28" parent="globals/ElevationView" pc="268439767" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="30" parent="globals/ElevationView" pc="268439774" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="31" parent="globals/ElevationView" pc="268439788" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="32" parent="globals/ElevationView" pc="268439843" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="33" parent="globals/ElevationView" pc="268439907" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\ElevationView.mc" id="40" lineNum="34" parent="globals/ElevationView" pc="268439971" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="41" lineNum="13" parent="globals/BinarySystemApp" pc="268440036" symbol="onStart"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="42" lineNum="26" parent="globals/BinarySystemApp" pc="268440039" symbol="onSettingsChanged"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="42" lineNum="27" parent="globals/BinarySystemApp" pc="268440041" symbol="onSettingsChanged"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="42" lineNum="28" parent="globals/BinarySystemApp" pc="268440052" symbol="onSettingsChanged"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="43" lineNum="21" parent="globals/BinarySystemApp" pc="268440065" symbol="getInitialView"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="43" lineNum="22" parent="globals/BinarySystemApp" pc="268440067" symbol="getInitialView"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="44" lineNum="8" parent="globals/BinarySystemApp" pc="268440080" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="44" lineNum="9" parent="globals/BinarySystemApp" pc="268440082" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemApp.mc" id="45" lineNum="17" parent="globals/BinarySystemApp" pc="268440095" symbol="onStop"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemBackground.mc" id="46" lineNum="7" parent="globals/Background" pc="268440098" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemBackground.mc" id="46" lineNum="8" parent="globals/Background" pc="268440101" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemBackground.mc" id="46" lineNum="12" parent="globals/Background" pc="268440119" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemBackground.mc" id="47" lineNum="15" parent="globals/Background" pc="268440136" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemBackground.mc" id="47" lineNum="17" parent="globals/Background" pc="268440138" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinarySystemBackground.mc" id="47" lineNum="18" parent="globals/Background" pc="268440168" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="48" lineNum="21" parent="globals/BinaryLocation" pc="268440177" symbol="verticalLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="48" lineNum="23" parent="globals/BinaryLocation" pc="268440180" symbol="verticalLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="48" lineNum="26" parent="globals/BinaryLocation" pc="268440225" symbol="verticalLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="49" lineNum="28" parent="globals/BinaryLocation" pc="268440228" symbol="horizontalLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="49" lineNum="30" parent="globals/BinaryLocation" pc="268440231" symbol="horizontalLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="49" lineNum="31" parent="globals/BinaryLocation" pc="268440273" symbol="horizontalLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="34" parent="globals/BinaryLocation" pc="268440276" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="36" parent="globals/BinaryLocation" pc="268440279" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="37" parent="globals/BinaryLocation" pc="268440288" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="38" parent="globals/BinaryLocation" pc="268440297" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="41" parent="globals/BinaryLocation" pc="268440329" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="43" parent="globals/BinaryLocation" pc="268440357" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="45" parent="globals/BinaryLocation" pc="268440362" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="47" parent="globals/BinaryLocation" pc="268440369" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="50" parent="globals/BinaryLocation" pc="268440462" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="52" parent="globals/BinaryLocation" pc="268440470" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="56" parent="globals/BinaryLocation" pc="268440563" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="58" parent="globals/BinaryLocation" pc="268440571" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="62" parent="globals/BinaryLocation" pc="268440664" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="64" parent="globals/BinaryLocation" pc="268440672" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Calculation\\BinaryLocation.mc" id="51" lineNum="70" parent="globals/BinaryLocation" pc="268440765" symbol="circularLocation"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Point.mc" id="52" lineNum="6" parent="globals/Point" pc="268440768" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Point.mc" id="52" lineNum="7" parent="globals/Point" pc="268440770" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\Point.mc" id="52" lineNum="8" parent="globals/Point" pc="268440779" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="70" parent="globals/SunView" pc="268440789" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="72" parent="globals/SunView" pc="268440792" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="74" parent="globals/SunView" pc="268440812" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="76" parent="globals/SunView" pc="268440819" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="77" parent="globals/SunView" pc="268440839" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="78" parent="globals/SunView" pc="268440843" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="79" parent="globals/SunView" pc="268440857" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="82" parent="globals/SunView" pc="268440877" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="83" parent="globals/SunView" pc="268440897" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="85" parent="globals/SunView" pc="268440904" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="87" parent="globals/SunView" pc="268440944" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="88" parent="globals/SunView" pc="268440969" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="90" parent="globals/SunView" pc="268440994" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="92" parent="globals/SunView" pc="268441006" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="93" parent="globals/SunView" pc="268441023" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="95" parent="globals/SunView" pc="268441040" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="97" parent="globals/SunView" pc="268441139" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="53" lineNum="103" parent="globals/SunView" pc="268441174" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="29" parent="globals/SunView" pc="268441203" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="31" parent="globals/SunView" pc="268441206" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="32" parent="globals/SunView" pc="268441222" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="33" parent="globals/SunView" pc="268441249" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="34" parent="globals/SunView" pc="268441276" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="35" parent="globals/SunView" pc="268441303" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="37" parent="globals/SunView" pc="268441330" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="40" parent="globals/SunView" pc="268441351" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="41" parent="globals/SunView" pc="268441372" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="42" parent="globals/SunView" pc="268441410" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="43" parent="globals/SunView" pc="268441427" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="46" parent="globals/SunView" pc="268441430" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="48" parent="globals/SunView" pc="268441436" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="49" parent="globals/SunView" pc="268441446" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="50" parent="globals/SunView" pc="268441449" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="51" parent="globals/SunView" pc="268441460" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="52" parent="globals/SunView" pc="268441472" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="53" parent="globals/SunView" pc="268441495" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="54" parent="globals/SunView" pc="268441518" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="60" parent="globals/SunView" pc="268441541" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="61" parent="globals/SunView" pc="268441561" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="63" parent="globals/SunView" pc="268441568" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\SunView.mc" id="54" lineNum="64" parent="globals/SunView" pc="268441593" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="55" lineNum="114" parent="globals/BatteryView" pc="268441622" symbol="drawBatteryBar"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="55" lineNum="116" parent="globals/BatteryView" pc="268441625" symbol="drawBatteryBar"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="55" lineNum="117" parent="globals/BatteryView" pc="268441637" symbol="drawBatteryBar"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="55" lineNum="122" parent="globals/BatteryView" pc="268441645" symbol="drawBatteryBar"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="55" lineNum="123" parent="globals/BatteryView" pc="268441665" symbol="drawBatteryBar"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="55" lineNum="125" parent="globals/BatteryView" pc="268441678" symbol="drawBatteryBar"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="55" lineNum="126" parent="globals/BatteryView" pc="268441698" symbol="drawBatteryBar"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="68" parent="globals/BatteryView" pc="268441712" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="75" parent="globals/BatteryView" pc="268441715" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="76" parent="globals/BatteryView" pc="268441749" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="78" parent="globals/BatteryView" pc="268441759" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="80" parent="globals/BatteryView" pc="268441769" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="81" parent="globals/BatteryView" pc="268441777" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="83" parent="globals/BatteryView" pc="268441825" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="84" parent="globals/BatteryView" pc="268441833" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="86" parent="globals/BatteryView" pc="268441893" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="87" parent="globals/BatteryView" pc="268441901" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="89" parent="globals/BatteryView" pc="268441937" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="90" parent="globals/BatteryView" pc="268441945" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="92" parent="globals/BatteryView" pc="268442005" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="93" parent="globals/BatteryView" pc="268442044" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="96" parent="globals/BatteryView" pc="268442083" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="97" parent="globals/BatteryView" pc="268442091" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="99" parent="globals/BatteryView" pc="268442124" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="100" parent="globals/BatteryView" pc="268442132" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="102" parent="globals/BatteryView" pc="268442192" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="103" parent="globals/BatteryView" pc="268442200" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="105" parent="globals/BatteryView" pc="268442260" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="106" parent="globals/BatteryView" pc="268442268" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="108" parent="globals/BatteryView" pc="268442328" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="56" lineNum="109" parent="globals/BatteryView" pc="268442370" symbol="drawBatteryBars"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="57" lineNum="50" parent="globals/BatteryView" pc="268442401" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="57" lineNum="54" parent="globals/BatteryView" pc="268442404" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="57" lineNum="55" parent="globals/BatteryView" pc="268442424" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="57" lineNum="57" parent="globals/BatteryView" pc="268442444" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="57" lineNum="59" parent="globals/BatteryView" pc="268442449" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="57" lineNum="61" parent="globals/BatteryView" pc="268442463" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="57" lineNum="63" parent="globals/BatteryView" pc="268442468" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="160" parent="globals/BatteryView" pc="268442483" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="162" parent="globals/BatteryView" pc="268442486" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="163" parent="globals/BatteryView" pc="268442506" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="164" parent="globals/BatteryView" pc="268442518" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="168" parent="globals/BatteryView" pc="268442526" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="173" parent="globals/BatteryView" pc="268442555" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="174" parent="globals/BatteryView" pc="268442560" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="175" parent="globals/BatteryView" pc="268442568" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="176" parent="globals/BatteryView" pc="268442592" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="178" parent="globals/BatteryView" pc="268442606" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="179" parent="globals/BatteryView" pc="268442616" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="182" parent="globals/BatteryView" pc="268442650" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="185" parent="globals/BatteryView" pc="268442688" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="188" parent="globals/BatteryView" pc="268442701" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="190" parent="globals/BatteryView" pc="268442711" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="191" parent="globals/BatteryView" pc="268442715" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="58" lineNum="192" parent="globals/BatteryView" pc="268442735" symbol="drawBatteryPercentage"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="132" parent="globals/BatteryView" pc="268442774" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="134" parent="globals/BatteryView" pc="268442777" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="135" parent="globals/BatteryView" pc="268442781" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="136" parent="globals/BatteryView" pc="268442792" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="137" parent="globals/BatteryView" pc="268442806" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="139" parent="globals/BatteryView" pc="268442819" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="140" parent="globals/BatteryView" pc="268442828" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="141" parent="globals/BatteryView" pc="268442838" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="142" parent="globals/BatteryView" pc="268442847" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="143" parent="globals/BatteryView" pc="268442857" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="145" parent="globals/BatteryView" pc="268442869" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="146" parent="globals/BatteryView" pc="268442884" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="152" parent="globals/BatteryView" pc="268442894" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="153" parent="globals/BatteryView" pc="268442913" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="154" parent="globals/BatteryView" pc="268442931" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="59" lineNum="155" parent="globals/BatteryView" pc="268442949" symbol="batteryPrediction"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="34" parent="globals/BatteryView" pc="268442980" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="37" parent="globals/BatteryView" pc="268442982" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="38" parent="globals/BatteryView" pc="268442998" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="39" parent="globals/BatteryView" pc="268443007" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="40" parent="globals/BatteryView" pc="268443028" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="41" parent="globals/BatteryView" pc="268443055" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="42" parent="globals/BatteryView" pc="268443082" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="43" parent="globals/BatteryView" pc="268443109" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="44" parent="globals/BatteryView" pc="268443136" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BatteryView.mc" id="60" lineNum="45" parent="globals/BatteryView" pc="268443163" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\AppStorage.mc" id="61" lineNum="10" parent="globals/AppStorage" pc="268443191" symbol="getProperty"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\AppStorage.mc" id="61" lineNum="11" parent="globals/AppStorage" pc="268443193" symbol="getProperty"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\AppStorage.mc" id="61" lineNum="12" parent="globals/AppStorage" pc="268443208" symbol="getProperty"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\AppStorage.mc" id="61" lineNum="15" parent="globals/AppStorage" pc="268443226" symbol="getProperty"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\AppStorage.mc" id="63" lineNum="6" parent="globals/AppStorage" pc="268443243" symbol="setApp"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\AppStorage.mc" id="63" lineNum="7" parent="globals/AppStorage" pc="268443245" symbol="setApp"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="64" lineNum="7" parent="globals/AlarmView" pc="268443255" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="64" lineNum="9" parent="globals/AlarmView" pc="268443257" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="64" lineNum="10" parent="globals/AlarmView" pc="268443273" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="64" lineNum="11" parent="globals/AlarmView" pc="268443294" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="64" lineNum="13" parent="globals/AlarmView" pc="268443315" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="65" lineNum="16" parent="globals/AlarmView" pc="268443354" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="65" lineNum="18" parent="globals/AlarmView" pc="268443357" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="65" lineNum="19" parent="globals/AlarmView" pc="268443369" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="65" lineNum="21" parent="globals/AlarmView" pc="268443377" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\AlarmView.mc" id="65" lineNum="23" parent="globals/AlarmView" pc="268443384" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="17" parent="globals/TimeView" pc="268443413" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="19" parent="globals/TimeView" pc="268443416" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="21" parent="globals/TimeView" pc="268443432" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="22" parent="globals/TimeView" pc="268443454" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="23" parent="globals/TimeView" pc="268443476" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="24" parent="globals/TimeView" pc="268443497" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="26" parent="globals/TimeView" pc="268443518" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="27" parent="globals/TimeView" pc="268443539" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="66" lineNum="29" parent="globals/TimeView" pc="268443560" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="33" parent="globals/TimeView" pc="268443583" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="37" parent="globals/TimeView" pc="268443586" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="38" parent="globals/TimeView" pc="268443598" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="40" parent="globals/TimeView" pc="268443616" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="41" parent="globals/TimeView" pc="268443623" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="42" parent="globals/TimeView" pc="268443627" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="45" parent="globals/TimeView" pc="268443647" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="46" parent="globals/TimeView" pc="268443687" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="48" parent="globals/TimeView" pc="268443708" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="50" parent="globals/TimeView" pc="268443716" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="51" parent="globals/TimeView" pc="268443770" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="52" parent="globals/TimeView" pc="268443784" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="60" parent="globals/TimeView" pc="268443819" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="62" parent="globals/TimeView" pc="268443827" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="63" parent="globals/TimeView" pc="268443877" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\TimeView.mc" id="67" lineNum="64" parent="globals/TimeView" pc="268443891" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinaryWatchDrawable.mc" id="68" lineNum="11" parent="globals/BinaryWatchDrawable" pc="268443942" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinaryWatchDrawable.mc" id="68" lineNum="13" parent="globals/BinaryWatchDrawable" pc="268443944" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinaryWatchDrawable.mc" id="68" lineNum="14" parent="globals/BinaryWatchDrawable" pc="268443966" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinaryWatchDrawable.mc" id="68" lineNum="15" parent="globals/BinaryWatchDrawable" pc="268443988" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinaryWatchDrawable.mc" id="68" lineNum="16" parent="globals/BinaryWatchDrawable" pc="268444006" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\BinaryWatchDrawable.mc" id="68" lineNum="18" parent="globals/BinaryWatchDrawable" pc="268444024" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="69" lineNum="73" parent="globals/BinaryView" pc="268444045" symbol="onExitSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="69" lineNum="74" parent="globals/BinaryView" pc="268444047" symbol="onExitSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="70" lineNum="78" parent="globals/BinaryView" pc="268444056" symbol="onEnterSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="70" lineNum="79" parent="globals/BinaryView" pc="268444058" symbol="onEnterSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="70" lineNum="80" parent="globals/BinaryView" pc="268444066" symbol="onEnterSleep"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="45" parent="globals/BinaryView" pc="268444078" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="47" parent="globals/BinaryView" pc="268444081" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="48" parent="globals/BinaryView" pc="268444107" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="49" parent="globals/BinaryView" pc="268444127" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="50" parent="globals/BinaryView" pc="268444130" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="52" parent="globals/BinaryView" pc="268444137" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="54" parent="globals/BinaryView" pc="268444148" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="57" parent="globals/BinaryView" pc="268444155" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="58" parent="globals/BinaryView" pc="268444172" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="59" parent="globals/BinaryView" pc="268444180" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="61" parent="globals/BinaryView" pc="268444188" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="62" parent="globals/BinaryView" pc="268444202" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="64" parent="globals/BinaryView" pc="268444218" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="66" parent="globals/BinaryView" pc="268444229" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="71" lineNum="67" parent="globals/BinaryView" pc="268444243" symbol="drawBinaryArray"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="13" parent="globals/BinaryView" pc="268444276" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="15" parent="globals/BinaryView" pc="268444279" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="17" parent="globals/BinaryView" pc="268444295" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="18" parent="globals/BinaryView" pc="268444322" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="19" parent="globals/BinaryView" pc="268444349" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="20" parent="globals/BinaryView" pc="268444370" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="21" parent="globals/BinaryView" pc="268444395" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="22" parent="globals/BinaryView" pc="268444411" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="23" parent="globals/BinaryView" pc="268444427" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="25" parent="globals/BinaryView" pc="268444452" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="26" parent="globals/BinaryView" pc="268444468" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="27" parent="globals/BinaryView" pc="268444489" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="29" parent="globals/BinaryView" pc="268444502" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="30" parent="globals/BinaryView" pc="268444520" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="32" parent="globals/BinaryView" pc="268444548" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="34" parent="globals/BinaryView" pc="268444562" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="35" parent="globals/BinaryView" pc="268444580" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="37" parent="globals/BinaryView" pc="268444608" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="39" parent="globals/BinaryView" pc="268444622" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="72" lineNum="40" parent="globals/BinaryView" pc="268444640" symbol="initialize"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="83" parent="globals/BinaryView" pc="268444669" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="85" parent="globals/BinaryView" pc="268444672" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="86" parent="globals/BinaryView" pc="268444684" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="89" parent="globals/BinaryView" pc="268444702" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="90" parent="globals/BinaryView" pc="268444722" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="94" parent="globals/BinaryView" pc="268444749" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="96" parent="globals/BinaryView" pc="268444777" symbol="draw"/>
+<entry filename="C:\\Repo\\fenix3\\watch_faces\\BinarySystem\\source\\DataViews\\BinaryView.mc" id="73" lineNum="97" parent="globals/BinaryView" pc="268444803" symbol="draw"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="124" parent="globals/Rez/Layouts" pc="268444830" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="125" parent="globals/Rez/Layouts" pc="268444841" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="127" parent="globals/Rez/Layouts" pc="268444949" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="129" parent="globals/Rez/Layouts" pc="268445035" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="131" parent="globals/Rez/Layouts" pc="268445113" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="133" parent="globals/Rez/Layouts" pc="268445209" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="135" parent="globals/Rez/Layouts" pc="268445265" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="137" parent="globals/Rez/Layouts" pc="268445322" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="139" parent="globals/Rez/Layouts" pc="268445409" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="74" lineNum="141" parent="globals/Rez/Layouts" pc="268445472" symbol="NormalModeLayoutFR735"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="104" parent="globals/Rez/Layouts" pc="268445517" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="105" parent="globals/Rez/Layouts" pc="268445528" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="107" parent="globals/Rez/Layouts" pc="268445638" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="109" parent="globals/Rez/Layouts" pc="268445724" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="111" parent="globals/Rez/Layouts" pc="268445802" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="113" parent="globals/Rez/Layouts" pc="268445899" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="115" parent="globals/Rez/Layouts" pc="268445956" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="117" parent="globals/Rez/Layouts" pc="268446012" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="119" parent="globals/Rez/Layouts" pc="268446100" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="75" lineNum="121" parent="globals/Rez/Layouts" pc="268446163" symbol="NormalModeLayout2"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="18" parent="globals/Rez/Layouts" pc="268446208" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="19" parent="globals/Rez/Layouts" pc="268446219" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="21" parent="globals/Rez/Layouts" pc="268446328" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="23" parent="globals/Rez/Layouts" pc="268446399" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="25" parent="globals/Rez/Layouts" pc="268446480" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="27" parent="globals/Rez/Layouts" pc="268446558" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="29" parent="globals/Rez/Layouts" pc="268446655" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="31" parent="globals/Rez/Layouts" pc="268446711" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="33" parent="globals/Rez/Layouts" pc="268446767" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="76" lineNum="35" parent="globals/Rez/Layouts" pc="268446830" symbol="Fenix6Layout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="144" parent="globals/Rez/Layouts" pc="268446875" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="145" parent="globals/Rez/Layouts" pc="268446886" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="147" parent="globals/Rez/Layouts" pc="268446995" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="149" parent="globals/Rez/Layouts" pc="268447065" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="151" parent="globals/Rez/Layouts" pc="268447144" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="153" parent="globals/Rez/Layouts" pc="268447200" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="155" parent="globals/Rez/Layouts" pc="268447256" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="157" parent="globals/Rez/Layouts" pc="268447336" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="77" lineNum="159" parent="globals/Rez/Layouts" pc="268447400" symbol="VerticalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="78" lineNum="78" parent="globals/Rez/Layouts" pc="268447440" symbol="WatchFace"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="78" lineNum="79" parent="globals/Rez/Layouts" pc="268447451" symbol="WatchFace"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="78" lineNum="81" parent="globals/Rez/Layouts" pc="268447475" symbol="WatchFace"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="38" parent="globals/Rez/Layouts" pc="268447485" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="39" parent="globals/Rez/Layouts" pc="268447496" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="41" parent="globals/Rez/Layouts" pc="268447605" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="43" parent="globals/Rez/Layouts" pc="268447675" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="45" parent="globals/Rez/Layouts" pc="268447754" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="47" parent="globals/Rez/Layouts" pc="268447833" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="49" parent="globals/Rez/Layouts" pc="268447928" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="51" parent="globals/Rez/Layouts" pc="268447984" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="53" parent="globals/Rez/Layouts" pc="268448040" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="79" lineNum="55" parent="globals/Rez/Layouts" pc="268448104" symbol="GeekModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="58" parent="globals/Rez/Layouts" pc="268448149" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="59" parent="globals/Rez/Layouts" pc="268448160" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="61" parent="globals/Rez/Layouts" pc="268448267" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="63" parent="globals/Rez/Layouts" pc="268448337" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="65" parent="globals/Rez/Layouts" pc="268448416" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="67" parent="globals/Rez/Layouts" pc="268448512" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="69" parent="globals/Rez/Layouts" pc="268448568" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="71" parent="globals/Rez/Layouts" pc="268448624" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="73" parent="globals/Rez/Layouts" pc="268448703" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="80" lineNum="75" parent="globals/Rez/Layouts" pc="268448766" symbol="HorizontalLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="84" parent="globals/Rez/Layouts" pc="268448811" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="85" parent="globals/Rez/Layouts" pc="268448822" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="87" parent="globals/Rez/Layouts" pc="268448931" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="89" parent="globals/Rez/Layouts" pc="268449001" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="91" parent="globals/Rez/Layouts" pc="268449080" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="93" parent="globals/Rez/Layouts" pc="268449158" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="95" parent="globals/Rez/Layouts" pc="268449254" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="97" parent="globals/Rez/Layouts" pc="268449310" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="99" parent="globals/Rez/Layouts" pc="268449367" symbol="NormalModeLayout"/>
+<entry filename="c:\\Repo\\fenix3\\watch_faces\\builds\\gen\\006-B4376-00\\source\\Rez.mcgen" id="81" lineNum="101" parent="globals/Rez/Layouts" pc="268449430" symbol="NormalModeLayout"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="91" method="true" symbol="setApp"/>
+<entry id="82" method="true" symbol="drawBatteryBar"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry field="true" id="101" symbol="typeMethod"/>
+<entry id="114" method="true" symbol="VerticalLayout"/>
+<entry field="true" id="70" symbol="batHist"/>
+<entry field="true" id="100" symbol="showSeconds"/>
+<entry field="true" id="8389163" symbol="COLOR_ORANGE"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry field="true" id="92" symbol="dateFontSize"/>
+<entry id="8" object="true" symbol="AlarmView"/>
+<entry field="true" id="122" symbol="LAYOUTMODE_CIRCULAR2"/>
+<entry field="true" id="121" symbol="LAYOUTMODE_CIRCULAR1"/>
+<entry id="59" method="true" symbol="horizontalLocation"/>
+<entry field="true" id="8389671" symbol="screenWidth"/>
+<entry field="true" id="37" symbol="distanceYOffset"/>
+<entry field="true" id="135" symbol="RemainingBatteryEstimateTitle"/>
+<entry field="true" id="86" symbol="remainingBattery"/>
+<entry id="8389683" method="true" symbol="onSettingsChanged"/>
+<entry field="true" id="38" symbol="showDistance"/>
+<entry field="true" id="97" symbol="scaleFactorY"/>
+<entry field="true" id="96" symbol="scaleFactorX"/>
+<entry id="113" method="true" symbol="NormalModeLayoutFR735"/>
+<entry field="true" id="8389158" symbol="COLOR_LT_GRAY"/>
+<entry field="true" id="8389159" symbol="COLOR_DK_GRAY"/>
+<entry field="true" id="124" symbol="LAYOUTMODE_GEEK"/>
+<entry field="true" id="85" symbol="fg_color"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="58" method="true" symbol="circularLocation"/>
+<entry field="true" id="89" symbol="timeInterval"/>
+<entry field="true" id="67" symbol="sunFontSize"/>
+<entry id="84" method="true" symbol="drawBatteryPercentage"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="9" object="true" symbol="AppStorage"/>
+<entry field="true" id="103" symbol="alarm_icon"/>
+<entry field="true" id="127" symbol="LayoutTypeTitle"/>
+<entry id="16" object="true" symbol="BluetoothView"/>
+<entry field="true" id="56" symbol="mView"/>
+<entry field="true" id="90" symbol="app"/>
+<entry id="46" symbol="TIMES"/>
+<entry field="true" id="123" symbol="LAYOUTMODE_FR735"/>
+<entry field="true" id="8389168" symbol="COLOR_DK_BLUE"/>
+<entry field="true" id="115" symbol="AppName"/>
+<entry id="11" object="true" symbol="BinaryLocation"/>
+<entry id="112" method="true" symbol="NormalModeLayout2"/>
+<entry field="true" id="8389162" symbol="COLOR_DK_RED"/>
+<entry id="6" module="true" symbol="globals/Rez/Strings"/>
+<entry field="true" id="41" symbol="image"/>
+<entry field="true" id="8389157" symbol="COLOR_WHITE"/>
+<entry field="true" id="105" symbol="flight_icon"/>
+<entry id="8388631" module="true" symbol="Activity"/>
+<entry field="true" id="8389160" symbol="COLOR_BLACK"/>
+<entry field="true" id="55" symbol="sinM"/>
+<entry id="15" object="true" symbol="BinaryWatchDrawable"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry field="true" id="87" symbol="showBatteryBar"/>
+<entry field="true" id="119" symbol="FENIX6LAYOUT"/>
+<entry field="true" id="136" symbol="ShowSecondsTitle"/>
+<entry field="true" id="8389170" symbol="COLOR_PINK"/>
+<entry field="true" id="31" symbol="graphRangeStart"/>
+<entry id="8390425" module="true" symbol="Properties"/>
+<entry id="3" module="true" symbol="globals/Rez"/>
+<entry field="true" id="29" symbol="graphMinRange"/>
+<entry id="18" object="true" symbol="LineGraph"/>
+<entry id="32" method="true" symbol="setMinRange"/>
+<entry id="13" object="true" symbol="BinarySystemView"/>
+<entry id="110" method="true" symbol="HorizontalLayout"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="19" object="true" symbol="NotificationView"/>
+<entry field="true" id="8389161" symbol="COLOR_RED"/>
+<entry id="8389719" method="true" symbol="round"/>
+<entry id="60" method="true" symbol="verticalLocation"/>
+<entry field="true" id="75" symbol="batteryBarSize"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry field="true" id="8389314" symbol="latitude"/>
+<entry field="true" id="76" symbol="batteryBarThickness"/>
+<entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="134" symbol="RADIUS_9"/>
+<entry field="true" id="133" symbol="RADIUS_8"/>
+<entry field="true" id="132" symbol="RADIUS_7"/>
+<entry field="true" id="131" symbol="RADIUS_6"/>
+<entry field="true" id="130" symbol="RADIUS_5"/>
+<entry field="true" id="129" symbol="RADIUS_4"/>
+<entry field="true" id="8389672" symbol="screenHeight"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry field="true" id="63" symbol="hasStoredLocationData"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389282" method="true" symbol="getProperty"/>
+<entry field="true" id="33" symbol="isDirty"/>
+<entry field="true" id="57" symbol="borderDistance"/>
+<entry field="true" id="49" symbol="ds"/>
+<entry field="true" id="72" symbol="batteryBarHorizontal"/>
+<entry id="8389131" method="true" symbol="setColor"/>
+<entry field="true" id="34" symbol="isLowPowerMode"/>
+<entry field="true" id="88" symbol="showBatteryPercentage"/>
+<entry field="true" id="74" symbol="batteryBarLocY"/>
+<entry field="true" id="73" symbol="batteryBarLocX"/>
+<entry id="50" method="true" symbol="fromJulian"/>
+<entry field="true" id="27" symbol="graphColor"/>
+<entry field="true" id="30" symbol="graphRangeEnd"/>
+<entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+<entry field="true" id="139" symbol="showBatteryPercentageTitle"/>
+<entry field="true" id="54" symbol="sin2L"/>
+<entry id="8389809" symbol="order"/>
+<entry field="true" id="65" symbol="iconY"/>
+<entry field="true" id="64" symbol="iconX"/>
+<entry id="8389095" method="true" symbol="addItem"/>
+<entry id="14" object="true" symbol="BinaryView"/>
+<entry id="109" method="true" symbol="GeekModeLayout"/>
+<entry field="true" id="8388893" symbol="PI"/>
+<entry id="22" object="true" symbol="SunView"/>
+<entry id="12" object="true" symbol="BinarySystemApp"/>
+<entry field="true" id="81" symbol="dot_color"/>
+<entry field="true" id="51" symbol="lastD"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry field="true" id="8389315" symbol="longitude"/>
+<entry field="true" id="137" symbol="ShowSunTitle"/>
+<entry id="47" method="true" symbol="calculate"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="8389166" symbol="COLOR_DK_GREEN"/>
+<entry field="true" id="52" symbol="lastLng"/>
+<entry field="true" id="43" symbol="Jnoon"/>
+<entry field="true" id="28" symbol="graphIndex"/>
+<entry id="2" module="true" symbol="globals/AppStorage/&lt;statics&gt;"/>
+<entry id="79" method="true" symbol="batteryPrediction"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="99" method="true" symbol="drawBinaryArray"/>
+<entry id="83" method="true" symbol="drawBatteryBars"/>
+<entry id="8389068" method="true" symbol="draw"/>
+<entry field="true" id="102" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry field="true" id="69" symbol="textY"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="68" symbol="textX"/>
+<entry field="true" id="8389167" symbol="COLOR_BLUE"/>
+<entry id="8388643" module="true" symbol="Sensor"/>
+<entry id="20" object="true" symbol="Point"/>
+<entry field="true" id="104" symbol="bluetooth_icon"/>
+<entry field="true" id="107" symbol="nogps_icon"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry field="true" id="140" symbol="showDistanceTitle"/>
+<entry field="true" id="117" symbol="BackgroundColorTitle"/>
+<entry field="true" id="93" symbol="showDate"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8390146" module="true" object="true" symbol="Background"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="95" symbol="timeFontSize"/>
+<entry field="true" id="26" symbol="graphArray"/>
+<entry id="17" object="true" symbol="ElevationView"/>
+<entry id="23" object="true" symbol="TimeView"/>
+<entry id="8389808" symbol="period"/>
+<entry id="8388641" module="true" symbol="Math"/>
+<entry field="true" id="8389169" symbol="COLOR_PURPLE"/>
+<entry field="true" id="61" symbol="curLoc"/>
+<entry field="true" id="48" symbol="dec"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="10" object="true" symbol="BatteryView"/>
+<entry field="true" id="8389164" symbol="COLOR_YELLOW"/>
+<entry id="108" method="true" symbol="Fenix6Layout"/>
+<entry field="true" id="36" symbol="distanceXOffset"/>
+<entry id="8389781" module="true" symbol="SensorHistory"/>
+<entry field="true" id="71" symbol="batHistCount"/>
+<entry field="true" id="120" symbol="ForegroundColorTitle"/>
+<entry id="111" method="true" symbol="NormalModeLayout"/>
+<entry field="true" id="80" symbol="bg_transp"/>
+<entry field="true" id="8389165" symbol="COLOR_GREEN"/>
+<entry field="true" id="35" symbol="distanceStr"/>
+<entry id="7" object="true" symbol="ActivityView"/>
+<entry field="true" id="98" symbol="binaryLocation"/>
+<entry field="true" id="116" symbol="AppVersionTitle"/>
+<entry id="25" module="true" symbol="Layouts"/>
+<entry field="true" id="126" symbol="LAYOUTMODE_VERTICAL"/>
+<entry field="true" id="39" symbol="stepsXOffset"/>
+<entry id="8388642" module="true" symbol="Position"/>
+<entry field="true" id="40" symbol="stepsYOffset"/>
+<entry field="true" id="118" symbol="BinaryRadiusTitle"/>
+<entry field="true" id="94" symbol="showTime"/>
+<entry field="true" id="8389846" symbol="type"/>
+<entry field="true" id="138" symbol="showBatteryBarTitle"/>
+<entry field="true" id="24" symbol="fontSize"/>
+<entry field="true" id="125" symbol="LAYOUTMODE_HORIZONTAL"/>
+<entry field="true" id="78" symbol="batteryPercentageLocY"/>
+<entry field="true" id="77" symbol="batteryPercentageLocX"/>
+<entry id="21" object="true" symbol="SunCalc"/>
+<entry field="true" id="106" symbol="lock_icon"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry field="true" id="66" symbol="showSun"/>
+<entry field="true" id="62" symbol="gpsImage"/>
+<entry field="true" id="8390079" symbol="y"/>
+<entry field="true" id="8390078" symbol="x"/>
+<entry field="true" id="53" symbol="n"/>
+<entry field="true" id="45" symbol="M"/>
+<entry field="true" id="44" symbol="L"/>
+<entry field="true" id="42" symbol="C"/>
+<entry field="true" id="128" symbol="NO_GPS_FIX"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435792" name="params" stackId="1" startPc="268435699"/>
+<entry arg="true" endPc="268436062" name="dc" stackId="1" startPc="268435793"/>
+<entry endPc="268436061" name="dot_color" stackId="2" startPc="268435796"/>
+<entry endPc="268436061" name="bg_transp" stackId="3" startPc="268435796"/>
+<entry endPc="268436061" name="fg_color" stackId="4" startPc="268435796"/>
+<entry endPc="268436061" name="deviceSettings" stackId="5" startPc="268435796"/>
+<entry endPc="268436061" name="notificationCount" stackId="6" startPc="268435796"/>
+<entry endPc="268436058" name="notificationCountStr" stackId="7" startPc="268435854"/>
+<entry arg="true" endPc="268436452" name="value" stackId="1" startPc="268436063"/>
+<entry endPc="268436451" name="updateMin" stackId="2" startPc="268436066"/>
+<entry endPc="268436451" name="updateMax" stackId="3" startPc="268436066"/>
+<entry endPc="268436361" name="i" stackId="4" startPc="268436286"/>
+<entry endPc="268436361" name="min" stackId="5" startPc="268436286"/>
+<entry endPc="268436445" name="i" stackId="6" startPc="268436370"/>
+<entry endPc="268436445" name="max" stackId="7" startPc="268436370"/>
+<entry arg="true" endPc="268436464" name="color" stackId="1" startPc="268436453"/>
+<entry arg="true" endPc="268436476" name="minRange" stackId="1" startPc="268436465"/>
+<entry arg="true" endPc="268436560" name="size" stackId="1" startPc="268436477"/>
+<entry arg="true" endPc="268436560" name="minRange" stackId="2" startPc="268436477"/>
+<entry arg="true" endPc="268436560" name="color" stackId="3" startPc="268436477"/>
+<entry arg="true" endPc="268437042" name="dc" stackId="1" startPc="268436561"/>
+<entry arg="true" endPc="268437042" name="topLeft" stackId="2" startPc="268436561"/>
+<entry arg="true" endPc="268437042" name="bottomRight" stackId="3" startPc="268436561"/>
+<entry endPc="268437041" name="min" stackId="4" startPc="268436564"/>
+<entry endPc="268437041" name="range" stackId="5" startPc="268436564"/>
+<entry endPc="268437041" name="y" stackId="6" startPc="268436564"/>
+<entry endPc="268437041" name="x" stackId="7" startPc="268436564"/>
+<entry endPc="268437041" name="prev_y" stackId="8" startPc="268436564"/>
+<entry endPc="268437041" name="prev_x" stackId="9" startPc="268436564"/>
+<entry endPc="268437041" name="drawExtentsX" stackId="10" startPc="268436564"/>
+<entry endPc="268437041" name="drawExtentsY" stackId="11" startPc="268436564"/>
+<entry endPc="268437041" name="i" stackId="12" startPc="268436564"/>
+<entry endPc="268437041" name="draw_idx" stackId="13" startPc="268436564"/>
+<entry arg="true" endPc="268437572" name="dc" stackId="1" startPc="268437065"/>
+<entry endPc="268437571" name="layoutMode" stackId="2" startPc="268437068"/>
+<entry arg="true" endPc="268437682" name="dc" stackId="1" startPc="268437634"/>
+<entry arg="true" endPc="268437827" name="params" stackId="1" startPc="268437683"/>
+<entry arg="true" endPc="268438587" name="dc" stackId="1" startPc="268437828"/>
+<entry endPc="268438586" name="showDistance" stackId="2" startPc="268437831"/>
+<entry endPc="268438586" name="deviceSettings" stackId="3" startPc="268437831"/>
+<entry endPc="268438586" name="activity" stackId="4" startPc="268437831"/>
+<entry endPc="268438583" name="dot_color" stackId="5" startPc="268437878"/>
+<entry endPc="268438583" name="bg_transp" stackId="6" startPc="268437878"/>
+<entry endPc="268438583" name="fg_color" stackId="7" startPc="268437878"/>
+<entry endPc="268438583" name="activityInfo" stackId="8" startPc="268437878"/>
+<entry endPc="268438583" name="stepGoal" stackId="9" startPc="268437878"/>
+<entry endPc="268438583" name="steps" stackId="10" startPc="268437878"/>
+<entry endPc="268438583" name="distance" stackId="11" startPc="268437878"/>
+<entry endPc="268438583" name="distUnits" stackId="12" startPc="268437878"/>
+<entry endPc="268438583" name="stepsStr" stackId="13" startPc="268437878"/>
+<entry endPc="268438583" name="stepBarWidth" stackId="14" startPc="268437878"/>
+<entry endPc="268438583" name="stepGoalPercentage" stackId="15" startPc="268437878"/>
+<entry endPc="268438583" name="borderOffset_Goal" stackId="16" startPc="268437878"/>
+<entry endPc="268438580" name="distanceStr" stackId="17" startPc="268438365"/>
+<entry endPc="268438531" name="feetDistance" stackId="18" startPc="268438466"/>
+<entry arg="true" endPc="268438698" name="params" stackId="1" startPc="268438588"/>
+<entry arg="true" endPc="268438755" name="dc" stackId="1" startPc="268438699"/>
+<entry endPc="268438754" name="devSettings" stackId="2" startPc="268438702"/>
+<entry endPc="268438754" name="phoneConnected" stackId="3" startPc="268438702"/>
+<entry arg="true" endPc="268438798" name="j" stackId="1" startPc="268438756"/>
+<entry arg="true" endPc="268438853" name="a" stackId="1" startPc="268438799"/>
+<entry arg="true" endPc="268439550" name="moment" stackId="1" startPc="268438873"/>
+<entry arg="true" endPc="268439550" name="lat" stackId="2" startPc="268438873"/>
+<entry arg="true" endPc="268439550" name="lng" stackId="3" startPc="268438873"/>
+<entry arg="true" endPc="268439550" name="what" stackId="4" startPc="268438873"/>
+<entry endPc="268439550" name="d" stackId="5" startPc="268438876"/>
+<entry endPc="268439550" name="x" stackId="6" startPc="268438876"/>
+<entry endPc="268439550" name="ds" stackId="7" startPc="268438876"/>
+<entry endPc="268439550" name="Jset" stackId="8" startPc="268438876"/>
+<entry endPc="268439550" name="Jrise" stackId="9" startPc="268438876"/>
+<entry arg="true" endPc="268439623" name="params" stackId="1" startPc="268439551"/>
+<entry arg="true" endPc="268440035" name="dc" stackId="1" startPc="268439624"/>
+<entry endPc="268440034" name="elevIt" stackId="2" startPc="268439627"/>
+<entry endPc="268440034" name="hrIt" stackId="3" startPc="268439627"/>
+<entry endPc="268440034" name="pressureIt" stackId="4" startPc="268439627"/>
+<entry endPc="268440034" name="tempIt" stackId="5" startPc="268439627"/>
+<entry endPc="268440034" name="bg_transp" stackId="6" startPc="268439627"/>
+<entry endPc="268440034" name="fg_color" stackId="7" startPc="268439627"/>
+<entry endPc="268440134" name="dictionary" stackId="1" startPc="268440101"/>
+<entry arg="true" endPc="268440176" name="dc" stackId="1" startPc="268440136"/>
+<entry arg="true" endPc="268440227" name="dc" stackId="1" startPc="268440177"/>
+<entry arg="true" endPc="268440227" name="column" stackId="2" startPc="268440177"/>
+<entry arg="true" endPc="268440227" name="item" stackId="3" startPc="268440177"/>
+<entry endPc="268440227" name="location" stackId="4" startPc="268440180"/>
+<entry arg="true" endPc="268440275" name="dc" stackId="1" startPc="268440228"/>
+<entry arg="true" endPc="268440275" name="column" stackId="2" startPc="268440228"/>
+<entry arg="true" endPc="268440275" name="item" stackId="3" startPc="268440228"/>
+<entry endPc="268440275" name="location" stackId="4" startPc="268440231"/>
+<entry arg="true" endPc="268440767" name="dc" stackId="1" startPc="268440276"/>
+<entry arg="true" endPc="268440767" name="column" stackId="2" startPc="268440276"/>
+<entry arg="true" endPc="268440767" name="item" stackId="3" startPc="268440276"/>
+<entry endPc="268440767" name="height" stackId="4" startPc="268440279"/>
+<entry endPc="268440767" name="width" stackId="5" startPc="268440279"/>
+<entry endPc="268440767" name="binaryRadius" stackId="6" startPc="268440279"/>
+<entry endPc="268440767" name="circleLocation" stackId="7" startPc="268440279"/>
+<entry endPc="268440767" name="location" stackId="8" startPc="268440279"/>
+<entry arg="true" endPc="268440788" name="x" stackId="1" startPc="268440768"/>
+<entry arg="true" endPc="268440788" name="y" stackId="2" startPc="268440768"/>
+<entry arg="true" endPc="268441202" name="dc" stackId="1" startPc="268440789"/>
+<entry endPc="268441201" name="showSun" stackId="2" startPc="268440792"/>
+<entry endPc="268441198" name="dot_color" stackId="3" startPc="268440819"/>
+<entry endPc="268441198" name="bg_transp" stackId="4" startPc="268440819"/>
+<entry endPc="268441198" name="sc" stackId="5" startPc="268440819"/>
+<entry endPc="268441198" name="hasStoredLocationData" stackId="6" startPc="268440819"/>
+<entry endPc="268441170" name="now" stackId="7" startPc="268440904"/>
+<entry endPc="268441170" name="sunrise_moment" stackId="8" startPc="268440904"/>
+<entry endPc="268441170" name="sunset_moment" stackId="9" startPc="268440904"/>
+<entry endPc="268441167" name="timeInfoSunrise" stackId="10" startPc="268441006"/>
+<entry endPc="268441167" name="timeInfoSunset" stackId="11" startPc="268441006"/>
+<entry endPc="268441167" name="sunInfoString" stackId="12" startPc="268441006"/>
+<entry arg="true" endPc="268441621" name="params" stackId="1" startPc="268441203"/>
+<entry endPc="268441620" name="curLoc" stackId="2" startPc="268441206"/>
+<entry endPc="268441620" name="hasStoredLocationData" stackId="3" startPc="268441206"/>
+<entry endPc="268441537" name="latlon" stackId="4" startPc="268441436"/>
+<entry arg="true" endPc="268441711" name="dc" stackId="1" startPc="268441622"/>
+<entry endPc="268441710" name="sysStats" stackId="2" startPc="268441625"/>
+<entry endPc="268441710" name="battery" stackId="3" startPc="268441625"/>
+<entry arg="true" endPc="268442400" name="dc" stackId="1" startPc="268441712"/>
+<entry arg="true" endPc="268442400" name="battery" stackId="2" startPc="268441712"/>
+<entry endPc="268442399" name="batteryPercentageBar" stackId="3" startPc="268441715"/>
+<entry endPc="268442399" name="batteryPercentageOffset" stackId="4" startPc="268441715"/>
+<entry arg="true" endPc="268442482" name="dc" stackId="1" startPc="268442401"/>
+<entry endPc="268442481" name="showBatteryBar" stackId="2" startPc="268442404"/>
+<entry endPc="268442481" name="showBatteryPercentage" stackId="3" startPc="268442404"/>
+<entry arg="true" endPc="268442773" name="dc" stackId="1" startPc="268442483"/>
+<entry endPc="268442772" name="remainingBatteryEstimateMode" stackId="2" startPc="268442486"/>
+<entry endPc="268442772" name="sysStats" stackId="3" startPc="268442486"/>
+<entry endPc="268442772" name="battery" stackId="4" startPc="268442486"/>
+<entry endPc="268442772" name="batteryPercentageStr" stackId="5" startPc="268442486"/>
+<entry endPc="268442646" name="remainingBatteryHours" stackId="6" startPc="268442606"/>
+<entry endPc="268442772" name="font" stackId="7" startPc="268442486"/>
+<entry arg="true" endPc="268442979" name="input" stackId="1" startPc="268442774"/>
+<entry arg="true" endPc="268442979" name="battery" stackId="2" startPc="268442774"/>
+<entry arg="true" endPc="268442979" name="divider" stackId="3" startPc="268442774"/>
+<entry endPc="268442978" name="timeDiff" stackId="4" startPc="268442777"/>
+<entry endPc="268442972" name="batLoss" stackId="5" startPc="268442913"/>
+<entry arg="true" endPc="268443190" name="params" stackId="1" startPc="268442980"/>
+<entry arg="true" endPc="268443242" name="propName" stackId="1" startPc="268443191"/>
+<entry arg="true" endPc="268443254" name="application" stackId="1" startPc="268443243"/>
+<entry arg="true" endPc="268443353" name="params" stackId="1" startPc="268443255"/>
+<entry arg="true" endPc="268443412" name="dc" stackId="1" startPc="268443354"/>
+<entry endPc="268443411" name="devSettings" stackId="2" startPc="268443357"/>
+<entry endPc="268443411" name="alarmCount" stackId="3" startPc="268443357"/>
+<entry arg="true" endPc="268443582" name="params" stackId="1" startPc="268443413"/>
+<entry endPc="268443581" name="x" stackId="2" startPc="268443416"/>
+<entry endPc="268443581" name="y" stackId="3" startPc="268443416"/>
+<entry arg="true" endPc="268443941" name="dc" stackId="1" startPc="268443583"/>
+<entry endPc="268443940" name="now" stackId="2" startPc="268443586"/>
+<entry endPc="268443940" name="time" stackId="3" startPc="268443586"/>
+<entry endPc="268443940" name="fg_color" stackId="4" startPc="268443586"/>
+<entry endPc="268443940" name="bg_transp" stackId="5" startPc="268443586"/>
+<entry endPc="268443940" name="dot_color" stackId="6" startPc="268443586"/>
+<entry endPc="268443940" name="timeFontOffset" stackId="7" startPc="268443586"/>
+<entry endPc="268443815" name="timeStr" stackId="8" startPc="268443716"/>
+<entry endPc="268443937" name="dateStr" stackId="9" startPc="268443827"/>
+<entry arg="true" endPc="268444044" name="params" stackId="1" startPc="268443942"/>
+<entry arg="true" endPc="268444275" name="dc" stackId="1" startPc="268444078"/>
+<entry arg="true" endPc="268444275" name="rows" stackId="2" startPc="268444078"/>
+<entry arg="true" endPc="268444275" name="column" stackId="3" startPc="268444078"/>
+<entry arg="true" endPc="268444275" name="count" stackId="4" startPc="268444078"/>
+<entry arg="true" endPc="268444275" name="locationCallback" stackId="5" startPc="268444078"/>
+<entry endPc="268444274" name="binaryRadius" stackId="6" startPc="268444081"/>
+<entry endPc="268444274" name="color_rgb" stackId="7" startPc="268444081"/>
+<entry endPc="268444274" name="color_bg" stackId="8" startPc="268444081"/>
+<entry endPc="268444274" name="color_fg" stackId="9" startPc="268444081"/>
+<entry endPc="268444274" name="iL" stackId="10" startPc="268444148"/>
+<entry endPc="268444264" name="value" stackId="11" startPc="268444148"/>
+<entry endPc="268444264" name="location" stackId="12" startPc="268444148"/>
+<entry endPc="268444264" name="xLocation" stackId="13" startPc="268444148"/>
+<entry endPc="268444264" name="yLocation" stackId="14" startPc="268444148"/>
+<entry arg="true" endPc="268444668" name="params" stackId="1" startPc="268444276"/>
+<entry endPc="268444667" name="type" stackId="2" startPc="268444279"/>
+<entry arg="true" endPc="268444829" name="dc" stackId="1" startPc="268444669"/>
+<entry endPc="268444828" name="now" stackId="2" startPc="268444672"/>
+<entry endPc="268444828" name="time" stackId="3" startPc="268444672"/>
+<entry endPc="268444828" name="appShowSeconds" stackId="4" startPc="268444672"/>
+<entry arg="true" endPc="268445516" name="dc" stackId="1" startPc="268444830"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_batteryView" stackId="2" startPc="268444841"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_timeView" stackId="3" startPc="268444841"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_binaryView" stackId="4" startPc="268444841"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_activityView" stackId="5" startPc="268444841"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_bluetoothView" stackId="6" startPc="268444841"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_alarmView" stackId="7" startPc="268444841"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_sunView" stackId="8" startPc="268444841"/>
+<entry endPc="268445516" name="rez_cmp_local_custom_drawable_notificationView" stackId="9" startPc="268444841"/>
+<entry arg="true" endPc="268446207" name="dc" stackId="1" startPc="268445517"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_batteryView" stackId="2" startPc="268445528"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_timeView" stackId="3" startPc="268445528"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_binaryView" stackId="4" startPc="268445528"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_activityView" stackId="5" startPc="268445528"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_alarmView" stackId="6" startPc="268445528"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_bluetoothView" stackId="7" startPc="268445528"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_sunView" stackId="8" startPc="268445528"/>
+<entry endPc="268446207" name="rez_cmp_local_custom_drawable_notificationView" stackId="9" startPc="268445528"/>
+<entry arg="true" endPc="268446874" name="dc" stackId="1" startPc="268446208"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_batteryView" stackId="2" startPc="268446219"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_timeView" stackId="3" startPc="268446219"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_sunView" stackId="4" startPc="268446219"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_binaryView" stackId="5" startPc="268446219"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_activityView" stackId="6" startPc="268446219"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_bluetoothView" stackId="7" startPc="268446219"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_alarmView" stackId="8" startPc="268446219"/>
+<entry endPc="268446874" name="rez_cmp_local_custom_drawable_notificationView" stackId="9" startPc="268446219"/>
+<entry arg="true" endPc="268447439" name="dc" stackId="1" startPc="268446875"/>
+<entry endPc="268447439" name="rez_cmp_local_custom_drawable_batteryView" stackId="2" startPc="268446886"/>
+<entry endPc="268447439" name="rez_cmp_local_custom_drawable_timeView" stackId="3" startPc="268446886"/>
+<entry endPc="268447439" name="rez_cmp_local_custom_drawable_binaryView" stackId="4" startPc="268446886"/>
+<entry endPc="268447439" name="rez_cmp_local_custom_drawable_bluetoothView" stackId="5" startPc="268446886"/>
+<entry endPc="268447439" name="rez_cmp_local_custom_drawable_alarmView" stackId="6" startPc="268446886"/>
+<entry endPc="268447439" name="rez_cmp_local_custom_drawable_sunView" stackId="7" startPc="268446886"/>
+<entry endPc="268447439" name="rez_cmp_local_custom_drawable_notificationView" stackId="8" startPc="268446886"/>
+<entry arg="true" endPc="268447484" name="dc" stackId="1" startPc="268447440"/>
+<entry endPc="268447484" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="2" startPc="268447451"/>
+<entry arg="true" endPc="268448148" name="dc" stackId="1" startPc="268447485"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_batteryView" stackId="2" startPc="268447496"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_timeView" stackId="3" startPc="268447496"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_sunView" stackId="4" startPc="268447496"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_binaryView" stackId="5" startPc="268447496"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_activityView" stackId="6" startPc="268447496"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_bluetoothView" stackId="7" startPc="268447496"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_alarmView" stackId="8" startPc="268447496"/>
+<entry endPc="268448148" name="rez_cmp_local_custom_drawable_notificationView" stackId="9" startPc="268447496"/>
+<entry arg="true" endPc="268448810" name="dc" stackId="1" startPc="268448149"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_batteryView" stackId="2" startPc="268448160"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_timeView" stackId="3" startPc="268448160"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_binaryView" stackId="4" startPc="268448160"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_activityView" stackId="5" startPc="268448160"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_bluetoothView" stackId="6" startPc="268448160"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_alarmView" stackId="7" startPc="268448160"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_sunView" stackId="8" startPc="268448160"/>
+<entry endPc="268448810" name="rez_cmp_local_custom_drawable_notificationView" stackId="9" startPc="268448160"/>
+<entry arg="true" endPc="268449474" name="dc" stackId="1" startPc="268448811"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_batteryView" stackId="2" startPc="268448822"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_timeView" stackId="3" startPc="268448822"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_sunView" stackId="4" startPc="268448822"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_binaryView" stackId="5" startPc="268448822"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_activityView" stackId="6" startPc="268448822"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_bluetoothView" stackId="7" startPc="268448822"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_alarmView" stackId="8" startPc="268448822"/>
+<entry endPc="268449474" name="rez_cmp_local_custom_drawable_notificationView" stackId="9" startPc="268448822"/>
+</localVars>
+<deviceInfo deviceVersion="90325a5ba4f163ec5ad32845d0e0beee034c6cee" partNumber="006-B4376-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="flight_icon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_BLUE"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppVersionTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_DK_GREEN"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="NO_GPS_FIX"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_DK_RED"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_PURPLE"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_DK_BLUE"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LayoutTypeTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LAYOUTMODE_CIRCULAR2"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BinaryRadiusTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ShowSecondsTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="alarm_icon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LAYOUTMODE_CIRCULAR1"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="nogps_icon"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="bluetooth_icon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_YELLOW"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="lock_icon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RemainingBatteryEstimateTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="showBatteryPercentageTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_GREEN"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_LT_GRAY"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RADIUS_8"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RADIUS_9"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ShowSunTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_BLACK"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="FENIX6LAYOUT"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LAYOUTMODE_VERTICAL"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RADIUS_4"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RADIUS_5"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RADIUS_6"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="showDistanceTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RADIUS_7"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LAYOUTMODE_GEEK"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LAYOUTMODE_HORIZONTAL"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_ORANGE"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="showBatteryBarTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_DK_GRAY"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_PINK"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_RED"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="COLOR_WHITE"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LAYOUTMODE_FR735"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/NotificationView" offset="269" parentId="globals" symbolId="NotificationView" type="class"/>
+<dataEntry label="globals/Rez" offset="331" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/LineGraph" offset="384" parentId="globals" symbolId="LineGraph" type="class"/>
+<dataEntry label="globals/BinarySystemView" offset="518" parentId="globals" symbolId="BinarySystemView" type="class"/>
+<dataEntry label="globals/ActivityView" offset="643" parentId="globals" symbolId="ActivityView" type="class"/>
+<dataEntry label="globals/BluetoothView" offset="750" parentId="globals" symbolId="BluetoothView" type="class"/>
+<dataEntry label="globals/SunCalc" offset="812" parentId="globals" symbolId="SunCalc" type="class"/>
+<dataEntry label="globals/ElevationView" offset="991" parentId="globals" symbolId="ElevationView" type="class"/>
+<dataEntry label="globals/BinarySystemApp" offset="1044" parentId="globals" symbolId="BinarySystemApp" type="class"/>
+<dataEntry label="globals/Background" offset="1133" parentId="globals" symbolId="Background" type="class"/>
+<dataEntry label="globals/BinaryLocation" offset="1186" parentId="globals" symbolId="BinaryLocation" type="class"/>
+<dataEntry label="globals/Point" offset="1284" parentId="globals" symbolId="Point" type="class"/>
+<dataEntry label="globals/SunView" offset="1346" parentId="globals" symbolId="SunView" type="class"/>
+<dataEntry label="globals/BatteryView" offset="1498" parentId="globals" symbolId="BatteryView" type="class"/>
+<dataEntry label="globals/AppStorage" offset="1731" parentId="globals" symbolId="AppStorage" type="class"/>
+<dataEntry label="globals/AppStorage/&lt;statics&gt;" offset="1779" parentId="AppStorage" symbolId="&lt;statics&gt;" type="module"/>
+<dataEntry label="globals/AlarmView" offset="1828" parentId="globals" symbolId="AlarmView" type="class"/>
+<dataEntry label="globals/TimeView" offset="1890" parentId="globals" symbolId="TimeView" type="class"/>
+<dataEntry label="globals/BinaryWatchDrawable" offset="1979" parentId="globals" symbolId="BinaryWatchDrawable" type="class"/>
+<dataEntry label="globals/BinaryView" offset="2059" parentId="globals" symbolId="BinaryView" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="2175" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="2255" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="2353" parentId="Rez" symbolId="Strings" type="module"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="NotificationView" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435491" name="&lt;init&gt;" parent="Rez" startPc="268435472">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="LineGraph">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435503" name="&lt;init&gt;" parent="BinarySystemView" startPc="268435492">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="ActivityView" startPc="268435504">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435527" name="&lt;init&gt;" parent="BluetoothView" startPc="268435516">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435540" name="&lt;init&gt;" parent="SunCalc" startPc="268435528">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435552" name="&lt;init&gt;" parent="ElevationView" startPc="268435541">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435589" name="&lt;init&gt;" parent="BinarySystemApp" startPc="268435553">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435601" name="&lt;init&gt;" parent="Background" startPc="268435590">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="BinaryLocation">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Point">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435613" name="&lt;init&gt;" parent="SunView" startPc="268435602">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435650" name="&lt;init&gt;" parent="BatteryView" startPc="268435614">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="AppStorage">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="globals/AppStorage">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435662" name="&lt;init&gt;" parent="AlarmView" startPc="268435651">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435674" name="&lt;init&gt;" parent="TimeView" startPc="268435663">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435686" name="&lt;init&gt;" parent="BinaryWatchDrawable" startPc="268435675">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435698" name="&lt;init&gt;" parent="BinaryView" startPc="268435687">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435792" name="initialize" parent="NotificationView" startPc="268435699">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436062" name="draw" parent="NotificationView" startPc="268435793">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436452" name="addItem" parent="LineGraph" startPc="268436063">
+<param id="value"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436464" name="setColor" parent="LineGraph" startPc="268436453">
+<param id="color"/>
+<documentation><![CDATA[<div class="description"> Set graph line color<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436476" name="setMinRange" parent="LineGraph" startPc="268436465">
+<param id="minRange"/>
+<documentation><![CDATA[<div class="description"> Set graph line color<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436560" name="initialize" parent="LineGraph" startPc="268436477">
+<param id="size"/>
+<param id="minRange"/>
+<param id="color"/>
+<documentation><![CDATA[<div class="description"> Constructor<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437042" name="draw" parent="LineGraph" startPc="268436561">
+<param id="dc"/>
+<param id="topLeft"/>
+<param id="bottomRight"/>
+<documentation><![CDATA[<div class="description"> Handle the update event<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437053" name="onExitSleep" parent="BinarySystemView" startPc="268437043">
+<documentation><![CDATA[<div class="description"> The user has just looked at their watch. Timers and animations may be started here.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="BinarySystemView">
+<documentation><![CDATA[<div class="description"> Called when this View is brought to the foreground. Restore<br/> the state of this View and prepare it to be shown. This includes<br/> loading resources into memory.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437064" name="onSettingsChanged" parent="BinarySystemView" startPc="268437054">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437572" name="onLayout" parent="BinarySystemView" startPc="268437065">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437594" name="onEnterSleep" parent="BinarySystemView" startPc="268437573">
+<documentation><![CDATA[<div class="description"> Terminate any active timers and prepare for slow updates.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437633" name="initialize" parent="BinarySystemView" startPc="268437595">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="BinarySystemView">
+<documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of this View here. This includes freeing resources from<br/> memory.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437682" name="onUpdate" parent="BinarySystemView" startPc="268437634">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437827" name="initialize" parent="ActivityView" startPc="268437683">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438587" name="draw" parent="ActivityView" startPc="268437828">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438698" name="initialize" parent="BluetoothView" startPc="268438588">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438755" name="draw" parent="BluetoothView" startPc="268438699">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438798" name="fromJulian" parent="SunCalc" startPc="268438756">
+<param id="j"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438853" name="round" parent="SunCalc" startPc="268438799">
+<param id="a"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438872" name="initialize" parent="SunCalc" startPc="268438854">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439550" name="calculate" parent="SunCalc" startPc="268438873">
+<param id="moment"/>
+<param id="lat"/>
+<param id="lng"/>
+<param id="what"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439623" name="initialize" parent="ElevationView" startPc="268439551">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440035" name="draw" parent="ElevationView" startPc="268439624">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440038" name="onStart" parent="BinarySystemApp" startPc="268440036">
+<param id="state"/>
+<documentation><![CDATA[<div class="description"> onStart() is called on application start up<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440064" name="onSettingsChanged" parent="BinarySystemApp" startPc="268440039">
+<documentation><![CDATA[<div class="description"> New app settings have been received so trigger a UI update<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440079" name="getInitialView" parent="BinarySystemApp" startPc="268440065">
+<documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440094" name="initialize" parent="BinarySystemApp" startPc="268440080">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440097" name="onStop" parent="BinarySystemApp" startPc="268440095">
+<param id="state"/>
+<documentation><![CDATA[<div class="description"> onStop() is called when your application is exiting<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440135" name="initialize" parent="Background" startPc="268440098">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440176" name="draw" parent="Background" startPc="268440136">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440227" name="verticalLocation" parent="BinaryLocation" startPc="268440177">
+<param id="dc"/>
+<param id="column"/>
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440275" name="horizontalLocation" parent="BinaryLocation" startPc="268440228">
+<param id="dc"/>
+<param id="column"/>
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="BinaryLocation">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440767" name="circularLocation" parent="BinaryLocation" startPc="268440276">
+<param id="dc"/>
+<param id="column"/>
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440788" name="initialize" parent="Point" startPc="268440768">
+<param id="x"/>
+<param id="y"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441202" name="draw" parent="SunView" startPc="268440789">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441621" name="initialize" parent="SunView" startPc="268441203">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441711" name="drawBatteryBar" parent="BatteryView" startPc="268441622">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442400" name="drawBatteryBars" parent="BatteryView" startPc="268441712">
+<param id="dc"/>
+<param id="battery"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442482" name="draw" parent="BatteryView" startPc="268442401">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442773" name="drawBatteryPercentage" parent="BatteryView" startPc="268442483">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442979" name="batteryPrediction" parent="BatteryView" startPc="268442774">
+<param id="input"/>
+<param id="battery"/>
+<param id="divider"/>
+<documentation><![CDATA[<div class="description">battery prediction<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443190" name="initialize" parent="BatteryView" startPc="268442980">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443242" name="getProperty" parent="AppStorage" startPc="268443191">
+<param id="propName"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="AppStorage">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443254" name="setApp" parent="AppStorage" startPc="268443243">
+<param id="application"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443353" name="initialize" parent="AlarmView" startPc="268443255">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443412" name="draw" parent="AlarmView" startPc="268443354">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443582" name="initialize" parent="TimeView" startPc="268443413">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443941" name="draw" parent="TimeView" startPc="268443583">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444044" name="initialize" parent="BinaryWatchDrawable" startPc="268443942">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444055" name="onExitSleep" parent="BinaryView" startPc="268444045">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444077" name="onEnterSleep" parent="BinaryView" startPc="268444056">
+<documentation><![CDATA[<div class="description"> Terminate any active timers and prepare for slow updates.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444275" name="drawBinaryArray" parent="BinaryView" startPc="268444078">
+<param id="dc"/>
+<param id="rows"/>
+<param id="column"/>
+<param id="count"/>
+<param id="locationCallback"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444668" name="initialize" parent="BinaryView" startPc="268444276">
+<param id="params"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444829" name="draw" parent="BinaryView" startPc="268444669">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268445516" name="NormalModeLayoutFR735" parent="Layouts" startPc="268444830">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268446207" name="NormalModeLayout2" parent="Layouts" startPc="268445517">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268446874" name="Fenix6Layout" parent="Layouts" startPc="268446208">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268447439" name="VerticalLayout" parent="Layouts" startPc="268446875">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268447484" name="WatchFace" parent="Layouts" startPc="268447440">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268448148" name="GeekModeLayout" parent="Layouts" startPc="268447485">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268448810" name="HorizontalLayout" parent="Layouts" startPc="268448149">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268449474" name="NormalModeLayout" parent="Layouts" startPc="268448811">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

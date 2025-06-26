@@ -1,0 +1,336 @@
+{
+  "settings" : [ {
+    "key" : "appVersion",
+    "valueType" : "string",
+    "defaultValue" : "2.41",
+    "configTitle" : "AppVersionTitle",
+    "configPrompt" : null,
+    "configType" : "alphaNumeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : true,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "LayoutType",
+    "valueType" : "number",
+    "defaultValue" : 4,
+    "configTitle" : "LayoutTypeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "LAYOUTMODE_GEEK",
+      "value" : 0
+    }, {
+      "display" : "LAYOUTMODE_VERTICAL",
+      "value" : 1
+    }, {
+      "display" : "LAYOUTMODE_HORIZONTAL",
+      "value" : 2
+    }, {
+      "display" : "LAYOUTMODE_CIRCULAR1",
+      "value" : 3
+    }, {
+      "display" : "LAYOUTMODE_CIRCULAR2",
+      "value" : 4
+    }, {
+      "display" : "FENIX6LAYOUT",
+      "value" : 5
+    }, {
+      "display" : "LAYOUTMODE_FR735",
+      "value" : 6
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "showBatteryPercentage",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "showBatteryPercentageTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "showBatteryBar",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "showBatteryBarTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "RemainingBatteryEstimate",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "RemainingBatteryEstimateTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ShowSun",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "ShowSunTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "showDistance",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "showDistanceTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "BinaryRadius",
+    "valueType" : "number",
+    "defaultValue" : 8,
+    "configTitle" : "BinaryRadiusTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "RADIUS_4",
+      "value" : 4
+    }, {
+      "display" : "RADIUS_5",
+      "value" : 5
+    }, {
+      "display" : "RADIUS_6",
+      "value" : 6
+    }, {
+      "display" : "RADIUS_7",
+      "value" : 7
+    }, {
+      "display" : "RADIUS_8",
+      "value" : 8
+    }, {
+      "display" : "RADIUS_9",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ShowSeconds",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "ShowSecondsTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ForegroundColor",
+    "valueType" : "number",
+    "defaultValue" : 16711680,
+    "configTitle" : "ForegroundColorTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "COLOR_WHITE",
+      "value" : 16777215
+    }, {
+      "display" : "COLOR_LT_GRAY",
+      "value" : 11184810
+    }, {
+      "display" : "COLOR_DK_GRAY",
+      "value" : 5592405
+    }, {
+      "display" : "COLOR_BLACK",
+      "value" : 0
+    }, {
+      "display" : "COLOR_RED",
+      "value" : 16711680
+    }, {
+      "display" : "COLOR_DK_RED",
+      "value" : 11141120
+    }, {
+      "display" : "COLOR_ORANGE",
+      "value" : 16733440
+    }, {
+      "display" : "COLOR_YELLOW",
+      "value" : 16755200
+    }, {
+      "display" : "COLOR_GREEN",
+      "value" : 65280
+    }, {
+      "display" : "COLOR_DK_GREEN",
+      "value" : 43520
+    }, {
+      "display" : "COLOR_BLUE",
+      "value" : 43775
+    }, {
+      "display" : "COLOR_DK_BLUE",
+      "value" : 255
+    }, {
+      "display" : "COLOR_PURPLE",
+      "value" : 11141375
+    }, {
+      "display" : "COLOR_PINK",
+      "value" : 16711935
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "BackgroundColor",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "BackgroundColorTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "COLOR_WHITE",
+      "value" : 16777215
+    }, {
+      "display" : "COLOR_LT_GRAY",
+      "value" : 11184810
+    }, {
+      "display" : "COLOR_DK_GRAY",
+      "value" : 5592405
+    }, {
+      "display" : "COLOR_BLACK",
+      "value" : 0
+    }, {
+      "display" : "COLOR_RED",
+      "value" : 16711680
+    }, {
+      "display" : "COLOR_DK_RED",
+      "value" : 11141120
+    }, {
+      "display" : "COLOR_ORANGE",
+      "value" : 16733440
+    }, {
+      "display" : "COLOR_YELLOW",
+      "value" : 16755200
+    }, {
+      "display" : "COLOR_GREEN",
+      "value" : 65280
+    }, {
+      "display" : "COLOR_DK_GREEN",
+      "value" : 43520
+    }, {
+      "display" : "COLOR_BLUE",
+      "value" : 43775
+    }, {
+      "display" : "COLOR_DK_BLUE",
+      "value" : 255
+    }, {
+      "display" : "COLOR_PURPLE",
+      "value" : 11141375
+    }, {
+      "display" : "COLOR_PINK",
+      "value" : 16711935
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "valyrian" : {
+      "ShowSunTitle" : "Sunrise Sunset",
+      "RADIUS_8" : "8",
+      "RADIUS_7" : "7",
+      "RADIUS_6" : "6",
+      "FENIX6LAYOUT" : "Fenix 6",
+      "RADIUS_5" : "5",
+      "BackgroundColorTitle" : "Background Color",
+      "COLOR_DK_GREEN" : "Dark Green",
+      "RADIUS_9" : "9",
+      "COLOR_RED" : "Red",
+      "RADIUS_4" : "4",
+      "COLOR_LT_GRAY" : "Light Gray",
+      "AppName" : "BinarySystem",
+      "COLOR_BLACK" : "Black",
+      "COLOR_DK_RED" : "Dark Red",
+      "showBatteryBarTitle" : "Battery Bar",
+      "COLOR_WHITE" : "White",
+      "COLOR_ORANGE" : "Orange",
+      "COLOR_BLUE" : "Blue",
+      "LAYOUTMODE_GEEK" : "Geek Mode",
+      "COLOR_GREEN" : "Green",
+      "LAYOUTMODE_CIRCULAR1" : "Circular Mode 1",
+      "LAYOUTMODE_CIRCULAR2" : "Circular Mode 2",
+      "COLOR_PURPLE" : "Purple",
+      "LAYOUTMODE_FR735" : "Forerunner 735",
+      "AppVersionTitle" : "Version",
+      "LayoutTypeTitle" : "Layout",
+      "NO_GPS_FIX" : "No GPS fix!",
+      "COLOR_YELLOW" : "Yellow",
+      "showBatteryPercentageTitle" : "Battery Percentage",
+      "ForegroundColorTitle" : "Binary Color",
+      "COLOR_DK_BLUE" : "Dark Blue",
+      "ShowSecondsTitle" : "Binary Seconds",
+      "BinaryRadiusTitle" : "Binary radius",
+      "LAYOUTMODE_VERTICAL" : "Vertical Mode",
+      "LAYOUTMODE_HORIZONTAL" : "Horizontal Mode",
+      "COLOR_PINK" : "Pink",
+      "COLOR_DK_GRAY" : "Dark Gray",
+      "RemainingBatteryEstimateTitle" : "Remaining Battery (Experimental)",
+      "showDistanceTitle" : "Activity Distance"
+    }
+  }
+}

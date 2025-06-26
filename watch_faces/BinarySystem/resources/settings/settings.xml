@@ -34,6 +34,14 @@
     </setting>      
     
     <!-- TIME -->   
+    <!-- <setting propertyKey="@Properties.FontSize" 
+                    title="@Strings.FontSizeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.FONT_1</listEntry>
+            <listEntry value="1">@Strings.FONT_2</listEntry>
+        </settingConfig>
+    </setting> -->
+
     <!-- <setting propertyKey="@Properties.showTime" 
                     title="@Strings.showTimeTitle">
         <settingConfig type="boolean" />

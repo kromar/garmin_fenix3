@@ -19,7 +19,7 @@ class BatteryView extends BinaryWatchDrawable
     var remainingBattery;
 
     var batteryBarSize = 50;
-    var batteryBarThickness = 2;
+    var batteryBarThickness = 4;
     var batteryBarLocX= 109;
     var batteryBarLocY = 50;
 

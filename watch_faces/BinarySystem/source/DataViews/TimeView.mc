@@ -42,14 +42,14 @@ class TimeView extends BinaryWatchDrawable
         var dot_color = AppStorage.getProperty("ForegroundColor");
 
 		//calculate offset
-		var timeFontOffset =  (Gfx.getFontDescent(timeFontSize) + Gfx.getFontAscent(timeFontSize)/2);
-        //System.println("timeFontOffset" + timeFontOffset);
+		var timeFontOffset =  (Gfx.getFontDescent(timeFontSize) + Gfx.getFontAscent(timeFontSize) / 2);
+        System.println("timeFontOffset" + timeFontOffset);
 
         if (showTime)
         {
             var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
             dc.setColor(fg_color, bg_transp);
-            dc.drawText(locX, locY-timeFontOffset, timeFontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(locX + timeFontOffset/2, timeFontOffset, timeFontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
 
         }
 
