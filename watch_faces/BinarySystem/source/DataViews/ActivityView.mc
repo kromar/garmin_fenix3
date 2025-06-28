@@ -49,7 +49,7 @@ class ActivityView extends BinaryWatchDrawable
             //===============================
             var stepsStr = steps.toString();
             dc.setColor(dot_color, bg_transp);
-            dc.drawText((locX + stepsXOffset) * scaleFactorX, (locY + stepsYOffset) * scaleFactorY, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText((locX + stepsXOffset) * scaleFactorX, (locY + stepsYOffset) * scaleFactorY, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_LEFT);
 
             //draw step goal bar
             var stepBarWidth = self.screenWidth / 2;
