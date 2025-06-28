@@ -20,6 +20,8 @@ class TimeView extends BinaryWatchDrawable
 
         var x = params.get(:x) * scaleFactorX;
         var y = params.get(:y) * scaleFactorY;
+        
+
         showTime = params.get(:showTime);
         showDate = params.get(:showDate);
 
@@ -40,17 +42,39 @@ class TimeView extends BinaryWatchDrawable
         var fg_color = Gfx.COLOR_WHITE;
         var bg_transp = Gfx.COLOR_TRANSPARENT;
         var dot_color = AppStorage.getProperty("ForegroundColor");
+        
+        self.screenHeight = Sys.getDeviceSettings().screenHeight;
+        self.screenWidth = Sys.getDeviceSettings().screenWidth;
 
 		//calculate offset
-		var timeFontOffset =  (Gfx.getFontDescent(timeFontSize) + Gfx.getFontAscent(timeFontSize) / 2);
-        System.println("timeFontOffset" + timeFontOffset);
+		var timeFontOffset =  (Gfx.getFontHeight(timeFontSize) / 2);       
+        
+        locX = self.screenWidth / 2;
+        locY = self.screenHeight / 2;
 
+        //System.println("screenWidth: " + self.screenWidth);
+        //System.println("screenHeight: " + self.screenHeight);
+
+        //System.println("X: " + locX);
+        //System.println("Y: " + locY);
+        //System.println("timeFontSize: " + timeFontSize);
+        //System.println("getFontHeight: " + Gfx.getFontHeight(timeFontSize));
+        //
+        //System.println("timeFontOffset: " + timeFontOffset);
+        //System.println("");
+        //dc.setColor(fg_color, bg_transp);
+        //dc.drawLine(0, screenHeight/2, screenWidth, screenHeight/2);
+        //dc.drawLine(screenWidth/2, 0, screenWidth/2, screenHeight);
+
+
+        //===============================
+        //!draw time
+        //===============================
         if (showTime)
         {
             var timeStr = Lang.format("$1$:$2$", [time.hour, time.min.format("%02d")]);
             dc.setColor(fg_color, bg_transp);
-            dc.drawText(locX + timeFontOffset/2, timeFontOffset, timeFontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
-
+            dc.drawText(locX, locY - timeFontOffset, timeFontSize , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
         }
 
 
