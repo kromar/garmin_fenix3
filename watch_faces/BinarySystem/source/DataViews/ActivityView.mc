@@ -11,6 +11,7 @@ class ActivityView extends BinaryWatchDrawable
     var distanceStr = 0;
     var distanceXOffset = 0;
     var distanceYOffset = 0;
+    var activityBarThickness = 4;
 
     function initialize(params)
     {
@@ -52,7 +53,10 @@ class ActivityView extends BinaryWatchDrawable
             dc.drawText((locX + stepsXOffset) * scaleFactorX, (locY + stepsYOffset) * scaleFactorY, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_LEFT);
 
             //draw step goal bar
-            var stepBarWidth = self.screenWidth / 2;
+            var activityBarWidth = self.screenWidth * 0.6;
+            var activityBarLocX = self.screenWidth / 2; // center the activity bar   
+            var activityBarLocY = self.screenHeight * 0.18;    
+
             var stepGoalPercentage = steps.toFloat() / stepGoal.toFloat();
             if (steps > stepGoal)
             {
@@ -60,19 +64,26 @@ class ActivityView extends BinaryWatchDrawable
             }
             var borderOffset_Goal = 30;
 
+            // draw the step goal bar background
             dc.setColor(fg_color, bg_transp);
-            dc.drawLine((locX - stepBarWidth / 2)* scaleFactorX, (locY-5) * scaleFactorY, (locX + stepBarWidth / 2) * scaleFactorX, (locY -5) * scaleFactorY);
-
+            System.println("activityBarWidth: " + activityBarWidth);
+            System.println("activityBarLocX: " + activityBarLocX);
+            System.println("activityBarLocY: " + activityBarLocY);
+            dc.fillRectangle(activityBarLocX - activityBarWidth / 2, self.screenHeight - activityBarLocY, activityBarWidth, activityBarThickness);
+            
+            // draw the step goal bar
             dc.setColor(dot_color, bg_transp);
-            dc.fillRectangle(locX , locY - 10, 2, 5);
+            dc.fillRectangle(locX , locY - 10, 2, activityBarThickness);
 
-            if (stepGoalPercentage <= stepBarWidth and stepGoalPercentage >=0)
+            if (stepGoalPercentage <= activityBarWidth and stepGoalPercentage >=0)
             {
-                dc.drawLine((locX - stepBarWidth / 2) * scaleFactorX, (locY-5) * scaleFactorY, (locX - (stepBarWidth ) / 2 + stepBarWidth * stepGoalPercentage) * scaleFactorX , (locY-5) * scaleFactorY);
+                //dc.drawLine((locX - activityBarWidth / 2), (locY-5), (locX - (activityBarWidth ) / 2 + activityBarWidth * stepGoalPercentage) , (locY-5));
+                dc.drawRectangle((locX - activityBarWidth / 2), (locY - 5), activityBarWidth * stepGoalPercentage, activityBarThickness);
             }
             else
             {
-                dc.drawLine(borderOffset_Goal * scaleFactorX, (locY-5) * scaleFactorX, (stepBarWidth) * scaleFactorX, (locY-5) * scaleFactorY);
+                //dc.drawLine(borderOffset_Goal, (locY-5), (activityBarWidth), (locY-5));
+                dc.drawRectangle((locX - activityBarWidth / 2), (locY - 5), activityBarWidth, activityBarThickness);
             }
 
             //===============================

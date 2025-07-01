@@ -18,8 +18,8 @@ class TimeView extends BinaryWatchDrawable
     {
         BinaryWatchDrawable.initialize(params);
 
-        var x = params.get(:x) * scaleFactorX;
-        var y = params.get(:y) * scaleFactorY;
+        var x = params.get(:x); //* scaleFactorX;
+        var y = params.get(:y); //* scaleFactorY;
         
 
         showTime = params.get(:showTime);

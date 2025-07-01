@@ -18,18 +18,17 @@ class BatteryView extends BinaryWatchDrawable
     var timeInterval = 0;
     var remainingBattery;
 
-    var batteryBarSize = 50;
     var batteryBarThickness = 4;
-    var batteryBarLocX= 109;
+    var batteryBarLocX= 0;
     var batteryBarLocY = 50;
 
-    var batteryPercentageLocX = 109;
-    var batteryPercentageLocY =10;
+    var batteryPercentageLocX = 0;
+    var batteryPercentageLocY = 0;
 
     var fg_color = Gfx.COLOR_WHITE;
     var bg_transp = Gfx.COLOR_TRANSPARENT;
     var dot_color = AppStorage.getProperty("ForegroundColor");
-
+    var batteryBarSize = 0;
 
     function initialize(params)
     {
@@ -37,10 +36,10 @@ class BatteryView extends BinaryWatchDrawable
         BinaryWatchDrawable.initialize(params);
         batHist = [];
         batteryBarHorizontal = params.get(:batteryBarHorizontal);
-        batteryBarSize = params.get(:batteryBarSize) * scaleFactorX;
+        batteryBarSize = params.get(:batteryBarSize);
         batteryBarThickness = params.get(:batteryBarThickness) * scaleFactorY;
-        batteryBarLocX = params.get(:batteryBarLocX) * scaleFactorX;
-        batteryBarLocY = params.get(:batteryBarLocY) * scaleFactorY;
+        //batteryBarLocX = params.get(:batteryBarLocX) * scaleFactorX;
+        //batteryBarLocY = params.get(:batteryBarLocY) * scaleFactorY;
         batteryPercentageLocX = params.get(:batteryPercentageLocX) * scaleFactorX;
         batteryPercentageLocY = params.get(:batteryPercentageLocY) * scaleFactorY;
     }
@@ -49,10 +48,9 @@ class BatteryView extends BinaryWatchDrawable
 
 function draw(dc)
     {
-
-
         var showBatteryBar = AppStorage.getProperty("showBatteryBar");
         var showBatteryPercentage = AppStorage.getProperty("showBatteryPercentage");
+        
 
         if (showBatteryBar)
         {
@@ -71,6 +69,10 @@ function draw(dc)
         // fillRectangle(x, y, width, height) ⇒ Object
         // drawLine(x1, y1, x2, y2) ⇒ Object
         //  drawArc(x, y, r, attr, degreeStart, degreeEnd) ⇒ Object
+
+        var batteryBarSize = self.screenWidth * 0.6; 
+        var batteryBarLocX = self.screenWidth / 2; // center the battery bar   
+        var batteryBarLocY = self.screenWidth * 0.18;    
 
         var batteryPercentageBar = Math.round(batteryBarSize / 100.0f * battery).toLong();
         var batteryPercentageOffset =(batteryBarSize -  batteryPercentageBar);   // this is needed to shift the percentage bar to its correct coordinate
@@ -126,7 +128,7 @@ function draw(dc)
         drawBatteryBars(dc, battery);
     }
 
-        //===============================
+    //===============================
     //!battery prediction
     //===============================
     function batteryPrediction(input, battery, divider) {
@@ -189,7 +191,11 @@ function draw(dc)
             }
             var font = Gfx.FONT_TINY;
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(batteryBarLocX + batteryPercentageLocX , batteryBarLocY +batteryPercentageLocY, font, batteryPercentageStr, Gfx.TEXT_JUSTIFY_CENTER);
+            System.println("batteryBarLocX: " + batteryBarLocX);
+            System.println("batteryBarSize: " + batteryBarSize);
+            System.println("batteryBarLocY: " + batteryBarLocY);
+            System.println("batteryPercentageStr: " + batteryPercentageStr);
+            dc.drawText(batteryBarSize, batteryBarLocY, font, batteryPercentageStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
 
 
