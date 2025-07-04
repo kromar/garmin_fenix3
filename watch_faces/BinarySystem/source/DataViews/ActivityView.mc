@@ -73,17 +73,17 @@ class ActivityView extends BinaryWatchDrawable
             
             // draw the step goal bar
             dc.setColor(dot_color, bg_transp);
-            dc.fillRectangle(locX , locY - 10, 2, activityBarThickness);
+            dc.fillRectangle(activityBarLocX , self.screenHeight - activityBarLocY , 2, activityBarThickness);
 
             if (stepGoalPercentage <= activityBarWidth and stepGoalPercentage >=0)
             {
                 //dc.drawLine((locX - activityBarWidth / 2), (locY-5), (locX - (activityBarWidth ) / 2 + activityBarWidth * stepGoalPercentage) , (locY-5));
-                dc.drawRectangle((locX - activityBarWidth / 2), (locY - 5), activityBarWidth * stepGoalPercentage, activityBarThickness);
+                dc.fillRectangle((activityBarLocX - activityBarWidth / 2), self.screenHeight - activityBarLocY , activityBarWidth * stepGoalPercentage, activityBarThickness);
             }
             else
             {
                 //dc.drawLine(borderOffset_Goal, (locY-5), (activityBarWidth), (locY-5));
-                dc.drawRectangle((locX - activityBarWidth / 2), (locY - 5), activityBarWidth, activityBarThickness);
+                dc.fillRectangle((activityBarLocX - activityBarWidth / 2), self.screenHeight - activityBarLocY, activityBarWidth, activityBarThickness);
             }
 
             //===============================
