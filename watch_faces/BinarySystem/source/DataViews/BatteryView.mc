@@ -72,26 +72,30 @@ function draw(dc)
 
         var batteryBarSize = self.screenWidth * 0.6; 
         var batteryBarLocX = self.screenWidth / 2; // center the battery bar   
-        var batteryBarLocY = self.screenWidth * 0.18;    
+        var batteryBarLocY = self.screenHeight * 0.22;  
+        
+        System.println("batteryBarSize: " + batteryBarSize);
+        System.println("batteryBarLocX: " + batteryBarLocX);
+        System.println("batteryBarLocY: " + batteryBarLocY);  
 
         var batteryPercentageBar = Math.round(batteryBarSize / 100.0f * battery).toLong();
         var batteryPercentageOffset =(batteryBarSize -  batteryPercentageBar);   // this is needed to shift the percentage bar to its correct coordinate
-
+        
         if (batteryBarHorizontal == true) //draw horizontal battery bar
         {
             if (battery > 99){
-                dc.fillRectangle(batteryBarLocX + batteryBarSize / 2 - batteryBarThickness,  batteryBarLocY - 8, batteryBarThickness, 8);
+                dc.fillRectangle(batteryBarLocX + batteryBarSize / 2 - batteryBarThickness,  batteryBarLocY - 2 * batteryBarThickness, batteryBarThickness, 2 * batteryBarThickness);
             }
             if (battery >= 75) {
                 dc.drawLine(batteryBarLocX + batteryBarSize * 0.25 , batteryBarLocY, batteryBarLocX + batteryBarSize * 0.25, batteryBarLocY - 5);
             }
             if (battery >= 50) {
-                dc.drawLine(batteryBarLocX , batteryBarLocY, batteryBarLocX, batteryBarLocY - 8);
+                dc.drawLine(batteryBarLocX , batteryBarLocY, batteryBarLocX, batteryBarLocY - 2 * batteryBarThickness);
             }
             if (battery >= 25) {
                 dc.drawLine(batteryBarLocX - batteryBarSize * 0.25 , batteryBarLocY, batteryBarLocX - batteryBarSize * 0.25, batteryBarLocY - 5);
             }
-            dc.fillRectangle(batteryBarLocX - batteryBarSize / 2, batteryBarLocY - 8,  batteryBarThickness, 8);   //0% mark
+            dc.fillRectangle(batteryBarLocX - batteryBarSize / 2, batteryBarLocY - 2 * batteryBarThickness,  batteryBarThickness, 2 * batteryBarThickness);   //0% mark
             dc.fillRectangle(batteryBarLocX - batteryBarSize / 2, batteryBarLocY, batteryPercentageBar, batteryBarThickness);
 
         } else {     // draw vertical battery bar
@@ -191,11 +195,8 @@ function draw(dc)
             }
             var font = Gfx.FONT_TINY;
             dc.setColor(dot_color, bg_transp);
-            System.println("batteryBarLocX: " + batteryBarLocX);
-            System.println("batteryBarSize: " + batteryBarSize);
-            System.println("batteryBarLocY: " + batteryBarLocY);
             System.println("batteryPercentageStr: " + batteryPercentageStr);
-            dc.drawText(batteryBarSize, batteryBarLocY, font, batteryPercentageStr, Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(batteryBarLocX + batteryBarSize / 2, batteryBarLocY + 3 * batteryBarThickness, font, batteryPercentageStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
 
 

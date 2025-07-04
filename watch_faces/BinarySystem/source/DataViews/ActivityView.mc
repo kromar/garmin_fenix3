@@ -45,30 +45,23 @@ class ActivityView extends BinaryWatchDrawable
             // the units are either UNIT_METRIC or UNIT_STATUTE
             var distUnits = Sys.getDeviceSettings().distanceUnits;
 
-            //===============================
-            //!steps
-            //===============================
-            var stepsStr = steps.toString();
-            dc.setColor(dot_color, bg_transp);
-            dc.drawText((locX + stepsXOffset) * scaleFactorX, (locY + stepsYOffset) * scaleFactorY, Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_LEFT);
-
+           
             //draw step goal bar
             var activityBarWidth = self.screenWidth * 0.6;
             var activityBarLocX = self.screenWidth / 2; // center the activity bar   
-            var activityBarLocY = self.screenHeight * 0.18;    
+            var activityBarLocY = self.screenHeight * 0.2;    
+            System.println("activityBarWidth: " + activityBarWidth);
+            System.println("activityBarLocX: " + activityBarLocX);
+            System.println("activityBarLocY: " + activityBarLocY);
 
             var stepGoalPercentage = steps.toFloat() / stepGoal.toFloat();
             if (steps > stepGoal)
             {
                 stepGoalPercentage = 1.0;
             }
-            var borderOffset_Goal = 30;
 
             // draw the step goal bar background
             dc.setColor(fg_color, bg_transp);
-            System.println("activityBarWidth: " + activityBarWidth);
-            System.println("activityBarLocX: " + activityBarLocX);
-            System.println("activityBarLocY: " + activityBarLocY);
             dc.fillRectangle(activityBarLocX - activityBarWidth / 2, self.screenHeight - activityBarLocY, activityBarWidth, activityBarThickness);
             
             // draw the step goal bar
@@ -77,14 +70,23 @@ class ActivityView extends BinaryWatchDrawable
 
             if (stepGoalPercentage <= activityBarWidth and stepGoalPercentage >=0)
             {
-                //dc.drawLine((locX - activityBarWidth / 2), (locY-5), (locX - (activityBarWidth ) / 2 + activityBarWidth * stepGoalPercentage) , (locY-5));
                 dc.fillRectangle((activityBarLocX - activityBarWidth / 2), self.screenHeight - activityBarLocY , activityBarWidth * stepGoalPercentage, activityBarThickness);
             }
             else
             {
-                //dc.drawLine(borderOffset_Goal, (locY-5), (activityBarWidth), (locY-5));
                 dc.fillRectangle((activityBarLocX - activityBarWidth / 2), self.screenHeight - activityBarLocY, activityBarWidth, activityBarThickness);
             }
+
+            
+            //===============================
+            //!steps
+            //===============================
+            var stepsStr = steps.toString();
+            System.println("stepsStr: " + stepsStr);
+            // draw the steps text
+            dc.setColor(dot_color, bg_transp);
+            dc.drawText(activityBarLocX - activityBarWidth / 2, (self.screenHeight - activityBarLocY + stepsYOffset), Gfx.FONT_TINY, stepsStr, Gfx.TEXT_JUSTIFY_LEFT);
+
 
             //===============================
             //!distance
@@ -116,7 +118,9 @@ class ActivityView extends BinaryWatchDrawable
                         distanceStr = (feetDistance).toLong() + "ft";
                     }
                 }
-                dc.drawText((locX+distanceXOffset) * scaleFactorX, (locY+distanceYOffset) * scaleFactorY, Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
+                System.println("distanceStr: " + distanceStr);
+                // draw the distance text
+                dc.drawText((activityBarLocX + activityBarWidth / 2), (self.screenHeight - activityBarLocY + distanceYOffset), Gfx.FONT_TINY, distanceStr, Gfx.TEXT_JUSTIFY_RIGHT);
             }
         }
     }

@@ -24,7 +24,7 @@ class SunView extends BinaryWatchDrawable
     var iconY = 0;
     var textX = 0;
     var textY = 0;
-    var sunFontSize = 1;
+    var sunFontSize = 2;
 
     function initialize(params)
         {
@@ -74,9 +74,13 @@ class SunView extends BinaryWatchDrawable
         if (showSun==true)
         {
             var dot_color = AppStorage.getProperty("ForegroundColor");
+            var fg_color = Gfx.COLOR_WHITE;
             var bg_transp = Gfx.COLOR_TRANSPARENT;
-            dc.setColor(dot_color, bg_transp);
+
             var sc = new SunCalc();
+
+            var locX = self.screenWidth / 2; // center the bar
+            var locY = self.screenHeight * 0.18;
 
             // get stored data
             var hasStoredLocationData = AppStorage.getProperty("hasStoredLocationData");
@@ -92,11 +96,14 @@ class SunView extends BinaryWatchDrawable
                     var timeInfoSunrise = Time.Gregorian.info(sunrise_moment, Time.FORMAT_SHORT);
                     var timeInfoSunset = Time.Gregorian.info(sunset_moment, Time.FORMAT_SHORT);
 
-                    var sunInfoString = timeInfoSunrise.hour.format("%01d") + ":" + timeInfoSunrise.min.format("%02d") + " - " + timeInfoSunset.hour.format("%01d") + ":" + timeInfoSunset.min.format("%02d");
+                    var sunInfoString = timeInfoSunrise.hour.format("%02d") + ":" + timeInfoSunrise.min.format("%02d") + " - " + timeInfoSunset.hour.format("%02d") + ":" + timeInfoSunset.min.format("%02d");
                     // var sunInfoString = sunrise_moment.hour.format("%01d") + ":" + sunrise_moment.min.format("%02d") + " - " + sunset_moment.hour.format("%01d") + ":" + sunset_moment.min.format("%02d");
-                    dc.drawText(textX, textY, sunFontSize, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
-            }   
-               
+                   
+                    dc.setColor(fg_color, bg_transp);
+                    dc.drawText(locX, self.screenHeight - locY, sunFontSize, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+
+            }
+
 
             } else {
                 // if no location found or stored draw icon
