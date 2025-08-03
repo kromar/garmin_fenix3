@@ -50,8 +50,8 @@ class TimeView extends BinaryWatchDrawable
 		var timeFontOffset =  (Gfx.getFontHeight(timeFontSize) / 2);  
 		var dateFontOffset =  (Gfx.getFontHeight(dateFontSize) / 2);        
 
-        locX = self.screenWidth / 2;
-        locY = self.screenHeight / 2;
+        var locX = self.screenWidth / 2;
+        var locY = self.screenHeight / 2;
 
         //System.println("screenWidth: " + self.screenWidth);
         //System.println("screenHeight: " + self.screenHeight);
@@ -85,7 +85,7 @@ class TimeView extends BinaryWatchDrawable
         {
             var dateStr = Lang.format("$1$ $2$ $3$", [time.day_of_week, time.month, time.day]);
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(locX, locY - (showTime ? (timeFontOffset + dateFontOffset / 2) : 0), dateFontSize, dateStr, Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(locX, locY - (showTime ? (timeFontOffset + dateFontOffset / 2) : 0), dateFontSize, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
         }
     }
 }

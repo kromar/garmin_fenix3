@@ -80,7 +80,7 @@ class SunView extends BinaryWatchDrawable
             var sc = new SunCalc();
 
             var locX = self.screenWidth / 2; // center the bar
-            var locY = self.screenHeight * 0.18;
+            var locY = self.screenHeight * 0.82;
 
             // get stored data
             var hasStoredLocationData = AppStorage.getProperty("hasStoredLocationData");
@@ -98,9 +98,8 @@ class SunView extends BinaryWatchDrawable
 
                     var sunInfoString = timeInfoSunrise.hour.format("%02d") + ":" + timeInfoSunrise.min.format("%02d") + " - " + timeInfoSunset.hour.format("%02d") + ":" + timeInfoSunset.min.format("%02d");
                     // var sunInfoString = sunrise_moment.hour.format("%01d") + ":" + sunrise_moment.min.format("%02d") + " - " + sunset_moment.hour.format("%01d") + ":" + sunset_moment.min.format("%02d");
-                   
-                    dc.setColor(fg_color, bg_transp);
-                    dc.drawText(locX, self.screenHeight - locY, sunFontSize, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
+                   dc.setColor(fg_color, bg_transp);
+                   dc.drawText(locX, locY, sunFontSize, sunInfoString, Gfx.TEXT_JUSTIFY_CENTER);
 
             }
 

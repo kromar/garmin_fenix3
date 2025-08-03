@@ -29,14 +29,14 @@ class NotificationView extends BinaryWatchDrawable
 		{
             dc.setColor(fg_color, bg_transp);
             dc.drawRoundedRectangle(locX, locY, 40 * scaleFactorX, 18 * scaleFactorY, 4);
-            dc.drawRectangle(locX+2, locY+4, 10, 1);
-            dc.drawRectangle(locX+2, locY+8, 16, 1);
-            dc.drawRectangle(locX+2, locY+12, 10, 1);
+            dc.drawRectangle(locX + 2, locY + 4, 10, 1);
+            dc.drawRectangle(locX + 2, locY + 8, 16, 1);
+            dc.drawRectangle(locX + 2, locY + 12, 10, 1);
 
             //draw notification count
             var notificationCountStr = notificationCount.toString();
             dc.setColor(dot_color, bg_transp);
-            dc.drawText(locX+36 * scaleFactorX, locY-1, fontSize, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
+            dc.drawText(locX + 36, locY - 1, fontSize, notificationCountStr, Gfx.TEXT_JUSTIFY_RIGHT);
 		}
 	}
 }
